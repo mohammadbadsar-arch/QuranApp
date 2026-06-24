@@ -1,7 +1,5 @@
 package com.example.quranapp
 
-import android.content.Context
-import android.content.SharedPreferences
 import android.os.Bundle
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
@@ -10,7 +8,6 @@ class MainActivity : AppCompatActivity() {
 
     lateinit var verses: List<Verse>
     lateinit var progress: ProgressManager
-    lateinit var prefs: SharedPreferences
     var index = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,26 +17,34 @@ class MainActivity : AppCompatActivity() {
         verses = VerseRepository.load(this)
         progress = ProgressManager(this)
         index = progress.getIndex()
-        
-        // تنظیمات مربوط به علاقه‌مندی‌ها
-        prefs = getSharedPreferences("favorites", Context.MODE_PRIVATE)
 
         val num = findViewById<TextView>(R.id.verseNumber)
         val ar = findViewById<TextView>(R.id.arabicText)
         val tr = findViewById<TextView>(R.id.translation)
         val ex = findViewById<TextView>(R.id.exampleText)
+        
+        // پیدا کردن چک‌باکس‌ها
+        val cbRead = findViewById<CheckBox>(R.id.cbRead)
+        val cbTranslate = findViewById<CheckBox>(R.id.cbTranslate)
+        val cbExample = findViewById<CheckBox>(R.id.cbExample)
+        val cbAction = findViewById<CheckBox>(R.id.cbAction)
+        
         val next = findViewById<Button>(R.id.nextButton)
         val done = findViewById<Button>(R.id.doneButton)
-        val favBtn = findViewById<ImageButton>(R.id.favButton)
 
-        fun updateFavoriteIcon(verseNumber: Int) {
-            val isFav = prefs.getBoolean(verseNumber.toString(), false)
-            if (isFav) {
-                favBtn.setImageResource(android.R.drawable.btn_star_big_on)
-            } else {
-                favBtn.setImageResource(android.R.drawable.btn_star_big_off)
-            }
+        // تابعی برای بررسی وضعیت چک‌باکس‌ها
+        fun checkProgress() {
+            val isAllChecked = cbRead.isChecked && cbTranslate.isChecked && cbExample.isChecked && cbAction.isChecked
+            next.isEnabled = isAllChecked
+            next.text = if (isAllChecked) "آیه بعدی" else "آیه بعدی (قفل)"
         }
+
+        // اختصاص دادن Listener به همه چک‌باکس‌ها
+        val checkListener = CompoundButton.OnCheckedChangeListener { _, _ -> checkProgress() }
+        cbRead.setOnCheckedChangeListener(checkListener)
+        cbTranslate.setOnCheckedChangeListener(checkListener)
+        cbExample.setOnCheckedChangeListener(checkListener)
+        cbAction.setOnCheckedChangeListener(checkListener)
 
         fun show() {
             val v = verses[index]
@@ -48,26 +53,23 @@ class MainActivity : AppCompatActivity() {
             tr.text = v.persian_translation
             ex.text = v.practical_examples.joinToString("\n")
             
-            updateFavoriteIcon(v.number)
+            // ریست کردن چک‌باکس‌ها برای آیه جدید
+            cbRead.isChecked = false
+            cbTranslate.isChecked = false
+            cbExample.isChecked = false
+            cbAction.isChecked = false
+            next.isEnabled = false
+            next.text = "آیه بعدی (قفل)"
         }
 
         show()
 
-        // تغییر وضعیت علاقه‌مندی
-        favBtn.setOnClickListener {
-            val verseNumber = verses[index].number.toString()
-            val isCurrentlyFav = prefs.getBoolean(verseNumber, false)
-            
-            prefs.edit().putBoolean(verseNumber, !isCurrentlyFav).apply()
-            updateFavoriteIcon(verses[index].number)
-            
-            val msg = if (!isCurrentlyFav) "به علاقه‌مندی‌ها اضافه شد ❤️" else "از علاقه‌مندی‌ها حذف شد 💔"
-            Toast.makeText(this, msg, Toast.LENGTH_SHORT).show()
-        }
-
         done.setOnClickListener {
-            Toast.makeText(this, "عالی بود! ✅", Toast.LENGTH_SHORT).show()
-            // اینجا بعدا سیستم امتیازدهی اضافه می‌شود
+            if (cbRead.isChecked && cbTranslate.isChecked && cbExample.isChecked && cbAction.isChecked) {
+                Toast.makeText(this, "آفرین! مراحل این آیه کامل شد ✅", Toast.LENGTH_SHORT).show()
+            } else {
+                Toast.makeText(this, "لطفاً ابتدا تمام ۴ مرحله را تیک بزنید.", Toast.LENGTH_SHORT).show()
+            }
         }
 
         next.setOnClickListener {
@@ -76,7 +78,7 @@ class MainActivity : AppCompatActivity() {
                 progress.saveIndex(index)
                 show()
             } else {
-                Toast.makeText(this, "همه آیات تمام شد 🎉", Toast.LENGTH_LONG).show()
+                Toast.makeText(this, "تبریک! تمام آیات به پایان رسید.", Toast.LENGTH_LONG).show()
             }
         }
     }

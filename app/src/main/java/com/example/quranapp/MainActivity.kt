@@ -27,11 +27,10 @@ class MainActivity:AppCompatActivity(){
 
   fun show(){
    val v=verses[index]
-   num.text="آیه "+v.number+" - "+v.surah_reference
-   ar.text=v.arabic_text
-   tr.text=v.persian_translation
-   ex.text=v.practical_examples.joinToString("
-")
+   num.text = "آیه " + v.number + " - " + v.surah_reference
+ar.text = v.arabic_text
+tr.text = v.persian_translation
+ex.text = v.practical_examples.joinToString("\n")
   }
 
   show()

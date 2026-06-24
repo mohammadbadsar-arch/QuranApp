@@ -1,0 +1,11 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent" android:layout_height="match_parent" android:padding="16dp">
+<LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+<TextView android:id="@+id/verseNumber" android:textSize="20sp" android:textStyle="bold" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+<TextView android:id="@+id/arabicText" android:textSize="26sp" android:layout_marginTop="20dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+<TextView android:id="@+id/translation" android:textSize="18sp" android:layout_marginTop="16dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+<TextView android:id="@+id/exampleText" android:textSize="16sp" android:layout_marginTop="16dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+<Button android:id="@+id/doneButton" android:text="انجام دادم" android:layout_marginTop="24dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+<Button android:id="@+id/nextButton" android:text="آیه بعدی" android:layout_marginTop="12dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+</LinearLayout>
+</ScrollView>

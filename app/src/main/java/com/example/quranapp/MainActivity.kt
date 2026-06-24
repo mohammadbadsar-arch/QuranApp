@@ -1,3 +1,12 @@
+package com.example.quranapp
+
+import android.os.Bundle
+import android.widget.Button
+import android.widget.ProgressBar
+import android.widget.TextView
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+
 class MainActivity : AppCompatActivity() {
 
     lateinit var verses: List<Verse>
@@ -30,16 +39,14 @@ class MainActivity : AppCompatActivity() {
             tr.text = v.persian_translation
             ex.text = v.practical_examples.joinToString("\n")
             
-            // --- کدهای محاسبه و نمایش پیشرفت ---
+            // محاسبات پیشرفت
             val totalVerses = verses.size
-            val passedVerses = index // چون ایندکس از صفر شروع می‌شود، برابر با تعداد آیات رد شده است
+            val passedVerses = index
             val remainingVerses = totalVerses - passedVerses
             val percentage = if (totalVerses > 0) (passedVerses * 100) / totalVerses else 0
             
-            // نمایش متن آمار
+            // نمایش پیشرفت
             progressStatsText.text = "گذرانده: $passedVerses | باقیمانده: $remainingVerses | پیشرفت: $percentage%"
-            
-            // پر کردن نوار پیشرفت
             progressBar.progress = percentage
         }
 
@@ -56,7 +63,6 @@ class MainActivity : AppCompatActivity() {
                 show()
             } else {
                 Toast.makeText(this, "همه آیات تمام شد", Toast.LENGTH_LONG).show()
-                // تنظیم پیشرفت روی 100% در پایان
                 progressBar.progress = 100
                 progressStatsText.text = "گذرانده: ${verses.size} | باقیمانده: 0 | پیشرفت: 100%"
             }

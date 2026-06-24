@@ -1,83 +1,130 @@
-package com.example.quranapp
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    android:padding="16dp">
 
-import android.content.Context
-import android.content.SharedPreferences
-import android.os.Bundle
-import android.widget.*
-import androidx.appcompat.app.AppCompatActivity
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-class MainActivity : AppCompatActivity() {
+        <!-- Header: Verse Number & Favorite Button -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="16dp">
 
-    lateinit var verses: List<Verse>
-    lateinit var progress: ProgressManager
-    lateinit var prefs: SharedPreferences
-    var index = 0
+            <TextView
+                android:id="@+id/verseNumber"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#333333"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"/>
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+            <ImageButton
+                android:id="@+id/favButton"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@android:drawable/btn_star_big_off"
+                android:contentDescription="علاقه‌مندی" />
+        </LinearLayout>
 
-        verses = VerseRepository.load(this)
-        progress = ProgressManager(this)
-        index = progress.getIndex()
-        
-        // تنظیمات مربوط به علاقه‌مندی‌ها
-        prefs = getSharedPreferences("favorites", Context.MODE_PRIVATE)
-
-        val num = findViewById<TextView>(R.id.verseNumber)
-        val ar = findViewById<TextView>(R.id.arabicText)
-        val tr = findViewById<TextView>(R.id.translation)
-        val ex = findViewById<TextView>(R.id.exampleText)
-        val next = findViewById<Button>(R.id.nextButton)
-        val done = findViewById<Button>(R.id.doneButton)
-        val favBtn = findViewById<ImageButton>(R.id.favButton)
-
-        fun updateFavoriteIcon(verseNumber: Int) {
-            val isFav = prefs.getBoolean(verseNumber.toString(), false)
-            if (isFav) {
-                favBtn.setImageResource(android.R.drawable.btn_star_big_on)
-            } else {
-                favBtn.setImageResource(android.R.drawable.btn_star_big_off)
-            }
-        }
-
-        fun show() {
-            val v = verses[index]
-            num.text = "آیه " + v.number + " - " + v.surah_reference
-            ar.text = v.arabic_text
-            tr.text = v.persian_translation
-            ex.text = v.practical_examples.joinToString("\n")
+        <!-- Card 1: Arabic Text -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp"
+            android:layout_marginBottom="12dp">
             
-            updateFavoriteIcon(v.number)
-        }
+            <TextView
+                android:id="@+id/arabicText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:textSize="26sp"
+                android:textColor="#000000"
+                android:gravity="center"
+                android:textDirection="rtl"/>
+        </androidx.cardview.widget.CardView>
 
-        show()
-
-        // تغییر وضعیت علاقه‌مندی
-        favBtn.setOnClickListener {
-            val verseNumber = verses[index].number.toString()
-            val isCurrentlyFav = prefs.getBoolean(verseNumber, false)
+        <!-- Card 2: Translation -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="2dp"
+            android:layout_marginBottom="12dp">
             
-            prefs.edit().putBoolean(verseNumber, !isCurrentlyFav).apply()
-            updateFavoriteIcon(verses[index].number)
+            <TextView
+                android:id="@+id/translation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:textSize="18sp"
+                android:textColor="#444444"
+                android:lineSpacingExtra="4dp"
+                android:textDirection="rtl"/>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Card 3: Practical Application -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="2dp"
+            app:cardBackgroundColor="#E3F2FD"
+            android:layout_marginBottom="24dp">
             
-            val msg = if (!isCurrentlyFav) "به علاقه‌مندی‌ها اضافه شد ❤️" else "از علاقه‌مندی‌ها حذف شد 💔"
-            Toast.makeText(this, msg, Toast.LENGTH_SHORT).show()
-        }
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+                
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="💡 کاربرد در زندگی:"
+                    android:textStyle="bold"
+                    android:textColor="#1976D2"
+                    android:layout_marginBottom="8dp"/>
+                    
+                <TextView
+                    android:id="@+id/exampleText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textColor="#333333"
+                    android:lineSpacingExtra="4dp"
+                    android:textDirection="rtl"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
 
-        done.setOnClickListener {
-            Toast.makeText(this, "عالی بود! ✅", Toast.LENGTH_SHORT).show()
-            // اینجا بعدا سیستم امتیازدهی اضافه می‌شود
-        }
+        <Button
+            android:id="@+id/doneButton"
+            android:text="✅ انجام دادم"
+            android:textSize="18sp"
+            android:padding="12dp"
+            android:backgroundTint="#4CAF50"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
 
-        next.setOnClickListener {
-            if (index < verses.size - 1) {
-                index++
-                progress.saveIndex(index)
-                show()
-            } else {
-                Toast.makeText(this, "همه آیات تمام شد 🎉", Toast.LENGTH_LONG).show()
-            }
-        }
-    }
-}
+        <Button
+            android:id="@+id/nextButton"
+            android:text="آیه بعدی ➔"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_marginTop="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+</ScrollView>

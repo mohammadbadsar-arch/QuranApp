@@ -1,47 +1,161 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp">
+    android:padding="16dp"
+    android:background="#F5F5F5">
 
     <LinearLayout
-        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-<!-- نمایش متن آمار پیشرفت -->
-<TextView
-    android:id="@+id/progressStatsText"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:textAlignment="center"
-    android:textSize="14sp"
-    android:textColor="#555555"
-    android:layout_marginBottom="8dp"/>
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-<!-- نوار پیشرفت افقی -->
-<ProgressBar
-    android:id="@+id/progressBar"
-    style="?android:attr/progressBarStyleHorizontal"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:max="100"
-    android:layout_marginBottom="16dp"/>
+        <!-- بخش آمار پیشرفت -->
+        <TextView
+            android:id="@+id/progressStatsText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="#333333" />
 
-        <TextView android:id="@+id/verseNumber" android:textSize="20sp" android:textStyle="bold" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
-        <TextView android:id="@+id/arabicText" android:textSize="26sp" android:layout_marginTop="20dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
-        <TextView android:id="@+id/translation" android:textSize="18sp" android:layout_marginTop="16dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
-        <TextView android:id="@+id/exampleText" android:textSize="16sp" android:layout_marginTop="16dp" android:layout_marginBottom="16dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp" />
 
-        <!-- مراحل ۴ گانه -->
-        <CheckBox android:id="@+id/cbRead" android:text="۱. تلفظ و خواندن آیه" android:layout_width="match_parent" android:layout_height="wrap_content"/>
-        <CheckBox android:id="@+id/cbTranslate" android:text="۲. درک ترجمه روان" android:layout_width="match_parent" android:layout_height="wrap_content"/>
-        <CheckBox android:id="@+id/cbExample" android:text="۳. مطالعه مصداق و کاربرد" android:layout_width="match_parent" android:layout_height="wrap_content"/>
-        <CheckBox android:id="@+id/cbAction" android:text="۴. تعهد به انجام عملی" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        <!-- هدر: شماره آیه و دکمه علاقه‌مندی -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="16dp">
 
-        <Button android:id="@+id/doneButton" android:text="ثبت پیشرفت" android:layout_marginTop="24dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
-        
-        <!-- دکمه آیه بعدی (پیش‌فرض غیرفعال) -->
-        <Button android:id="@+id/nextButton" android:text="آیه بعدی (قفل)" android:enabled="false" android:layout_marginTop="12dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/verseNumber"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#2E7D32" />
+
+            <ImageButton
+                android:id="@+id/favoriteButton"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@android:drawable/btn_star"
+                app:tint="#757575"
+                android:contentDescription="علاقه‌مندی" />
+        </LinearLayout>
+
+        <!-- کارت متن عربی -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp"
+            app:contentPadding="16dp">
+
+            <TextView
+                android:id="@+id/arabicText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:textAlignment="center"
+                android:lineSpacingExtra="8dp"
+                android:textColor="#000000" />
+        </androidx.cardview.widget.CardView>
+
+        <!-- کارت ترجمه -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp"
+            app:contentPadding="16dp">
+
+            <TextView
+                android:id="@+id/translation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:lineSpacingExtra="6dp"
+                android:textColor="#424242" />
+        </androidx.cardview.widget.CardView>
+
+        <!-- کارت مصداق عملی -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp"
+            app:contentPadding="16dp"
+            app:cardBackgroundColor="#E8F5E9">
+
+            <TextView
+                android:id="@+id/exampleText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:lineSpacingExtra="6dp"
+                android:textColor="#1B5E20" />
+        </androidx.cardview.widget.CardView>
+
+        <!-- چک‌باکس‌های ۴ مرحله‌ای -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="مراحل یادگیری:"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp"/>
+
+        <CheckBox
+            android:id="@+id/checkBox1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="۱. تلفظ و خواندن صحیح" />
+
+        <CheckBox
+            android:id="@+id/checkBox2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="۲. درک ترجمه و مفهوم" />
+
+        <CheckBox
+            android:id="@+id/checkBox3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="۳. مطالعه مصداق و کاربرد" />
+
+        <CheckBox
+            android:id="@+id/checkBox4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="۴. تعهد به انجام عمل در زندگی" />
+
+        <!-- دکمه آیه بعدی -->
+        <Button
+            android:id="@+id/nextButton"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="16dp"
+            android:text="آیه بعدی (قفل)"
+            android:textSize="18sp"
+            android:enabled="false"
+            app:cornerRadius="8dp" />
 
     </LinearLayout>
 </ScrollView>

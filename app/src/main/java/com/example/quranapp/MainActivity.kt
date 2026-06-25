@@ -24,6 +24,13 @@ class MainActivity : AppCompatActivity() {
         val ex = findViewById<TextView>(R.id.exampleText)
         val next = findViewById<Button>(R.id.nextButton)
         
+        // --- اضافه شدن دکمه بازگشت به داشبورد ---
+        val btnBackToDashboard = findViewById<Button>(R.id.btnBackToDashboard)
+        btnBackToDashboard.setOnClickListener {
+            finish() // بستن این صفحه و بازگشت به داشبورد
+        }
+        // ----------------------------------------
+        
         // پیدا کردن چک‌باکس‌ها
         val cb1 = findViewById<CheckBox>(R.id.checkBox1)
         val cb2 = findViewById<CheckBox>(R.id.checkBox2)

@@ -10,7 +10,8 @@ import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var verseTextView: TextView
+    // تغییر نام متغیر به arabicText برای همخوانی با activity_main.xml
+    private lateinit var arabicText: TextView
     private lateinit var nextButton: Button
     private lateinit var btnBackToDashboard: Button
     
@@ -19,15 +20,14 @@ class MainActivity : AppCompatActivity() {
     private lateinit var checkBox3: CheckBox
     private lateinit var checkBox4: CheckBox
 
-    // این متغیر برای این است که وقتی آیه عوض می‌شود و تیک‌ها به صورت خودکار برداشته می‌شوند، صدای کلیک پخش نشود
     private var isResetting = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        // متصل کردن المان‌های UI
-        verseTextView = findViewById(R.id.verseTextView)
+        // متصل کردن المان‌های UI (استفاده از R.id.arabicText)
+        arabicText = findViewById(R.id.arabicText)
         nextButton = findViewById(R.id.nextButton)
         btnBackToDashboard = findViewById(R.id.btnBackToDashboard)
         
@@ -36,14 +36,11 @@ class MainActivity : AppCompatActivity() {
         checkBox3 = findViewById(R.id.checkBox3)
         checkBox4 = findViewById(R.id.checkBox4)
 
-        // دکمه بازگشت به داشبورد
         btnBackToDashboard.setOnClickListener {
-            finish() // بستن این صفحه و برگشت به داشبورد
+            finish() 
         }
 
-        // تنظیم Listener برای چک‌باکس‌ها
         val checkListener = CompoundButton.OnCheckedChangeListener { _, isChecked ->
-            // اگر چک‌باکس تیک خورد و سیستم در حال ریست کردن خودکار نبود، صدای کلیک بیاید
             if (isChecked && !isResetting) {
                 playClickSound()
             }
@@ -55,18 +52,15 @@ class MainActivity : AppCompatActivity() {
         checkBox3.setOnCheckedChangeListener(checkListener)
         checkBox4.setOnCheckedChangeListener(checkListener)
 
-        // دکمه آیه بعدی
         nextButton.setOnClickListener {
             loadNextVerse()
         }
 
-        // در شروع برنامه دکمه بعدی غیرفعال باشد و آیه اول لود شود
         nextButton.isEnabled = false
         loadNextVerse()
     }
 
     private fun checkAllCompleted() {
-        // اگر سیستم در حال پاک کردن تیک‌هاست، این تابع فعلاً کاری نکند
         if (isResetting) return
 
         val allChecked = checkBox1.isChecked && checkBox2.isChecked && checkBox3.isChecked && checkBox4.isChecked
@@ -75,19 +69,17 @@ class MainActivity : AppCompatActivity() {
             nextButton.isEnabled = true
             playSuccessSound()
             
-            // ذخیره پیشرفت در داشبورد
-            val currentProgress = ProgressManager.getProgress(this)
-            ProgressManager.saveProgress(this, currentProgress + 1)
+            // اصلاح نام متدها بر اساس ProgressManager.kt پروژه شما
+            val currentIndex = ProgressManager.getIndex(this)
+            ProgressManager.saveIndex(this, currentIndex + 1)
         } else {
             nextButton.isEnabled = false
         }
     }
 
     private fun loadNextVerse() {
-        // روشن کردن حالت ریست تا صدای کلیک و موفقیت الکی پخش نشود
         isResetting = true
 
-        // برداشتن تیک چک‌باکس‌ها برای آیه جدید
         checkBox1.isChecked = false
         checkBox2.isChecked = false
         checkBox3.isChecked = false
@@ -95,19 +87,14 @@ class MainActivity : AppCompatActivity() {
         
         nextButton.isEnabled = false
         
-        // خاموش کردن حالت ریست بعد از اتمام پاکسازی
         isResetting = false
 
-        // اینجا می‌توانید کد لود کردن متن آیه از Repository را قرار دهید
-        // مثال:
-        // val verse = VerseRepository.getNextVerse()
-        // verseTextView.text = verse.text
-        verseTextView.text = "اینجا متن آیه بعدی نمایش داده می‌شود..."
+        // تخصیص متن به arabicText
+        arabicText.text = "اینجا متن آیه بعدی نمایش داده می‌شود..."
     }
 
     private fun playClickSound() {
         try {
-            // پخش صدای کلیک
             val mediaPlayer = MediaPlayer.create(this, R.raw.click)
             mediaPlayer.start()
             mediaPlayer.setOnCompletionListener { it.release() }
@@ -118,7 +105,6 @@ class MainActivity : AppCompatActivity() {
 
     private fun playSuccessSound() {
         try {
-            // پخش صدای موفقیت و تکمیل شدن هر ۴ مرحله
             val mediaPlayer = MediaPlayer.create(this, R.raw.success)
             mediaPlayer.start()
             mediaPlayer.setOnCompletionListener { it.release() }

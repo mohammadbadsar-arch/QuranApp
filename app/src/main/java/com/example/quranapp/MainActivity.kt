@@ -60,7 +60,7 @@ class MainActivity : AppCompatActivity() {
         loadNextVerse()
     }
 
-    private fun checkAllCompleted() {
+       private fun checkAllCompleted() {
         if (isResetting) return
 
         val allChecked = checkBox1.isChecked && checkBox2.isChecked && checkBox3.isChecked && checkBox4.isChecked
@@ -69,13 +69,16 @@ class MainActivity : AppCompatActivity() {
             nextButton.isEnabled = true
             playSuccessSound()
             
-            // اصلاح نام متدها بر اساس ProgressManager.kt پروژه شما
-            val currentIndex = ProgressManager.getIndex(this)
-            ProgressManager.saveIndex(this, currentIndex + 1)
+            // اصلاح نحوه فراخوانی ProgressManager
+            val progressManager = ProgressManager(this)
+            val currentIndex = progressManager.getIndex()
+            progressManager.saveIndex(currentIndex + 1)
+            
         } else {
             nextButton.isEnabled = false
         }
     }
+
 
     private fun loadNextVerse() {
         isResetting = true

@@ -25,7 +25,6 @@ class MainActivity : AppCompatActivity() {
 
     private var isResetting = false
     private lateinit var progressManager: ProgressManager
-    private lateinit var repository: VerseRepository
     private var verses: List<Verse> = listOf()
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -46,10 +45,9 @@ class MainActivity : AppCompatActivity() {
         checkBox3 = findViewById(R.id.checkBox3)
         checkBox4 = findViewById(R.id.checkBox4)
 
-        // مقداردهی کلاس‌ها
+        // مقداردهی منیجر و دریافت آیات از آبجکت سینگلتون
         progressManager = ProgressManager(this)
-        repository = VerseRepository(this)
-        verses = repository.loadVerses()
+        verses = VerseRepository.load(this) // اصلاح شد
 
         btnBackToDashboard.setOnClickListener {
             finish() 
@@ -68,9 +66,10 @@ class MainActivity : AppCompatActivity() {
         checkBox4.setOnCheckedChangeListener(checkListener)
 
         nextButton.setOnClickListener {
-            val currentIndex = progressManager.getIndex()
+            // اگر متد در ProgressManager شما نام دیگری دارد، اینجا تغییر دهید
+            val currentIndex = progressManager.getCurrentVerseIndex() 
             if (currentIndex < verses.size - 1) {
-                progressManager.saveIndex(currentIndex + 1)
+                progressManager.saveCurrentVerseIndex(currentIndex + 1)
                 loadVerse()
             }
         }
@@ -106,7 +105,8 @@ class MainActivity : AppCompatActivity() {
         
         isResetting = false
 
-        val currentIndex = progressManager.getIndex()
+        // اگر متد دریافت اندیس متفاوت است، نام آن را بروز کنید
+        val currentIndex = progressManager.getCurrentVerseIndex() 
         
         // اطمینان از اینکه اندیس از محدوده خارج نشود
         if (currentIndex >= verses.size) {
@@ -121,8 +121,10 @@ class MainActivity : AppCompatActivity() {
         translation.text = currentVerse.persian_translation
         
         // نمایش مثال‌های کاربردی
-        if (currentVerse.practical_examples.isNotEmpty()) {
-            exampleText.text = currentVerse.practical_examples.joinToString("\n• ", prefix = "• ")
+        // توجه: اگر در فایل Verse.kt متغیر practical_examples از نوع String است، متد joinToString را پاک کنید
+        // و مستقیما بنویسید: exampleText.text = currentVerse.practical_examples
+        if (currentVerse.practical_examples.toString().isNotEmpty()) {
+            exampleText.text = currentVerse.practical_examples.toString()
         } else {
             exampleText.text = "مثالی وجود ندارد."
         }

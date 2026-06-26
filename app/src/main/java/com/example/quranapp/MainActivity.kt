@@ -1,103 +1,129 @@
 package com.example.quranapp
 
-import android.media.MediaPlayer // <-- این خط اضافه شد
+import android.media.MediaPlayer
 import android.os.Bundle
-import android.widget.*
+import android.widget.Button
+import android.widget.CheckBox
+import android.widget.CompoundButton
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
 
-    lateinit var verses: List<Verse>
-    lateinit var progress: ProgressManager
-    var index = 0
+    private lateinit var verseTextView: TextView
+    private lateinit var nextButton: Button
+    private lateinit var btnBackToDashboard: Button
+    
+    private lateinit var checkBox1: CheckBox
+    private lateinit var checkBox2: CheckBox
+    private lateinit var checkBox3: CheckBox
+    private lateinit var checkBox4: CheckBox
+
+    // این متغیر برای این است که وقتی آیه عوض می‌شود و تیک‌ها به صورت خودکار برداشته می‌شوند، صدای کلیک پخش نشود
+    private var isResetting = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        verses = VerseRepository.load(this)
-        progress = ProgressManager(this)
-        index = progress.getIndex()
-
-        val num = findViewById<TextView>(R.id.verseNumber)
-        val ar = findViewById<TextView>(R.id.arabicText)
-        val tr = findViewById<TextView>(R.id.translation)
-        val ex = findViewById<TextView>(R.id.exampleText)
-        val next = findViewById<Button>(R.id.nextButton)
+        // متصل کردن المان‌های UI
+        verseTextView = findViewById(R.id.verseTextView)
+        nextButton = findViewById(R.id.nextButton)
+        btnBackToDashboard = findViewById(R.id.btnBackToDashboard)
         
-        val btnBackToDashboard = findViewById<Button>(R.id.btnBackToDashboard)
+        checkBox1 = findViewById(R.id.checkBox1)
+        checkBox2 = findViewById(R.id.checkBox2)
+        checkBox3 = findViewById(R.id.checkBox3)
+        checkBox4 = findViewById(R.id.checkBox4)
+
+        // دکمه بازگشت به داشبورد
         btnBackToDashboard.setOnClickListener {
-            finish() 
+            finish() // بستن این صفحه و برگشت به داشبورد
         }
-        
-        val cb1 = findViewById<CheckBox>(R.id.checkBox1)
-        val cb2 = findViewById<CheckBox>(R.id.checkBox2)
-        val cb3 = findViewById<CheckBox>(R.id.checkBox3)
-        val cb4 = findViewById<CheckBox>(R.id.checkBox4)
 
-        // تابعی برای بررسی اینکه آیا همه چک‌باکس‌ها تیک خورده‌اند یا خیر
-        fun checkAllCompleted() {
-            val allChecked = cb1.isChecked && cb2.isChecked && cb3.isChecked && cb4.isChecked
-            next.isEnabled = allChecked 
-            
-            if (allChecked) {
-                next.text = "آیه بعدی"
-                // --- پخش افکت صوتی هنگام باز شدن قفل ---
-                try {
-                    val mediaPlayer = MediaPlayer.create(this@MainActivity, R.raw.success)
-                    mediaPlayer.start()
-                    mediaPlayer.setOnCompletionListener { it.release() } // آزادسازی حافظه بعد از اتمام صدا
-                } catch (e: Exception) {
-                    e.printStackTrace()
-                }
-                // ----------------------------------------
-            } else {
-                next.text = "آیه بعدی (قفل)"
+        // تنظیم Listener برای چک‌باکس‌ها
+        val checkListener = CompoundButton.OnCheckedChangeListener { _, isChecked ->
+            // اگر چک‌باکس تیک خورد و سیستم در حال ریست کردن خودکار نبود، صدای کلیک بیاید
+            if (isChecked && !isResetting) {
+                playClickSound()
             }
-        }
-
-        val listener = CompoundButton.OnCheckedChangeListener { _, _ -> checkAllCompleted() }
-        cb1.setOnCheckedChangeListener(listener)
-        cb2.setOnCheckedChangeListener(listener)
-        cb3.setOnCheckedChangeListener(listener)
-        cb4.setOnCheckedChangeListener(listener)
-
-        fun show() {
-            val v = verses[index]
-            num.text = "آیه " + v.number + " - " + v.surah_reference
-            ar.text = v.arabic_text
-            tr.text = v.persian_translation
-            ex.text = v.practical_examples.joinToString("\n")
-            
-            // با رفتن به آیه جدید، چک‌باکس‌ها را ریست می‌کنیم (بدون اجرای لیسنر برای جلوگیری از پخش صدای اشتباه)
-            cb1.setOnCheckedChangeListener(null)
-            cb2.setOnCheckedChangeListener(null)
-            cb3.setOnCheckedChangeListener(null)
-            cb4.setOnCheckedChangeListener(null)
-
-            cb1.isChecked = false
-            cb2.isChecked = false
-            cb3.isChecked = false
-            cb4.isChecked = false
-
-            cb1.setOnCheckedChangeListener(listener)
-            cb2.setOnCheckedChangeListener(listener)
-            cb3.setOnCheckedChangeListener(listener)
-            cb4.setOnCheckedChangeListener(listener)
-            
             checkAllCompleted()
         }
 
-        show()
+        checkBox1.setOnCheckedChangeListener(checkListener)
+        checkBox2.setOnCheckedChangeListener(checkListener)
+        checkBox3.setOnCheckedChangeListener(checkListener)
+        checkBox4.setOnCheckedChangeListener(checkListener)
 
-        next.setOnClickListener {
-            if (index < verses.size - 1) {
-                index++
-                progress.saveIndex(index)
-                show()
-            } else {
-                Toast.makeText(this, "همه آیات تمام شد", Toast.LENGTH_LONG).show()
-            }
+        // دکمه آیه بعدی
+        nextButton.setOnClickListener {
+            loadNextVerse()
+        }
+
+        // در شروع برنامه دکمه بعدی غیرفعال باشد و آیه اول لود شود
+        nextButton.isEnabled = false
+        loadNextVerse()
+    }
+
+    private fun checkAllCompleted() {
+        // اگر سیستم در حال پاک کردن تیک‌هاست، این تابع فعلاً کاری نکند
+        if (isResetting) return
+
+        val allChecked = checkBox1.isChecked && checkBox2.isChecked && checkBox3.isChecked && checkBox4.isChecked
+        
+        if (allChecked) {
+            nextButton.isEnabled = true
+            playSuccessSound()
+            
+            // ذخیره پیشرفت در داشبورد
+            val currentProgress = ProgressManager.getProgress(this)
+            ProgressManager.saveProgress(this, currentProgress + 1)
+        } else {
+            nextButton.isEnabled = false
+        }
+    }
+
+    private fun loadNextVerse() {
+        // روشن کردن حالت ریست تا صدای کلیک و موفقیت الکی پخش نشود
+        isResetting = true
+
+        // برداشتن تیک چک‌باکس‌ها برای آیه جدید
+        checkBox1.isChecked = false
+        checkBox2.isChecked = false
+        checkBox3.isChecked = false
+        checkBox4.isChecked = false
+        
+        nextButton.isEnabled = false
+        
+        // خاموش کردن حالت ریست بعد از اتمام پاکسازی
+        isResetting = false
+
+        // اینجا می‌توانید کد لود کردن متن آیه از Repository را قرار دهید
+        // مثال:
+        // val verse = VerseRepository.getNextVerse()
+        // verseTextView.text = verse.text
+        verseTextView.text = "اینجا متن آیه بعدی نمایش داده می‌شود..."
+    }
+
+    private fun playClickSound() {
+        try {
+            // پخش صدای کلیک
+            val mediaPlayer = MediaPlayer.create(this, R.raw.click)
+            mediaPlayer.start()
+            mediaPlayer.setOnCompletionListener { it.release() }
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
+    }
+
+    private fun playSuccessSound() {
+        try {
+            // پخش صدای موفقیت و تکمیل شدن هر ۴ مرحله
+            val mediaPlayer = MediaPlayer.create(this, R.raw.success)
+            mediaPlayer.start()
+            mediaPlayer.setOnCompletionListener { it.release() }
+        } catch (e: Exception) {
+            e.printStackTrace()
         }
     }
 }

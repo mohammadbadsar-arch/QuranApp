@@ -10,8 +10,11 @@ import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
 
-    // تغییر نام متغیر به arabicText برای همخوانی با activity_main.xml
+    private lateinit var verseNumber: TextView
     private lateinit var arabicText: TextView
+    private lateinit var translation: TextView
+    private lateinit var exampleText: TextView
+    
     private lateinit var nextButton: Button
     private lateinit var btnBackToDashboard: Button
     
@@ -21,13 +24,20 @@ class MainActivity : AppCompatActivity() {
     private lateinit var checkBox4: CheckBox
 
     private var isResetting = false
+    private lateinit var progressManager: ProgressManager
+    private lateinit var repository: VerseRepository
+    private var verses: List<Verse> = listOf()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        // متصل کردن المان‌های UI (استفاده از R.id.arabicText)
+        // متصل کردن المان‌های UI
+        verseNumber = findViewById(R.id.verseNumber)
         arabicText = findViewById(R.id.arabicText)
+        translation = findViewById(R.id.translation)
+        exampleText = findViewById(R.id.exampleText)
+        
         nextButton = findViewById(R.id.nextButton)
         btnBackToDashboard = findViewById(R.id.btnBackToDashboard)
         
@@ -35,6 +45,11 @@ class MainActivity : AppCompatActivity() {
         checkBox2 = findViewById(R.id.checkBox2)
         checkBox3 = findViewById(R.id.checkBox3)
         checkBox4 = findViewById(R.id.checkBox4)
+
+        // مقداردهی کلاس‌ها
+        progressManager = ProgressManager(this)
+        repository = VerseRepository(this)
+        verses = repository.loadVerses()
 
         btnBackToDashboard.setOnClickListener {
             finish() 
@@ -53,14 +68,18 @@ class MainActivity : AppCompatActivity() {
         checkBox4.setOnCheckedChangeListener(checkListener)
 
         nextButton.setOnClickListener {
-            loadNextVerse()
+            val currentIndex = progressManager.getIndex()
+            if (currentIndex < verses.size - 1) {
+                progressManager.saveIndex(currentIndex + 1)
+                loadVerse()
+            }
         }
 
         nextButton.isEnabled = false
-        loadNextVerse()
+        loadVerse()
     }
 
-       private fun checkAllCompleted() {
+    private fun checkAllCompleted() {
         if (isResetting) return
 
         val allChecked = checkBox1.isChecked && checkBox2.isChecked && checkBox3.isChecked && checkBox4.isChecked
@@ -68,19 +87,14 @@ class MainActivity : AppCompatActivity() {
         if (allChecked) {
             nextButton.isEnabled = true
             playSuccessSound()
-            
-            // اصلاح نحوه فراخوانی ProgressManager
-            val progressManager = ProgressManager(this)
-            val currentIndex = progressManager.getIndex()
-            progressManager.saveIndex(currentIndex + 1)
-            
         } else {
             nextButton.isEnabled = false
         }
     }
 
+    private fun loadVerse() {
+        if (verses.isEmpty()) return
 
-    private fun loadNextVerse() {
         isResetting = true
 
         checkBox1.isChecked = false
@@ -92,8 +106,26 @@ class MainActivity : AppCompatActivity() {
         
         isResetting = false
 
-        // تخصیص متن به arabicText
-        arabicText.text = "اینجا متن آیه بعدی نمایش داده می‌شود..."
+        val currentIndex = progressManager.getIndex()
+        
+        // اطمینان از اینکه اندیس از محدوده خارج نشود
+        if (currentIndex >= verses.size) {
+           return 
+        }
+
+        val currentVerse = verses[currentIndex]
+
+        // نمایش اطلاعات آیه
+        verseNumber.text = "آیه ${currentVerse.number} - ${currentVerse.surah_reference}"
+        arabicText.text = currentVerse.arabic_text
+        translation.text = currentVerse.persian_translation
+        
+        // نمایش مثال‌های کاربردی
+        if (currentVerse.practical_examples.isNotEmpty()) {
+            exampleText.text = currentVerse.practical_examples.joinToString("\n• ", prefix = "• ")
+        } else {
+            exampleText.text = "مثالی وجود ندارد."
+        }
     }
 
     private fun playClickSound() {

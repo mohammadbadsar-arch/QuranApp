@@ -16,11 +16,11 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
-        // متصل کردن متغیرها به فایل XML (مطمئن شوید IDها در XML همین مقادیر باشند)
-        val etUsername = findViewById<EditText>(R.id.et_username)
-        val etPassword = findViewById<EditText>(R.id.et_password)
-        val btnLogin = findViewById<Button>(R.id.btn_login)
-        val btnRegister = findViewById<Button>(R.id.btn_register)
+       // متصل کردن متغیرها به فایل XML با ID های صحیح
+val etUsername = findViewById<EditText>(R.id.etUsername)
+val etPassword = findViewById<EditText>(R.id.etPassword)
+val btnLogin = findViewById<Button>(R.id.btnLogin)
+val btnRegister = findViewById<Button>(R.id.btnRegister)
 
         // دکمه ثبت نام
         btnRegister.setOnClickListener {

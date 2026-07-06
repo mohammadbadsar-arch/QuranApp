@@ -1,0 +1,88 @@
+package com.example.quranapp
+
+import android.content.Intent
+import android.os.Bundle
+import android.widget.Button
+import android.widget.EditText
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
+
+class LoginActivity : AppCompatActivity() {
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_login)
+
+        // متصل کردن متغیرها به فایل XML (مطمئن شوید IDها در XML همین مقادیر باشند)
+        val etUsername = findViewById<EditText>(R.id.et_username)
+        val etPassword = findViewById<EditText>(R.id.et_password)
+        val btnLogin = findViewById<Button>(R.id.btn_login)
+        val btnRegister = findViewById<Button>(R.id.btn_register)
+
+        // دکمه ثبت نام
+        btnRegister.setOnClickListener {
+            val username = etUsername.text.toString().trim()
+            val password = etPassword.text.toString().trim()
+
+            if (username.isEmpty() || password.isEmpty()) {
+                Toast.makeText(this, "لطفاً نام کاربری و رمز عبور را وارد کنید", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
+
+            // فراخوانی API ثبت نام
+            RetrofitClient.instance.registerUser(username, password).enqueue(object : Callback<AuthResponse> {
+                override fun onResponse(call: Call<AuthResponse>, response: Response<AuthResponse>) {
+                    if (response.isSuccessful && response.body() != null) {
+                        val authResponse = response.body()!!
+                        // نمایش پیام دریافتی از سرور (موفق یا ناموفق بودن ثبت نام)
+                        Toast.makeText(this@LoginActivity, authResponse.message, Toast.LENGTH_LONG).show()
+                    }
+                }
+
+                override fun onFailure(call: Call<AuthResponse>, t: Throwable) {
+                    Toast.makeText(this@LoginActivity, "خطا در ارتباط با سرور: ${t.message}", Toast.LENGTH_LONG).show()
+                }
+            })
+        }
+
+        // دکمه ورود
+        btnLogin.setOnClickListener {
+            val username = etUsername.text.toString().trim()
+            val password = etPassword.text.toString().trim()
+
+            if (username.isEmpty() || password.isEmpty()) {
+                Toast.makeText(this, "لطفاً نام کاربری و رمز عبور را وارد کنید", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
+
+            // فراخوانی API ورود
+            RetrofitClient.instance.loginUser(username, password).enqueue(object : Callback<AuthResponse> {
+                override fun onResponse(call: Call<AuthResponse>, response: Response<AuthResponse>) {
+                    if (response.isSuccessful && response.body() != null) {
+                        val authResponse = response.body()!!
+                        
+                        if (authResponse.success) {
+                            Toast.makeText(this@LoginActivity, "ورود موفق!", Toast.LENGTH_SHORT).show()
+                            
+                            // در صورت موفقیت، کاربر را به صفحه اصلی هدایت می‌کنیم
+                            val intent = Intent(this@LoginActivity, MainActivity::class.java)
+                            startActivity(intent)
+                            finish() // بستن صفحه لاگین تا با زدن دکمه بک (Back) به اینجا برنگردد
+                            
+                        } else {
+                            // نمایش دلیل خطای ورود (مثلاً رمز اشتباه است)
+                            Toast.makeText(this@LoginActivity, authResponse.message, Toast.LENGTH_LONG).show()
+                        }
+                    }
+                }
+
+                override fun onFailure(call: Call<AuthResponse>, t: Throwable) {
+                    Toast.makeText(this@LoginActivity, "خطا در ارتباط با سرور: ${t.message}", Toast.LENGTH_LONG).show()
+                }
+            })
+        }
+    }
+}

@@ -20,4 +20,18 @@ interface ApiService {
         @Field("username") username: String,
         @Field("password") password: String
     ): Call<AuthResponse>
+
+    // دستورات جدید برای ارسال تیک‌ها و دریافت تایید معلم
+    @FormUrlEncoded
+    @POST("update_progress.php")
+    fun updateProgress(
+        @Field("student_id") studentId: String,
+        @Field("verse_index") verseIndex: String
+    ): Call<ProgressResponse>
+
+    @FormUrlEncoded
+    @POST("get_progress.php")
+    fun getProgress(
+        @Field("student_id") studentId: String
+    ): Call<GetProgressResponse>
 }

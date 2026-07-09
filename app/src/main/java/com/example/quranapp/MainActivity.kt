@@ -1,12 +1,17 @@
 package com.example.quranapp
 
+import android.content.Context
 import android.media.MediaPlayer
 import android.os.Bundle
 import android.widget.Button
 import android.widget.CheckBox
 import android.widget.CompoundButton
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 class MainActivity : AppCompatActivity() {
 
@@ -31,7 +36,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        // متصل کردن المان‌های UI
         verseNumber = findViewById(R.id.verseNumber)
         arabicText = findViewById(R.id.arabicText)
         translation = findViewById(R.id.translation)
@@ -45,9 +49,8 @@ class MainActivity : AppCompatActivity() {
         checkBox3 = findViewById(R.id.checkBox3)
         checkBox4 = findViewById(R.id.checkBox4)
 
-        // مقداردهی منیجر و دریافت آیات از آبجکت سینگلتون
         progressManager = ProgressManager(this)
-        verses = VerseRepository.load(this) // اصلاح شد
+        verses = VerseRepository.load(this)
 
         btnBackToDashboard.setOnClickListener {
             finish() 
@@ -66,11 +69,7 @@ class MainActivity : AppCompatActivity() {
         checkBox4.setOnCheckedChangeListener(checkListener)
 
         nextButton.setOnClickListener {
-            val currentIndex = progressManager.getIndex() 
-            if (currentIndex < verses.size - 1) {
-                progressManager.saveIndex(currentIndex + 1)
-                loadVerse()
-            }
+            sendProgressToServer()
         }
 
         nextButton.isEnabled = false
@@ -84,10 +83,43 @@ class MainActivity : AppCompatActivity() {
         
         if (allChecked) {
             nextButton.isEnabled = true
+            nextButton.text = "ارسال برای تایید معلم"
             playSuccessSound()
         } else {
             nextButton.isEnabled = false
+            nextButton.text = "آیه بعدی"
         }
+    }
+
+    private fun sendProgressToServer() {
+        val currentIndex = progressManager.getIndex()
+        
+        // دریافت آیدی دانش‌آموز (با فرض ذخیره در SharedPreferences هنگام لاگین)
+        val sharedPref = getSharedPreferences("AppPrefs", Context.MODE_PRIVATE)
+        val studentId = sharedPref.getString("user_id", "1") ?: "1"
+
+        nextButton.isEnabled = false
+        nextButton.text = "در حال ارسال..."
+
+        RetrofitClient.instance.updateProgress(studentId, currentIndex.toString())
+            .enqueue(object : Callback<ProgressResponse> {
+                override fun onResponse(call: Call<ProgressResponse>, response: Response<ProgressResponse>) {
+                    if (response.isSuccessful && response.body()?.error == false) {
+                        Toast.makeText(this@MainActivity, "با موفقیت ارسال شد. در انتظار تایید معلم...", Toast.LENGTH_LONG).show()
+                        nextButton.text = "در انتظار تایید..."
+                    } else {
+                        Toast.makeText(this@MainActivity, "خطا در ارسال اطلاعات", Toast.LENGTH_SHORT).show()
+                        nextButton.isEnabled = true
+                        nextButton.text = "تلاش مجدد"
+                    }
+                }
+
+                override fun onFailure(call: Call<ProgressResponse>, t: Throwable) {
+                    Toast.makeText(this@MainActivity, "خطای شبکه!", Toast.LENGTH_SHORT).show()
+                    nextButton.isEnabled = true
+                    nextButton.text = "تلاش مجدد"
+                }
+            })
     }
 
     private fun loadVerse() {
@@ -101,24 +133,22 @@ class MainActivity : AppCompatActivity() {
         checkBox4.isChecked = false
         
         nextButton.isEnabled = false
+        nextButton.text = "آیه بعدی"
         
         isResetting = false
 
         val currentIndex = progressManager.getIndex() 
         
-        // اطمینان از اینکه اندیس از محدوده خارج نشود
         if (currentIndex >= verses.size) {
            return 
         }
 
         val currentVerse = verses[currentIndex]
 
-        // نمایش اطلاعات آیه
         verseNumber.text = "آیه ${currentVerse.number} - ${currentVerse.surah_reference}"
         arabicText.text = currentVerse.arabic_text
         translation.text = currentVerse.persian_translation
-        
-        // نمایش مثال‌های کاربردی
+
         if (currentVerse.practical_examples.toString().isNotEmpty()) {
             exampleText.text = currentVerse.practical_examples.toString()
         } else {

@@ -1,5 +1,6 @@
 package com.example.quranapp
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
@@ -16,11 +17,11 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
-       // متصل کردن متغیرها به فایل XML با ID های صحیح
-val etUsername = findViewById<EditText>(R.id.etUsername)
-val etPassword = findViewById<EditText>(R.id.etPassword)
-val btnLogin = findViewById<Button>(R.id.btnLogin)
-val btnRegister = findViewById<Button>(R.id.btnRegister)
+        // متصل کردن متغیرها به فایل XML با ID های صحیح
+        val etUsername = findViewById<EditText>(R.id.etUsername)
+        val etPassword = findViewById<EditText>(R.id.etPassword)
+        val btnLogin = findViewById<Button>(R.id.btnLogin)
+        val btnRegister = findViewById<Button>(R.id.btnRegister)
 
         // دکمه ثبت نام
         btnRegister.setOnClickListener {
@@ -65,6 +66,12 @@ val btnRegister = findViewById<Button>(R.id.btnRegister)
                         val authResponse = response.body()!!
                         
                         if (authResponse.success) {
+                            
+                            // ---- ذخیره شناسه کاربر در حافظه دستگاه ----
+                            val sharedPref = getSharedPreferences("AppPrefs", Context.MODE_PRIVATE)
+                            sharedPref.edit().putString("user_id", authResponse.user_id.toString()).apply()
+                            // ------------------------------------------
+
                             Toast.makeText(this@LoginActivity, "ورود موفق!", Toast.LENGTH_SHORT).show()
                             
                             // در صورت موفقیت، کاربر را به صفحه اصلی هدایت می‌کنیم

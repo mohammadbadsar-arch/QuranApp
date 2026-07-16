@@ -69,11 +69,19 @@ class MainActivity : AppCompatActivity() {
         checkBox4.setOnCheckedChangeListener(checkListener)
 
         nextButton.setOnClickListener {
-            sendProgressToServer()
+            // اگر دکمه در حالت رفرش است، از سرور وضعیت را بپرس، در غیر اینصورت اطلاعات را ارسال کن
+            if (nextButton.text.contains("بررسی وضعیت")) {
+                syncProgressWithServer()
+            } else {
+                sendProgressToServer()
+            }
         }
 
         nextButton.isEnabled = false
+        
+        // اول آیه را لود می‌کنیم، سپس وضعیت را از سرور استعلام می‌گیریم
         loadVerse()
+        syncProgressWithServer()
     }
 
     private fun checkAllCompleted() {
@@ -94,15 +102,11 @@ class MainActivity : AppCompatActivity() {
     private fun sendProgressToServer() {
         val currentIndex = progressManager.getIndex()
         
-        // دریافت آیدی دانش‌آموز
         val sharedPref = getSharedPreferences("AppPrefs", Context.MODE_PRIVATE)
-        val studentId = sharedPref.getString("user_id", "") // پیش‌فرض را خالی گذاشتیم تا عدد ۱ الکی ارسال نشود
+        val studentId = sharedPref.getString("user_id", "")
 
-        // اگر آیدی کاربر ذخیره نشده بود (نیاز به لاگین مجدد)
         if (studentId.isNullOrEmpty()) {
-            Toast.makeText(this, "شناسه کاربر یافت نشد! لطفاً از برنامه خارج شده و دوباره وارد شوید.", Toast.LENGTH_LONG).show()
-            nextButton.isEnabled = true
-            nextButton.text = "ارسال برای تایید معلم"
+            Toast.makeText(this, "شناسه کاربر یافت نشد! لطفاً مجدداً وارد شوید.", Toast.LENGTH_LONG).show()
             return
         }
 
@@ -113,27 +117,110 @@ class MainActivity : AppCompatActivity() {
             .enqueue(object : Callback<ProgressResponse> {
                 override fun onResponse(call: Call<ProgressResponse>, response: Response<ProgressResponse>) {
                     if (response.isSuccessful && response.body()?.error == false) {
-                        Toast.makeText(this@MainActivity, "با موفقیت ارسال شد. در انتظار تایید معلم...", Toast.LENGTH_LONG).show()
-                        nextButton.text = "در انتظار تایید..."
+                        Toast.makeText(this@MainActivity, "با موفقیت ارسال شد.", Toast.LENGTH_SHORT).show()
+                        // پس از ارسال موفق، UI را به حالت انتظار می‌بریم
+                        setUiToPendingState()
                     } else {
                         Toast.makeText(this@MainActivity, "خطا در ارسال اطلاعات", Toast.LENGTH_SHORT).show()
                         nextButton.isEnabled = true
-                        nextButton.text = "تلاش مجدد"
+                        nextButton.text = "ارسال برای تایید معلم"
                     }
                 }
 
                 override fun onFailure(call: Call<ProgressResponse>, t: Throwable) {
                     Toast.makeText(this@MainActivity, "خطای شبکه!", Toast.LENGTH_SHORT).show()
                     nextButton.isEnabled = true
-                    nextButton.text = "تلاش مجدد"
+                    nextButton.text = "ارسال برای تایید معلم"
                 }
             })
+    }
+
+    // این تابع جدید، وضعیت پیشرفت را از سرور دریافت و با گوشی همگام می‌کند
+    private fun syncProgressWithServer() {
+        val sharedPref = getSharedPreferences("AppPrefs", Context.MODE_PRIVATE)
+        val studentId = sharedPref.getString("user_id", "")
+        if (studentId.isNullOrEmpty()) return
+
+        nextButton.text = "در حال ارتباط با سرور..."
+        nextButton.isEnabled = false
+
+        RetrofitClient.instance.getProgress(studentId).enqueue(object : Callback<GetProgressResponse> {
+            override fun onResponse(call: Call<GetProgressResponse>, response: Response<GetProgressResponse>) {
+                val progressList = response.body()?.progress
+                
+                if (response.isSuccessful && progressList != null) {
+                    var maxApprovedIndex = -1
+                    var isCurrentPending = false
+                    val currentIndex = progressManager.getIndex()
+
+                    // بررسی تمام رکوردهای دریافتی از سرور
+                    for (item in progressList) {
+                        val verseIdx = item.verse_index.toIntOrNull() ?: continue
+                        if (item.status == "approved") {
+                            if (verseIdx > maxApprovedIndex) {
+                                maxApprovedIndex = verseIdx
+                            }
+                        } else if (item.status == "pending") {
+                            if (verseIdx == currentIndex) {
+                                isCurrentPending = true
+                            }
+                        }
+                    }
+
+                    // اگر معلم آیه فعلی (یا آیات بعدی) را تایید کرده است:
+                    if (maxApprovedIndex >= currentIndex) {
+                        progressManager.saveIndex(maxApprovedIndex + 1) // رفتن به آیه جدید
+                        Toast.makeText(this@MainActivity, "معلم پیشرفت شما را تایید کرد!", Toast.LENGTH_LONG).show()
+                        loadVerse() // لود کردن آیه جدید
+                    } 
+                    // اگر آیه فعلی در سرور هنوز در انتظار تایید است:
+                    else if (isCurrentPending) {
+                        setUiToPendingState()
+                    } 
+                    // اگر هیچکدام (حالت عادی یادگیری):
+                    else {
+                        checkAllCompleted() 
+                    }
+                } else {
+                    checkAllCompleted()
+                }
+            }
+
+            override fun onFailure(call: Call<GetProgressResponse>, t: Throwable) {
+                checkAllCompleted() // بازگرداندن دکمه به حالت قبل در صورت خطا
+                Toast.makeText(this@MainActivity, "عدم اتصال به سرور جهت همگام‌سازی", Toast.LENGTH_SHORT).show()
+            }
+        })
+    }
+
+    // تابعی برای قفل کردن چک‌باکس‌ها و تغییر دکمه به حالت رفرش
+    private fun setUiToPendingState() {
+        isResetting = true
+        checkBox1.isChecked = true
+        checkBox2.isChecked = true
+        checkBox3.isChecked = true
+        checkBox4.isChecked = true
+        
+        checkBox1.isEnabled = false
+        checkBox2.isEnabled = false
+        checkBox3.isEnabled = false
+        checkBox4.isEnabled = false
+        isResetting = false
+
+        nextButton.isEnabled = true
+        nextButton.text = "بررسی وضعیت تایید (رفرش)"
     }
 
     private fun loadVerse() {
         if (verses.isEmpty()) return
 
         isResetting = true
+        
+        // فعال کردن مجدد چک باکس‌ها برای آیه جدید
+        checkBox1.isEnabled = true
+        checkBox2.isEnabled = true
+        checkBox3.isEnabled = true
+        checkBox4.isEnabled = true
 
         checkBox1.isChecked = false
         checkBox2.isChecked = false
@@ -148,7 +235,12 @@ class MainActivity : AppCompatActivity() {
         val currentIndex = progressManager.getIndex() 
         
         if (currentIndex >= verses.size) {
-           return 
+            verseNumber.text = "پایان مسیر"
+            arabicText.text = "تبریک! شما همه آیات را یاد گرفتید."
+            translation.text = ""
+            exampleText.text = ""
+            nextButton.isEnabled = false
+            return 
         }
 
         val currentVerse = verses[currentIndex]

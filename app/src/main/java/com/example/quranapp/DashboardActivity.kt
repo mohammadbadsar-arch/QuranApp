@@ -68,9 +68,9 @@ class DashboardActivity : AppCompatActivity() {
                     // ایمن‌سازی در برابر Null (حذف علامت !! که خطرناک بود)
                     val progressList = response.body()?.progress ?: return
                     
-                    // پیدا کردن بالاترین شماره آیه‌ای که تایید شده (approved)
+                    // پیدا کردن بالاترین شماره آیه‌ای که تایید شده (approved) و تبدیل مقدار به عدد
                     val maxApprovedIndex = progressList.filter { it.status == "approved" }
-                        .maxOfOrNull { it.verse_index } ?: -1
+                        .maxOfOrNull { it.verse_index.toString().toIntOrNull() ?: -1 } ?: -1
 
                     if (maxApprovedIndex >= 0) {
                         // اگر تایید شده بود، قفل آیه بعدی باز می‌شود

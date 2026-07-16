@@ -94,9 +94,17 @@ class MainActivity : AppCompatActivity() {
     private fun sendProgressToServer() {
         val currentIndex = progressManager.getIndex()
         
-        // دریافت آیدی دانش‌آموز (با فرض ذخیره در SharedPreferences هنگام لاگین)
+        // دریافت آیدی دانش‌آموز
         val sharedPref = getSharedPreferences("AppPrefs", Context.MODE_PRIVATE)
-        val studentId = sharedPref.getString("user_id", "1") ?: "1"
+        val studentId = sharedPref.getString("user_id", "") // پیش‌فرض را خالی گذاشتیم تا عدد ۱ الکی ارسال نشود
+
+        // اگر آیدی کاربر ذخیره نشده بود (نیاز به لاگین مجدد)
+        if (studentId.isNullOrEmpty()) {
+            Toast.makeText(this, "شناسه کاربر یافت نشد! لطفاً از برنامه خارج شده و دوباره وارد شوید.", Toast.LENGTH_LONG).show()
+            nextButton.isEnabled = true
+            nextButton.text = "ارسال برای تایید معلم"
+            return
+        }
 
         nextButton.isEnabled = false
         nextButton.text = "در حال ارسال..."

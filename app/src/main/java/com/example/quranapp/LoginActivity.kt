@@ -22,6 +22,21 @@ class LoginActivity : AppCompatActivity() {
         val etPassword = findViewById<EditText>(R.id.etPassword)
         val btnLogin = findViewById<Button>(R.id.btnLogin)
         val btnRegister = findViewById<Button>(R.id.btnRegister)
+        val btnGuestLogin = findViewById<Button>(R.id.btnGuestLogin) // دکمه مهمان
+
+        // دکمه ورود مهمان (آفلاین)
+        btnGuestLogin.setOnClickListener {
+            // ذخیره کلمه guest به عنوان شناسه کاربر
+            val sharedPref = getSharedPreferences("AppPrefs", Context.MODE_PRIVATE)
+            sharedPref.edit().putString("user_id", "guest").apply()
+            
+            Toast.makeText(this, "ورود در حالت آفلاین", Toast.LENGTH_SHORT).show()
+            
+            // انتقال به صفحه اصلی
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
 
         // دکمه ثبت نام
         btnRegister.setOnClickListener {

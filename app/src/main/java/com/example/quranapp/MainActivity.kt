@@ -4,12 +4,14 @@ import android.content.Context
 import android.content.Intent
 import android.media.MediaPlayer
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
 import android.widget.CheckBox
 import android.widget.CompoundButton
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.cardview.widget.CardView
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -20,6 +22,10 @@ class MainActivity : AppCompatActivity() {
     private lateinit var arabicText: TextView
     private lateinit var translation: TextView
     private lateinit var exampleText: TextView
+    
+    private lateinit var cardTranslation: CardView
+    private lateinit var cardExample: CardView
+    private lateinit var btnShowTranslation: Button
     
     private lateinit var nextButton: Button
     private lateinit var btnBackToDashboard: Button
@@ -42,6 +48,10 @@ class MainActivity : AppCompatActivity() {
         translation = findViewById(R.id.translation)
         exampleText = findViewById(R.id.exampleText)
         
+        cardTranslation = findViewById(R.id.cardTranslation)
+        cardExample = findViewById(R.id.cardExample)
+        btnShowTranslation = findViewById(R.id.btnShowTranslation)
+        
         nextButton = findViewById(R.id.nextButton)
         btnBackToDashboard = findViewById(R.id.btnBackToDashboard)
         
@@ -53,11 +63,19 @@ class MainActivity : AppCompatActivity() {
         progressManager = ProgressManager(this)
         verses = VerseRepository.load(this)
 
-        // اصلاح مهم: بازگشت اصولی به داشبورد به جای بسته شدن کامل برنامه
+        // بازگشت اصولی به داشبورد
         btnBackToDashboard.setOnClickListener {
             val intent = Intent(this@MainActivity, DashboardActivity::class.java)
             startActivity(intent)
             finish() 
+        }
+
+        // عملکرد دکمه نمایش ترجمه
+        btnShowTranslation.setOnClickListener {
+            cardTranslation.visibility = View.VISIBLE
+            cardExample.visibility = View.VISIBLE
+            btnShowTranslation.visibility = View.GONE
+            playClickSound()
         }
 
         val checkListener = CompoundButton.OnCheckedChangeListener { _, isChecked ->
@@ -276,6 +294,11 @@ class MainActivity : AppCompatActivity() {
 
         isResetting = true
 
+        // مخفی کردن ترجمه و مثال برای آیه جدید
+        cardTranslation.visibility = View.GONE
+        cardExample.visibility = View.GONE
+        btnShowTranslation.visibility = View.VISIBLE
+
         checkBox1.isEnabled = true
         checkBox2.isEnabled = true
         checkBox3.isEnabled = true
@@ -298,6 +321,12 @@ class MainActivity : AppCompatActivity() {
             arabicText.text = "تبریک! شما همه آیات را یاد گرفتید."
             translation.text = ""
             exampleText.text = ""
+            
+            // نمایش دائم برای پایان مسیر
+            cardTranslation.visibility = View.VISIBLE
+            cardExample.visibility = View.VISIBLE
+            btnShowTranslation.visibility = View.GONE
+            
             nextButton.isEnabled = false
 
             checkBox1.isEnabled = false

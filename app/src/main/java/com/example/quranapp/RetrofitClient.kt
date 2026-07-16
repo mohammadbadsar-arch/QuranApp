@@ -5,7 +5,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 object RetrofitClient {
     // آدرس IP برای اتصال شبیه‌ساز اندروید استودیو به لوکال‌هاست سیستم شما
-    private const val BASE_URL = "http://10.15.70.17/quran_api/"
+    private const val BASE_URL = "http://10.145.50.17/quran_api/"
 
     val instance: ApiService by lazy {
         val retrofit = Retrofit.Builder()

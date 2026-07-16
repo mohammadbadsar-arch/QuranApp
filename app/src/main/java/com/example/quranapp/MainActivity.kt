@@ -69,19 +69,36 @@ class MainActivity : AppCompatActivity() {
         checkBox4.setOnCheckedChangeListener(checkListener)
 
         nextButton.setOnClickListener {
-            // اگر دکمه در حالت رفرش است، از سرور وضعیت را بپرس، در غیر اینصورت اطلاعات را ارسال کن
-            if (nextButton.text.contains("بررسی وضعیت")) {
-                syncProgressWithServer()
+            val sharedPref = getSharedPreferences("AppPrefs", Context.MODE_PRIVATE)
+            val studentId = sharedPref.getString("user_id", "")
+            val isGuest = (studentId == "guest")
+
+            if (isGuest) {
+                // --- منطق حالت آفلاین (بدون نیاز به سرور) ---
+                val currentIndex = progressManager.getIndex()
+                progressManager.saveIndex(currentIndex + 1) // ذخیره آیه جدید در گوشی
+                Toast.makeText(this@MainActivity, "آفرین! آیه بعدی...", Toast.LENGTH_SHORT).show()
+                loadVerse() // بارگذاری مستقیم آیه بعدی
             } else {
-                sendProgressToServer()
+                // --- منطق حالت آنلاین (کاربر واقعی) ---
+                if (nextButton.text.contains("بررسی وضعیت")) {
+                    syncProgressWithServer()
+                } else {
+                    sendProgressToServer()
+                }
             }
         }
 
         nextButton.isEnabled = false
         
-        // اول آیه را لود می‌کنیم، سپس وضعیت را از سرور استعلام می‌گیریم
+        // اول آیه را لود می‌کنیم
         loadVerse()
-        syncProgressWithServer()
+        
+        // فقط اگر کاربر واقعی بود وضعیت را از سرور استعلام می‌گیریم
+        val sharedPref = getSharedPreferences("AppPrefs", Context.MODE_PRIVATE)
+        if (sharedPref.getString("user_id", "") != "guest") {
+            syncProgressWithServer()
+        }
     }
 
     private fun checkAllCompleted() {
@@ -91,7 +108,16 @@ class MainActivity : AppCompatActivity() {
         
         if (allChecked) {
             nextButton.isEnabled = true
-            nextButton.text = "ارسال برای تایید معلم"
+            
+            // چک کردن حالت مهمان
+            val sharedPref = getSharedPreferences("AppPrefs", Context.MODE_PRIVATE)
+            val isGuest = sharedPref.getString("user_id", "") == "guest"
+            
+            if (isGuest) {
+                nextButton.text = "رفتن به آیه بعدی (آفلاین)"
+            } else {
+                nextButton.text = "ارسال برای تایید معلم"
+            }
             playSuccessSound()
         } else {
             nextButton.isEnabled = false
@@ -135,7 +161,6 @@ class MainActivity : AppCompatActivity() {
             })
     }
 
-    // این تابع جدید، وضعیت پیشرفت را از سرور دریافت و با گوشی همگام می‌کند
     private fun syncProgressWithServer() {
         val sharedPref = getSharedPreferences("AppPrefs", Context.MODE_PRIVATE)
         val studentId = sharedPref.getString("user_id", "")
@@ -193,7 +218,6 @@ class MainActivity : AppCompatActivity() {
         })
     }
 
-    // تابعی برای قفل کردن چک‌باکس‌ها و تغییر دکمه به حالت رفرش
     private fun setUiToPendingState() {
         isResetting = true
         checkBox1.isChecked = true
@@ -240,6 +264,12 @@ class MainActivity : AppCompatActivity() {
             translation.text = ""
             exampleText.text = ""
             nextButton.isEnabled = false
+            
+            // مخفی کردن چک‌باکس‌ها در صورت اتمام همه آیات (اختیاری)
+            checkBox1.isEnabled = false
+            checkBox2.isEnabled = false
+            checkBox3.isEnabled = false
+            checkBox4.isEnabled = false
             return 
         }
 

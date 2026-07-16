@@ -61,11 +61,12 @@ class DashboardActivity : AppCompatActivity() {
 
         if (studentId.isEmpty()) return
 
-        // فراخوانی API برای دریافت وضعیت
-        RetrofitClient.apiService.getProgress(studentId).enqueue(object : Callback<GetProgressResponse> {
+        // اصلاح: استفاده از RetrofitClient.instance به جای apiService
+        RetrofitClient.instance.getProgress(studentId).enqueue(object : Callback<GetProgressResponse> {
             override fun onResponse(call: Call<GetProgressResponse>, response: Response<GetProgressResponse>) {
-                if (response.isSuccessful && response.body() != null) {
-                    val progressList = response.body()!!.progress
+                if (response.isSuccessful) {
+                    // ایمن‌سازی در برابر Null (حذف علامت !! که خطرناک بود)
+                    val progressList = response.body()?.progress ?: return
                     
                     // پیدا کردن بالاترین شماره آیه‌ای که تایید شده (approved)
                     val maxApprovedIndex = progressList.filter { it.status == "approved" }

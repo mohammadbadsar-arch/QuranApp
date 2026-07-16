@@ -37,4 +37,13 @@
         android:layout_marginTop="8dp"
         style="?android:attr/borderlessButtonStyle" />
 
+    <!-- دکمه ورود مهمان اضافه شد -->
+    <Button
+        android:id="@+id/btnGuestLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="ورود به عنوان مهمان (آفلاین)"
+        android:backgroundTint="#757575" />
+
 </LinearLayout>

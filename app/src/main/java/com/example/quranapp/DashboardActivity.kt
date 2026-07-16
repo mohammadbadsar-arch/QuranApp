@@ -5,11 +5,16 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.ProgressBar
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 class DashboardActivity : AppCompatActivity() {
 
     private lateinit var progressManager: ProgressManager
+    private val totalVerses = 100 // تعداد کل آیات
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -18,32 +23,73 @@ class DashboardActivity : AppCompatActivity() {
         progressManager = ProgressManager(this)
 
         val progressBar = findViewById<ProgressBar>(R.id.progressBar)
-        val tvProgressText = findViewById<TextView>(R.id.tvProgressText)
-        val btnStart = findViewById<Button>(R.id.btnStart)
-
-        // تعداد کل آیات (فعلا ثابت 100 در نظر می‌گیریم)
-        val totalVerses = 100
-        
-        // ایندکس فعلی کاربر را می‌گیریم (همان تعداد آیاتی که یاد گرفته)
-        val currentIndex = progressManager.getIndex()
-
-        // آپدیت کردن نوار پیشرفت و متن
         progressBar.max = totalVerses
-        progressBar.progress = currentIndex
-        tvProgressText.text = "شما $currentIndex آیه از $totalVerses آیه را یاد گرفته‌اید"
+
+        val btnStart = findViewById<Button>(R.id.btnStart)
 
         // کلیک روی دکمه برای رفتن به صفحه آیات
         btnStart.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
+
+        // نمایش وضعیت اولیه کاربر هنگام باز شدن صفحه
+        updateUI()
     }
 
-    // این متد باعث می‌شود وقتی از صفحه MainActivity به این صفحه برمی‌گردیم، پیشرفت آپدیت شود
+    // این متد هر بار که کاربر به این صفحه برمی‌گردد اجرا می‌شود
     override fun onResume() {
         super.onResume()
+        // ابتدا بر اساس دیتای ذخیره شده در گوشی آپدیت می‌کنیم
+        updateUI()
+        // سپس از سرور چک می‌کنیم که آیا معلم تایید جدیدی داشته یا خیر
+        checkTeacherApproval()
+    }
+
+    // یک تابع کمکی برای آپدیت کردن نوار و متن پیشرفت (برای جلوگیری از تکرار کد)
+    private fun updateUI() {
         val currentIndex = progressManager.getIndex()
         findViewById<ProgressBar>(R.id.progressBar).progress = currentIndex
-        findViewById<TextView>(R.id.tvProgressText).text = "شما $currentIndex آیه از 100 آیه را یاد گرفته‌اید"
+        findViewById<TextView>(R.id.tvProgressText).text = "شما $currentIndex آیه از $totalVerses آیه را یاد گرفته‌اید"
+    }
+
+    // تابع بررسی وضعیت تایید از سرور
+    private fun checkTeacherApproval() {
+        // گرفتن آیدی دانش آموز
+        val sharedPreferences = getSharedPreferences("UserPrefs", MODE_PRIVATE)
+        val studentId = sharedPreferences.getString("student_id", "") ?: ""
+
+        if (studentId.isEmpty()) return
+
+        // فراخوانی API برای دریافت وضعیت
+        RetrofitClient.apiService.getProgress(studentId).enqueue(object : Callback<GetProgressResponse> {
+            override fun onResponse(call: Call<GetProgressResponse>, response: Response<GetProgressResponse>) {
+                if (response.isSuccessful && response.body() != null) {
+                    val progressList = response.body()!!.progress
+                    
+                    // پیدا کردن بالاترین شماره آیه‌ای که تایید شده (approved)
+                    val maxApprovedIndex = progressList.filter { it.status == "approved" }
+                        .maxOfOrNull { it.verse_index } ?: -1
+
+                    if (maxApprovedIndex >= 0) {
+                        // اگر تایید شده بود، قفل آیه بعدی باز می‌شود
+                        val nextUnlockedVerse = maxApprovedIndex + 1
+                        val currentLocalIndex = progressManager.getIndex()
+                        
+                        // اگر آیه بعدی بزرگتر از پیشرفت فعلی گوشی است، یعنی معلم تایید جدیدی داده
+                        if (nextUnlockedVerse > currentLocalIndex) {
+                            progressManager.saveIndex(nextUnlockedVerse)
+                            Toast.makeText(this@DashboardActivity, "معلم پیشرفت شما را تایید کرد!", Toast.LENGTH_SHORT).show()
+                            // چون پیشرفت جدید داریم، دوباره صفحه را آپدیت می‌کنیم
+                            updateUI() 
+                        }
+                    }
+                }
+            }
+
+            override fun onFailure(call: Call<GetProgressResponse>, t: Throwable) {
+                // اگر خواستید می‌توانید خطا را اینجا هندل کنید (مثلا لاگ بیندازید)
+            }
+        })
     }
 }

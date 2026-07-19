@@ -1,186 +1,205 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
-    android:background="#F5F5F5">
+    android:background="#F5F5F5"
+    tools:context=".MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:padding="16dp">
 
-        <!-- بخش آمار پیشرفت -->
-        <TextView
-            android:id="@+id/progressStatsText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textAlignment="center"
-            android:textSize="14sp"
-            android:textStyle="bold"
-            android:textColor="#333333" />
-
-        <ProgressBar
-            android:id="@+id/progressBar"
-            style="?android:attr/progressBarStyleHorizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="16dp" />
-
-        <!-- هدر: شماره آیه و دکمه علاقه‌مندی -->
+        <!-- Progress Layout -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:id="@+id/progressStatsText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="آیات حفظ شده: 0 از 100"
+                android:gravity="center"
+                android:textColor="#333333"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp"/>
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="100"
+                android:progress="0"
+                android:progressTint="#4CAF50"
+                android:layout_marginBottom="16dp"/>
+        </LinearLayout>
+
+        <!-- Header -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginBottom="16dp">
 
             <TextView
                 android:id="@+id/verseNumber"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:textColor="#2E7D32" />
+                android:layout_centerInParent="true"
+                android:text="آیه شماره 1"
+                android:textColor="#333333"
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
             <ImageButton
                 android:id="@+id/favoriteButton"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
+                android:layout_alignParentEnd="true"
                 android:background="?attr/selectableItemBackgroundBorderless"
-                android:src="@android:drawable/btn_star"
-                app:tint="#757575"
-                android:contentDescription="علاقه‌مندی" />
-        </LinearLayout>
+                android:contentDescription="علاقه‌مندی‌ها"
+                android:src="@android:drawable/btn_star_big_off" />
+        </RelativeLayout>
 
-        <!-- کارت متن عربی -->
+        <!-- Arabic Text Card -->
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="12dp"
-            app:cardCornerRadius="12dp"
-            app:cardElevation="4dp"
-            app:contentPadding="16dp">
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp">
 
             <TextView
                 android:id="@+id/arabicText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="24sp"
-                android:textAlignment="center"
-                android:lineSpacingExtra="8dp"
-                android:textColor="#000000" />
+                android:gravity="center"
+                android:padding="20dp"
+                android:text="متن عربی آیه"
+                android:textColor="#333333"
+                android:textSize="26sp"
+                android:textStyle="bold" />
         </androidx.cardview.widget.CardView>
 
-        <!-- دکمه نمایش ترجمه (اضافه شده) -->
+        <!-- ========================================== -->
+        <!-- بخش جدید برای نمایش کلمه به کلمه -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/wordsRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:nestedScrollingEnabled="false"
+            android:layoutDirection="rtl" />
+        <!-- ========================================== -->
+
+        <!-- دکمه نمایش ترجمه -->
         <Button
             android:id="@+id/btnShowTranslation"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="👁 نمایش ترجمه و مصداق (محک زدن خود)"
+            android:text="نمایش ترجمه و مصداق"
+            android:textSize="16sp"
+            android:backgroundTint="#2196F3"
             android:textColor="#FFFFFF"
-            android:backgroundTint="#2E7D32"
-            android:layout_marginBottom="12dp"
-            app:cornerRadius="8dp" />
+            android:layout_marginBottom="16dp" />
 
-        <!-- کارت ترجمه (پیش‌فرض مخفی) -->
+        <!-- Translation Card (مخفی در ابتدا) -->
         <androidx.cardview.widget.CardView
             android:id="@+id/cardTranslation"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="12dp"
+            android:layout_marginBottom="16dp"
+            android:visibility="gone"
             app:cardCornerRadius="12dp"
-            app:cardElevation="4dp"
-            app:contentPadding="16dp"
-            android:visibility="gone">
+            app:cardElevation="2dp">
 
             <TextView
                 android:id="@+id/translation"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:text="ترجمه فارسی"
+                android:textColor="#666666"
                 android:textSize="18sp"
-                android:lineSpacingExtra="6dp"
-                android:textColor="#424242" />
+                android:lineSpacingExtra="4dp"/>
         </androidx.cardview.widget.CardView>
 
-        <!-- کارت مصداق عملی (پیش‌فرض مخفی) -->
+        <!-- Practical Example Card (مخفی در ابتدا) -->
         <androidx.cardview.widget.CardView
             android:id="@+id/cardExample"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="24dp"
+            android:visibility="gone"
             app:cardCornerRadius="12dp"
-            app:cardElevation="4dp"
-            app:contentPadding="16dp"
-            app:cardBackgroundColor="#E8F5E9"
-            android:visibility="gone">
+            app:cardElevation="2dp">
 
             <TextView
                 android:id="@+id/exampleText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:text="مصداق کاربردی"
+                android:textColor="#00796B"
                 android:textSize="16sp"
-                android:lineSpacingExtra="6dp"
-                android:textColor="#1B5E20" />
+                android:textStyle="italic"
+                android:lineSpacingExtra="4dp"/>
         </androidx.cardview.widget.CardView>
 
-        <!-- چک‌باکس‌های ۴ مرحله‌ای -->
+        <!-- Options Section -->
         <TextView
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="مراحل یادگیری:"
-            android:textStyle="bold"
+            android:text="آیا این آیه را یاد گرفته‌اید؟"
             android:textSize="16sp"
+            android:textStyle="bold"
             android:layout_marginBottom="8dp"/>
 
-        <CheckBox
-            android:id="@+id/checkBox1"
+        <!-- Checkboxes -->
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="۱. تلفظ و خواندن صحیح" />
+            android:orientation="vertical"
+            android:layout_marginBottom="24dp">
 
-        <CheckBox
-            android:id="@+id/checkBox2"
+            <CheckBox android:id="@+id/checkBox1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="روخوانی صحیح" />
+            <CheckBox android:id="@+id/checkBox2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="حفظ متن عربی" />
+            <CheckBox android:id="@+id/checkBox3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="یادگیری ترجمه" />
+            <CheckBox android:id="@+id/checkBox4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="درک مصداق کاربردی" />
+        </LinearLayout>
+
+        <!-- Actions -->
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="۲. درک ترجمه و مفهوم" />
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="16dp">
 
-        <CheckBox
-            android:id="@+id/checkBox3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="۳. مطالعه مصداق و کاربرد" />
+            <Button
+                android:id="@+id/nextButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="آیه بعدی"
+                android:layout_marginEnd="8dp"/>
 
-        <CheckBox
-            android:id="@+id/checkBox4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="۴. تعهد به انجام عمل در زندگی" />
-
-        <!-- دکمه آیه بعدی -->
-        <Button
-            android:id="@+id/nextButton"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginBottom="16dp"
-            android:text="آیه بعدی (قفل)"
-            android:textSize="18sp"
-            android:enabled="false"
-            app:cornerRadius="8dp" />
-            
-        <!-- دکمه بازگشت به داشبورد -->
-        <Button
-            android:id="@+id/btnBackToDashboard"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginBottom="16dp"
-            android:text="بازگشت به داشبورد"
-            android:textSize="16sp"
-            style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
+            <Button
+                android:id="@+id/btnBackToDashboard"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="بازگشت به داشبورد"
+                android:backgroundTint="#757575"
+                android:layout_marginStart="8dp"/>
+        </LinearLayout>
 
     </LinearLayout>
 </ScrollView>

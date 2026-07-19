@@ -12,6 +12,8 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -26,6 +28,10 @@ class MainActivity : AppCompatActivity() {
     private lateinit var cardTranslation: CardView
     private lateinit var cardExample: CardView
     private lateinit var btnShowTranslation: Button
+    
+    // متغیرهای جدید برای جدول کلمات
+    private lateinit var wordsRecyclerView: RecyclerView
+    private lateinit var wordAdapter: WordAdapter
     
     private lateinit var nextButton: Button
     private lateinit var btnBackToDashboard: Button
@@ -59,6 +65,12 @@ class MainActivity : AppCompatActivity() {
         checkBox2 = findViewById(R.id.checkBox2)
         checkBox3 = findViewById(R.id.checkBox3)
         checkBox4 = findViewById(R.id.checkBox4)
+
+        // راه‌اندازی RecyclerView برای نمایش کلمات در 3 ستون
+        wordsRecyclerView = findViewById(R.id.wordsRecyclerView)
+        wordsRecyclerView.layoutManager = GridLayoutManager(this, 3)
+        wordAdapter = WordAdapter(emptyList())
+        wordsRecyclerView.adapter = wordAdapter
 
         progressManager = ProgressManager(this)
         verses = VerseRepository.load(this)
@@ -326,6 +338,7 @@ class MainActivity : AppCompatActivity() {
             cardTranslation.visibility = View.VISIBLE
             cardExample.visibility = View.VISIBLE
             btnShowTranslation.visibility = View.GONE
+            wordsRecyclerView.visibility = View.GONE // پنهان کردن لیست کلمات در صفحه پایان
             
             nextButton.isEnabled = false
 
@@ -347,6 +360,16 @@ class MainActivity : AppCompatActivity() {
             exampleText.text = currentVerse.practical_examples.toString()
         } else {
             exampleText.text = "مثالی وجود ندارد."
+        }
+
+        // ===============================================
+        // نمایش داده‌های ترجمه کلمه به کلمه در RecyclerView
+        // ===============================================
+        if (!currentVerse.word_translations.isNullOrEmpty()) {
+            wordsRecyclerView.visibility = View.VISIBLE
+            wordAdapter.updateData(currentVerse.word_translations)
+        } else {
+            wordsRecyclerView.visibility = View.GONE
         }
     }
 

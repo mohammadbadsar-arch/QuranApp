@@ -1,17 +1,23 @@
 package com.example.quranapp
 
-// مدل جدید برای کلمات
+import com.google.gson.annotations.SerializedName
+
+data class Verse(
+    val id: Int? = null, // در فایل متنی شما فیلد id وجود دارد
+    val number: Int,
+    @SerializedName("arabic_text")
+    val arabic_text: String,
+    @SerializedName("persian_translation")
+    val persian_translation: String,
+    @SerializedName("surah_reference")
+    val surah_reference: String,
+    @SerializedName("practical_examples")
+    val practical_examples: List<String>, 
+    @SerializedName("word_by_word")
+    val word_translations: List<WordTranslation>? = null 
+)
+
 data class WordTranslation(
     val arabic: String,
     val persian: String
-)
-
-// مدل بروزشده آیه
-data class Verse(
-    val number: Int,
-    val arabic_text: String,
-    val persian_translation: String,
-    val surah_reference: String,
-    val practical_examples: List<String>,
-    val word_translations: List<WordTranslation>? = null // فیلد جدید اضافه شد
 )

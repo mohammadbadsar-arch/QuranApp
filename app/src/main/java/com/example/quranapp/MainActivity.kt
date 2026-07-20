@@ -356,12 +356,11 @@ class MainActivity : AppCompatActivity() {
         arabicText.text = currentVerse.arabic_text
         translation.text = currentVerse.persian_translation
 
-        if (currentVerse.practical_examples.toString().isNotEmpty()) {
-            exampleText.text = currentVerse.practical_examples.toString()
-        } else {
-            exampleText.text = "مثالی وجود ندارد."
-        }
-
+       if (!currentVerse.practical_examples.isNullOrEmpty()) {
+    exampleText.text = currentVerse.practical_examples.joinToString("\n- ", prefix = "- ")
+} else {
+    exampleText.text = "مثالی وجود ندارد."
+}
         // ===============================================
         // نمایش داده‌های ترجمه کلمه به کلمه در RecyclerView
         // ===============================================

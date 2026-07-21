@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var cardExample: CardView
     private lateinit var btnShowTranslation: Button
     
-    // متغیرهای جدید برای جدول کلمات
+    // متغیرهای جدول کلمات
     private lateinit var wordsRecyclerView: RecyclerView
     private lateinit var wordAdapter: WordAdapter
     
@@ -82,10 +82,16 @@ class MainActivity : AppCompatActivity() {
             finish() 
         }
 
-        // عملکرد دکمه نمایش ترجمه
+        // عملکرد دکمه نمایش ترجمه (نمایش همه بخش‌های مخفی)
         btnShowTranslation.setOnClickListener {
             cardTranslation.visibility = View.VISIBLE
             cardExample.visibility = View.VISIBLE
+            
+            // نمایش جدول کلمات در صورت وجود محتوا
+            if (wordAdapter.itemCount > 0) {
+                wordsRecyclerView.visibility = View.VISIBLE
+            }
+            
             btnShowTranslation.visibility = View.GONE
             playClickSound()
         }
@@ -306,9 +312,10 @@ class MainActivity : AppCompatActivity() {
 
         isResetting = true
 
-        // مخفی کردن ترجمه و مثال برای آیه جدید
+        // مخفی کردن ترجمه، مثال و کلمات برای آیه جدید
         cardTranslation.visibility = View.GONE
         cardExample.visibility = View.GONE
+        wordsRecyclerView.visibility = View.GONE
         btnShowTranslation.visibility = View.VISIBLE
 
         checkBox1.isEnabled = true
@@ -351,24 +358,25 @@ class MainActivity : AppCompatActivity() {
 
         val currentVerse = verses[currentIndex]
 
-        verseNumber.text =
-            "آیه ${currentVerse.number} - ${currentVerse.surah_reference}"
+        // اصلاح نمایش شماره آیه (اضافه کردن ۱ به ایندکس)
+        verseNumber.text = "آیه ${currentIndex + 1} - ${currentVerse.surah_reference}"
         arabicText.text = currentVerse.arabic_text
         translation.text = currentVerse.persian_translation
 
-       if (!currentVerse.practical_examples.isNullOrEmpty()) {
-    exampleText.text = currentVerse.practical_examples.joinToString("\n- ", prefix = "- ")
-} else {
-    exampleText.text = "مثالی وجود ندارد."
-}
+        if (!currentVerse.practical_examples.isNullOrEmpty()) {
+            exampleText.text = currentVerse.practical_examples.joinToString("\n- ", prefix = "- ")
+        } else {
+            exampleText.text = "مثالی وجود ندارد."
+        }
+        
         // ===============================================
-        // نمایش داده‌های ترجمه کلمه به کلمه در RecyclerView
+        // آماده‌سازی داده‌های ترجمه کلمه به کلمه در Adapter
+        // (نمایش آنها با کلیک روی دکمه انجام می‌شود)
         // ===============================================
         if (!currentVerse.word_translations.isNullOrEmpty()) {
-            wordsRecyclerView.visibility = View.VISIBLE
             wordAdapter.updateData(currentVerse.word_translations)
         } else {
-            wordsRecyclerView.visibility = View.GONE
+            wordAdapter.updateData(emptyList())
         }
     }
 

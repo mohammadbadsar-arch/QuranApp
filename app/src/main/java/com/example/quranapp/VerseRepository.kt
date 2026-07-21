@@ -1,40 +1,27 @@
 package com.example.quranapp
 
 import android.content.Context
-import org.json.JSONArray
-import org.json.JSONException
+import com.google.gson.Gson
+import com.google.gson.reflect.TypeToken
 
 object VerseRepository {
 
     fun load(context: Context): List<Verse> {
-        val list = mutableListOf<Verse>()
-        try {
-            val text = context.assets.open("Quran_Verses_100.json").bufferedReader().use { it.readText() }
-            val arr = JSONArray(text)
+        return try {
+            // خواندن محتوای فایل JSON
+            val jsonString = context.assets.open("Quran_Verses_100.json")
+                .bufferedReader()
+                .use { it.readText() }
+
+            // تعریف نوع لیست برای Gson
+            val listType = object : TypeToken<List<Verse>>() {}.type
+
+            // تبدیل خودکار JSON به لیست کلاس Verse
+            Gson().fromJson(jsonString, listType) ?: emptyList()
             
-            for (i in 0 until arr.length()) {
-                val o = arr.getJSONObject(i)
-                
-                // خواندن متن با optString برای جلوگیری از کرش در صورت نبودن فیلد
-                val exampleText = o.optString("practical_examples", "")
-                val ex = if (exampleText.isNotEmpty()) listOf(exampleText) else emptyList()
-                
-                list.add(
-                    Verse(
-                        o.optInt("number", 0),
-                        o.optString("arabic_text", ""),
-                        o.optString("persian_translation", ""),
-                        o.optString("surah_reference", ""),
-                        ex
-                    )
-                )
-            }
-        } catch (e: JSONException) {
-            e.printStackTrace()
         } catch (e: Exception) {
             e.printStackTrace()
+            emptyList()
         }
-        
-        return list
     }
 }

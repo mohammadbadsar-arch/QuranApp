@@ -1,5 +1,6 @@
 package com.example.quranapp
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
@@ -26,11 +27,29 @@ class DashboardActivity : AppCompatActivity() {
         progressBar.max = totalVerses
 
         val btnStart = findViewById<Button>(R.id.btnStart)
+        val btnLogout = findViewById<Button>(R.id.btnLogout) // اضافه شدن دکمه خروج
 
         // کلیک روی دکمه برای رفتن به صفحه آیات
         btnStart.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
+        }
+
+        // عملیات خروج از حساب
+        btnLogout.setOnClickListener {
+            // پاک کردن اطلاعات کاربر از حافظه اصلی (AppPrefs که در صفحه لاگین ذخیره می‌شود)
+            val sharedPref = getSharedPreferences("AppPrefs", Context.MODE_PRIVATE)
+            sharedPref.edit().remove("user_id").apply()
+
+            // پاک کردن حافظه UserPrefs (برای اطمینان کامل)
+            val userPrefs = getSharedPreferences("UserPrefs", Context.MODE_PRIVATE)
+            userPrefs.edit().remove("student_id").apply()
+
+            // بازگشت به صفحه لاگین و بستن کامل صفحات قبلی
+            val intent = Intent(this, LoginActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+            startActivity(intent)
+            finish()
         }
 
         // نمایش وضعیت اولیه کاربر هنگام باز شدن صفحه
@@ -65,7 +84,7 @@ class DashboardActivity : AppCompatActivity() {
         RetrofitClient.instance.getProgress(studentId).enqueue(object : Callback<GetProgressResponse> {
             override fun onResponse(call: Call<GetProgressResponse>, response: Response<GetProgressResponse>) {
                 if (response.isSuccessful) {
-                    // ایمن‌سازی در برابر Null (حذف علامت !! که خطرناک بود)
+                    // ایمن‌سازی در برابر Null
                     val progressList = response.body()?.progress ?: return
                     
                     // پیدا کردن بالاترین شماره آیه‌ای که تایید شده (approved) و تبدیل مقدار به عدد
@@ -89,7 +108,7 @@ class DashboardActivity : AppCompatActivity() {
             }
 
             override fun onFailure(call: Call<GetProgressResponse>, t: Throwable) {
-                // اگر خواستید می‌توانید خطا را اینجا هندل کنید (مثلا لاگ بیندازید)
+                // در صورت نیاز به لاگ زدن خطا
             }
         })
     }

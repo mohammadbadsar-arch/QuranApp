@@ -34,10 +34,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="ثبت‌نام کاربر جدید"
+        android:textColor="#5E4B8B"
         android:layout_marginTop="8dp"
         style="?android:attr/borderlessButtonStyle" />
 
-    <!-- دکمه ورود مهمان اضافه شد -->
+    <!-- دکمه ورود مهمان -->
     <Button
         android:id="@+id/btnGuestLogin"
         android:layout_width="match_parent"

@@ -13,28 +13,43 @@
         "موقع بازی اگر کسی خوب بازی کرد، تعریف کن.",
         "حتی به کسی که از او خوشت نمی‌آید، بی‌احترامی نکن."
       ],
-      "word_by_word": [
-        {
-          "arabic": "وَ",
-          "persian": "و"
-        },
-        {
-          "arabic": "قُولُوا",
-          "persian": "بگویید"
-        },
-        {
-          "arabic": "لِ",
-          "persian": "به / برای"
-        },
-        {
-          "arabic": "النَّاسِ",
-          "persian": "مردم"
-        },
-        {
-          "arabic": "حُسْنًا",
-          "persian": "(سخنِ) نیکو"
-        }
-      ]
+"word_by_word": [
+  {
+    "arabic": "وَ",
+    "persian": "و",
+    "grammar_rule": "حرف عطف",
+    "grammar_color": "#9C27B0",
+    "grammar_explanation": "این واژه برای پیوند دادن کلمات یا جمله‌ها به کار می‌رود."
+  },
+  {
+    "arabic": "قُولُوا",
+    "persian": "بگویید",
+    "grammar_rule": "فعل امر",
+    "grammar_color": "#4CAF50",
+    "grammar_explanation": "این واژه فعل امر و خطاب به چند نفر است."
+  },
+  {
+    "arabic": "لِ",
+    "persian": "به / برای",
+    "grammar_rule": "حرف جر",
+    "grammar_color": "#2196F3",
+    "grammar_explanation": "این واژه حرف جر است و اسم بعد از خود را مجرور می‌کند."
+  },
+  {
+    "arabic": "النَّاسِ",
+    "persian": "مردم",
+    "grammar_rule": "اسم مجرور",
+    "grammar_color": "#E91E63",
+    "grammar_explanation": "این اسم به دلیل قرار گرفتن بعد از حرف جر «لِ» مجرور شده است."
+  },
+  {
+    "arabic": "حُسْنًا",
+    "persian": "(سخنِ) نیکو",
+    "grammar_rule": "قید حالت",
+    "grammar_color": "#FF9800",
+    "grammar_explanation": "این واژه در این عبارت چگونگی سخن گفتن را بیان می‌کند."
+  }
+]
     },
     {
       "id": 2,

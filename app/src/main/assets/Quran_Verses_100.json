@@ -311,30 +311,42 @@
         "قبل از اینکه قهر طولانی شود، سریع‌تر آشتی کن."
       ],
       "word_by_word": [
-        {
-          "arabic": "وَ",
-          "persian": "و (حرف عطف)",
-          "grammar_rule": "حرف عطف",
-          "grammar_color": "#9C27B0",
-          "grammar_explanation": "حرف عطف برای پیوند دادن"
-        },
-        {
-          "arabic": "أَصْلِحُوا",
-          "persian": "اصلاح کنید / آشتی برقرار کنید"
-        },
-        {
-          "arabic": "ذَاتَ",
-          "persian": "رابطه / وضعیت"
-        },
-        {
-          "arabic": "بَیْنِ",
-          "persian": "میانِ / بینِ"
-        },
-        {
-          "arabic": "كُمْ",
-          "persian": "شما / خودتان (ضمیر متصل)"
-        }
-      ]
+  {
+    "arabic": "وَ",
+    "persian": "و",
+    "grammar_rule": "حرف عطف",
+    "grammar_color": "#9C27B0",
+    "grammar_explanation": "حرف عطف برای پیوند دادن کلمات و جملات."
+  },
+  {
+    "arabic": "أَصْلِحُوا",
+    "persian": "اصلاح کنید / آشتی برقرار کنید",
+    "grammar_rule": "فعل امر",
+    "grammar_color": "#4CAF50",
+    "grammar_explanation": "فعل امر از باب افعال (صیغه جمع مذکر مخاطب)."
+  },
+  {
+    "arabic": "ذَاتَ",
+    "persian": "رابطه / وضعیت",
+    "grammar_rule": "مفعول‌به",
+    "grammar_color": "#FF9800",
+    "grammar_explanation": "مفعول‌به برای فعل «أصلحوا» و منصوب است."
+  },
+  {
+    "arabic": "بَیْنِ",
+    "persian": "میانِ / بینِ",
+    "grammar_rule": "مضاف‌الیه",
+    "grammar_color": "#795548",
+    "grammar_explanation": "مضاف‌الیه برای «ذات» و مجرور است."
+  },
+  {
+    "arabic": "كُمْ",
+    "persian": "شما / خودتان",
+    "grammar_rule": "ضمیر متصل",
+    "grammar_color": "#546E7A",
+    "grammar_explanation": "ضمیر متصل در جایگاه مضاف‌الیه دوم و محلاً مجرور."
+  }
+]
     },
     {
       "id": 7,
@@ -350,26 +362,35 @@
         "قبل از خواب، دل‌خوری‌هایت از دیگران را کنار بگذار."
       ],
       "word_by_word": [
-        {
-          "arabic": "فَـ",
-          "persian": "پس"
-        },
-        {
-          "arabic": "ـاعْفُوا",
-          "persian": "ببخشید"
-        },
-        {
-          "arabic": "وَ",
-          "persian": "و",
-          "grammar_rule": "حرف عطف",
-          "grammar_color": "#9C27B0",
-          "grammar_explanation": "حرف عطف برای پیوند دادن"
-        },
-        {
-          "arabic": "اصْفَحُوا",
-          "persian": "گذشت کنید"
-        }
-      ]
+  {
+    "arabic": "فَـ",
+    "persian": "پس",
+    "grammar_rule": "حرف عطف (نتیجه)",
+    "grammar_color": "#9C27B0",
+    "grammar_explanation": "فاء تفریع یا نتیجه، برای ربط دادن جمله به ماقبل."
+  },
+  {
+    "arabic": "ـاعْفُوا",
+    "persian": "ببخشید",
+    "grammar_rule": "فعل امر",
+    "grammar_color": "#4CAF50",
+    "grammar_explanation": "فعل امر (صیغه جمع مذکر مخاطب)."
+  },
+  {
+    "arabic": "وَ",
+    "persian": "و",
+    "grammar_rule": "حرف عطف",
+    "grammar_color": "#9C27B0",
+    "grammar_explanation": "حرف عطف برای پیوند دادن."
+  },
+  {
+    "arabic": "اصْفَحُوا",
+    "persian": "گذشت کنید",
+    "grammar_rule": "فعل امر",
+    "grammar_color": "#4CAF50",
+    "grammar_explanation": "فعل امر (صیغه جمع مذکر مخاطب)، تأکیدی بر عفو."
+  }
+]
     },
     {
       "id": 8,
@@ -385,23 +406,35 @@
         "یک روز در هفته کار خیری بدون چشم‌داشت انجام بده."
       ],
       "word_by_word": [
-        {
-          "arabic": "إِنَّ",
-          "persian": "همانا (قطعاً)"
-        },
-        {
-          "arabic": "اللَّهَ",
-          "persian": "خداوند"
-        },
-        {
-          "arabic": "يُحِبُّ",
-          "persian": "دوست دارد"
-        },
-        {
-          "arabic": "الْمُحْسِنِينَ",
-          "persian": "نیکوکاران را"
-        }
-      ]
+  {
+    "arabic": "إِنَّ",
+    "persian": "همانا (قطعاً)",
+    "grammar_rule": "حرف مشبهة بالفعل",
+    "grammar_color": "#FBC02D",
+    "grammar_explanation": "حرف تأکید که بر سر جمله اسمیه می‌آید و اسم خود را منصوب می‌کند."
+  },
+  {
+    "arabic": "اللَّهَ",
+    "persian": "خداوند",
+    "grammar_rule": "اسم «إنّ»",
+    "grammar_color": "#673AB7",
+    "grammar_explanation": "اسم برای «إنّ» که منصوب است."
+  },
+  {
+    "arabic": "یُحِبُّ",
+    "persian": "دوست دارد",
+    "grammar_rule": "فعل مضارع",
+    "grammar_color": "#8BC34A",
+    "grammar_explanation": "فعل مضارع (مفرد مذکر غایب) و مرفوع. خبر «إنّ» محلاً مرفوع است."
+  },
+  {
+    "arabic": "الْمُحْسِنِینَ",
+    "persian": "نیکوکاران را",
+    "grammar_rule": "مفعول‌به",
+    "grammar_color": "#FF9800",
+    "grammar_explanation": "مفعول‌به و منصوب. نشانه نصب در جمع مذکر سالم حرف «ی» است."
+  }
+]
     },
     {
       "id": 9,
@@ -417,26 +450,35 @@
         "وقتی مریض هستی و باید استراحت کنی، بی‌قراری نکن."
       ],
       "word_by_word": [
-        {
-          "arabic": "وَ",
-          "persian": "و",
-          "grammar_rule": "حرف عطف",
-          "grammar_color": "#9C27B0",
-          "grammar_explanation": "حرف عطف برای پیوند دادن"
-        },
-        {
-          "arabic": "اللَّهُ",
-          "persian": "خداوند"
-        },
-        {
-          "arabic": "يُحِبُّ",
-          "persian": "دوست دارد"
-        },
-        {
-          "arabic": "الصَّابِرِينَ",
-          "persian": "شکیبایان را"
-        }
-      ]
+  {
+    "arabic": "وَ",
+    "persian": "و",
+    "grammar_rule": "حرف استیناف / عطف",
+    "grammar_color": "#9C27B0",
+    "grammar_explanation": "برای آغاز جمله جدید یا پیوند با قبل."
+  },
+  {
+    "arabic": "اللَّهُ",
+    "persian": "خداوند",
+    "grammar_rule": "مبتدا",
+    "grammar_color": "#3F51B5",
+    "grammar_explanation": "مبتدا و مرفوع (علامت رفع ضمه است)."
+  },
+  {
+    "arabic": "یُحِبُّ",
+    "persian": "دوست دارد",
+    "grammar_rule": "فعل مضارع",
+    "grammar_color": "#8BC34A",
+    "grammar_explanation": "فعل مضارع (مفرد مذکر غایب). جمله فعلیه در محل رفع، خبرِ مبتدا است."
+  },
+  {
+    "arabic": "الصَّابِرِینَ",
+    "persian": "شکیبایان را",
+    "grammar_rule": "مفعول‌به",
+    "grammar_color": "#FF9800",
+    "grammar_explanation": "مفعول‌به و منصوب. نشانه نصب در جمع مذکر سالم حرف «ی» است."
+  }
+]
     },
     {
       "id": 10,
@@ -452,27 +494,42 @@
         "وقتی کسی ادعایی دارد، بدون تعصب گوش بده."
       ],
       "word_by_word": [
-        {
-          "arabic": "إِنَّ",
-          "persian": "همانا"
-        },
-        {
-          "arabic": "اللَّهَ",
-          "persian": "خدا"
-        },
-        {
-          "arabic": "یُحِبُّ",
-          "persian": "دوست دارد"
-        },
-        {
-          "arabic": "الْ",
-          "persian": "(حرف تعریف)"
-        },
-        {
-          "arabic": "مُقْسِطِینَ",
-          "persian": "عدالت‌پیشگان"
-        }
-      ]
+  {
+    "arabic": "إِنَّ",
+    "persian": "همانا",
+    "grammar_rule": "حرف مشبهة بالفعل",
+    "grammar_color": "#FBC02D",
+    "grammar_explanation": "حرف تأکید که مبتدا را منصوب می‌کند."
+  },
+  {
+    "arabic": "اللَّهَ",
+    "persian": "خدا",
+    "grammar_rule": "اسم «إنّ»",
+    "grammar_color": "#673AB7",
+    "grammar_explanation": "اسم برای «إنّ» که در اینجا منصوب است."
+  },
+  {
+    "arabic": "یُحِبُّ",
+    "persian": "دوست دارد",
+    "grammar_rule": "فعل مضارع",
+    "grammar_color": "#8BC34A",
+    "grammar_explanation": "فعل مضارع (مفرد مذکر غایب) و مرفوع."
+  },
+  {
+    "arabic": "الْ",
+    "persian": "(حرف تعریف)",
+    "grammar_rule": "حرف تعریف",
+    "grammar_color": "#9E9E9E",
+    "grammar_explanation": "الف و لام تعریف (معرفه‌ساز)."
+  },
+  {
+    "arabic": "مُقْسِطِینَ",
+    "persian": "عدالت‌پیشگان",
+    "grammar_rule": "مفعول‌به",
+    "grammar_color": "#FF9800",
+    "grammar_explanation": "مفعول‌به برای یحبّ و منصوب (با علامت ی)."
+  }
+]
     },
     {
       "id": 11,
@@ -488,30 +545,42 @@
         "اگر از کتاب کسی استفاده کردی، مثل مال خودت نگه‌دارش."
       ],
       "word_by_word": [
-        {
-          "arabic": "وَ",
-          "persian": "و",
-          "grammar_rule": "حرف عطف",
-          "grammar_color": "#9C27B0",
-          "grammar_explanation": "حرف عطف برای پیوند دادن"
-        },
-        {
-          "arabic": "لَا تَبْخَسُوا",
-          "persian": "کم نگذارید"
-        },
-        {
-          "arabic": "النَّاسَ",
-          "persian": "مردم را"
-        },
-        {
-          "arabic": "أَشْیَاءَ",
-          "persian": "چیزهای"
-        },
-        {
-          "arabic": "هُمْ",
-          "persian": "شان"
-        }
-      ]
+  {
+    "arabic": "وَ",
+    "persian": "و",
+    "grammar_rule": "حرف عطف",
+    "grammar_color": "#9C27B0",
+    "grammar_explanation": "حرف عطف برای پیوند دادن."
+  },
+  {
+    "arabic": "لَا تَبْخَسُوا",
+    "persian": "کم نگذارید",
+    "grammar_rule": "فعل نهی",
+    "grammar_color": "#F44336",
+    "grammar_explanation": "فعل نهی (صیغه جمع مذکر مخاطب)، مجزوم به حذف حرف «ن»."
+  },
+  {
+    "arabic": "النَّاسَ",
+    "persian": "مردم را",
+    "grammar_rule": "مفعول‌به اول",
+    "grammar_color": "#FF9800",
+    "grammar_explanation": "مفعول‌به اول برای فعل و منصوب (علامت نصب فتحه است)."
+  },
+  {
+    "arabic": "أَشْیَاءَ",
+    "persian": "چیزهای",
+    "grammar_rule": "مفعول‌به دوم",
+    "grammar_color": "#FF9800",
+    "grammar_explanation": "مفعول‌به دوم و منصوب. این کلمه مضاف نیز هست."
+  },
+  {
+    "arabic": "هُمْ",
+    "persian": "شان",
+    "grammar_rule": "ضمیر متصل",
+    "grammar_color": "#546E7A",
+    "grammar_explanation": "ضمیر متصل در جایگاه مضاف‌الیه و محلاً مجرور."
+  }
+]
     },
     {
       "id": 12,
@@ -527,57 +596,84 @@
         "در بازی‌های امتیازی، امتیاز درست بده، نه کم، نه اضافه."
       ],
       "word_by_word": [
-        {
-          "arabic": "وَ",
-          "persian": "و",
-          "grammar_rule": "حرف عطف",
-          "grammar_color": "#9C27B0",
-          "grammar_explanation": "حرف عطف برای پیوند دادن"
-        },
-        {
-          "arabic": "أَقِیمُوا",
-          "persian": "برپا دارید"
-        },
-        {
-          "arabic": "الْ",
-          "persian": "(حرف تعریف)"
-        },
-        {
-          "arabic": "وَزْنَ",
-          "persian": "وزن را (سنجش را)"
-        },
-        {
-          "arabic": "بِ",
-          "persian": "به"
-        },
-        {
-          "arabic": "الْ",
-          "persian": "(حرف تعریف)"
-        },
-        {
-          "arabic": "قِسْطِ",
-          "persian": "عدالت"
-        },
-        {
-          "arabic": "وَ",
-          "persian": "و",
-          "grammar_rule": "حرف عطف",
-          "grammar_color": "#9C27B0",
-          "grammar_explanation": "حرف عطف برای پیوند دادن"
-        },
-        {
-          "arabic": "لَا تُخْسِرُوا",
-          "persian": "کم نگذارید"
-        },
-        {
-          "arabic": "الْ",
-          "persian": "(حرف تعریف)"
-        },
-        {
-          "arabic": "مِیزَانَ",
-          "persian": "ترازو را (وسیله سنجش را)"
-        }
-      ]
+  {
+    "arabic": "وَ",
+    "persian": "و",
+    "grammar_rule": "حرف عطف",
+    "grammar_color": "#9C27B0",
+    "grammar_explanation": "حرف عطف برای پیوند دادن."
+  },
+  {
+    "arabic": "أَقِیمُوا",
+    "persian": "برپا دارید",
+    "grammar_rule": "فعل امر",
+    "grammar_color": "#4CAF50",
+    "grammar_explanation": "فعل امر از باب افعال (صیغه جمع مذکر مخاطب)."
+  },
+  {
+    "arabic": "الْ",
+    "persian": "(حرف تعریف)",
+    "grammar_rule": "حرف تعریف",
+    "grammar_color": "#9E9E9E",
+    "grammar_explanation": "الف و لام تعریف (معرفه‌ساز)."
+  },
+  {
+    "arabic": "وَزْنَ",
+    "persian": "وزن را (سنجش را)",
+    "grammar_rule": "مفعول‌به",
+    "grammar_color": "#FF9800",
+    "grammar_explanation": "مفعول‌به و منصوب (علامت نصب فتحه)."
+  },
+  {
+    "arabic": "بِ",
+    "persian": "به",
+    "grammar_rule": "حرف جر",
+    "grammar_color": "#2196F3",
+    "grammar_explanation": "حرف جر که اسم بعد از خود را مجرور می‌کند."
+  },
+  {
+    "arabic": "الْ",
+    "persian": "(حرف تعریف)",
+    "grammar_rule": "حرف تعریف",
+    "grammar_color": "#9E9E9E",
+    "grammar_explanation": "الف و لام تعریف."
+  },
+  {
+    "arabic": "قِسْطِ",
+    "persian": "عدالت",
+    "grammar_rule": "اسم مجرور",
+    "grammar_color": "#00BCD4",
+    "grammar_explanation": "اسم مجرور به حرف جر «بِ» (علامت جر کسره)."
+  },
+  {
+    "arabic": "وَ",
+    "persian": "و",
+    "grammar_rule": "حرف عطف",
+    "grammar_color": "#9C27B0",
+    "grammar_explanation": "حرف عطف برای پیوند دادن جملات."
+  },
+  {
+    "arabic": "لَا تُخْسِرُوا",
+    "persian": "کم نگذارید",
+    "grammar_rule": "فعل نهی",
+    "grammar_color": "#F44336",
+    "grammar_explanation": "فعل نهی (صیغه جمع مذکر مخاطب)، مجزوم به حذف «ن»."
+  },
+  {
+    "arabic": "الْ",
+    "persian": "(حرف تعریف)",
+    "grammar_rule": "حرف تعریف",
+    "grammar_color": "#9E9E9E",
+    "grammar_explanation": "الف و لام تعریف."
+  },
+  {
+    "arabic": "مِیزَانَ",
+    "persian": "ترازو را (وسیله سنجش را)",
+    "grammar_rule": "مفعول‌به",
+    "grammar_color": "#FF9800",
+    "grammar_explanation": "مفعول‌به و منصوب."
+  }
+]
     },
     {
       "id": 13,
@@ -593,38 +689,56 @@
         "وقتی یه کار خوب می‌کنی، انتظار تعریف نداشته باش."
       ],
       "word_by_word": [
-        {
-          "arabic": "وَ",
-          "persian": "و",
-          "grammar_rule": "حرف عطف",
-          "grammar_color": "#9C27B0",
-          "grammar_explanation": "حرف عطف برای پیوند دادن"
-        },
-        {
-          "arabic": "أَحْسِنُوا",
-          "persian": "نیکی کنید"
-        },
-        {
-          "arabic": "إِنَّ",
-          "persian": "زیرا / همانا"
-        },
-        {
-          "arabic": "اللَّهَ",
-          "persian": "خداوند"
-        },
-        {
-          "arabic": "یُحِبُّ",
-          "persian": "دوست دارد"
-        },
-        {
-          "arabic": "الْ",
-          "persian": "(حرف تعریف)"
-        },
-        {
-          "arabic": "مُحْسِنِینَ",
-          "persian": "نیکوکاران را"
-        }
-      ]
+  {
+    "arabic": "وَ",
+    "persian": "و",
+    "grammar_rule": "حرف عطف",
+    "grammar_color": "#9C27B0",
+    "grammar_explanation": "حرف عطف برای پیوند دادن."
+  },
+  {
+    "arabic": "أَحْسِنُوا",
+    "persian": "نیکی کنید",
+    "grammar_rule": "فعل امر",
+    "grammar_color": "#4CAF50",
+    "grammar_explanation": "فعل امر از باب افعال (صیغه جمع مذکر مخاطب)."
+  },
+  {
+    "arabic": "إِنَّ",
+    "persian": "زیرا / همانا",
+    "grammar_rule": "حرف مشبهة بالفعل",
+    "grammar_color": "#FBC02D",
+    "grammar_explanation": "حرف تأکید و تعلیل که مبتدا را منصوب می‌کند."
+  },
+  {
+    "arabic": "اللَّهَ",
+    "persian": "خداوند",
+    "grammar_rule": "اسم «إنّ»",
+    "grammar_color": "#673AB7",
+    "grammar_explanation": "اسم برای «إنّ» و منصوب."
+  },
+  {
+    "arabic": "یُحِبُّ",
+    "persian": "دوست دارد",
+    "grammar_rule": "فعل مضارع",
+    "grammar_color": "#8BC34A",
+    "grammar_explanation": "فعل مضارع (مفرد مذکر غایب)، خبر «إنّ» محلاً مرفوع."
+  },
+  {
+    "arabic": "الْ",
+    "persian": "(حرف تعریف)",
+    "grammar_rule": "حرف تعریف",
+    "grammar_color": "#9E9E9E",
+    "grammar_explanation": "الف و لام تعریف."
+  },
+  {
+    "arabic": "مُحْسِنِینَ",
+    "persian": "نیکوکاران را",
+    "grammar_rule": "مفعول‌به",
+    "grammar_color": "#FF9800",
+    "grammar_explanation": "مفعول‌به و منصوب. نشانه نصب در جمع مذکر سالم حرف «ی» است."
+  }
+]
     },
     {
       "id": 14,
@@ -640,37 +754,49 @@
         "بین راه رفتن با اعتماد به نفس و غرور فرق بگذار."
       ],
       "word_by_word": [
-        {
-          "arabic": "وَ",
-          "persian": "و",
-          "grammar_rule": "حرف عطف",
-          "grammar_color": "#9C27B0",
-          "grammar_explanation": "حرف عطف برای پیوند دادن"
-        },
-        {
-          "arabic": "لَا تَمْشِ",
-          "persian": "راه مرو"
-        },
-        {
-          "arabic": "فِي",
-          "persian": "در",
-          "grammar_rule": "حرف جر",
-          "grammar_color": "#2196F3",
-          "grammar_explanation": "حرف جر به معنای «در»"
-        },
-        {
-          "arabic": "الْ",
-          "persian": "(حرف تعریف)"
-        },
-        {
-          "arabic": "أَرْضِ",
-          "persian": "زمین"
-        },
-        {
-          "arabic": "مَرَحًا",
-          "persian": "با غرور و سرمستی"
-        }
-      ]
+  {
+    "arabic": "وَ",
+    "persian": "و",
+    "grammar_rule": "حرف عطف",
+    "grammar_color": "#9C27B0",
+    "grammar_explanation": "حرف عطف برای پیوند دادن."
+  },
+  {
+    "arabic": "لَا تَمْشِ",
+    "persian": "راه مرو",
+    "grammar_rule": "فعل نهی",
+    "grammar_color": "#F44336",
+    "grammar_explanation": "فعل نهی (مفرد مذکر مخاطب)، مجزوم به حذف حرف عله (ی)."
+  },
+  {
+    "arabic": "فِي",
+    "persian": "در",
+    "grammar_rule": "حرف جر",
+    "grammar_color": "#2196F3",
+    "grammar_explanation": "حرف جر به معنای «در»."
+  },
+  {
+    "arabic": "الْ",
+    "persian": "(حرف تعریف)",
+    "grammar_rule": "حرف تعریف",
+    "grammar_color": "#9E9E9E",
+    "grammar_explanation": "الف و لام تعریف."
+  },
+  {
+    "arabic": "أَرْضِ",
+    "persian": "زمین",
+    "grammar_rule": "اسم مجرور",
+    "grammar_color": "#00BCD4",
+    "grammar_explanation": "اسم مجرور به حرف جر «في» (علامت جر کسره)."
+  },
+  {
+    "arabic": "مَرَحًا",
+    "persian": "با غرور و سرمستی",
+    "grammar_rule": "حال",
+    "grammar_color": "#009688",
+    "grammar_explanation": "قید حالت (حال) برای فاعل پنهان، منصوب (علامت نصب تنوین فتحه)."
+  }
+]
     },
     {
       "id": 15,
@@ -686,33 +812,42 @@
         "در تماشای بازی یا فیلم در منزل، حجم صدا را مناسب نگه دار."
       ],
       "word_by_word": [
-        {
-          "arabic": "وَ",
-          "persian": "و",
-          "grammar_rule": "حرف عطف",
-          "grammar_color": "#9C27B0",
-          "grammar_explanation": "حرف عطف برای پیوند دادن"
-        },
-        {
-          "arabic": "اغْضُضْ",
-          "persian": "پایین بیاور (بکاه)"
-        },
-        {
-          "arabic": "مِنْ",
-          "persian": "از",
-          "grammar_rule": "حرف جر",
-          "grammar_color": "#2196F3",
-          "grammar_explanation": "حرف جر به معنای «از»"
-        },
-        {
-          "arabic": "صَوْتِ",
-          "persian": "صدای"
-        },
-        {
-          "arabic": "كَ",
-          "persian": "ت (خودت)"
-        }
-      ]
+  {
+    "arabic": "وَ",
+    "persian": "و",
+    "grammar_rule": "حرف عطف",
+    "grammar_color": "#9C27B0",
+    "grammar_explanation": "حرف عطف برای پیوند دادن."
+  },
+  {
+    "arabic": "اغْضُضْ",
+    "persian": "پایین بیاور (بکاه)",
+    "grammar_rule": "فعل امر",
+    "grammar_color": "#4CAF50",
+    "grammar_explanation": "فعل امر (مفرد مذکر مخاطب)، مبنی بر سکون."
+  },
+  {
+    "arabic": "مِنْ",
+    "persian": "از",
+    "grammar_rule": "حرف جر",
+    "grammar_color": "#2196F3",
+    "grammar_explanation": "حرف جر به معنای «از»."
+  },
+  {
+    "arabic": "صَوْتِ",
+    "persian": "صدای",
+    "grammar_rule": "اسم مجرور",
+    "grammar_color": "#00BCD4",
+    "grammar_explanation": "اسم مجرور به حرف جر «مِن» (علامت جر کسره). ضمناً مضاف نیز هست."
+  },
+  {
+    "arabic": "كَ",
+    "persian": "ت (خودت)",
+    "grammar_rule": "ضمیر متصل",
+    "grammar_color": "#546E7A",
+    "grammar_explanation": "ضمیر متصل در جایگاه مضاف‌الیه و محلاً مجرور."
+  }
+]
     },
     {
       "id": 16,
@@ -728,26 +863,35 @@
         "یادت باشد شاید در چیزی که تو خوبی، آن کس بهتر از تو باشد."
       ],
       "word_by_word": [
-        {
-          "arabic": "لَا يَسْخَرْ",
-          "persian": "مسخره نکند"
-        },
-        {
-          "arabic": "قَوْمٌ",
-          "persian": "گروهی"
-        },
-        {
-          "arabic": "مِنْ",
-          "persian": "از",
-          "grammar_rule": "حرف جر",
-          "grammar_color": "#2196F3",
-          "grammar_explanation": "حرف جر به معنای «از»"
-        },
-        {
-          "arabic": "قَوْمٍ",
-          "persian": "گروهی (دیگر)"
-        }
-      ]
+  {
+    "arabic": "لَا يَسْخَرْ",
+    "persian": "مسخره نکند",
+    "grammar_rule": "فعل نهی",
+    "grammar_color": "#F44336",
+    "grammar_explanation": "فعل نهی (مفرد مذکر غایب)، مجزوم به سکون."
+  },
+  {
+    "arabic": "قَوْمٌ",
+    "persian": "گروهی",
+    "grammar_rule": "فاعل",
+    "grammar_color": "#3F51B5",
+    "grammar_explanation": "فاعل برای فعل است و مرفوع (علامت رفع تنوین ضمه)."
+  },
+  {
+    "arabic": "مِنْ",
+    "persian": "از",
+    "grammar_rule": "حرف جر",
+    "grammar_color": "#2196F3",
+    "grammar_explanation": "حرف جر به معنای «از»."
+  },
+  {
+    "arabic": "قَوْمٍ",
+    "persian": "گروهی (دیگر)",
+    "grammar_rule": "اسم مجرور",
+    "grammar_color": "#00BCD4",
+    "grammar_explanation": "اسم مجرور به حرف جر (علامت جر تنوین کسره)."
+  }
+]
     },
     {
       "id": 17,
@@ -763,26 +907,35 @@
         "وقتی دوستانت دارند کسی را نقد می‌کنند، موضوع را عوض کن."
       ],
       "word_by_word": [
-        {
-          "arabic": "وَ",
-          "persian": "و",
-          "grammar_rule": "حرف عطف",
-          "grammar_color": "#9C27B0",
-          "grammar_explanation": "حرف عطف برای پیوند دادن"
-        },
-        {
-          "arabic": "لَا تَلْمِزُوا",
-          "persian": "عیب‌جویی نکنید"
-        },
-        {
-          "arabic": "أَنْفُسَ",
-          "persian": "(نفس‌های) یکدیگر"
-        },
-        {
-          "arabic": "كُمْ",
-          "persian": "شما (تان)"
-        }
-      ]
+  {
+    "arabic": "وَ",
+    "persian": "و",
+    "grammar_rule": "حرف عطف",
+    "grammar_color": "#9C27B0",
+    "grammar_explanation": "حرف عطف برای پیوند دادن."
+  },
+  {
+    "arabic": "لَا تَلْمِزُوا",
+    "persian": "عیب‌جویی نکنید",
+    "grammar_rule": "فعل نهی",
+    "grammar_color": "#F44336",
+    "grammar_explanation": "فعل نهی (صیغه جمع مذکر مخاطب)، مجزوم به حذف حرف «ن»."
+  },
+  {
+    "arabic": "أَنْفُسَ",
+    "persian": "(نفس‌های) یکدیگر",
+    "grammar_rule": "مفعول‌به",
+    "grammar_color": "#FF9800",
+    "grammar_explanation": "مفعول‌به و منصوب. این کلمه مضاف نیز هست."
+  },
+  {
+    "arabic": "كُمْ",
+    "persian": "شما (تان)",
+    "grammar_rule": "ضمیر متصل",
+    "grammar_color": "#546E7A",
+    "grammar_explanation": "ضمیر متصل در جایگاه مضاف‌الیه و محلاً مجرور."
+  }
+]
     },
     {
       "id": 18,
@@ -798,30 +951,42 @@
         "یاد بگیر فرق بین غیبت و گزارش مشکل واقعی را."
       ],
       "word_by_word": [
-        {
-          "arabic": "وَ",
-          "persian": "و",
-          "grammar_rule": "حرف عطف",
-          "grammar_color": "#9C27B0",
-          "grammar_explanation": "حرف عطف برای پیوند دادن"
-        },
-        {
-          "arabic": "لَا يَغْتَبْ",
-          "persian": "غیبت نکند"
-        },
-        {
-          "arabic": "بَعْضُ",
-          "persian": "بعضی"
-        },
-        {
-          "arabic": "كُمْ",
-          "persian": "شما (از شما)"
-        },
-        {
-          "arabic": "بَعْضًا",
-          "persian": "بعضی دیگر را"
-        }
-      ]
+  {
+    "arabic": "وَ",
+    "persian": "و",
+    "grammar_rule": "حرف عطف",
+    "grammar_color": "#9C27B0",
+    "grammar_explanation": "حرف عطف برای پیوند دادن."
+  },
+  {
+    "arabic": "لَا يَغْتَبْ",
+    "persian": "غیبت نکند",
+    "grammar_rule": "فعل نهی",
+    "grammar_color": "#F44336",
+    "grammar_explanation": "فعل نهی (مفرد مذکر غایب)، مجزوم به سکون."
+  },
+  {
+    "arabic": "بَعْضُ",
+    "persian": "بعضی",
+    "grammar_rule": "فاعل",
+    "grammar_color": "#3F51B5",
+    "grammar_explanation": "فاعل و مرفوع (علامت رفع ضمه). این کلمه مضاف است."
+  },
+  {
+    "arabic": "كُمْ",
+    "persian": "شما (از شما)",
+    "grammar_rule": "ضمیر متصل",
+    "grammar_color": "#546E7A",
+    "grammar_explanation": "ضمیر متصل، مضاف‌الیه و محلاً مجرور."
+  },
+  {
+    "arabic": "بَعْضًا",
+    "persian": "بعضی دیگر را",
+    "grammar_rule": "مفعول‌به",
+    "grammar_color": "#FF9800",
+    "grammar_explanation": "مفعول‌به برای فعل و منصوب (علامت نصب تنوین فتحه)."
+  }
+]
     },
     {
       "id": 19,
@@ -836,28 +1001,43 @@
         "وقتی دوستی ناعادلانه رفتار کرد، یه کار خوب برایش انجام بده.",
         "اگر کسی بدگویی‌ات کرد، از جلوی همه تعریفش کن."
       ],
-      "word_by_word": [
-        {
-          "arabic": "ادْفَعْ",
-          "persian": "دفع کن"
-        },
-        {
-          "arabic": "بِ",
-          "persian": "با"
-        },
-        {
-          "arabic": "الَّتِي",
-          "persian": "آنچه (شیوه‌ای که)"
-        },
-        {
-          "arabic": "هِيَ",
-          "persian": "آن"
-        },
-        {
-          "arabic": "أَحْسَنُ",
-          "persian": "بهتر (نیکوتر) است"
-        }
-      ]
+      "word_by_word":[
+  {
+    "arabic": "ادْفَعْ",
+    "persian": "دفع کن",
+    "grammar_rule": "فعل امر",
+    "grammar_color": "#4CAF50",
+    "grammar_explanation": "فعل امر (مفرد مذکر مخاطب)، مبنی بر سکون."
+  },
+  {
+    "arabic": "بِ",
+    "persian": "با",
+    "grammar_rule": "حرف جر",
+    "grammar_color": "#2196F3",
+    "grammar_explanation": "حرف جر."
+  },
+  {
+    "arabic": "الَّتِي",
+    "persian": "آنچه (شیوه‌ای که)",
+    "grammar_rule": "اسم موصول",
+    "grammar_color": "#009688",
+    "grammar_explanation": "اسم موصول، مبنی است و در جایگاه اسم مجرور (محلاً مجرور)."
+  },
+  {
+    "arabic": "هِيَ",
+    "persian": "آن",
+    "grammar_rule": "مبتدا",
+    "grammar_color": "#607D8B",
+    "grammar_explanation": "ضمیر منفصل، در جایگاه مبتدا و محلاً مرفوع."
+  },
+  {
+    "arabic": "أَحْسَنُ",
+    "persian": "بهتر (نیکوتر) است",
+    "grammar_rule": "خبر",
+    "grammar_color": "#795548",
+    "grammar_explanation": "خبر برای مبتدا، مرفوع به ضمه (همچنین اسم تفضیل است)."
+  }
+]
     },
     {
       "id": 20,
@@ -873,54 +1053,84 @@
         "اگر دیدی دوستت ظلم می‌کند، حتی اگر صمیمی باشید، نگو خوب است."
       ],
       "word_by_word": [
-        {
-          "arabic": "يَا أَيُّهَا",
-          "persian": "ای"
-        },
-        {
-          "arabic": "الَّذِينَ",
-          "persian": "کسانی که"
-        },
-        {
-          "arabic": "آمَنُوا",
-          "persian": "ایمان آوردند (مؤمنان)"
-        },
-        {
-          "arabic": "كُونُوا",
-          "persian": "باشید"
-        },
-        {
-          "arabic": "قَوَّامِينَ",
-          "persian": "قیام‌کنندگان (به پا خیزندگان)"
-        },
-        {
-          "arabic": "لِ",
-          "persian": "برای",
-          "grammar_rule": "حرف جر",
-          "grammar_color": "#2196F3",
-          "grammar_explanation": "حرف جر به معنای «برای»"
-        },
-        {
-          "arabic": "لَّهِ",
-          "persian": "خدا"
-        },
-        {
-          "arabic": "شُهَدَاءَ",
-          "persian": "گواهان (گواهی‌دهندگان)"
-        },
-        {
-          "arabic": "بِ",
-          "persian": "به"
-        },
-        {
-          "arabic": "الْ",
-          "persian": "(حرف تعریف)"
-        },
-        {
-          "arabic": "قِسْطِ",
-          "persian": "عدالت (درستی)"
-        }
-      ]
+  {
+    "arabic": "يَا أَيُّهَا",
+    "persian": "ای",
+    "grammar_rule": "حرف ندا و منادا",
+    "grammar_color": "#E91E63",
+    "grammar_explanation": "«يا» حرف ندا و «أيّ» منادای نکره مقصوده (مبنی بر ضم)."
+  },
+  {
+    "arabic": "الَّذِينَ",
+    "persian": "کسانی که",
+    "grammar_rule": "اسم موصول",
+    "grammar_color": "#009688",
+    "grammar_explanation": "اسم موصول، در نقش عطف بیان یا صفت برای منادا."
+  },
+  {
+    "arabic": "آمَنُوا",
+    "persian": "ایمان آوردند (مؤمنان)",
+    "grammar_rule": "فعل ماضی",
+    "grammar_color": "#4CAF50",
+    "grammar_explanation": "فعل ماضی (جمع مذکر غایب)، جمله صله برای موصول."
+  },
+  {
+    "arabic": "كُونُوا",
+    "persian": "باشید",
+    "grammar_rule": "فعل امر ناقص",
+    "grammar_color": "#4CAF50",
+    "grammar_explanation": "فعل امر از افعال ناقصه، ضمیر «واو» اسم آن است."
+  },
+  {
+    "arabic": "قَوَّامِينَ",
+    "persian": "قیام‌کنندگان (به پا خیزندگان)",
+    "grammar_rule": "خبر افعال ناقصه",
+    "grammar_color": "#FF9800",
+    "grammar_explanation": "خبر برای «كان»، منصوب و نشانه نصب آن حرف «ی» در جمع مذکر سالم است."
+  },
+  {
+    "arabic": "لِ",
+    "persian": "برای",
+    "grammar_rule": "حرف جر",
+    "grammar_color": "#2196F3",
+    "grammar_explanation": "حرف جر به معنای «برای»."
+  },
+  {
+    "arabic": "لَّهِ",
+    "persian": "خدا",
+    "grammar_rule": "اسم مجرور",
+    "grammar_color": "#00BCD4",
+    "grammar_explanation": "لفظ جلاله مجرور به حرف جر."
+  },
+  {
+    "arabic": "شُهَدَاءَ",
+    "persian": "گواهان (گواهی‌دهندگان)",
+    "grammar_rule": "خبر دوم",
+    "grammar_color": "#FF9800",
+    "grammar_explanation": "خبر دوم برای فعل ناقصه و منصوب (علامت نصب فتحه)."
+  },
+  {
+    "arabic": "بِ",
+    "persian": "به",
+    "grammar_rule": "حرف جر",
+    "grammar_color": "#2196F3",
+    "grammar_explanation": "حرف جر."
+  },
+  {
+    "arabic": "الْ",
+    "persian": "(حرف تعریف)",
+    "grammar_rule": "حرف تعریف",
+    "grammar_color": "#9E9E9E",
+    "grammar_explanation": "الف و لام تعریف."
+  },
+  {
+    "arabic": "قِسْطِ",
+    "persian": "عدالت (درستی)",
+    "grammar_rule": "اسم مجرور",
+    "grammar_color": "#00BCD4",
+    "grammar_explanation": "اسم مجرور به حرف جر «بِ» (علامت جر کسره)."
+  }
+]
     },
     {
       "id": 21,
@@ -936,27 +1146,42 @@
         "یاد بگیر آیة‌الکرسی را حفظ کنی و معنایش را بفهمی."
       ],
       "word_by_word": [
-        {
-          "arabic": "اللَّهُ",
-          "persian": "خداوند"
-        },
-        {
-          "arabic": "لَا",
-          "persian": "نیست (هیچ)"
-        },
-        {
-          "arabic": "إِلَهَ",
-          "persian": "معبودی"
-        },
-        {
-          "arabic": "إِلَّا",
-          "persian": "مگر (جز)"
-        },
-        {
-          "arabic": "هُوَ",
-          "persian": "او"
-        }
-      ]
+  {
+    "arabic": "اللَّهُ",
+    "persian": "خداوند",
+    "grammar_rule": "مبتدا",
+    "grammar_color": "#607D8B",
+    "grammar_explanation": "لفظ جلاله، در جایگاه مبتدا و مرفوع به ضمه."
+  },
+  {
+    "arabic": "لَا",
+    "persian": "نیست (هیچ)",
+    "grammar_rule": "لای نفی جنس",
+    "grammar_color": "#E91E63",
+    "grammar_explanation": "حرف نفی جنس، مبنی بر سکون که عمل «إنّ» را انجام می‌دهد."
+  },
+  {
+    "arabic": "إِلَهَ",
+    "persian": "معبودی",
+    "grammar_rule": "اسم لا",
+    "grammar_color": "#FF9800",
+    "grammar_explanation": "اسم لای نفی جنس، مبنی بر فتحه و در محل نصب."
+  },
+  {
+    "arabic": "إِلَّا",
+    "persian": "مگر (جز)",
+    "grammar_rule": "حرف حصر (استثناء)",
+    "grammar_color": "#9C27B0",
+    "grammar_explanation": "حرف استثناء که در اینجا به عنوان حرف حصر عمل می‌کند."
+  },
+  {
+    "arabic": "هُوَ",
+    "persian": "او",
+    "grammar_rule": "بدل / خبر",
+    "grammar_color": "#546E7A",
+    "grammar_explanation": "ضمیر منفصل، در جایگاه رفع (بدل از محل لا و اسم آن، یا خبر محذوف)."
+  }
+]
     },
     {
       "id": 22,
@@ -972,30 +1197,42 @@
         "در دعا صادق باش و فقط چیزهایی بخواه که واقعاً نیاز داری."
       ],
       "word_by_word": [
-        {
-          "arabic": "إِيَّاكَ",
-          "persian": "تنها تو را"
-        },
-        {
-          "arabic": "نَعْبُدُ",
-          "persian": "می‌پرستیم"
-        },
-        {
-          "arabic": "وَ",
-          "persian": "و",
-          "grammar_rule": "حرف عطف",
-          "grammar_color": "#9C27B0",
-          "grammar_explanation": "حرف عطف برای پیوند دادن"
-        },
-        {
-          "arabic": "إِيَّاكَ",
-          "persian": "تنها از تو"
-        },
-        {
-          "arabic": "نَسْتَعِينُ",
-          "persian": "یاری می‌جوییم"
-        }
-      ]
+  {
+    "arabic": "إِيَّاكَ",
+    "persian": "تنها تو را",
+    "grammar_rule": "مفعول‌به مقدم",
+    "grammar_color": "#FF9800",
+    "grammar_explanation": "ضمیر منفصل در جایگاه نصب، مفعول‌به مقدم (مقدم شدن آن افاده حصر و تاکید می‌کند)."
+  },
+  {
+    "arabic": "نَعْبُدُ",
+    "persian": "می‌پرستیم",
+    "grammar_rule": "فعل مضارع",
+    "grammar_color": "#4CAF50",
+    "grammar_explanation": "فعل مضارع مرفوع، فاعل آن ضمیر مستتر «نحن» (ما) است."
+  },
+  {
+    "arabic": "وَ",
+    "persian": "و",
+    "grammar_rule": "حرف عطف",
+    "grammar_color": "#9C27B0",
+    "grammar_explanation": "حرف عطف برای پیوند دادن."
+  },
+  {
+    "arabic": "إِيَّاكَ",
+    "persian": "تنها از تو",
+    "grammar_rule": "مفعول‌به مقدم",
+    "grammar_color": "#FF9800",
+    "grammar_explanation": "ضمیر منفصل منصوب، مفعول‌به مقدم برای فعل بعدی."
+  },
+  {
+    "arabic": "نَسْتَعِينُ",
+    "persian": "یاری می‌جوییم",
+    "grammar_rule": "فعل مضارع",
+    "grammar_color": "#4CAF50",
+    "grammar_explanation": "فعل مضارع مرفوع، فاعل مستتر آن «نحن» است."
+  }
+]
     },
     {
       "id": 23,
@@ -1011,30 +1248,42 @@
         "وقتی موفق می‌شوی، بلافاصله خدا را شکر کن."
       ],
       "word_by_word": [
-        {
-          "arabic": "فَ",
-          "persian": "پس",
-          "grammar_rule": "حرف عطف",
-          "grammar_color": "#9C27B0",
-          "grammar_explanation": "حرف عطف برای ترتیب یا نتیجه"
-        },
-        {
-          "arabic": "اذْكُرُو",
-          "persian": "یاد کنید"
-        },
-        {
-          "arabic": "نِي",
-          "persian": "مرا"
-        },
-        {
-          "arabic": "أَذْكُرْ",
-          "persian": "یاد می‌کنم"
-        },
-        {
-          "arabic": "كُمْ",
-          "persian": "شما را"
-        }
-      ]
+  {
+    "arabic": "فَ",
+    "persian": "پس",
+    "grammar_rule": "حرف عطف",
+    "grammar_color": "#9C27B0",
+    "grammar_explanation": "حرف عطف برای بیان نتیجه یا ترتیب."
+  },
+  {
+    "arabic": "اذْكُرُو",
+    "persian": "یاد کنید",
+    "grammar_rule": "فعل امر و فاعل",
+    "grammar_color": "#4CAF50",
+    "grammar_explanation": "فعل امر مبنی بر حذف نون. ضمیر «واو» فاعل آن است."
+  },
+  {
+    "arabic": "نِي",
+    "persian": "مرا",
+    "grammar_rule": "مفعول‌به",
+    "grammar_color": "#546E7A",
+    "grammar_explanation": "نون برای وقایه است و «ي» ضمیر متصل در محل نصب (مفعول‌به)."
+  },
+  {
+    "arabic": "أَذْكُرْ",
+    "persian": "یاد می‌کنم",
+    "grammar_rule": "فعل مضارع مجزوم",
+    "grammar_color": "#4CAF50",
+    "grammar_explanation": "فعل مضارع، چون جواب امر (طلب) واقع شده مجزوم به سکون است. فاعل آن «أنا» مستتر است."
+  },
+  {
+    "arabic": "كُمْ",
+    "persian": "شما را",
+    "grammar_rule": "مفعول‌به",
+    "grammar_color": "#FF9800",
+    "grammar_explanation": "ضمیر متصل در محل نصب، مفعول‌به."
+  }
+]
     },
     {
       "id": 24,
@@ -1049,36 +1298,57 @@
         "اگر نگران آینده هستی، توکل به خدا آرامش می‌آورد.",
         "نماز را به وقتش بخوان، احساس آرامشش را بیشتر حس می‌کنی."
       ],
-      "word_by_word": [
-        {
-          "arabic": "أَلَا",
-          "persian": "آگاه باشید"
-        },
-        {
-          "arabic": "بِ",
-          "persian": "به (با)"
-        },
-        {
-          "arabic": "ذِكْرِ",
-          "persian": "یاد"
-        },
-        {
-          "arabic": "اللَّهِ",
-          "persian": "خدا"
-        },
-        {
-          "arabic": "تَطْمَئِنُّ",
-          "persian": "آرام می‌گیرد"
-        },
-        {
-          "arabic": "الْ",
-          "persian": "(حرف تعریف)"
-        },
-        {
-          "arabic": "قُلُوبُ",
-          "persian": "دل‌ها"
-        }
-      ]
+      "word_by_word":[
+  {
+    "arabic": "أَلَا",
+    "persian": "آگاه باشید",
+    "grammar_rule": "حرف تنبیه",
+    "grammar_color": "#E91E63",
+    "grammar_explanation": "حرف تنبیه و آگاه‌سازی، مبنی بر سکون."
+  },
+  {
+    "arabic": "بِ",
+    "persian": "به (با)",
+    "grammar_rule": "حرف جر",
+    "grammar_color": "#2196F3",
+    "grammar_explanation": "حرف جر."
+  },
+  {
+    "arabic": "ذِكْرِ",
+    "persian": "یاد",
+    "grammar_rule": "اسم مجرور",
+    "grammar_color": "#00BCD4",
+    "grammar_explanation": "اسم مجرور به حرف جر."
+  },
+  {
+    "arabic": "اللَّهِ",
+    "persian": "خدا",
+    "grammar_rule": "مضاف‌الیه",
+    "grammar_color": "#00BCD4",
+    "grammar_explanation": "لفظ جلاله، مضاف‌الیه و مجرور به کسره."
+  },
+  {
+    "arabic": "تَطْمَئِنُّ",
+    "persian": "آرام می‌گیرد",
+    "grammar_rule": "فعل مضارع",
+    "grammar_color": "#4CAF50",
+    "grammar_explanation": "فعل مضارع مرفوع به ضمه."
+  },
+  {
+    "arabic": "الْ",
+    "persian": "(حرف تعریف)",
+    "grammar_rule": "حرف تعریف",
+    "grammar_color": "#9E9E9E",
+    "grammar_explanation": "الف و لام تعریف."
+  },
+  {
+    "arabic": "قُلُوبُ",
+    "persian": "دل‌ها",
+    "grammar_rule": "فاعل",
+    "grammar_color": "#3F51B5",
+    "grammar_explanation": "فاعل برای فعل «تطمئن» و مرفوع به ضمه."
+  }
+]
     },
     {
       "id": 25,
@@ -1094,36 +1364,42 @@
         "ترس از نظر دیگران را با توکل به خدا کم کن."
       ],
       "word_by_word": [
-        {
-          "arabic": "وَ",
-          "persian": "و",
-          "grammar_rule": "حرف عطف",
-          "grammar_color": "#9C27B0",
-          "grammar_explanation": "حرف عطف برای پیوند دادن"
-        },
-        {
-          "arabic": "عَلَى",
-          "persian": "بر",
-          "grammar_rule": "حرف جر",
-          "grammar_color": "#2196F3",
-          "grammar_explanation": "حرف جر به معنای «بر»"
-        },
-        {
-          "arabic": "اللَّهِ",
-          "persian": "خدا"
-        },
-        {
-          "arabic": "فَ",
-          "persian": "پس",
-          "grammar_rule": "حرف عطف",
-          "grammar_color": "#9C27B0",
-          "grammar_explanation": "حرف عطف برای ترتیب یا نتیجه"
-        },
-        {
-          "arabic": "تَوَكَّلُوا",
-          "persian": "توکل کنید"
-        }
-      ]
+  {
+    "arabic": "وَ",
+    "persian": "و",
+    "grammar_rule": "حرف عطف",
+    "grammar_color": "#9C27B0",
+    "grammar_explanation": "حرف عطف."
+  },
+  {
+    "arabic": "عَلَى",
+    "persian": "بر",
+    "grammar_rule": "حرف جر",
+    "grammar_color": "#2196F3",
+    "grammar_explanation": "حرف جر به معنای «بر»."
+  },
+  {
+    "arabic": "اللَّهِ",
+    "persian": "خدا",
+    "grammar_rule": "اسم مجرور",
+    "grammar_color": "#00BCD4",
+    "grammar_explanation": "لفظ جلاله، مجرور به حرف جر."
+  },
+  {
+    "arabic": "فَ",
+    "persian": "پس",
+    "grammar_rule": "حرف رابطه",
+    "grammar_color": "#9C27B0",
+    "grammar_explanation": "حرف رابطه (یا عطف) برای تأکید و پیوند جمله."
+  },
+  {
+    "arabic": "تَوَكَّلُوا",
+    "persian": "توکل کنید",
+    "grammar_rule": "فعل امر و فاعل",
+    "grammar_color": "#4CAF50",
+    "grammar_explanation": "فعل امر، مبنی بر حذف نون. ضمیر «واو» در نقش فاعل آن است."
+  }
+]
     },
     {
       "id": 26,
@@ -1139,55 +1415,70 @@
         "وقتی غمگینی و کسی نیست، بنویس یا دعا کن، خدا می‌شنود."
       ],
       "word_by_word": [
-        {
-          "arabic": "وَ",
-          "persian": "و",
-          "grammar_rule": "حرف عطف",
-          "grammar_color": "#9C27B0",
-          "grammar_explanation": "حرف عطف برای پیوند دادن"
-        },
-        {
-          "arabic": "مَنْ",
-          "persian": "هر کس",
-          "grammar_rule": "حرف جر",
-          "grammar_color": "#2196F3",
-          "grammar_explanation": "حرف جر به معنای «از»"
-        },
-        {
-          "arabic": "يَتَوَكَّلْ",
-          "persian": "توکل کند"
-        },
-        {
-          "arabic": "عَلَى",
-          "persian": "بر",
-          "grammar_rule": "حرف جر",
-          "grammar_color": "#2196F3",
-          "grammar_explanation": "حرف جر به معنای «بر»"
-        },
-        {
-          "arabic": "اللَّهِ",
-          "persian": "خدا"
-        },
-        {
-          "arabic": "فَ",
-          "persian": "پس",
-          "grammar_rule": "حرف عطف",
-          "grammar_color": "#9C27B0",
-          "grammar_explanation": "حرف عطف برای ترتیب یا نتیجه"
-        },
-        {
-          "arabic": "هُوَ",
-          "persian": "او"
-        },
-        {
-          "arabic": "حَسْبُ",
-          "persian": "کافی است"
-        },
-        {
-          "arabic": "هُ",
-          "persian": "برای او (اش)"
-        }
-      ]
+  {
+    "arabic": "وَ",
+    "persian": "و",
+    "grammar_rule": "حرف عطف",
+    "grammar_color": "#9C27B0",
+    "grammar_explanation": "حرف عطف یا استئناف."
+  },
+  {
+    "arabic": "مَنْ",
+    "persian": "هر کس",
+    "grammar_rule": "اسم شرط جازم / مبتدا",
+    "grammar_color": "#607D8B",
+    "grammar_explanation": "اسم شرط جازم، در جایگاه رفع و مبتدا."
+  },
+  {
+    "arabic": "يَتَوَكَّلْ",
+    "persian": "توکل کند",
+    "grammar_rule": "فعل مضارع مجزوم",
+    "grammar_color": "#4CAF50",
+    "grammar_explanation": "فعل مضارع که به عنوان فعل شرط مجزوم به سکون است. فاعل آن ضمیر مستتر «هو» است."
+  },
+  {
+    "arabic": "عَلَى",
+    "persian": "بر",
+    "grammar_rule": "حرف جر",
+    "grammar_color": "#2196F3",
+    "grammar_explanation": "حرف جر برای ربط و اتصال."
+  },
+  {
+    "arabic": "اللَّهِ",
+    "persian": "خدا",
+    "grammar_rule": "اسم مجرور",
+    "grammar_color": "#00BCD4",
+    "grammar_explanation": "لفظ جلاله، مجرور به حرف جر «علی»."
+  },
+  {
+    "arabic": "فَ",
+    "persian": "پس",
+    "grammar_rule": "حرف رابطه",
+    "grammar_color": "#9C27B0",
+    "grammar_explanation": "حرف رابطه که در جواب شرط می‌آید (فاء جزائیه)."
+  },
+  {
+    "arabic": "هُوَ",
+    "persian": "او",
+    "grammar_rule": "مبتدا",
+    "grammar_color": "#607D8B",
+    "grammar_explanation": "ضمیر منفصل در جایگاه رفع، مبتدا برای جمله جواب شرط."
+  },
+  {
+    "arabic": "حَسْبُ",
+    "persian": "کافی است",
+    "grammar_rule": "خبر",
+    "grammar_color": "#546E7A",
+    "grammar_explanation": "خبر برای مبتدا (هو) و مرفوع به ضمه."
+  },
+  {
+    "arabic": "هُ",
+    "persian": "برای او (اش)",
+    "grammar_rule": "مضاف‌الیه",
+    "grammar_color": "#00BCD4",
+    "grammar_explanation": "ضمیر متصل در محل جر، مضاف‌الیه."
+  }
+]
     },
     {
       "id": 27,
@@ -1202,28 +1493,43 @@
         "در دوران نوجوانی که پر از تغییر است، آرامش خودت را حفظ کن.",
         "وقتی صبر می‌کنی، بدان که خدا این را می‌بیند و ارزش دارد."
       ],
-      "word_by_word": [
-        {
-          "arabic": "إِنَّ",
-          "persian": "همانا (قطعا)"
-        },
-        {
-          "arabic": "اللَّهَ",
-          "persian": "خدا"
-        },
-        {
-          "arabic": "مَعَ",
-          "persian": "با"
-        },
-        {
-          "arabic": "الْ",
-          "persian": "(حرف تعریف)"
-        },
-        {
-          "arabic": "صَّابِرِينَ",
-          "persian": "شکیبایان (صبرکنندگان)"
-        }
-      ]
+      "word_by_word":[
+  {
+    "arabic": "إِنَّ",
+    "persian": "همانا (قطعاً)",
+    "grammar_rule": "حرف مشبهة بالفعل",
+    "grammar_color": "#E91E63",
+    "grammar_explanation": "حرف تأکید و نصب که مبتدا را منصوب می‌کند."
+  },
+  {
+    "arabic": "اللَّهَ",
+    "persian": "خدا",
+    "grammar_rule": "اسم إنّ",
+    "grammar_color": "#FF9800",
+    "grammar_explanation": "لفظ جلاله، اسم «إنّ» و منصوب به فتحه."
+  },
+  {
+    "arabic": "مَعَ",
+    "persian": "با",
+    "grammar_rule": "ظرف (مضاف)",
+    "grammar_color": "#FFC107",
+    "grammar_explanation": "ظرف منصوب (نشان‌دهنده همراهی)، متعلق به خبر محذوف."
+  },
+  {
+    "arabic": "الْ",
+    "persian": "(حرف تعریف)",
+    "grammar_rule": "حرف تعریف",
+    "grammar_color": "#9E9E9E",
+    "grammar_explanation": "الف و لام تعریف."
+  },
+  {
+    "arabic": "صَّابِرِينَ",
+    "persian": "شکیبایان (صبرکنندگان)",
+    "grammar_rule": "مضاف‌الیه",
+    "grammar_color": "#00BCD4",
+    "grammar_explanation": "مضاف‌الیه و مجرور به «یاء» (زیرا جمع مذکر سالم است)."
+  }
+]
     },
     {
       "id": 28,
@@ -1238,28 +1544,43 @@
         "تاریخ نشان می‌دهد بعد از هر بحران، بهبود می‌آید.",
         "یه مشکل جدید را فرصت رشد ببین، نه فاجعه."
       ],
-      "word_by_word": [
-        {
-          "arabic": "إِنَّ",
-          "persian": "بی‌گمان (قطعا)"
-        },
-        {
-          "arabic": "مَعَ",
-          "persian": "با"
-        },
-        {
-          "arabic": "الْ",
-          "persian": "(حرف تعریف)"
-        },
-        {
-          "arabic": "عُسْرِ",
-          "persian": "سختی"
-        },
-        {
-          "arabic": "يُسْرًا",
-          "persian": "آسانی"
-        }
-      ]
+      "word_by_word":[
+  {
+    "arabic": "إِنَّ",
+    "persian": "بی‌گمان (قطعاً)",
+    "grammar_rule": "حرف مشبهة بالفعل",
+    "grammar_color": "#E91E63",
+    "grammar_explanation": "حرف تأکید و نصب."
+  },
+  {
+    "arabic": "مَعَ",
+    "persian": "با",
+    "grammar_rule": "ظرف",
+    "grammar_color": "#FFC107",
+    "grammar_explanation": "ظرف در محل نصب، متعلق به خبر مقدم محذوف."
+  },
+  {
+    "arabic": "الْ",
+    "persian": "(حرف تعریف)",
+    "grammar_rule": "حرف تعریف",
+    "grammar_color": "#9E9E9E",
+    "grammar_explanation": "الف و لام تعریف."
+  },
+  {
+    "arabic": "عُسْرِ",
+    "persian": "سختی",
+    "grammar_rule": "مضاف‌الیه",
+    "grammar_color": "#00BCD4",
+    "grammar_explanation": "مضاف‌الیه و مجرور به کسره."
+  },
+  {
+    "arabic": "يُسْرًا",
+    "persian": "آسانی",
+    "grammar_rule": "اسم إنّ مؤخر",
+    "grammar_color": "#FF9800",
+    "grammar_explanation": "اسم «إنّ» که در جمله مؤخر شده (تأخیر افتاده) و منصوب به تنوین فتحه است."
+  }
+]
     },
     {
       "id": 29,
@@ -1275,30 +1596,42 @@
         "در برابر فشار دوستان برای کار اشتباه، استوار باش."
       ],
       "word_by_word": [
-        {
-          "arabic": "فَ",
-          "persian": "پس",
-          "grammar_rule": "حرف عطف",
-          "grammar_color": "#9C27B0",
-          "grammar_explanation": "حرف عطف برای ترتیب یا نتیجه"
-        },
-        {
-          "arabic": "اسْتَقِمْ",
-          "persian": "استوار باش (پایداری کن)"
-        },
-        {
-          "arabic": "كَ",
-          "persian": "همان‌گونه (مانندِ)"
-        },
-        {
-          "arabic": "مَا",
-          "persian": "آنچه (که)"
-        },
-        {
-          "arabic": "أُمِرْتَ",
-          "persian": "فرمان یافته‌ای"
-        }
-      ]
+  {
+    "arabic": "فَ",
+    "persian": "پس",
+    "grammar_rule": "حرف عطف / نتیجه",
+    "grammar_color": "#9C27B0",
+    "grammar_explanation": "حرف عطف که برای بیان نتیجه یا تفریع می‌آید."
+  },
+  {
+    "arabic": "اسْتَقِمْ",
+    "persian": "استوار باش (پایداری کن)",
+    "grammar_rule": "فعل امر و فاعل",
+    "grammar_color": "#4CAF50",
+    "grammar_explanation": "فعل امر مبنی بر سکون. فاعل آن ضمیر مستتر «أنت» (تو) است."
+  },
+  {
+    "arabic": "كَ",
+    "persian": "همان‌گونه (مانندِ)",
+    "grammar_rule": "حرف جر",
+    "grammar_color": "#2196F3",
+    "grammar_explanation": "حرف جر برای تشبیه."
+  },
+  {
+    "arabic": "مَا",
+    "persian": "آنچه (که)",
+    "grammar_rule": "اسم موصول / مصدری",
+    "grammar_color": "#795548",
+    "grammar_explanation": "اسم موصول (یا حرف مصدری) در محل جر به وسیله حرف «ک»."
+  },
+  {
+    "arabic": "أُمِرْتَ",
+    "persian": "فرمان یافته‌ای",
+    "grammar_rule": "فعل ماضی مجهول",
+    "grammar_color": "#4CAF50",
+    "grammar_explanation": "فعل ماضی مجهول. ضمیر متصل «تَ» در جایگاه رفع و نائب فاعل آن است."
+  }
+]
     },
     {
       "id": 30,
@@ -1314,38 +1647,56 @@
         "در هر حالی، در خوبی و بدی، خدا حاضر است."
       ],
       "word_by_word": [
-        {
-          "arabic": "وَ",
-          "persian": "و",
-          "grammar_rule": "حرف عطف",
-          "grammar_color": "#9C27B0",
-          "grammar_explanation": "حرف عطف برای پیوند دادن"
-        },
-        {
-          "arabic": "هُوَ",
-          "persian": "او"
-        },
-        {
-          "arabic": "مَعَ",
-          "persian": "با"
-        },
-        {
-          "arabic": "كُمْ",
-          "persian": "شما"
-        },
-        {
-          "arabic": "أَيْنَ",
-          "persian": "کجا"
-        },
-        {
-          "arabic": "مَا",
-          "persian": "هر (أَيْنَمَا = هر جا که)"
-        },
-        {
-          "arabic": "كُنْتُمْ",
-          "persian": "باشید"
-        }
-      ]
+  {
+    "arabic": "وَ",
+    "persian": "و",
+    "grammar_rule": "حرف عطف / حالیه",
+    "grammar_color": "#9C27B0",
+    "grammar_explanation": "حرف عطف (و در اینجا می‌تواند واو حالیه باشد)."
+  },
+  {
+    "arabic": "هُوَ",
+    "persian": "او",
+    "grammar_rule": "مبتدا",
+    "grammar_color": "#607D8B",
+    "grammar_explanation": "ضمیر منفصل در جایگاه رفع و مبتدا."
+  },
+  {
+    "arabic": "مَعَ",
+    "persian": "با",
+    "grammar_rule": "ظرف",
+    "grammar_color": "#FFC107",
+    "grammar_explanation": "ظرف مکان/همراهی منصوب، متعلق به خبر محذوف."
+  },
+  {
+    "arabic": "كُمْ",
+    "persian": "شما",
+    "grammar_rule": "مضاف‌الیه",
+    "grammar_color": "#00BCD4",
+    "grammar_explanation": "ضمیر متصل در محل جر، مضاف‌الیه."
+  },
+  {
+    "arabic": "أَيْنَ",
+    "persian": "کجا",
+    "grammar_rule": "ظرف مکان / اسم شرط",
+    "grammar_color": "#FFC107",
+    "grammar_explanation": "اسم شرط جازم و ظرف مکان در محل نصب."
+  },
+  {
+    "arabic": "مَا",
+    "persian": "هر (أَيْنَمَا = هر جا که)",
+    "grammar_rule": "حرف زائد (تأکید)",
+    "grammar_color": "#9E9E9E",
+    "grammar_explanation": "حرف زائد که برای تعمیم و تأکید شرط به «أین» متصل می‌شود."
+  },
+  {
+    "arabic": "كُنْتُمْ",
+    "persian": "باشید",
+    "grammar_rule": "فعل ماضی ناقص",
+    "grammar_color": "#4CAF50",
+    "grammar_explanation": "فعل ماضی از افعال ناقصه (کان). ضمیر متصل «تُمْ» اسم آن در محل رفع است."
+  }
+]
     },
     {
       "id": 31,
@@ -1360,31 +1711,43 @@
         "حتی اگر بارها اشتباه کردی، توبه همیشه باز است.",
         "در سخت‌ترین لحظات، امیدت را به خدا از دست نده."
       ],
-      "word_by_word": [
-        {
-          "arabic": "لَا",
-          "persian": "نه"
-        },
-        {
-          "arabic": "تَقْنَطُوا",
-          "persian": "ناامید شوید (لَا تَقْنَطُوا: ناامید نشوید)"
-        },
-        {
-          "arabic": "مِنْ",
-          "persian": "از",
-          "grammar_rule": "حرف جر",
-          "grammar_color": "#2196F3",
-          "grammar_explanation": "حرف جر به معنای «از»"
-        },
-        {
-          "arabic": "رَحْمَةِ",
-          "persian": "رحمت"
-        },
-        {
-          "arabic": "اللَّهِ",
-          "persian": "خدا"
-        }
-      ]
+      "word_by_word":[
+  {
+    "arabic": "لَا",
+    "persian": "نه",
+    "grammar_rule": "حرف نهی",
+    "grammar_color": "#E91E63",
+    "grammar_explanation": "حرف نهی (بازدارنده) که فعل مضارع پس از خود را مجزوم می‌کند."
+  },
+  {
+    "arabic": "تَقْنَطُوا",
+    "persian": "ناامید شوید",
+    "grammar_rule": "فعل مضارع مجزوم",
+    "grammar_color": "#4CAF50",
+    "grammar_explanation": "فعل مضارع مجزوم به «لا» نهی، علامت جزم آن حذف «نون» است. واو ضمیر متصل و فاعل است."
+  },
+  {
+    "arabic": "مِنْ",
+    "persian": "از",
+    "grammar_rule": "حرف جر",
+    "grammar_color": "#2196F3",
+    "grammar_explanation": "حرف جر."
+  },
+  {
+    "arabic": "رَحْمَةِ",
+    "persian": "رحمت",
+    "grammar_rule": "اسم مجرور",
+    "grammar_color": "#00BCD4",
+    "grammar_explanation": "اسم مجرور به حرف جر «من» و علامت جر آن کسره است. در ضمن مضاف نیز می‌باشد."
+  },
+  {
+    "arabic": "اللَّهِ",
+    "persian": "خدا",
+    "grammar_rule": "مضاف‌الیه",
+    "grammar_color": "#00BCD4",
+    "grammar_explanation": "لفظ جلاله، مضاف‌الیه و مجرور به کسره."
+  }
+]
     },
     {
       "id": 32,
@@ -1400,34 +1763,49 @@
         "قبل از خواب، یه نعمت جدید پیدا کن و شکر کن."
       ],
       "word_by_word": [
-        {
-          "arabic": "وَ",
-          "persian": "و",
-          "grammar_rule": "حرف عطف",
-          "grammar_color": "#9C27B0",
-          "grammar_explanation": "حرف عطف برای پیوند دادن"
-        },
-        {
-          "arabic": "رَحْمَتِ",
-          "persian": "رحمتِ"
-        },
-        {
-          "arabic": "ي",
-          "persian": "من"
-        },
-        {
-          "arabic": "وَسِعَتْ",
-          "persian": "فرا گرفته است"
-        },
-        {
-          "arabic": "كُلَّ",
-          "persian": "همه"
-        },
-        {
-          "arabic": "شَيْءٍ",
-          "persian": "چیز"
-        }
-      ]
+  {
+    "arabic": "وَ",
+    "persian": "و",
+    "grammar_rule": "حرف استئناف / عطف",
+    "grammar_color": "#9C27B0",
+    "grammar_explanation": "حرف عطف برای آغاز یا پیوند جمله."
+  },
+  {
+    "arabic": "رَحْمَتِ",
+    "persian": "رحمتِ",
+    "grammar_rule": "مبتدا",
+    "grammar_color": "#607D8B",
+    "grammar_explanation": "مبتدا و مرفوع (تقدیراً، به دلیل اتصال به یاء متکلم). مضاف است."
+  },
+  {
+    "arabic": "ي",
+    "persian": "من",
+    "grammar_rule": "مضاف‌الیه",
+    "grammar_color": "#00BCD4",
+    "grammar_explanation": "ضمیر متصل (یاء متکلم) در محل جر، مضاف‌الیه."
+  },
+  {
+    "arabic": "وَسِعَتْ",
+    "persian": "فرا گرفته است",
+    "grammar_rule": "فعل ماضی",
+    "grammar_color": "#4CAF50",
+    "grammar_explanation": "فعل ماضی مبنی بر فتح، «ت» نشانه تأنیث است. فاعل آن ضمیر مستتر «هی» (به رحمت برمی‌گردد). جمله فعلیه، خبر برای مبتدا است."
+  },
+  {
+    "arabic": "كُلَّ",
+    "persian": "همه",
+    "grammar_rule": "مفعول‌به",
+    "grammar_color": "#FF9800",
+    "grammar_explanation": "مفعول‌به برای فعل «وَسِعَتْ» منصوب به فتحه. مضاف نیز هست."
+  },
+  {
+    "arabic": "شَيْءٍ",
+    "persian": "چیز",
+    "grammar_rule": "مضاف‌الیه",
+    "grammar_color": "#00BCD4",
+    "grammar_explanation": "مضاف‌الیه و مجرور به کسره."
+  }
+]
     },
     {
       "id": 33,
@@ -1443,27 +1821,42 @@
         "با خدا حرف بزن مثل اینکه با بهترین دوستت حرف می‌زنی."
       ],
       "word_by_word": [
-        {
-          "arabic": "إِنَّ",
-          "persian": "همانا (قطعا)"
-        },
-        {
-          "arabic": "رَبِّ",
-          "persian": "پروردگارِ"
-        },
-        {
-          "arabic": "ي",
-          "persian": "من"
-        },
-        {
-          "arabic": "قَرِيبٌ",
-          "persian": "نزدیک (است)"
-        },
-        {
-          "arabic": "مُجِيبٌ",
-          "persian": "اجابت‌کننده (است)"
-        }
-      ]
+  {
+    "arabic": "إِنَّ",
+    "persian": "همانا (قطعاً)",
+    "grammar_rule": "حرف مشبهة بالفعل",
+    "grammar_color": "#E91E63",
+    "grammar_explanation": "حرف تأکید که اسم پس از خود را منصوب می‌کند."
+  },
+  {
+    "arabic": "رَبِّ",
+    "persian": "پروردگارِ",
+    "grammar_rule": "اسم إنّ",
+    "grammar_color": "#FF9800",
+    "grammar_explanation": "اسم «إنّ» منصوب (تقدیراً به دلیل اتصال به یاء متکلم). مضاف است."
+  },
+  {
+    "arabic": "ي",
+    "persian": "من",
+    "grammar_rule": "مضاف‌الیه",
+    "grammar_color": "#00BCD4",
+    "grammar_explanation": "ضمیر متصل در محل جر، مضاف‌الیه."
+  },
+  {
+    "arabic": "قَرِيبٌ",
+    "persian": "نزدیک (است)",
+    "grammar_rule": "خبر إنّ",
+    "grammar_color": "#546E7A",
+    "grammar_explanation": "خبر اول برای «إنّ» مرفوع به تنوین ضمه."
+  },
+  {
+    "arabic": "مُجِيبٌ",
+    "persian": "اجابت‌کننده (است)",
+    "grammar_rule": "خبر دوم إنّ",
+    "grammar_color": "#546E7A",
+    "grammar_explanation": "خبر دوم برای «إنّ» مرفوع به تنوین ضمه."
+  }
+]
     },
     {
       "id": 34,
@@ -1479,37 +1872,49 @@
         "بعد از نماز یه دعای شخصی داشته باش."
       ],
       "word_by_word": [
-        {
-          "arabic": "فَ",
-          "persian": "پس",
-          "grammar_rule": "حرف عطف",
-          "grammar_color": "#9C27B0",
-          "grammar_explanation": "حرف عطف برای ترتیب یا نتیجه"
-        },
-        {
-          "arabic": "ادْعُو",
-          "persian": "بخوانید"
-        },
-        {
-          "arabic": "نِي",
-          "persian": "مرا"
-        },
-        {
-          "arabic": "أَسْتَجِبْ",
-          "persian": "اجابت کنم"
-        },
-        {
-          "arabic": "لَ",
-          "persian": "برای",
-          "grammar_rule": "حرف جر",
-          "grammar_color": "#2196F3",
-          "grammar_explanation": "حرف جر به معنای «برای»"
-        },
-        {
-          "arabic": "كُمْ",
-          "persian": "شما"
-        }
-      ]
+  {
+    "arabic": "فَ",
+    "persian": "پس",
+    "grammar_rule": "حرف رابطه / عطف",
+    "grammar_color": "#9C27B0",
+    "grammar_explanation": "حرف رابطه‌ای که نتیجه‌گیری را نشان می‌دهد."
+  },
+  {
+    "arabic": "ادْعُو",
+    "persian": "بخوانید",
+    "grammar_rule": "فعل امر و فاعل",
+    "grammar_color": "#4CAF50",
+    "grammar_explanation": "فعل امر مبنی بر حذف نون. واو ضمیر متصل و در محل رفع فاعل است."
+  },
+  {
+    "arabic": "نِي",
+    "persian": "مرا",
+    "grammar_rule": "مفعول‌به",
+    "grammar_color": "#FF9800",
+    "grammar_explanation": "متشکل از نون وقایه و ضمیر متصل «یاء» متکلم، در محل نصب مفعول‌به."
+  },
+  {
+    "arabic": "أَسْتَجِبْ",
+    "persian": "اجابت کنم",
+    "grammar_rule": "فعل مضارع مجزوم (جواب طلب)",
+    "grammar_color": "#4CAF50",
+    "grammar_explanation": "فعل مضارع مجزوم به سکون، زیرا در جایگاه جواب برای فعل امر (طلب) قرار گرفته است. فاعل آن ضمیر مستتر «أنا» است."
+  },
+  {
+    "arabic": "لَ",
+    "persian": "برای",
+    "grammar_rule": "حرف جر",
+    "grammar_color": "#2196F3",
+    "grammar_explanation": "حرف جر."
+  },
+  {
+    "arabic": "كُمْ",
+    "persian": "شما",
+    "grammar_rule": "اسم مجرور",
+    "grammar_color": "#00BCD4",
+    "grammar_explanation": "ضمیر متصل در محل جر به حرف جر."
+  }
+]
     },
     {
       "id": 35,
@@ -1525,37 +1930,49 @@
         "وقتی از علم می‌خوانی، عجایب خلقت را به یاد قدرت خدا ببند."
       ],
       "word_by_word": [
-        {
-          "arabic": "وَ",
-          "persian": "و",
-          "grammar_rule": "حرف عطف",
-          "grammar_color": "#9C27B0",
-          "grammar_explanation": "حرف عطف برای پیوند دادن"
-        },
-        {
-          "arabic": "هُوَ",
-          "persian": "او"
-        },
-        {
-          "arabic": "عَلَىٰ",
-          "persian": "بر",
-          "grammar_rule": "حرف جر",
-          "grammar_color": "#2196F3",
-          "grammar_explanation": "حرف جر به معنای «بر»"
-        },
-        {
-          "arabic": "كُلِّ",
-          "persian": "هر"
-        },
-        {
-          "arabic": "شَيْءٍ",
-          "persian": "چیز"
-        },
-        {
-          "arabic": "قَدِيرٌ",
-          "persian": "توانا (است)"
-        }
-      ]
+  {
+    "arabic": "وَ",
+    "persian": "و",
+    "grammar_rule": "حرف عطف",
+    "grammar_color": "#9C27B0",
+    "grammar_explanation": "حرف عطف."
+  },
+  {
+    "arabic": "هُوَ",
+    "persian": "او",
+    "grammar_rule": "مبتدا",
+    "grammar_color": "#607D8B",
+    "grammar_explanation": "ضمیر منفصل در محل رفع، مبتدا."
+  },
+  {
+    "arabic": "عَلَىٰ",
+    "persian": "بر",
+    "grammar_rule": "حرف جر",
+    "grammar_color": "#2196F3",
+    "grammar_explanation": "حرف جر."
+  },
+  {
+    "arabic": "كُلِّ",
+    "persian": "هر",
+    "grammar_rule": "اسم مجرور",
+    "grammar_color": "#00BCD4",
+    "grammar_explanation": "اسم مجرور به کسره و متعلق به «قَدِیرٌ». در ضمن مضاف نیز هست."
+  },
+  {
+    "arabic": "شَيْءٍ",
+    "persian": "چیز",
+    "grammar_rule": "مضاف‌الیه",
+    "grammar_color": "#00BCD4",
+    "grammar_explanation": "مضاف‌الیه و مجرور به تنوین کسره."
+  },
+  {
+    "arabic": "قَدِيرٌ",
+    "persian": "توانا (است)",
+    "grammar_rule": "خبر",
+    "grammar_color": "#546E7A",
+    "grammar_explanation": "خبر برای مبتدا (هو) و مرفوع به تنوین ضمه."
+  }
+]
     },
     {
       "id": 36,
@@ -1571,30 +1988,42 @@
         "یاد بگیر سوره نور را بخوانی و کمی از تفسیرش را بدانی."
       ],
       "word_by_word": [
-        {
-          "arabic": "اللَّهُ",
-          "persian": "خداوند"
-        },
-        {
-          "arabic": "نُورُ",
-          "persian": "نورِ"
-        },
-        {
-          "arabic": "السَّمَاوَاتِ",
-          "persian": "آسمان‌ها"
-        },
-        {
-          "arabic": "وَ",
-          "persian": "و",
-          "grammar_rule": "حرف عطف",
-          "grammar_color": "#9C27B0",
-          "grammar_explanation": "حرف عطف برای پیوند دادن"
-        },
-        {
-          "arabic": "الْأَرْضِ",
-          "persian": "زمین (است)"
-        }
-      ]
+  {
+    "arabic": "اللَّهُ",
+    "persian": "خداوند",
+    "grammar_rule": "مبتدا",
+    "grammar_color": "#607D8B",
+    "grammar_explanation": "لفظ جلاله، مبتدا و مرفوع به ضمه است."
+  },
+  {
+    "arabic": "نُورُ",
+    "persian": "نورِ",
+    "grammar_rule": "خبر",
+    "grammar_color": "#546E7A",
+    "grammar_explanation": "خبر برای مبتدا و مرفوع به ضمه. در ضمن مضاف نیز می‌باشد."
+  },
+  {
+    "arabic": "السَّمَاوَاتِ",
+    "persian": "آسمان‌ها",
+    "grammar_rule": "مضاف‌الیه",
+    "grammar_color": "#00BCD4",
+    "grammar_explanation": "مضاف‌الیه و مجرور به کسره."
+  },
+  {
+    "arabic": "وَ",
+    "persian": "و",
+    "grammar_rule": "حرف عطف",
+    "grammar_color": "#9C27B0",
+    "grammar_explanation": "حرف عطف برای پیوند دادن کلمات."
+  },
+  {
+    "arabic": "الْأَرْضِ",
+    "persian": "زمین (است)",
+    "grammar_rule": "معطوف مجرور",
+    "grammar_color": "#00BCD4",
+    "grammar_explanation": "معطوف به «السَّمَاوَاتِ» است و به پیروی از آن مجرور به کسره می‌باشد."
+  }
+]
     },
     {
       "id": 37,
@@ -1610,23 +2039,35 @@
         "وقتی کار خوبی می‌کنی که کسی نمی‌بیند، خدا می‌بیند و ارزش دارد."
       ],
       "word_by_word": [
-        {
-          "arabic": "إِنَّ",
-          "persian": "همانا"
-        },
-        {
-          "arabic": "اللَّهَ",
-          "persian": "خداوند"
-        },
-        {
-          "arabic": "سَمِيعٌ",
-          "persian": "شنوا"
-        },
-        {
-          "arabic": "بَصِيرٌ",
-          "persian": "بینا (است)"
-        }
-      ]
+  {
+    "arabic": "إِنَّ",
+    "persian": "همانا",
+    "grammar_rule": "حرف مشبهة بالفعل",
+    "grammar_color": "#E91E63",
+    "grammar_explanation": "حرف تأکید (ناسخ) که بر سر جمله اسمیه می‌آید و اسم خود را منصوب می‌کند."
+  },
+  {
+    "arabic": "اللَّهَ",
+    "persian": "خداوند",
+    "grammar_rule": "اسم إنّ",
+    "grammar_color": "#FF9800",
+    "grammar_explanation": "لفظ جلاله، اسم «إنّ» و منصوب به فتحه است."
+  },
+  {
+    "arabic": "سَمِيعٌ",
+    "persian": "شنوا",
+    "grammar_rule": "خبر إنّ اول",
+    "grammar_color": "#546E7A",
+    "grammar_explanation": "خبر اول برای «إنّ» و مرفوع به تنوین ضمه."
+  },
+  {
+    "arabic": "بَصِيرٌ",
+    "persian": "بینا (است)",
+    "grammar_rule": "خبر إنّ دوم",
+    "grammar_color": "#546E7A",
+    "grammar_explanation": "خبر دوم برای «إنّ» و مرفوع به تنوین ضمه."
+  }
+]
     },
     {
       "id": 38,
@@ -1642,31 +2083,49 @@
         "از خودت بپرس: اگر خدا الان قلبم را می‌دید، راضی بود؟"
       ],
       "word_by_word": [
-        {
-          "arabic": "إِنَّ",
-          "persian": "همانا"
-        },
-        {
-          "arabic": "اللَّهَ",
-          "persian": "خداوند"
-        },
-        {
-          "arabic": "عَلِيمٌ",
-          "persian": "آگاه (است)"
-        },
-        {
-          "arabic": "بِ",
-          "persian": "به"
-        },
-        {
-          "arabic": "ذَاتِ",
-          "persian": "آنچه در"
-        },
-        {
-          "arabic": "الصُّدُورِ",
-          "persian": "دل‌هاست"
-        }
-      ]
+  {
+    "arabic": "إِنَّ",
+    "persian": "همانا",
+    "grammar_rule": "حرف مشبهة بالفعل",
+    "grammar_color": "#E91E63",
+    "grammar_explanation": "حرف تأکید و از نواسخ."
+  },
+  {
+    "arabic": "اللَّهَ",
+    "persian": "خداوند",
+    "grammar_rule": "اسم إنّ",
+    "grammar_color": "#FF9800",
+    "grammar_explanation": "اسم «إنّ» و منصوب به فتحه."
+  },
+  {
+    "arabic": "عَلِيمٌ",
+    "persian": "آگاه (است)",
+    "grammar_rule": "خبر إنّ",
+    "grammar_color": "#546E7A",
+    "grammar_explanation": "خبر «إنّ» و مرفوع به تنوین ضمه."
+  },
+  {
+    "arabic": "بِ",
+    "persian": "به",
+    "grammar_rule": "حرف جر",
+    "grammar_color": "#2196F3",
+    "grammar_explanation": "حرف جر (عامل مجرور کننده)."
+  },
+  {
+    "arabic": "ذَاتِ",
+    "persian": "آنچه در",
+    "grammar_rule": "اسم مجرور",
+    "grammar_color": "#00BCD4",
+    "grammar_explanation": "اسم مجرور به حرف جر «باء» و علامت جر آن کسره است. در ضمن مضاف نیز هست."
+  },
+  {
+    "arabic": "الصُّدُورِ",
+    "persian": "دل‌هاست",
+    "grammar_rule": "مضاف‌الیه",
+    "grammar_color": "#00BCD4",
+    "grammar_explanation": "مضاف‌الیه و مجرور به کسره."
+  }
+]
     },
     {
       "id": 39,
@@ -1682,26 +2141,35 @@
         "به خودت یادآوری کن که بنده کریم‌ترین هستی."
       ],
       "word_by_word": [
-        {
-          "arabic": "وَ",
-          "persian": "و",
-          "grammar_rule": "حرف عطف",
-          "grammar_color": "#9C27B0",
-          "grammar_explanation": "حرف عطف برای پیوند دادن"
-        },
-        {
-          "arabic": "رَبُّ",
-          "persian": "پروردگارِ"
-        },
-        {
-          "arabic": "كَ",
-          "persian": "تو"
-        },
-        {
-          "arabic": "الْأَكْرَمُ",
-          "persian": "بزرگوارترین (است)"
-        }
-      ]
+  {
+    "arabic": "وَ",
+    "persian": "و",
+    "grammar_rule": "حرف عطف / استئناف",
+    "grammar_color": "#9C27B0",
+    "grammar_explanation": "حرف عطف برای آغاز یا پیوند جمله."
+  },
+  {
+    "arabic": "رَبُّ",
+    "persian": "پروردگارِ",
+    "grammar_rule": "مبتدا",
+    "grammar_color": "#607D8B",
+    "grammar_explanation": "مبتدا و مرفوع به ضمه. در ضمن مضاف است."
+  },
+  {
+    "arabic": "كَ",
+    "persian": "تو",
+    "grammar_rule": "مضاف‌الیه",
+    "grammar_color": "#00BCD4",
+    "grammar_explanation": "ضمیر متصل مخاطب، مبنی بر فتح در محل جر مضاف‌الیه."
+  },
+  {
+    "arabic": "الْأَكْرَمُ",
+    "persian": "بزرگوارترین (است)",
+    "grammar_rule": "خبر",
+    "grammar_color": "#546E7A",
+    "grammar_explanation": "خبر برای مبتدا (رَبُّ) و مرفوع به ضمه."
+  }
+]
     },
     {
       "id": 40,
@@ -1717,23 +2185,35 @@
         "هر شب قبل از خواب، اگر اشتباهی کردی، استغفر بگو."
       ],
       "word_by_word": [
-        {
-          "arabic": "إِنَّ",
-          "persian": "همانا"
-        },
-        {
-          "arabic": "اللَّهَ",
-          "persian": "خداوند"
-        },
-        {
-          "arabic": "يُحِبُّ",
-          "persian": "دوست دارد"
-        },
-        {
-          "arabic": "التَّوَّابِينَ",
-          "persian": "توبه‌کنندگان را"
-        }
-      ]
+  {
+    "arabic": "إِنَّ",
+    "persian": "همانا",
+    "grammar_rule": "حرف مشبهة بالفعل",
+    "grammar_color": "#E91E63",
+    "grammar_explanation": "حرف تأکید ناسخ."
+  },
+  {
+    "arabic": "اللَّهَ",
+    "persian": "خداوند",
+    "grammar_rule": "اسم إنّ",
+    "grammar_color": "#FF9800",
+    "grammar_explanation": "اسم «إنّ» و منصوب به فتحه."
+  },
+  {
+    "arabic": "يُحِبُّ",
+    "persian": "دوست دارد",
+    "grammar_rule": "فعل مضارع",
+    "grammar_color": "#4CAF50",
+    "grammar_explanation": "فعل مضارع مرفوع به ضمه. فاعل آن ضمیر مستتر «هو» است. این جمله فعلیه در محل رفع، خبر برای «إنّ» است."
+  },
+  {
+    "arabic": "التَّوَّابِينَ",
+    "persian": "توبه‌کنندگان را",
+    "grammar_rule": "مفعول‌به",
+    "grammar_color": "#FF9800",
+    "grammar_explanation": "مفعول‌به برای فعل «یُحِبُّ». چون جمع مذکر سالم است، علامت نصب آن «یاء» می‌باشد."
+  }
+]
     },
     {
       "id": 41,
@@ -1749,49 +2229,70 @@
         "وقتی صبرت تمام می‌شود، دعا کن تا خدا نیرو بدهد."
       ],
       "word_by_word": [
-        {
-          "arabic": "وَ",
-          "persian": "و",
-          "grammar_rule": "حرف عطف",
-          "grammar_color": "#9C27B0",
-          "grammar_explanation": "حرف عطف برای پیوند دادن"
-        },
-        {
-          "arabic": "اصْبِرْ",
-          "persian": "شکیبا باش"
-        },
-        {
-          "arabic": "وَ",
-          "persian": "و",
-          "grammar_rule": "حرف عطف",
-          "grammar_color": "#9C27B0",
-          "grammar_explanation": "حرف عطف برای پیوند دادن"
-        },
-        {
-          "arabic": "مَا",
-          "persian": "نیست"
-        },
-        {
-          "arabic": "صَبْرُ",
-          "persian": "شکیباییِ"
-        },
-        {
-          "arabic": "كَ",
-          "persian": "تو"
-        },
-        {
-          "arabic": "إِلَّا",
-          "persian": "جز"
-        },
-        {
-          "arabic": "بِ",
-          "persian": "به (یاریِ)"
-        },
-        {
-          "arabic": "اللَّهِ",
-          "persian": "خدا"
-        }
-      ]
+  {
+    "arabic": "وَ",
+    "persian": "و",
+    "grammar_rule": "حرف عطف / استئناف",
+    "grammar_color": "#9C27B0",
+    "grammar_explanation": "حرفی برای آغاز جمله جدید یا پیوند با قبل."
+  },
+  {
+    "arabic": "اصْبِرْ",
+    "persian": "شکیبا باش",
+    "grammar_rule": "فعل امر",
+    "grammar_color": "#4CAF50",
+    "grammar_explanation": "فعل امر، مبنی بر سکون. فاعل آن ضمیر مستتر «أنتَ» (تو) است."
+  },
+  {
+    "arabic": "وَ",
+    "persian": "و",
+    "grammar_rule": "واو حالیه",
+    "grammar_color": "#9C27B0",
+    "grammar_explanation": "واو حالیه که جمله پس از خود را در جایگاه حال قرار می‌دهد."
+  },
+  {
+    "arabic": "مَا",
+    "persian": "نیست",
+    "grammar_rule": "حرف نفی",
+    "grammar_color": "#F44336",
+    "grammar_explanation": "حرف نفی که معنای جمله را منفی می‌کند."
+  },
+  {
+    "arabic": "صَبْرُ",
+    "persian": "شکیباییِ",
+    "grammar_rule": "مبتدا",
+    "grammar_color": "#607D8B",
+    "grammar_explanation": "مبتدا و مرفوع به ضمه. مضاف نیز می‌باشد."
+  },
+  {
+    "arabic": "كَ",
+    "persian": "تو",
+    "grammar_rule": "مضاف‌الیه",
+    "grammar_color": "#00BCD4",
+    "grammar_explanation": "ضمیر متصل در محل جر به عنوان مضاف‌الیه."
+  },
+  {
+    "arabic": "إِلَّا",
+    "persian": "جز",
+    "grammar_rule": "ادات حصر",
+    "grammar_color": "#9E9E9E",
+    "grammar_explanation": "حرف استثناء که در اینجا به دلیل وجود نفی در ابتدای جمله، نقش حصر (محدود کردن) دارد."
+  },
+  {
+    "arabic": "بِ",
+    "persian": "به (یاریِ)",
+    "grammar_rule": "حرف جر",
+    "grammar_color": "#2196F3",
+    "grammar_explanation": "حرف جر عامل مجرور شدن کلمه بعدی."
+  },
+  {
+    "arabic": "اللَّهِ",
+    "persian": "خدا",
+    "grammar_rule": "اسم مجرور",
+    "grammar_color": "#00BCD4",
+    "grammar_explanation": "لفظ جلاله، مجرور به حرف جر. جار و مجرور متعلق به خبر محذوف برای مبتدا است."
+  }
+]
     },
     {
       "id": 42,
@@ -1807,33 +2308,42 @@
         "اگر ساعت‌ها پای بازی موبایل گذراندی، فکر کن چه از دست دادی."
       ],
       "word_by_word": [
-        {
-          "arabic": "إِنَّ",
-          "persian": "بی‌گمان"
-        },
-        {
-          "arabic": "الْإِنسَانَ",
-          "persian": "انسان"
-        },
-        {
-          "arabic": "لَ",
-          "persian": "قطعاً",
-          "grammar_rule": "حرف جر",
-          "grammar_color": "#2196F3",
-          "grammar_explanation": "حرف جر به معنای «برای»"
-        },
-        {
-          "arabic": "فِي",
-          "persian": "در",
-          "grammar_rule": "حرف جر",
-          "grammar_color": "#2196F3",
-          "grammar_explanation": "حرف جر به معنای «در»"
-        },
-        {
-          "arabic": "خُسْرٍ",
-          "persian": "زیان (است)"
-        }
-      ]
+  {
+    "arabic": "إِنَّ",
+    "persian": "بی‌گمان",
+    "grammar_rule": "حرف مشبهة بالفعل",
+    "grammar_color": "#E91E63",
+    "grammar_explanation": "حرف تأکید ناسخ که بر سر جمله اسمیه می‌آید."
+  },
+  {
+    "arabic": "الْإِنسَانَ",
+    "persian": "انسان",
+    "grammar_rule": "اسم إنّ",
+    "grammar_color": "#FF9800",
+    "grammar_explanation": "اسم برای «إنّ» و منصوب به فتحه."
+  },
+  {
+    "arabic": "لَ",
+    "persian": "قطعاً",
+    "grammar_rule": "لام مزحلقه (تأکید)",
+    "grammar_color": "#FFC107",
+    "grammar_explanation": "حرف تأکید که معمولاً بر سر خبر «إنّ» می‌آید و در اعراب کلمه تأثیری ندارد."
+  },
+  {
+    "arabic": "فِي",
+    "persian": "در",
+    "grammar_rule": "حرف جر",
+    "grammar_color": "#2196F3",
+    "grammar_explanation": "حرف جر."
+  },
+  {
+    "arabic": "خُسْرٍ",
+    "persian": "زیان (است)",
+    "grammar_rule": "اسم مجرور",
+    "grammar_color": "#00BCD4",
+    "grammar_explanation": "مجرور به کسره. ترکیب جار و مجرور (فِي خُسْرٍ) در محل رفع، خبر برای «إنّ» است."
+  }
+]
     },
     {
       "id": 43,
@@ -1848,35 +2358,50 @@
         "به جای آرزو، یه کار کوچک خوب انجام بده.",
         "ایمان را در رفتار روزمره نشان بده."
       ],
-      "word_by_word": [
-        {
-          "arabic": "إِلَّا",
-          "persian": "مگر"
-        },
-        {
-          "arabic": "الَّذِينَ",
-          "persian": "کسانی که"
-        },
-        {
-          "arabic": "آمَنُوا",
-          "persian": "ایمان آوردند"
-        },
-        {
-          "arabic": "وَ",
-          "persian": "و",
-          "grammar_rule": "حرف عطف",
-          "grammar_color": "#9C27B0",
-          "grammar_explanation": "حرف عطف برای پیوند دادن"
-        },
-        {
-          "arabic": "عَمِلُوا",
-          "persian": "انجام دادند"
-        },
-        {
-          "arabic": "الصَّالِحَاتِ",
-          "persian": "کارهای شایسته (را)"
-        }
-      ]
+      "word_by_word":[
+  {
+    "arabic": "إِلَّا",
+    "persian": "مگر",
+    "grammar_rule": "حرف استثناء",
+    "grammar_color": "#9E9E9E",
+    "grammar_explanation": "حرفی برای استثنا کردن کلمات بعد از حکم قبل."
+  },
+  {
+    "arabic": "الَّذِينَ",
+    "persian": "کسانی که",
+    "grammar_rule": "مستثنی",
+    "grammar_color": "#795548",
+    "grammar_explanation": "اسم موصول، مبنی بر فتح و در محل نصب به عنوان مستثنی."
+  },
+  {
+    "arabic": "آمَنُوا",
+    "persian": "ایمان آوردند",
+    "grammar_rule": "فعل ماضی و فاعل",
+    "grammar_color": "#4CAF50",
+    "grammar_explanation": "فعل ماضی جمع مذکر. ضمیر «واو» فاعل آن است. این جمله صله موصول است."
+  },
+  {
+    "arabic": "وَ",
+    "persian": "و",
+    "grammar_rule": "حرف عطف",
+    "grammar_color": "#9C27B0",
+    "grammar_explanation": "برای عطف کردن جمله بعدی به جمله قبلی."
+  },
+  {
+    "arabic": "عَمِلُوا",
+    "persian": "انجام دادند",
+    "grammar_rule": "فعل ماضی و فاعل",
+    "grammar_color": "#4CAF50",
+    "grammar_explanation": "فعل ماضی و ضمیر «واو» فاعل آن است (معطوف به آمَنُوا)."
+  },
+  {
+    "arabic": "الصَّالِحَاتِ",
+    "persian": "کارهای شایسته (را)",
+    "grammar_rule": "مفعول‌به",
+    "grammar_color": "#FF9800",
+    "grammar_explanation": "مفعول‌به برای فعل «عَمِلُوا». چون جمع مؤنث سالم است، علامت نصب آن به نیابت از فتحه، «کسره» است."
+  }
+]
     },
     {
       "id": 44,
@@ -1892,26 +2417,35 @@
         "در خانه هم اگر حقی پایمال می‌شود، بگو."
       ],
       "word_by_word": [
-        {
-          "arabic": "وَ",
-          "persian": "و",
-          "grammar_rule": "حرف عطف",
-          "grammar_color": "#9C27B0",
-          "grammar_explanation": "حرف عطف برای پیوند دادن"
-        },
-        {
-          "arabic": "تَوَاصَوْا",
-          "persian": "یکدیگر را سفارش کردند"
-        },
-        {
-          "arabic": "بِ",
-          "persian": "به"
-        },
-        {
-          "arabic": "الْحَقِّ",
-          "persian": "حق"
-        }
-      ]
+  {
+    "arabic": "وَ",
+    "persian": "و",
+    "grammar_rule": "حرف عطف",
+    "grammar_color": "#9C27B0",
+    "grammar_explanation": "حرف عطف برای پیوند دادن افعال."
+  },
+  {
+    "arabic": "تَوَاصَوْا",
+    "persian": "یکدیگر را سفارش کردند",
+    "grammar_rule": "فعل ماضی و فاعل",
+    "grammar_color": "#4CAF50",
+    "grammar_explanation": "فعل ماضی از باب تفاعل. ضمیر متصل «واو» فاعل آن است."
+  },
+  {
+    "arabic": "بِ",
+    "persian": "به",
+    "grammar_rule": "حرف جر",
+    "grammar_color": "#2196F3",
+    "grammar_explanation": "حرف جر."
+  },
+  {
+    "arabic": "الْحَقِّ",
+    "persian": "حق",
+    "grammar_rule": "اسم مجرور",
+    "grammar_color": "#00BCD4",
+    "grammar_explanation": "اسم مجرور به حرف جر و علامت آن کسره است."
+  }
+]
     },
     {
       "id": 45,
@@ -1926,27 +2460,36 @@
         "یه داستان درباره صبر برای خواهر/برادر کوچک‌ترت تعریف کن.",
         "وقتی گروه دلسرد است، تو روحیه بده."
       ],
-      "word_by_word": [
-        {
-          "arabic": "وَ",
-          "persian": "و",
-          "grammar_rule": "حرف عطف",
-          "grammar_color": "#9C27B0",
-          "grammar_explanation": "حرف عطف برای پیوند دادن"
-        },
-        {
-          "arabic": "تَوَاصَوْا",
-          "persian": "یکدیگر را سفارش کردند"
-        },
-        {
-          "arabic": "بِ",
-          "persian": "به"
-        },
-        {
-          "arabic": "الصَّبْرِ",
-          "persian": "شکیبایی"
-        }
-      ]
+      "word_by_word":[
+  {
+    "arabic": "وَ",
+    "persian": "و",
+    "grammar_rule": "حرف عطف",
+    "grammar_color": "#9C27B0",
+    "grammar_explanation": "حرف عطف."
+  },
+  {
+    "arabic": "تَوَاصَوْا",
+    "persian": "یکدیگر را سفارش کردند",
+    "grammar_rule": "فعل ماضی و فاعل",
+    "grammar_color": "#4CAF50",
+    "grammar_explanation": "فعل ماضی و فاعل آن ضمیر «واو» (معطوف به فعل قبلی)."
+  },
+  {
+    "arabic": "بِ",
+    "persian": "به",
+    "grammar_rule": "حرف جر",
+    "grammar_color": "#2196F3",
+    "grammar_explanation": "حرف جر."
+  },
+  {
+    "arabic": "الصَّبْرِ",
+    "persian": "شکیبایی",
+    "grammar_rule": "اسم مجرور",
+    "grammar_color": "#00BCD4",
+    "grammar_explanation": "مجرور به حرف جر با علامت کسره."
+  }
+]
     },
     {
       "id": 46,
@@ -1962,37 +2505,49 @@
         "نماز صبح به عنوان شروع خوب روز را تجربه کن."
       ],
       "word_by_word": [
-        {
-          "arabic": "وَ",
-          "persian": "و",
-          "grammar_rule": "حرف عطف",
-          "grammar_color": "#9C27B0",
-          "grammar_explanation": "حرف عطف برای پیوند دادن"
-        },
-        {
-          "arabic": "اسْتَعِينُوا",
-          "persian": "یاری بگیرید"
-        },
-        {
-          "arabic": "بِ",
-          "persian": "از (به وسیله)"
-        },
-        {
-          "arabic": "الصَّبْرِ",
-          "persian": "صبر"
-        },
-        {
-          "arabic": "وَ",
-          "persian": "و",
-          "grammar_rule": "حرف عطف",
-          "grammar_color": "#9C27B0",
-          "grammar_explanation": "حرف عطف برای پیوند دادن"
-        },
-        {
-          "arabic": "الصَّلَاةِ",
-          "persian": "نماز"
-        }
-      ]
+  {
+    "arabic": "وَ",
+    "persian": "و",
+    "grammar_rule": "حرف عطف / استئناف",
+    "grammar_color": "#9C27B0",
+    "grammar_explanation": "برای آغاز جمله جدید یا پیوند با قبل."
+  },
+  {
+    "arabic": "اسْتَعِينُوا",
+    "persian": "یاری بگیرید",
+    "grammar_rule": "فعل امر و فاعل",
+    "grammar_color": "#4CAF50",
+    "grammar_explanation": "فعل امر از باب استفعال، مبنی بر حذف نون. ضمیر «واو» فاعل آن است."
+  },
+  {
+    "arabic": "بِ",
+    "persian": "از (به وسیله)",
+    "grammar_rule": "حرف جر",
+    "grammar_color": "#2196F3",
+    "grammar_explanation": "حرف جر."
+  },
+  {
+    "arabic": "الصَّبْرِ",
+    "persian": "صبر",
+    "grammar_rule": "اسم مجرور",
+    "grammar_color": "#00BCD4",
+    "grammar_explanation": "مجرور به حرف جر با علامت کسره."
+  },
+  {
+    "arabic": "وَ",
+    "persian": "و",
+    "grammar_rule": "حرف عطف",
+    "grammar_color": "#9C27B0",
+    "grammar_explanation": "حرف عطف برای پیوند دادن کلمات."
+  },
+  {
+    "arabic": "الصَّلَاةِ",
+    "persian": "نماز",
+    "grammar_rule": "اسم معطوف",
+    "grammar_color": "#00BCD4",
+    "grammar_explanation": "معطوف به «الصَّبْرِ» و مانند آن مجرور به کسره است."
+  }
+]
     },
     {
       "id": 47,
@@ -2007,31 +2562,43 @@
         "کارهایی که باعث شرم درونی می‌شوند را ترک کن.",
         "یه ویژگی خوب را هر هفته تقویت کن."
       ],
-      "word_by_word": [
-        {
-          "arabic": "قَدْ",
-          "persian": "قطعاً"
-        },
-        {
-          "arabic": "أَفْلَحَ",
-          "persian": "رستگار شد"
-        },
-        {
-          "arabic": "مَنْ",
-          "persian": "کسی که",
-          "grammar_rule": "حرف جر",
-          "grammar_color": "#2196F3",
-          "grammar_explanation": "حرف جر به معنای «از»"
-        },
-        {
-          "arabic": "زَكَّا",
-          "persian": "پاکیزه کرد"
-        },
-        {
-          "arabic": "هَا",
-          "persian": "آن (نفس) را"
-        }
-      ]
+      "word_by_word":[
+  {
+    "arabic": "قَدْ",
+    "persian": "قطعاً",
+    "grammar_rule": "حرف تحقیق",
+    "grammar_color": "#E91E63",
+    "grammar_explanation": "حرفی که وقتی پیش از فعل ماضی می‌آید، بر قطعیت و تأکید وقوع آن دلالت دارد."
+  },
+  {
+    "arabic": "أَفْلَحَ",
+    "persian": "رستگار شد",
+    "grammar_rule": "فعل ماضی",
+    "grammar_color": "#4CAF50",
+    "grammar_explanation": "فعل ماضی از باب افعال، مبنی بر فتح."
+  },
+  {
+    "arabic": "مَنْ",
+    "persian": "کسی که",
+    "grammar_rule": "اسم موصول (فاعل)",
+    "grammar_color": "#795548",
+    "grammar_explanation": "اسم موصول مبنی بر سکون، در جایگاه رفع به عنوان فاعل برای فعل «أَفْلَحَ»."
+  },
+  {
+    "arabic": "زَكَّا",
+    "persian": "پاکیزه کرد",
+    "grammar_rule": "فعل ماضی",
+    "grammar_color": "#4CAF50",
+    "grammar_explanation": "فعل ماضی از باب تفعیل. فاعل آن ضمیر مستتر «هُوَ» (او) است که به «مَنْ» برمی‌گردد."
+  },
+  {
+    "arabic": "هَا",
+    "persian": "آن (نفس) را",
+    "grammar_rule": "مفعول‌به",
+    "grammar_color": "#FF9800",
+    "grammar_explanation": "ضمیر متصل در جایگاه نصب، مفعول‌به برای فعل «زَكَّا»."
+  }
+]
     },
     {
       "id": 48,
@@ -2046,38 +2613,50 @@
         "اگر چیزی روحت را تاریک می‌کند، ترکش کن.",
         "محیط خوب برای خودت بساز؛ کتاب خوب، دوست خوب."
       ],
-      "word_by_word": [
-        {
-          "arabic": "وَ",
-          "persian": "و",
-          "grammar_rule": "حرف عطف",
-          "grammar_color": "#9C27B0",
-          "grammar_explanation": "حرف عطف برای پیوند دادن"
-        },
-        {
-          "arabic": "قَدْ",
-          "persian": "قطعاً"
-        },
-        {
-          "arabic": "خَابَ",
-          "persian": "زیانکار شد"
-        },
-        {
-          "arabic": "مَنْ",
-          "persian": "کسی که",
-          "grammar_rule": "حرف جر",
-          "grammar_color": "#2196F3",
-          "grammar_explanation": "حرف جر به معنای «از»"
-        },
-        {
-          "arabic": "دَسَّا",
-          "persian": "آلوده ساخت"
-        },
-        {
-          "arabic": "هَا",
-          "persian": "آن (نفس) را"
-        }
-      ]
+      "word_by_word":[
+  {
+    "arabic": "وَ",
+    "persian": "و",
+    "grammar_rule": "حرف عطف",
+    "grammar_color": "#9C27B0",
+    "grammar_explanation": "حرف عطف."
+  },
+  {
+    "arabic": "قَدْ",
+    "persian": "قطعاً",
+    "grammar_rule": "حرف تحقیق",
+    "grammar_color": "#E91E63",
+    "grammar_explanation": "حرف تحقیق و تأکید برای فعل ماضی."
+  },
+  {
+    "arabic": "خَابَ",
+    "persian": "زیانکار شد",
+    "grammar_rule": "فعل ماضی",
+    "grammar_color": "#4CAF50",
+    "grammar_explanation": "فعل ماضی، مبنی بر فتح."
+  },
+  {
+    "arabic": "مَنْ",
+    "persian": "کسی که",
+    "grammar_rule": "اسم موصول (فاعل)",
+    "grammar_color": "#795548",
+    "grammar_explanation": "اسم موصول در محل رفع، فاعل برای فعل «خَابَ»."
+  },
+  {
+    "arabic": "دَسَّا",
+    "persian": "آلوده ساخت",
+    "grammar_rule": "فعل ماضی",
+    "grammar_color": "#4CAF50",
+    "grammar_explanation": "فعل ماضی مقدر. فاعل آن ضمیر مستتر «هُوَ» است."
+  },
+  {
+    "arabic": "هَا",
+    "persian": "آن (نفس) را",
+    "grammar_rule": "مفعول‌به",
+    "grammar_color": "#FF9800",
+    "grammar_explanation": "ضمیر متصل متکلم، در جایگاه نصب مفعول‌به."
+  }
+]
     },
     {
       "id": 49,
@@ -2093,49 +2672,70 @@
         "بگو «نمی‌دانم» وقتی که واقعاً نمی‌دانی."
       ],
       "word_by_word": [
-        {
-          "arabic": "وَ",
-          "persian": "و",
-          "grammar_rule": "حرف عطف",
-          "grammar_color": "#9C27B0",
-          "grammar_explanation": "حرف عطف برای پیوند دادن"
-        },
-        {
-          "arabic": "لَا تَقْفُ",
-          "persian": "پیروی نکن"
-        },
-        {
-          "arabic": "مَا",
-          "persian": "از چیزی که"
-        },
-        {
-          "arabic": "لَيْسَ",
-          "persian": "نیست"
-        },
-        {
-          "arabic": "لَ",
-          "persian": "برای",
-          "grammar_rule": "حرف جر",
-          "grammar_color": "#2196F3",
-          "grammar_explanation": "حرف جر به معنای «برای»"
-        },
-        {
-          "arabic": "كَ",
-          "persian": "تو"
-        },
-        {
-          "arabic": "بِ",
-          "persian": "به"
-        },
-        {
-          "arabic": "هِ",
-          "persian": "آن"
-        },
-        {
-          "arabic": "عِلْمٌ",
-          "persian": "آگاهی (علم)"
-        }
-      ]
+  {
+    "arabic": "وَ",
+    "persian": "و",
+    "grammar_rule": "حرف عطف",
+    "grammar_color": "#9C27B0",
+    "grammar_explanation": "حرف عطف."
+  },
+  {
+    "arabic": "لَا تَقْفُ",
+    "persian": "پیروی نکن",
+    "grammar_rule": "فعل نهی (مجزوم)",
+    "grammar_color": "#F44336",
+    "grammar_explanation": "«لَا» حرف نهی است. «تَقْفُ» فعل مضارع مجزوم به حذف حرف عله (واو). فاعل آن ضمیر مستتر «أنتَ» است."
+  },
+  {
+    "arabic": "مَا",
+    "persian": "از چیزی که",
+    "grammar_rule": "اسم موصول",
+    "grammar_color": "#795548",
+    "grammar_explanation": "اسم موصول در جایگاه نصب، مفعول‌به برای فعل قبلی است."
+  },
+  {
+    "arabic": "لَيْسَ",
+    "persian": "نیست",
+    "grammar_rule": "فعل ماضی ناقص",
+    "grammar_color": "#4CAF50",
+    "grammar_explanation": "از افعال ناقصه (نواسخ) که بر سر مبتدا و خبر می‌آید و آنها را به اسم و خبر خود تبدیل می‌کند."
+  },
+  {
+    "arabic": "لَ",
+    "persian": "برای",
+    "grammar_rule": "حرف جر",
+    "grammar_color": "#2196F3",
+    "grammar_explanation": "حرف جر."
+  },
+  {
+    "arabic": "كَ",
+    "persian": "تو",
+    "grammar_rule": "اسم مجرور (خبر مقدم لیس)",
+    "grammar_color": "#00BCD4",
+    "grammar_explanation": "ضمیر در محل جر. ترکیب جار و مجرور (لَكَ) در جایگاه نصب، خبرِ مقدم برای «لَيْسَ» است."
+  },
+  {
+    "arabic": "بِ",
+    "persian": "به",
+    "grammar_rule": "حرف جر",
+    "grammar_color": "#2196F3",
+    "grammar_explanation": "حرف جر."
+  },
+  {
+    "arabic": "هِ",
+    "persian": "آن",
+    "grammar_rule": "اسم مجرور",
+    "grammar_color": "#00BCD4",
+    "grammar_explanation": "ضمیر متصل در محل جر. متعلق به خبر یا صفت است."
+  },
+  {
+    "arabic": "عِلْمٌ",
+    "persian": "آگاهی (علم)",
+    "grammar_rule": "اسم لیس مؤخر",
+    "grammar_color": "#607D8B",
+    "grammar_explanation": "اسمِ «لَيْسَ» که به تأخیر افتاده و مرفوع به ضمه است."
+  }
+]
     },
     {
       "id": 50,
@@ -2151,40 +2751,49 @@
         "مواد غذایی باقیمانده را دور نینداز."
       ],
       "word_by_word": [
-        {
-          "arabic": "وَ",
-          "persian": "و",
-          "grammar_rule": "حرف عطف",
-          "grammar_color": "#9C27B0",
-          "grammar_explanation": "حرف عطف برای پیوند دادن"
-        },
-        {
-          "arabic": "كُلُوا",
-          "persian": "بخورید"
-        },
-        {
-          "arabic": "وَ",
-          "persian": "و",
-          "grammar_rule": "حرف عطف",
-          "grammar_color": "#9C27B0",
-          "grammar_explanation": "حرف عطف برای پیوند دادن"
-        },
-        {
-          "arabic": "اشْرَبُوا",
-          "persian": "بیاشامید"
-        },
-        {
-          "arabic": "وَ",
-          "persian": "و (ولی)",
-          "grammar_rule": "حرف عطف",
-          "grammar_color": "#9C27B0",
-          "grammar_explanation": "حرف عطف برای پیوند دادن"
-        },
-        {
-          "arabic": "لَا تُسْرِفُوا",
-          "persian": "اسراف نکنید"
-        }
-      ]
+  {
+    "arabic": "وَ",
+    "persian": "و",
+    "grammar_rule": "حرف عطف",
+    "grammar_color": "#9C27B0",
+    "grammar_explanation": "حرف عطف."
+  },
+  {
+    "arabic": "كُلُوا",
+    "persian": "بخورید",
+    "grammar_rule": "فعل امر و فاعل",
+    "grammar_color": "#4CAF50",
+    "grammar_explanation": "فعل امر، مبنی بر حذف نون. ضمیر «واو» فاعل آن است."
+  },
+  {
+    "arabic": "وَ",
+    "persian": "و",
+    "grammar_rule": "حرف عطف",
+    "grammar_color": "#9C27B0",
+    "grammar_explanation": "حرف عطف."
+  },
+  {
+    "arabic": "اشْرَبُوا",
+    "persian": "بیاشامید",
+    "grammar_rule": "فعل امر و فاعل",
+    "grammar_color": "#4CAF50",
+    "grammar_explanation": "فعل امر معطوف به قبلی. ضمیر «واو» فاعل است."
+  },
+  {
+    "arabic": "وَ",
+    "persian": "و (ولی)",
+    "grammar_rule": "حرف عطف",
+    "grammar_color": "#9C27B0",
+    "grammar_explanation": "حرف عطف برای پیوند دادن جملات."
+  },
+  {
+    "arabic": "لَا تُسْرِفُوا",
+    "persian": "اسراف نکنید",
+    "grammar_rule": "فعل نهی و فاعل",
+    "grammar_color": "#F44336",
+    "grammar_explanation": "«لَا» حرف نهی است. «تُسْرِفُوا» فعل مضارع مجزوم به حذف نون است و ضمیر «واو» فاعل آن می‌باشد."
+  }
+]
     },
     {
       "id": 51,
@@ -2200,22 +2809,28 @@
         "قبل از خرید هر چیزی از خودت بپرس آیا واقعاً لازم است."
       ],
       "word_by_word": [
-        {
-          "arabic": "وَ",
-          "persian": "و",
-          "grammar_rule": "حرف عطف",
-          "grammar_color": "#9C27B0",
-          "grammar_explanation": "حرف عطف برای پیوند دادن"
-        },
-        {
-          "arabic": "لَا تُبَذِّرْ",
-          "persian": "اسراف نکن (ریخت و پاش نکن)"
-        },
-        {
-          "arabic": "تَبْذِيرًا",
-          "persian": "اسراف کردن (بسیار)"
-        }
-      ]
+  {
+    "arabic": "وَ",
+    "persian": "و",
+    "grammar_rule": "حرف عطف",
+    "grammar_color": "#9C27B0",
+    "grammar_explanation": "حرف عطف برای پیوند دادن جملات."
+  },
+  {
+    "arabic": "لَا تُبَذِّرْ",
+    "persian": "اسراف نکن (ریخت و پاش نکن)",
+    "grammar_rule": "فعل نهی (مجزوم)",
+    "grammar_color": "#F44336",
+    "grammar_explanation": "«لَا» حرف نهی است. «تُبَذِّرْ» فعل مضارع مجزوم به علامت سکون است و فاعل آن ضمیر مستتر «أنتَ» می‌باشد."
+  },
+  {
+    "arabic": "تَبْذِيرًا",
+    "persian": "اسراف کردن (بسیار)",
+    "grammar_rule": "مفعول مطلق (تأکیدی)",
+    "grammar_color": "#FF9800",
+    "grammar_explanation": "مصدر فعل (بذّر) که در جایگاه نصب (مفعول مطلق) برای تأکید بر وقوع فعل نهی آمده است."
+  }
+]
     },
     {
       "id": 52,
@@ -2230,24 +2845,36 @@
         "در فضای مجازی، به حریم خصوصی دیگران تجاوز نکن.",
         "وقتی قدرت داری، از آن سوءاستفاده نکن."
       ],
-      "word_by_word": [
-        {
-          "arabic": "إِنَّ",
-          "persian": "همانا (قطعا)"
-        },
-        {
-          "arabic": "اللَّهَ",
-          "persian": "خداوند"
-        },
-        {
-          "arabic": "لَا يُحِبُّ",
-          "persian": "دوست ندارد"
-        },
-        {
-          "arabic": "الْمُعْتَدِينَ",
-          "persian": "تجاوزکاران را"
-        }
-      ]
+      "word_by_word":[
+  {
+    "arabic": "إِنَّ",
+    "persian": "همانا (قطعاً)",
+    "grammar_rule": "حرف مشبهة بالفعل (تأکید)",
+    "grammar_color": "#E91E63",
+    "grammar_explanation": "حرف تأکید و از نواسخ که بر سر جمله اسمیه می‌آید."
+  },
+  {
+    "arabic": "اللَّهَ",
+    "persian": "خداوند",
+    "grammar_rule": "اسم إنَّ",
+    "grammar_color": "#FF9800",
+    "grammar_explanation": "اسم «إِنَّ» که در جایگاه نصب قرار دارد (منصوب به فتحه)."
+  },
+  {
+    "arabic": "لَا يُحِبُّ",
+    "persian": "دوست ندارد",
+    "grammar_rule": "فعل مضارع منفی",
+    "grammar_color": "#F44336",
+    "grammar_explanation": "«لَا» حرف نفی است (عمل نمی‌کند) و «يُحِبُّ» فعل مضارع مرفوع به ضمه است. کل جمله فعلیه، خبر «إِنَّ» است."
+  },
+  {
+    "arabic": "الْمُعْتَدِينَ",
+    "persian": "تجاوزکاران را",
+    "grammar_rule": "مفعول‌به",
+    "grammar_color": "#FF9800",
+    "grammar_explanation": "مفعول‌به برای فعل «لَا يُحِبُّ». منصوب به علامت فرعی «یاء» (چون جمع مذکر سالم است)."
+  }
+]
     },
     {
       "id": 53,
@@ -2263,33 +2890,42 @@
         "بیکاری طولانی معمولاً انرژی را کم می‌کند، نه زیاد — در حرکت باش."
       ],
       "word_by_word": [
-        {
-          "arabic": "فَ",
-          "persian": "پس",
-          "grammar_rule": "حرف عطف",
-          "grammar_color": "#9C27B0",
-          "grammar_explanation": "حرف عطف برای ترتیب یا نتیجه"
-        },
-        {
-          "arabic": "إِذَا",
-          "persian": "هنگامی که"
-        },
-        {
-          "arabic": "فَرَغْتَ",
-          "persian": "فارغ شدی (بیکار شدی)"
-        },
-        {
-          "arabic": "فَ",
-          "persian": "پس",
-          "grammar_rule": "حرف عطف",
-          "grammar_color": "#9C27B0",
-          "grammar_explanation": "حرف عطف برای ترتیب یا نتیجه"
-        },
-        {
-          "arabic": "انصَبْ",
-          "persian": "به کار دیگری بپرداز (تلاش کن)"
-        }
-      ]
+  {
+    "arabic": "فَ",
+    "persian": "پس",
+    "grammar_rule": "حرف عطف / استئناف",
+    "grammar_color": "#9C27B0",
+    "grammar_explanation": "حرفی برای نتیجه‌گیری یا آغاز کلام جدید."
+  },
+  {
+    "arabic": "إِذَا",
+    "persian": "هنگامی که",
+    "grammar_rule": "ظرف زمان (شرط)",
+    "grammar_color": "#FF9800",
+    "grammar_explanation": "ظرف زمان متضمن معنای شرط است (اسم شرط غیر جازم) که در محل نصب (مفعول‌فیه) قرار دارد."
+  },
+  {
+    "arabic": "فَرَغْتَ",
+    "persian": "فارغ شدی (بیکار شدی)",
+    "grammar_rule": "فعل ماضی و فاعل",
+    "grammar_color": "#4CAF50",
+    "grammar_explanation": "فعل ماضی مبنی بر سکون. ضمیر متصل «تَ» در محل رفع، فاعل آن است. (جمله شرط)"
+  },
+  {
+    "arabic": "فَ",
+    "persian": "پس",
+    "grammar_rule": "فاء جزائیه",
+    "grammar_color": "#9C27B0",
+    "grammar_explanation": "حرفی که برای اتصال جواب شرط (به دلیل فعل امر بودن) آمده است."
+  },
+  {
+    "arabic": "انصَبْ",
+    "persian": "به کار دیگری بپرداز (تلاش کن)",
+    "grammar_rule": "فعل امر و فاعل",
+    "grammar_color": "#4CAF50",
+    "grammar_explanation": "فعل امر مبنی بر سکون. فاعل آن ضمیر مستتر «أنتَ» است. (جمله جواب شرط)"
+  }
+]
     },
     {
       "id": 54,
@@ -2305,35 +2941,56 @@
         "یادت باشد بهترین خود نزد خداست، نه نزد مردم."
       ],
       "word_by_word": [
-        {
-          "arabic": "إِنَّ",
-          "persian": "همانا"
-        },
-        {
-          "arabic": "أَكْرَمَ",
-          "persian": "گرامی‌ترینِ"
-        },
-        {
-          "arabic": "كُمْ",
-          "persian": "شما"
-        },
-        {
-          "arabic": "عِندَ",
-          "persian": "نزد"
-        },
-        {
-          "arabic": "اللَّهِ",
-          "persian": "خدا"
-        },
-        {
-          "arabic": "أَتْقَا",
-          "persian": "پرهیزکارترینِ"
-        },
-        {
-          "arabic": "كُمْ",
-          "persian": "شماست"
-        }
-      ]
+  {
+    "arabic": "إِنَّ",
+    "persian": "همانا",
+    "grammar_rule": "حرف مشبهة بالفعل",
+    "grammar_color": "#E91E63",
+    "grammar_explanation": "حرف تأکید و نصب."
+  },
+  {
+    "arabic": "أَكْرَمَ",
+    "persian": "گرامی‌ترینِ",
+    "grammar_rule": "اسم إنَّ",
+    "grammar_color": "#FF9800",
+    "grammar_explanation": "اسم «إِنَّ» منصوب به فتحه."
+  },
+  {
+    "arabic": "كُمْ",
+    "persian": "شما",
+    "grammar_rule": "مضاف‌الیه",
+    "grammar_color": "#00BCD4",
+    "grammar_explanation": "ضمیر متصل در جایگاه جر، مضاف‌الیه."
+  },
+  {
+    "arabic": "عِندَ",
+    "persian": "نزد",
+    "grammar_rule": "ظرف مکان",
+    "grammar_color": "#FF9800",
+    "grammar_explanation": "ظرف مکان (مفعول‌فیه) منصوب به فتحه."
+  },
+  {
+    "arabic": "اللَّهِ",
+    "persian": "خدا",
+    "grammar_rule": "مضاف‌الیه",
+    "grammar_color": "#00BCD4",
+    "grammar_explanation": "لفظ جلاله، مضاف‌الیه برای «عِندَ» و مجرور به کسره."
+  },
+  {
+    "arabic": "أَتْقَا",
+    "persian": "پرهیزکارترینِ",
+    "grammar_rule": "خبر إنَّ",
+    "grammar_color": "#607D8B",
+    "grammar_explanation": "خبر «إِنَّ» که مرفوع است، اما علامت ضمه آن به دلیل ختم شدن به الف مقصوره، مقدر (پنهان) است."
+  },
+  {
+    "arabic": "كُمْ",
+    "persian": "شماست",
+    "grammar_rule": "مضاف‌الیه",
+    "grammar_color": "#00BCD4",
+    "grammar_explanation": "ضمیر متصل در جایگاه جر، مضاف‌الیه برای «أَتْقَا»."
+  }
+]
     },
     {
       "id": 55,
@@ -2349,19 +3006,28 @@
         "مؤمن واقعی بودن را در رفتار با دیگران نشان بده."
       ],
       "word_by_word": [
-        {
-          "arabic": "قَدْ",
-          "persian": "به‌راستی (قطعاً)"
-        },
-        {
-          "arabic": "أَفْلَحَ",
-          "persian": "رستگار شدند"
-        },
-        {
-          "arabic": "الْمُؤْمِنُونَ",
-          "persian": "مؤمنان"
-        }
-      ]
+  {
+    "arabic": "قَدْ",
+    "persian": "به‌راستی (قطعاً)",
+    "grammar_rule": "حرف تحقیق",
+    "grammar_color": "#E91E63",
+    "grammar_explanation": "حرفی که پیش از فعل ماضی می‌آید و بر قطعیت تحقق آن دلالت دارد."
+  },
+  {
+    "arabic": "أَفْلَحَ",
+    "persian": "رستگار شدند",
+    "grammar_rule": "فعل ماضی",
+    "grammar_color": "#4CAF50",
+    "grammar_explanation": "فعل ماضی از باب افعال، مبنی بر فتح."
+  },
+  {
+    "arabic": "الْمُؤْمِنُونَ",
+    "persian": "مؤمنان",
+    "grammar_rule": "فاعل",
+    "grammar_color": "#795548",
+    "grammar_explanation": "فاعل برای فعل «أَفْلَحَ». مرفوع است و علامت رفع آن فرعی و با حرف «واو» است (چون جمع مذکر سالم است)."
+  }
+]
     },
     {
       "id": 56,
@@ -2377,34 +3043,49 @@
         "بعد از نماز یه لحظه ساکت بنشین و با خدا حرف بزن."
       ],
       "word_by_word": [
-        {
-          "arabic": "الَّذِينَ",
-          "persian": "همان کسانی که"
-        },
-        {
-          "arabic": "هُمْ",
-          "persian": "آن‌ها"
-        },
-        {
-          "arabic": "فِي",
-          "persian": "در",
-          "grammar_rule": "حرف جر",
-          "grammar_color": "#2196F3",
-          "grammar_explanation": "حرف جر به معنای «در»"
-        },
-        {
-          "arabic": "صَلَاتِ",
-          "persian": "نمازِ"
-        },
-        {
-          "arabic": "هِمْ",
-          "persian": "شان"
-        },
-        {
-          "arabic": "خَاشِعُونَ",
-          "persian": "فروتن‌اند (خاشع‌اند)"
-        }
-      ]
+  {
+    "arabic": "الَّذِينَ",
+    "persian": "همان کسانی که",
+    "grammar_rule": "اسم موصول (صفت/بدل)",
+    "grammar_color": "#8BC34A",
+    "grammar_explanation": "اسم موصول مبنی بر فتح که توصیف‌کننده «الْمُؤْمِنُونَ» در آیه قبل است (در محل رفع)."
+  },
+  {
+    "arabic": "هُمْ",
+    "persian": "آن‌ها",
+    "grammar_rule": "مبتدا (ضمیر منفصل)",
+    "grammar_color": "#00BCD4",
+    "grammar_explanation": "ضمیر منفصل مرفوعی در جایگاه مبتدا."
+  },
+  {
+    "arabic": "فِي",
+    "persian": "در",
+    "grammar_rule": "حرف جر",
+    "grammar_color": "#2196F3",
+    "grammar_explanation": "حرف جری که کلمه بعد از خود را مجرور می‌کند."
+  },
+  {
+    "arabic": "صَلَاتِ",
+    "persian": "نمازِ",
+    "grammar_rule": "اسم مجرور",
+    "grammar_color": "#00BCD4",
+    "grammar_explanation": "اسم مجرور به حرف جر «فِي» و علامت آن کسره است."
+  },
+  {
+    "arabic": "هِمْ",
+    "persian": "شان",
+    "grammar_rule": "مضاف‌الیه",
+    "grammar_color": "#00BCD4",
+    "grammar_explanation": "ضمیر متصل در جایگاه جر، مضاف‌الیه برای «صَلَاة»."
+  },
+  {
+    "arabic": "خَاشِعُونَ",
+    "persian": "فروتن‌اند (خاشع‌اند)",
+    "grammar_rule": "خبر",
+    "grammar_color": "#607D8B",
+    "grammar_explanation": "خبر برای مبتدا (هُمْ). مرفوع است و علامت رفع آن فرعی و با حرف «واو» است (چون جمع مذکر سالم است)."
+  }
+]
     },
     {
       "id": 57,
@@ -2420,34 +3101,49 @@
         "وقتی دیگران بیهوده وقت تلف می‌کنند، تو همراهی نکن."
       ],
       "word_by_word": [
-        {
-          "arabic": "وَ",
-          "persian": "و",
-          "grammar_rule": "حرف عطف",
-          "grammar_color": "#9C27B0",
-          "grammar_explanation": "حرف عطف برای پیوند دادن"
-        },
-        {
-          "arabic": "الَّذِينَ",
-          "persian": "کسانی که"
-        },
-        {
-          "arabic": "هُمْ",
-          "persian": "آن‌ها"
-        },
-        {
-          "arabic": "عَنِ",
-          "persian": "از"
-        },
-        {
-          "arabic": "اللَّغْوِ",
-          "persian": "بیهوده (سخن و کار باطل)"
-        },
-        {
-          "arabic": "مُعْرِضُونَ",
-          "persian": "روی‌گردان‌اند"
-        }
-      ]
+  {
+    "arabic": "وَ",
+    "persian": "و",
+    "grammar_rule": "حرف عطف",
+    "grammar_color": "#9C27B0",
+    "grammar_explanation": "حرف عطف برای پیوند دادن ویژگی‌های مؤمنان."
+  },
+  {
+    "arabic": "الَّذِينَ",
+    "persian": "کسانی که",
+    "grammar_rule": "اسم موصول (معطوف)",
+    "grammar_color": "#8BC34A",
+    "grammar_explanation": "عطف به «الَّذِينَ» در آیه قبل."
+  },
+  {
+    "arabic": "هُمْ",
+    "persian": "آن‌ها",
+    "grammar_rule": "مبتدا (ضمیر منفصل)",
+    "grammar_color": "#00BCD4",
+    "grammar_explanation": "ضمیر منفصل در جایگاه رفع، مبتدا."
+  },
+  {
+    "arabic": "عَنِ",
+    "persian": "از",
+    "grammar_rule": "حرف جر",
+    "grammar_color": "#2196F3",
+    "grammar_explanation": "حرف جر (کسره نون برای رفع التقای ساکنین آمده است)."
+  },
+  {
+    "arabic": "اللَّغْوِ",
+    "persian": "بیهوده (سخن و کار باطل)",
+    "grammar_rule": "اسم مجرور",
+    "grammar_color": "#00BCD4",
+    "grammar_explanation": "مجرور به حرف جر «عَنْ» با علامت کسره."
+  },
+  {
+    "arabic": "مُعْرِضُونَ",
+    "persian": "روی‌گردان‌اند",
+    "grammar_rule": "خبر",
+    "grammar_color": "#607D8B",
+    "grammar_explanation": "خبر برای مبتدا (هُمْ). مرفوع به علامت فرعی «واو» (جمع مذکر سالم)."
+  }
+]
     },
     {
       "id": 58,
@@ -2461,35 +3157,50 @@
         "در خیریه‌های مدرسه شرکت کن.",
         "یاد بگیر دادن، آدم را بیشتر می‌کند نه کمتر."
       ],
-      "word_by_word": [
-        {
-          "arabic": "وَ",
-          "persian": "و",
-          "grammar_rule": "حرف عطف",
-          "grammar_color": "#9C27B0",
-          "grammar_explanation": "حرف عطف برای پیوند دادن"
-        },
-        {
-          "arabic": "الَّذِينَ",
-          "persian": "کسانی که"
-        },
-        {
-          "arabic": "هُمْ",
-          "persian": "آن‌ها"
-        },
-        {
-          "arabic": "لِـ",
-          "persian": "برای (نسبت به)"
-        },
-        {
-          "arabic": "زَّكَاةِ",
-          "persian": "زکات"
-        },
-        {
-          "arabic": "فَاعِلُونَ",
-          "persian": "انجام‌دهندگان‌اند"
-        }
-      ]
+      "word_by_word":[
+  {
+    "arabic": "وَ",
+    "persian": "و",
+    "grammar_rule": "حرف عطف",
+    "grammar_color": "#9C27B0",
+    "grammar_explanation": "حرف عطف."
+  },
+  {
+    "arabic": "الَّذِينَ",
+    "persian": "کسانی که",
+    "grammar_rule": "اسم موصول",
+    "grammar_color": "#8BC34A",
+    "grammar_explanation": "عطف به ویژگی‌های قبلی."
+  },
+  {
+    "arabic": "هُمْ",
+    "persian": "آن‌ها",
+    "grammar_rule": "مبتدا",
+    "grammar_color": "#00BCD4",
+    "grammar_explanation": "ضمیر منفصل در جایگاه رفع."
+  },
+  {
+    "arabic": "لِـ",
+    "persian": "برای (نسبت به)",
+    "grammar_rule": "حرف جر",
+    "grammar_color": "#2196F3",
+    "grammar_explanation": "حرف جر که بر سر اسم می‌آید."
+  },
+  {
+    "arabic": "زَّكَاةِ",
+    "persian": "زکات",
+    "grammar_rule": "اسم مجرور",
+    "grammar_color": "#00BCD4",
+    "grammar_explanation": "مجرور به حرف جر «لِـ» با علامت کسره."
+  },
+  {
+    "arabic": "فَاعِلُونَ",
+    "persian": "انجام‌دهندگان‌اند",
+    "grammar_rule": "خبر",
+    "grammar_color": "#607D8B",
+    "grammar_explanation": "خبر برای مبتدا (هُمْ). مرفوع به «واو» (جمع مذکر سالم)."
+  }
+]
     },
     {
       "id": 59,
@@ -2504,39 +3215,57 @@
         "حدود دینی در روابط را بشناس و رعایت کن.",
         "اگر کسی تو را به ناپاکی دعوت کرد، محکم نه بگو."
       ],
-      "word_by_word": [
-        {
-          "arabic": "وَ",
-          "persian": "و",
-          "grammar_rule": "حرف عطف",
-          "grammar_color": "#9C27B0",
-          "grammar_explanation": "حرف عطف برای پیوند دادن"
-        },
-        {
-          "arabic": "الَّذِينَ",
-          "persian": "کسانی که"
-        },
-        {
-          "arabic": "هُمْ",
-          "persian": "آن‌ها"
-        },
-        {
-          "arabic": "لِـ",
-          "persian": "برای (از)"
-        },
-        {
-          "arabic": "فُرُوجِ",
-          "persian": "دامن‌های (شرمگاه‌های)"
-        },
-        {
-          "arabic": "هِمْ",
-          "persian": "شان"
-        },
-        {
-          "arabic": "حَافِظُونَ",
-          "persian": "حفظ‌کنندگان‌اند (پاکدامن‌اند)"
-        }
-      ]
+      "word_by_word":[
+  {
+    "arabic": "وَ",
+    "persian": "و",
+    "grammar_rule": "حرف عطف",
+    "grammar_color": "#9C27B0",
+    "grammar_explanation": "حرف عطف."
+  },
+  {
+    "arabic": "الَّذِينَ",
+    "persian": "کسانی که",
+    "grammar_rule": "اسم موصول",
+    "grammar_color": "#8BC34A",
+    "grammar_explanation": "عطف به قبل."
+  },
+  {
+    "arabic": "هُمْ",
+    "persian": "آن‌ها",
+    "grammar_rule": "مبتدا",
+    "grammar_color": "#00BCD4",
+    "grammar_explanation": "ضمیر منفصل در جایگاه رفع."
+  },
+  {
+    "arabic": "لِـ",
+    "persian": "برای (از)",
+    "grammar_rule": "حرف جر",
+    "grammar_color": "#2196F3",
+    "grammar_explanation": "حرف جر."
+  },
+  {
+    "arabic": "فُرُوجِ",
+    "persian": "دامن‌های (شرمگاه‌های)",
+    "grammar_rule": "اسم مجرور",
+    "grammar_color": "#00BCD4",
+    "grammar_explanation": "مجرور به حرف جر با علامت کسره."
+  },
+  {
+    "arabic": "هِمْ",
+    "persian": "شان",
+    "grammar_rule": "مضاف‌الیه",
+    "grammar_color": "#00BCD4",
+    "grammar_explanation": "ضمیر متصل در جایگاه جر، مضاف‌الیه برای «فُرُوج»."
+  },
+  {
+    "arabic": "حَافِظُونَ",
+    "persian": "حفظ‌کنندگان‌اند (پاکدامن‌اند)",
+    "grammar_rule": "خبر",
+    "grammar_color": "#607D8B",
+    "grammar_explanation": "خبر برای مبتدا (هُمْ). مرفوع به «واو» (جمع مذکر سالم)."
+  }
+]
     },
     {
       "id": 60,
@@ -2552,26 +3281,35 @@
         "هر روز یه کار تقوا‌محور انجام بده."
       ],
       "word_by_word": [
-        {
-          "arabic": "وَ",
-          "persian": "و",
-          "grammar_rule": "حرف عطف",
-          "grammar_color": "#9C27B0",
-          "grammar_explanation": "حرف عطف برای پیوند دادن"
-        },
-        {
-          "arabic": "اللَّهُ",
-          "persian": "خداوند"
-        },
-        {
-          "arabic": "يُحِبُّ",
-          "persian": "دوست دارد"
-        },
-        {
-          "arabic": "الْمُتَّقِينَ",
-          "persian": "پرهیزگاران را"
-        }
-      ]
+  {
+    "arabic": "وَ",
+    "persian": "و",
+    "grammar_rule": "حرف استئناف / عطف",
+    "grammar_color": "#9C27B0",
+    "grammar_explanation": "حرفی برای آغاز جمله جدید یا پیوند به مفاهیم قبل."
+  },
+  {
+    "arabic": "اللَّهُ",
+    "persian": "خداوند",
+    "grammar_rule": "مبتدا",
+    "grammar_color": "#8BC34A",
+    "grammar_explanation": "لفظ جلاله، مبتدا و مرفوع به ضمه."
+  },
+  {
+    "arabic": "يُحِبُّ",
+    "persian": "دوست دارد",
+    "grammar_rule": "فعل مضارع",
+    "grammar_color": "#4CAF50",
+    "grammar_explanation": "فعل مضارع مرفوع به ضمه. فاعل آن ضمیر مستتر «هُوَ» است که به خداوند برمی‌گردد. (کل جمله فعلیه خبر برای مبتدا است)"
+  },
+  {
+    "arabic": "الْمُتَّقِينَ",
+    "persian": "پرهیزگاران را",
+    "grammar_rule": "مفعول‌به",
+    "grammar_color": "#FF9800",
+    "grammar_explanation": "مفعول‌به برای فعل «يُحِبُّ». منصوب است و علامت نصب آن فرعی و با حرف «یاء» است (زیرا جمع مذکر سالم است)."
+  }
+]
     },
     {
       "id": 61,
@@ -2587,27 +3325,42 @@
         "یه دفترچه داشته باش و برداشتت از آیات را بنویس."
       ],
       "word_by_word": [
-        {
-          "arabic": "أَ",
-          "persian": "آیا"
-        },
-        {
-          "arabic": "فَـ",
-          "persian": "پس"
-        },
-        {
-          "arabic": "لَا",
-          "persian": "نه (نمی‌)"
-        },
-        {
-          "arabic": "يَتَدَبَّرُونَ",
-          "persian": "تدبر می‌کنند (اندیشه می‌کنند)"
-        },
-        {
-          "arabic": "الْقُرْآنَ",
-          "persian": "قرآن را"
-        }
-      ]
+  {
+    "arabic": "أَ",
+    "persian": "آیا",
+    "grammar_rule": "حرف استفهام",
+    "grammar_color": "#9C27B0",
+    "grammar_explanation": "حرف پرسشی مبنی بر فتح برای سؤال و توبیخ."
+  },
+  {
+    "arabic": "فَـ",
+    "persian": "پس",
+    "grammar_rule": "حرف عطف",
+    "grammar_color": "#9C27B0",
+    "grammar_explanation": "حرف عطف برای پیوند با جملات مقدر قبلی."
+  },
+  {
+    "arabic": "لَا",
+    "persian": "نمی‌",
+    "grammar_rule": "حرف نفی",
+    "grammar_color": "#E91E63",
+    "grammar_explanation": "حرف نفی غیرعامل که تأثیری در اعراب فعل مضارع ندارد."
+  },
+  {
+    "arabic": "يَتَدَبَّرُونَ",
+    "persian": "تدبر (اندیشه) می‌کنند",
+    "grammar_rule": "فعل مضارع",
+    "grammar_color": "#4CAF50",
+    "grammar_explanation": "فعل مضارع مرفوع، و علامت رفع آن ثبوت «نون» است (از افعال خمسه). «واو» ضمیر متصل فاعل است."
+  },
+  {
+    "arabic": "الْقُرْآنَ",
+    "persian": "در قرآن",
+    "grammar_rule": "مفعول‌به",
+    "grammar_color": "#FF9800",
+    "grammar_explanation": "مفعول‌به برای فعل «یَتَدَبَّرُونَ»، منصوب و علامت نصب آن فتحه ظاهری است."
+  }
+]
     },
     {
       "id": 62,
@@ -2623,45 +3376,63 @@
         "درباره بزرگی کیهان با معلم علوم صحبت کن."
       ],
       "word_by_word": [
-        {
-          "arabic": "إِنَّ",
-          "persian": "همانا (بی‌گمان)"
-        },
-        {
-          "arabic": "فِي",
-          "persian": "در",
-          "grammar_rule": "حرف جر",
-          "grammar_color": "#2196F3",
-          "grammar_explanation": "حرف جر به معنای «در»"
-        },
-        {
-          "arabic": "خَلْقِ",
-          "persian": "آفرینشِ"
-        },
-        {
-          "arabic": "السَّمَاوَاتِ",
-          "persian": "آسمان‌ها"
-        },
-        {
-          "arabic": "وَ",
-          "persian": "و",
-          "grammar_rule": "حرف عطف",
-          "grammar_color": "#9C27B0",
-          "grammar_explanation": "حرف عطف برای پیوند دادن"
-        },
-        {
-          "arabic": "الْأَرْضِ",
-          "persian": "زمین"
-        },
-        {
-          "arabic": "لَـ",
-          "persian": "قطعاً (به‌راستی)"
-        },
-        {
-          "arabic": "آيَاتٍ",
-          "persian": "نشانه‌هایی است"
-        }
-      ]
+  {
+    "arabic": "إِنَّ",
+    "persian": "همانا",
+    "grammar_rule": "حرف مشبهة بالفعل",
+    "grammar_color": "#E91E63",
+    "grammar_explanation": "حرف تأکید و نصب که اسم را منصوب و خبر را مرفوع می‌کند."
+  },
+  {
+    "arabic": "فِي",
+    "persian": "در",
+    "grammar_rule": "حرف جر",
+    "grammar_color": "#2196F3",
+    "grammar_explanation": "حرف جر."
+  },
+  {
+    "arabic": "خَلْقِ",
+    "persian": "آفرینشِ",
+    "grammar_rule": "اسم مجرور (خبر إنَّ مقدم)",
+    "grammar_color": "#00BCD4",
+    "grammar_explanation": "اسم مجرور به حرف جر. ترکیب جار و مجرور در محل رفع، خبر مقدم برای «إِنَّ» است."
+  },
+  {
+    "arabic": "السَّمَاوَاتِ",
+    "persian": "آسمان‌ها",
+    "grammar_rule": "مضاف‌الیه",
+    "grammar_color": "#00BCD4",
+    "grammar_explanation": "مضاف‌الیه و مجرور به کسره."
+  },
+  {
+    "arabic": "وَ",
+    "persian": "و",
+    "grammar_rule": "حرف عطف",
+    "grammar_color": "#9C27B0",
+    "grammar_explanation": "حرف عطف."
+  },
+  {
+    "arabic": "الْأَرْضِ",
+    "persian": "زمین",
+    "grammar_rule": "اسم معطوف",
+    "grammar_color": "#00BCD4",
+    "grammar_explanation": "معطوف به «السَّمَاوَاتِ» و مجرور."
+  },
+  {
+    "arabic": "لَـ",
+    "persian": "قطعاً",
+    "grammar_rule": "لام مزحلقه (تأکید)",
+    "grammar_color": "#E91E63",
+    "grammar_explanation": "لام تأکید که معمولاً بر سر اسم مؤخر «إِنَّ» می‌آید."
+  },
+  {
+    "arabic": "آيَاتٍ",
+    "persian": "نشانه‌هایی است",
+    "grammar_rule": "اسم إنَّ (مؤخر)",
+    "grammar_color": "#FF9800",
+    "grammar_explanation": "اسم مؤخر برای «إِنَّ». منصوب است و علامت نصب آن نیابی (کسره به جای فتحه) است زیرا جمع مؤنث سالم است."
+  }
+]
     },
     {
       "id": 63,
@@ -2677,45 +3448,63 @@
         "شکرگزار سلامتی باش و بفهم چه نعمت بزرگی است."
       ],
       "word_by_word": [
-        {
-          "arabic": "وَ",
-          "persian": "و",
-          "grammar_rule": "حرف عطف",
-          "grammar_color": "#9C27B0",
-          "grammar_explanation": "حرف عطف برای پیوند دادن"
-        },
-        {
-          "arabic": "فِي",
-          "persian": "در",
-          "grammar_rule": "حرف جر",
-          "grammar_color": "#2196F3",
-          "grammar_explanation": "حرف جر به معنای «در»"
-        },
-        {
-          "arabic": "أَنْفُسِ",
-          "persian": "جان‌های (وجودِ)"
-        },
-        {
-          "arabic": "كُمْ",
-          "persian": "شما (تان)"
-        },
-        {
-          "arabic": "أَ",
-          "persian": "آیا"
-        },
-        {
-          "arabic": "فَـ",
-          "persian": "پس"
-        },
-        {
-          "arabic": "لَا",
-          "persian": "نه (نمی‌)"
-        },
-        {
-          "arabic": "تُبْصِرُونَ",
-          "persian": "می‌بینید"
-        }
-      ]
+  {
+    "arabic": "وَ",
+    "persian": "و",
+    "grammar_rule": "حرف عطف",
+    "grammar_color": "#9C27B0",
+    "grammar_explanation": "حرف عطف."
+  },
+  {
+    "arabic": "فِي",
+    "persian": "در",
+    "grammar_rule": "حرف جر",
+    "grammar_color": "#2196F3",
+    "grammar_explanation": "حرف جر."
+  },
+  {
+    "arabic": "أَنْفُسِ",
+    "persian": "جان‌های (خود)",
+    "grammar_rule": "اسم مجرور",
+    "grammar_color": "#00BCD4",
+    "grammar_explanation": "اسم مجرور به حرف جر."
+  },
+  {
+    "arabic": "كُمْ",
+    "persian": "شما",
+    "grammar_rule": "مضاف‌الیه",
+    "grammar_color": "#00BCD4",
+    "grammar_explanation": "ضمیر متصل در محل جر، مضاف‌الیه."
+  },
+  {
+    "arabic": "أَ",
+    "persian": "آیا",
+    "grammar_rule": "حرف استفهام",
+    "grammar_color": "#9C27B0",
+    "grammar_explanation": "همزه استفهام."
+  },
+  {
+    "arabic": "فَـ",
+    "persian": "پس",
+    "grammar_rule": "حرف عطف",
+    "grammar_color": "#9C27B0",
+    "grammar_explanation": "حرف عطف."
+  },
+  {
+    "arabic": "لَا",
+    "persian": "نمی‌",
+    "grammar_rule": "حرف نفی",
+    "grammar_color": "#E91E63",
+    "grammar_explanation": "حرف نفی."
+  },
+  {
+    "arabic": "تُبْصِرُونَ",
+    "persian": "می‌بینید",
+    "grammar_rule": "فعل مضارع",
+    "grammar_color": "#4CAF50",
+    "grammar_explanation": "فعل مضارع مرفوع به ثبوت نون، واو ضمیر متصل فاعل است."
+  }
+]
     },
     {
       "id": 64,
@@ -2730,43 +3519,64 @@
         "از خودت بپرس این موجود چطور طراحی شده که درست کار کند؟",
         "یه گزارش تصویری یا مقاله درباره یه حیوان بنویس."
       ],
-      "word_by_word": [
-        {
-          "arabic": "أَ",
-          "persian": "آیا"
-        },
-        {
-          "arabic": "فَـ",
-          "persian": "پس"
-        },
-        {
-          "arabic": "لَا",
-          "persian": "نه (نمی‌)"
-        },
-        {
-          "arabic": "يَنْظُرُونَ",
-          "persian": "می‌نگرند"
-        },
-        {
-          "arabic": "إِلَى",
-          "persian": "به (سوی)",
-          "grammar_rule": "حرف جر",
-          "grammar_color": "#2196F3",
-          "grammar_explanation": "حرف جر به معنای «به سوی»"
-        },
-        {
-          "arabic": "الْإِبِلِ",
-          "persian": "شتر"
-        },
-        {
-          "arabic": "كَيْفَ",
-          "persian": "چگونه"
-        },
-        {
-          "arabic": "خُلِقَتْ",
-          "persian": "آفریده شده است"
-        }
-      ]
+      "word_by_word":[
+  {
+    "arabic": "أَ",
+    "persian": "آیا",
+    "grammar_rule": "حرف استفهام",
+    "grammar_color": "#9C27B0",
+    "grammar_explanation": "حرف پرسشی."
+  },
+  {
+    "arabic": "فَـ",
+    "persian": "پس",
+    "grammar_rule": "حرف عطف",
+    "grammar_color": "#9C27B0",
+    "grammar_explanation": "حرف عطف."
+  },
+  {
+    "arabic": "لَا",
+    "persian": "نمی‌",
+    "grammar_rule": "حرف نفی",
+    "grammar_color": "#E91E63",
+    "grammar_explanation": "حرف نفی."
+  },
+  {
+    "arabic": "يَنْظُرُونَ",
+    "persian": "می‌نگرند",
+    "grammar_rule": "فعل مضارع",
+    "grammar_color": "#4CAF50",
+    "grammar_explanation": "فعل مضارع مرفوع به ثبوت نون، فاعل آن واو است."
+  },
+  {
+    "arabic": "إِلَى",
+    "persian": "به سوی",
+    "grammar_rule": "حرف جر",
+    "grammar_color": "#2196F3",
+    "grammar_explanation": "حرف جر."
+  },
+  {
+    "arabic": "الْإِبِلِ",
+    "persian": "شتران",
+    "grammar_rule": "اسم مجرور",
+    "grammar_color": "#00BCD4",
+    "grammar_explanation": "اسم مجرور به حرف جر «إِلَى» با علامت کسره."
+  },
+  {
+    "arabic": "كَيْفَ",
+    "persian": "چگونه",
+    "grammar_rule": "اسم استفهام (حال)",
+    "grammar_color": "#FF9800",
+    "grammar_explanation": "اسم استفهام مبنی بر فتح، در محل نصب به عنوان حال."
+  },
+  {
+    "arabic": "خُلِقَتْ",
+    "persian": "آفریده شد",
+    "grammar_rule": "فعل ماضی مجهول",
+    "grammar_color": "#4CAF50",
+    "grammar_explanation": "فعل ماضی مجهول مبنی بر فتح. «تاء» علامت تأنیث است و نایب فاعل ضمیر مستتر «هِيَ» است که به شتر برمی‌گردد."
+  }
+]
     },
     {
       "id": 65,
@@ -2782,42 +3592,63 @@
         "درباره سفرهای فضایی با علاقه تحقیق کن."
       ],
       "word_by_word": [
-        {
-          "arabic": "أَ",
-          "persian": "آیا"
-        },
-        {
-          "arabic": "فَـ",
-          "persian": "پس"
-        },
-        {
-          "arabic": "لَا",
-          "persian": "نه (نمی‌)"
-        },
-        {
-          "arabic": "يَنْظُرُونَ",
-          "persian": "می‌نگرند"
-        },
-        {
-          "arabic": "إِلَى",
-          "persian": "به (سوی)",
-          "grammar_rule": "حرف جر",
-          "grammar_color": "#2196F3",
-          "grammar_explanation": "حرف جر به معنای «به سوی»"
-        },
-        {
-          "arabic": "السَّمَاءِ",
-          "persian": "آسمان"
-        },
-        {
-          "arabic": "فَوْقَ",
-          "persian": "بالایِ"
-        },
-        {
-          "arabic": "هُمْ",
-          "persian": "شان (آن‌ها/خود)"
-        }
-      ]
+  {
+    "arabic": "أَ",
+    "persian": "آیا",
+    "grammar_rule": "حرف استفهام",
+    "grammar_color": "#9C27B0",
+    "grammar_explanation": "حرف پرسشی."
+  },
+  {
+    "arabic": "فَـ",
+    "persian": "پس",
+    "grammar_rule": "حرف عطف",
+    "grammar_color": "#9C27B0",
+    "grammar_explanation": "حرف عطف."
+  },
+  {
+    "arabic": "لَا",
+    "persian": "نمی‌",
+    "grammar_rule": "حرف نفی",
+    "grammar_color": "#E91E63",
+    "grammar_explanation": "حرف نفی غیر عامل."
+  },
+  {
+    "arabic": "يَنْظُرُونَ",
+    "persian": "می‌نگرند",
+    "grammar_rule": "فعل مضارع",
+    "grammar_color": "#4CAF50",
+    "grammar_explanation": "فعل مضارع مرفوع به ثبوت نون."
+  },
+  {
+    "arabic": "إِلَى",
+    "persian": "به سوی",
+    "grammar_rule": "حرف جر",
+    "grammar_color": "#2196F3",
+    "grammar_explanation": "حرف جر."
+  },
+  {
+    "arabic": "السَّمَاءِ",
+    "persian": "آسمان",
+    "grammar_rule": "اسم مجرور",
+    "grammar_color": "#00BCD4",
+    "grammar_explanation": "مجرور به حرف جر."
+  },
+  {
+    "arabic": "فَوْقَ",
+    "persian": "بالای",
+    "grammar_rule": "ظرف مکان (منصوب)",
+    "grammar_color": "#FF9800",
+    "grammar_explanation": "ظرف مکان (مفعول‌فیه)، منصوب به فتحه ظاهری و مضاف."
+  },
+  {
+    "arabic": "هُمْ",
+    "persian": "سرشان (آن‌ها)",
+    "grammar_rule": "مضاف‌الیه",
+    "grammar_color": "#00BCD4",
+    "grammar_explanation": "ضمیر متصل در محل جر، مضاف‌الیه برای «فَوْقَ»."
+  }
+]
     },
     {
       "id": 66,
@@ -2832,34 +3663,43 @@
         "مستندی درباره پیدایش زمین ببین.",
         "با یه معلم علوم درباره پوسته زمین صحبت کن."
       ],
-      "word_by_word": [
-        {
-          "arabic": "وَ",
-          "persian": "و",
-          "grammar_rule": "حرف عطف",
-          "grammar_color": "#9C27B0",
-          "grammar_explanation": "حرف عطف برای پیوند دادن"
-        },
-        {
-          "arabic": "إِلَى",
-          "persian": "به (سوی)",
-          "grammar_rule": "حرف جر",
-          "grammar_color": "#2196F3",
-          "grammar_explanation": "حرف جر به معنای «به سوی»"
-        },
-        {
-          "arabic": "الْأَرْضِ",
-          "persian": "زمین"
-        },
-        {
-          "arabic": "كَيْفَ",
-          "persian": "چگونه"
-        },
-        {
-          "arabic": "سُطِحَتْ",
-          "persian": "گسترده (مسطح) شده است"
-        }
-      ]
+      "word_by_word":[
+  {
+    "arabic": "وَ",
+    "persian": "و",
+    "grammar_rule": "حرف عطف",
+    "grammar_color": "#9C27B0",
+    "grammar_explanation": "حرف عطف مبنی بر فتح (عطف به آیات پیشین)."
+  },
+  {
+    "arabic": "إِلَى",
+    "persian": "به (سوی)",
+    "grammar_rule": "حرف جر",
+    "grammar_color": "#2196F3",
+    "grammar_explanation": "حرف جر."
+  },
+  {
+    "arabic": "الْأَرْضِ",
+    "persian": "زمین",
+    "grammar_rule": "اسم مجرور",
+    "grammar_color": "#00BCD4",
+    "grammar_explanation": "اسم مجرور به حرف جر «إِلَى» با علامت کسره ظاهری."
+  },
+  {
+    "arabic": "كَيْفَ",
+    "persian": "چگونه",
+    "grammar_rule": "اسم استفهام (حال)",
+    "grammar_color": "#FF9800",
+    "grammar_explanation": "اسم استفهام مبنی بر فتح، در محل نصب به عنوان حال."
+  },
+  {
+    "arabic": "سُطِحَتْ",
+    "persian": "گسترده (مسطح) شده است",
+    "grammar_rule": "فعل ماضی مجهول",
+    "grammar_color": "#4CAF50",
+    "grammar_explanation": "فعل ماضی مجهول مبنی بر فتح. «تاء» علامت تأنیث است و نایب فاعل ضمیر مستتر «هِيَ» است که به زمین برمی‌گردد."
+  }
+]
     },
     {
       "id": 67,
@@ -2875,42 +3715,63 @@
         "درباره آفرینش هدفمند با پدر یا معلمت صحبت کن."
       ],
       "word_by_word": [
-        {
-          "arabic": "وَ",
-          "persian": "و",
-          "grammar_rule": "حرف عطف",
-          "grammar_color": "#9C27B0",
-          "grammar_explanation": "حرف عطف برای پیوند دادن"
-        },
-        {
-          "arabic": "مَا",
-          "persian": "نه (نیافرید)"
-        },
-        {
-          "arabic": "خَلَقَ",
-          "persian": "آفرید"
-        },
-        {
-          "arabic": "اللَّهُ",
-          "persian": "خدا"
-        },
-        {
-          "arabic": "ذَلِكَ",
-          "persian": "آن (این‌ها)"
-        },
-        {
-          "arabic": "إِلَّا",
-          "persian": "جز (مگر)"
-        },
-        {
-          "arabic": "بِـ",
-          "persian": "به"
-        },
-        {
-          "arabic": "الْحَقِّ",
-          "persian": "حق"
-        }
-      ]
+  {
+    "arabic": "وَ",
+    "persian": "و",
+    "grammar_rule": "حرف استیناف / عطف",
+    "grammar_color": "#9C27B0",
+    "grammar_explanation": "حرف عطف یا استیناف برای شروع جمله جدید."
+  },
+  {
+    "arabic": "مَا",
+    "persian": "نه (نیافرید)",
+    "grammar_rule": "حرف نفی",
+    "grammar_color": "#E91E63",
+    "grammar_explanation": "حرف نفی غیر عامل که بر سر فعل ماضی آمده است."
+  },
+  {
+    "arabic": "خَلَقَ",
+    "persian": "آفرید",
+    "grammar_rule": "فعل ماضی",
+    "grammar_color": "#4CAF50",
+    "grammar_explanation": "فعل ماضی مبنی بر فتح."
+  },
+  {
+    "arabic": "اللَّهُ",
+    "persian": "خدا",
+    "grammar_rule": "فاعل",
+    "grammar_color": "#3F51B5",
+    "grammar_explanation": "اسم جلاله، فاعل برای فعل «خَلَقَ» و مرفوع به ضمه ظاهری."
+  },
+  {
+    "arabic": "ذَلِكَ",
+    "persian": "آن (این‌ها)",
+    "grammar_rule": "مفعول‌به",
+    "grammar_color": "#FF9800",
+    "grammar_explanation": "اسم اشاره مبنی در محل نصب، مفعول‌به."
+  },
+  {
+    "arabic": "إِلَّا",
+    "persian": "جز (مگر)",
+    "grammar_rule": "حرف حصر",
+    "grammar_color": "#E91E63",
+    "grammar_explanation": "حرف استثناء ملغی (ایجاد ساختار حصر) به دلیل منفی بودن جمله پیشین."
+  },
+  {
+    "arabic": "بِـ",
+    "persian": "به",
+    "grammar_rule": "حرف جر",
+    "grammar_color": "#2196F3",
+    "grammar_explanation": "حرف جر مبنی بر کسر."
+  },
+  {
+    "arabic": "الْحَقِّ",
+    "persian": "حق",
+    "grammar_rule": "اسم مجرور",
+    "grammar_color": "#00BCD4",
+    "grammar_explanation": "اسم مجرور به حرف جر. ترکیب جار و مجرور در محل نصب به عنوان حال."
+  }
+]
     },
     {
       "id": 68,
@@ -2925,42 +3786,57 @@
         "هدر دادن آب را جدی‌تر بگیر.",
         "درباره بحران آب در دنیا تحقیق کن."
       ],
-      "word_by_word": [
-        {
-          "arabic": "وَ",
-          "persian": "و",
-          "grammar_rule": "حرف عطف",
-          "grammar_color": "#9C27B0",
-          "grammar_explanation": "حرف عطف برای پیوند دادن"
-        },
-        {
-          "arabic": "جَعَلْنَا",
-          "persian": "قرار دادیم (آفریدیم)"
-        },
-        {
-          "arabic": "مِنَ",
-          "persian": "از",
-          "grammar_rule": "حرف جر",
-          "grammar_color": "#2196F3",
-          "grammar_explanation": "حرف جر به معنای «از»"
-        },
-        {
-          "arabic": "الْمَاءِ",
-          "persian": "آب"
-        },
-        {
-          "arabic": "كُلَّ",
-          "persian": "هر"
-        },
-        {
-          "arabic": "شَيْءٍ",
-          "persian": "چیز"
-        },
-        {
-          "arabic": "حَيٍّ",
-          "persian": "زنده"
-        }
-      ]
+      "word_by_word":[
+  {
+    "arabic": "وَ",
+    "persian": "و",
+    "grammar_rule": "حرف عطف",
+    "grammar_color": "#9C27B0",
+    "grammar_explanation": "حرف عطف."
+  },
+  {
+    "arabic": "جَعَلْنَا",
+    "persian": "قرار دادیم (آفریدیم)",
+    "grammar_rule": "فعل ماضی و فاعل",
+    "grammar_color": "#4CAF50",
+    "grammar_explanation": "فعل ماضی مبنی بر سکون. «نا» ضمیر متصل در محل رفع، فاعل است."
+  },
+  {
+    "arabic": "مِنَ",
+    "persian": "از",
+    "grammar_rule": "حرف جر",
+    "grammar_color": "#2196F3",
+    "grammar_explanation": "حرف جر (نون به دلیل التقای ساکنین مفتوح شده است)."
+  },
+  {
+    "arabic": "الْمَاءِ",
+    "persian": "آب",
+    "grammar_rule": "اسم مجرور",
+    "grammar_color": "#00BCD4",
+    "grammar_explanation": "مجرور به حرف جر «مِنْ» با علامت کسره."
+  },
+  {
+    "arabic": "کُلَّ",
+    "persian": "هر",
+    "grammar_rule": "مفعول‌به",
+    "grammar_color": "#FF9800",
+    "grammar_explanation": "مفعول‌به برای فعل «جَعَلْنَا»، منصوب به فتحه ظاهری و مضاف."
+  },
+  {
+    "arabic": "شَيْءٍ",
+    "persian": "چیز",
+    "grammar_rule": "مضاف‌الیه",
+    "grammar_color": "#00BCD4",
+    "grammar_explanation": "مضاف‌الیه و مجرور به کسره."
+  },
+  {
+    "arabic": "حَيٍّ",
+    "persian": "زنده",
+    "grammar_rule": "صفت (نعت)",
+    "grammar_color": "#00BCD4",
+    "grammar_explanation": "صفت برای «شَيْءٍ» و مجرور به تبعیت از آن."
+  }
+]
     },
     {
       "id": 69,
@@ -2976,37 +3852,49 @@
         "برنامه روزانه‌ات را با ریتم طبیعی شب و روز هماهنگ کن."
       ],
       "word_by_word": [
-        {
-          "arabic": "وَ",
-          "persian": "و",
-          "grammar_rule": "حرف عطف",
-          "grammar_color": "#9C27B0",
-          "grammar_explanation": "حرف عطف برای پیوند دادن"
-        },
-        {
-          "arabic": "جَعَلْنَا",
-          "persian": "قرار دادیم"
-        },
-        {
-          "arabic": "اللَّيْلَ",
-          "persian": "شب"
-        },
-        {
-          "arabic": "وَ",
-          "persian": "و",
-          "grammar_rule": "حرف عطف",
-          "grammar_color": "#9C27B0",
-          "grammar_explanation": "حرف عطف برای پیوند دادن"
-        },
-        {
-          "arabic": "النَّهَارَ",
-          "persian": "روز"
-        },
-        {
-          "arabic": "آيَتَيْنِ",
-          "persian": "دو نشانه"
-        }
-      ]
+  {
+    "arabic": "وَ",
+    "persian": "و",
+    "grammar_rule": "حرف عطف",
+    "grammar_color": "#9C27B0",
+    "grammar_explanation": "حرف عطف."
+  },
+  {
+    "arabic": "جَعَلْنَا",
+    "persian": "قرار دادیم",
+    "grammar_rule": "فعل ماضی و فاعل",
+    "grammar_color": "#4CAF50",
+    "grammar_explanation": "فعل ماضی مبنی بر سکون، «نا» فاعل آن است. این فعل دو مفعول می‌گیرد."
+  },
+  {
+    "arabic": "اللَّيْلَ",
+    "persian": "شب",
+    "grammar_rule": "مفعول‌به اول",
+    "grammar_color": "#FF9800",
+    "grammar_explanation": "مفعول‌به اول فعل «جَعَلْنَا» منصوب به فتحه."
+  },
+  {
+    "arabic": "وَ",
+    "persian": "و",
+    "grammar_rule": "حرف عطف",
+    "grammar_color": "#9C27B0",
+    "grammar_explanation": "حرف عطف."
+  },
+  {
+    "arabic": "النَّهَارَ",
+    "persian": "روز",
+    "grammar_rule": "اسم معطوف",
+    "grammar_color": "#FF9800",
+    "grammar_explanation": "معطوف به «اللَّيْلَ» و منصوب مانند آن."
+  },
+  {
+    "arabic": "آیَتَیْنِ",
+    "persian": "دو نشانه",
+    "grammar_rule": "مفعول‌به دوم",
+    "grammar_color": "#FF9800",
+    "grammar_explanation": "مفعول‌به دوم منصوب، علامت نصب فرعی آن «یاء» است زیرا اسم مثنی (تثنیه) است."
+  }
+]
     },
     {
       "id": 70,
@@ -3022,30 +3910,42 @@
         "درباره تقویم و ریشه‌های آن در طبیعت بخوان."
       ],
       "word_by_word": [
-        {
-          "arabic": "يُقَلِّبُ",
-          "persian": "دگرگون می‌کند"
-        },
-        {
-          "arabic": "اللَّهُ",
-          "persian": "خدا"
-        },
-        {
-          "arabic": "اللَّيْلَ",
-          "persian": "شب"
-        },
-        {
-          "arabic": "وَ",
-          "persian": "و",
-          "grammar_rule": "حرف عطف",
-          "grammar_color": "#9C27B0",
-          "grammar_explanation": "حرف عطف برای پیوند دادن"
-        },
-        {
-          "arabic": "النَّهَارَ",
-          "persian": "روز"
-        }
-      ]
+  {
+    "arabic": "يُقَلِّبُ",
+    "persian": "دگرگون می‌کند",
+    "grammar_rule": "فعل مضارع",
+    "grammar_color": "#4CAF50",
+    "grammar_explanation": "فعل مضارع مرفوع به ضمه ظاهری."
+  },
+  {
+    "arabic": "اللَّهُ",
+    "persian": "خدا",
+    "grammar_rule": "فاعل",
+    "grammar_color": "#3F51B5",
+    "grammar_explanation": "اسم جلاله، فاعل و مرفوع به ضمه."
+  },
+  {
+    "arabic": "اللَّيْلَ",
+    "persian": "شب",
+    "grammar_rule": "مفعول‌به",
+    "grammar_color": "#FF9800",
+    "grammar_explanation": "مفعول‌به منصوب به فتحه ظاهری."
+  },
+  {
+    "arabic": "وَ",
+    "persian": "و",
+    "grammar_rule": "حرف عطف",
+    "grammar_color": "#9C27B0",
+    "grammar_explanation": "حرف عطف."
+  },
+  {
+    "arabic": "النَّهَارَ",
+    "persian": "روز",
+    "grammar_rule": "اسم معطوف",
+    "grammar_color": "#FF9800",
+    "grammar_explanation": "معطوف به «اللَّيْلَ» و منصوب به تبعیت از آن."
+  }
+]
     },
     {
       "id": 71,
@@ -3060,35 +3960,50 @@
         "فهرست نعمت‌های طبیعی اطرافت را بنویس.",
         "با خانواده به پارک برو و لطف خدا را در طبیعت ببینید."
       ],
-      "word_by_word": [
-        {
-          "arabic": "فَـ",
-          "persian": "پس"
-        },
-        {
-          "arabic": "انْظُرْ",
-          "persian": "بنگر (نگاه کن)"
-        },
-        {
-          "arabic": "إِلَىٰ",
-          "persian": "به",
-          "grammar_rule": "حرف جر",
-          "grammar_color": "#2196F3",
-          "grammar_explanation": "حرف جر به معنای «به سوی»"
-        },
-        {
-          "arabic": "آثَارِ",
-          "persian": "آثار (نشانه‌های)"
-        },
-        {
-          "arabic": "رَحْمَةِ",
-          "persian": "رحمتِ"
-        },
-        {
-          "arabic": "اللَّهِ",
-          "persian": "خدا"
-        }
-      ]
+      "word_by_word":[
+  {
+    "arabic": "فَـ",
+    "persian": "پس",
+    "grammar_rule": "حرف رابط / عطف",
+    "grammar_color": "#9C27B0",
+    "grammar_explanation": "حرف مبنی بر فتح که معمولاً برای نتیجه‌گیری یا ربط دادن به جملات قبل می‌آید."
+  },
+  {
+    "arabic": "انْظُرْ",
+    "persian": "بنگر (نگاه کن)",
+    "grammar_rule": "فعل امر",
+    "grammar_color": "#4CAF50",
+    "grammar_explanation": "فعل امر مبنی بر سکون. فاعل آن ضمیر مستتر «أَنْتَ» است."
+  },
+  {
+    "arabic": "إِلَىٰ",
+    "persian": "به",
+    "grammar_rule": "حرف جر",
+    "grammar_color": "#2196F3",
+    "grammar_explanation": "حرف جر مبنی بر سکون."
+  },
+  {
+    "arabic": "آثَارِ",
+    "persian": "آثار (نشانه‌های)",
+    "grammar_rule": "اسم مجرور",
+    "grammar_color": "#00BCD4",
+    "grammar_explanation": "اسم مجرور به حرف جر «إِلَى» با علامت کسره ظاهری. این کلمه مضاف نیز هست."
+  },
+  {
+    "arabic": "رَحْمَةِ",
+    "persian": "رحمتِ",
+    "grammar_rule": "مضاف‌الیه",
+    "grammar_color": "#00BCD4",
+    "grammar_explanation": "مضاف‌الیه و مجرور به کسره. این کلمه نیز برای واژه بعدی مضاف است."
+  },
+  {
+    "arabic": "اللَّهِ",
+    "persian": "خدا",
+    "grammar_rule": "مضاف‌الیه",
+    "grammar_color": "#00BCD4",
+    "grammar_explanation": "اسم جلاله، مضاف‌الیه دوم و مجرور به کسره."
+  }
+]
     },
     {
       "id": 72,
@@ -3104,38 +4019,56 @@
         "کتاب‌هایی درباره اعجاز علمی قرآن برای نوجوانان پیدا کن."
       ],
       "word_by_word": [
-        {
-          "arabic": "سَـ",
-          "persian": "به‌زودی"
-        },
-        {
-          "arabic": "نُرِيـ",
-          "persian": "نشان خواهیم داد"
-        },
-        {
-          "arabic": "ـهِمْ",
-          "persian": "به آنان"
-        },
-        {
-          "arabic": "آيَاتِـ",
-          "persian": "نشانه‌هایِ"
-        },
-        {
-          "arabic": "ـنَا",
-          "persian": "ما (خود)"
-        },
-        {
-          "arabic": "فِي",
-          "persian": "در",
-          "grammar_rule": "حرف جر",
-          "grammar_color": "#2196F3",
-          "grammar_explanation": "حرف جر به معنای «در»"
-        },
-        {
-          "arabic": "الْآفَاقِ",
-          "persian": "افق‌ها (کرانه‌ها)"
-        }
-      ]
+  {
+    "arabic": "سَـ",
+    "persian": "به‌زودی",
+    "grammar_rule": "حرف استقبال",
+    "grammar_color": "#E91E63",
+    "grammar_explanation": "حرف استقبال (آینده‌ساز) مختص فعل مضارع، مبنی بر فتح."
+  },
+  {
+    "arabic": "نُرِيـ",
+    "persian": "نشان خواهیم داد",
+    "grammar_rule": "فعل مضارع",
+    "grammar_color": "#4CAF50",
+    "grammar_explanation": "فعل مضارع مرفوع (با ضمه مقدر). فاعل آن ضمیر مستتر «نَحْنُ» است."
+  },
+  {
+    "arabic": "ـهِمْ",
+    "persian": "به آنان",
+    "grammar_rule": "مفعول‌به اول",
+    "grammar_color": "#FF9800",
+    "grammar_explanation": "ضمیر متصل مبنی بر سکون، در محل نصب به عنوان مفعول‌به اول."
+  },
+  {
+    "arabic": "آيَاتِـ",
+    "persian": "نشانه‌هایِ",
+    "grammar_rule": "مفعول‌به دوم",
+    "grammar_color": "#FF9800",
+    "grammar_explanation": "مفعول‌به دوم. چون جمع مؤنث سالم است، منصوب شدن آن با علامت فرعی «کسره» نشان داده می‌شود."
+  },
+  {
+    "arabic": "ـنَا",
+    "persian": "ما",
+    "grammar_rule": "مضاف‌الیه",
+    "grammar_color": "#00BCD4",
+    "grammar_explanation": "ضمیر متصل در محل جر، مضاف‌الیه برای «آیات»."
+  },
+  {
+    "arabic": "فِي",
+    "persian": "در",
+    "grammar_rule": "حرف جر",
+    "grammar_color": "#2196F3",
+    "grammar_explanation": "حرف جر."
+  },
+  {
+    "arabic": "الْآفَاقِ",
+    "persian": "افق‌ها",
+    "grammar_rule": "اسم مجرور",
+    "grammar_color": "#00BCD4",
+    "grammar_explanation": "اسم مجرور به کسره ظاهری."
+  }
+]
     },
     {
       "id": 73,
@@ -3151,26 +4084,35 @@
         "نقشه بکش و یادداشت سفر بنویس."
       ],
       "word_by_word": [
-        {
-          "arabic": "فَـ",
-          "persian": "پس"
-        },
-        {
-          "arabic": "سِيرُوا",
-          "persian": "گردش کنید"
-        },
-        {
-          "arabic": "فِي",
-          "persian": "در",
-          "grammar_rule": "حرف جر",
-          "grammar_color": "#2196F3",
-          "grammar_explanation": "حرف جر به معنای «در»"
-        },
-        {
-          "arabic": "الْأَرْضِ",
-          "persian": "زمین"
-        }
-      ]
+  {
+    "arabic": "فَـ",
+    "persian": "پس",
+    "grammar_rule": "حرف عطف",
+    "grammar_color": "#9C27B0",
+    "grammar_explanation": "حرف عطف مبنی بر فتح."
+  },
+  {
+    "arabic": "سِيرُوا",
+    "persian": "گردش کنید",
+    "grammar_rule": "فعل امر و فاعل",
+    "grammar_color": "#4CAF50",
+    "grammar_explanation": "فعل امر مبنی بر «حذف نون» (چون مضارع آن از افعال خمسه است). ضمیر «واو» فاعل آن است."
+  },
+  {
+    "arabic": "فِي",
+    "persian": "در",
+    "grammar_rule": "حرف جر",
+    "grammar_color": "#2196F3",
+    "grammar_explanation": "حرف جر مبنی بر سکون."
+  },
+  {
+    "arabic": "الْأَرْضِ",
+    "persian": "زمین",
+    "grammar_rule": "اسم مجرور",
+    "grammar_color": "#00BCD4",
+    "grammar_explanation": "اسم مجرور به حرف جر با علامت کسره."
+  }
+]
     },
     {
       "id": 74,
@@ -3185,42 +4127,57 @@
         "دفترچه‌ای برای ثبت پرندگانی که دیده‌ای داشته باش.",
         "از خودت بپرس چطور پرنده بدون خستگی ساعت‌ها پرواز می‌کند."
       ],
-      "word_by_word": [
-        {
-          "arabic": "أَ",
-          "persian": "آیا"
-        },
-        {
-          "arabic": "وَ",
-          "persian": "و",
-          "grammar_rule": "حرف عطف",
-          "grammar_color": "#9C27B0",
-          "grammar_explanation": "حرف عطف برای پیوند دادن"
-        },
-        {
-          "arabic": "لَمْ يَرَوْا",
-          "persian": "نگاه نکرده‌اند (ندیدند)"
-        },
-        {
-          "arabic": "إِلَى",
-          "persian": "به",
-          "grammar_rule": "حرف جر",
-          "grammar_color": "#2196F3",
-          "grammar_explanation": "حرف جر به معنای «به سوی»"
-        },
-        {
-          "arabic": "الطَّيْرِ",
-          "persian": "پرندگان"
-        },
-        {
-          "arabic": "فَوْقَـ",
-          "persian": "بالای سرِ"
-        },
-        {
-          "arabic": "ـهُمْ",
-          "persian": "آن‌ها (خود)"
-        }
-      ]
+      "word_by_word":[
+  {
+    "arabic": "أَ",
+    "persian": "آیا",
+    "grammar_rule": "حرف استفهام",
+    "grammar_color": "#E91E63",
+    "grammar_explanation": "همزه استفهام (پرسشی) مبنی بر فتح."
+  },
+  {
+    "arabic": "وَ",
+    "persian": "و",
+    "grammar_rule": "حرف عطف",
+    "grammar_color": "#9C27B0",
+    "grammar_explanation": "حرف عطف."
+  },
+  {
+    "arabic": "لَمْ يَرَوْا",
+    "persian": "نگاه نکرده‌اند",
+    "grammar_rule": "فعل مضارع مجزوم",
+    "grammar_color": "#4CAF50",
+    "grammar_explanation": "«لَم» حرف جزم و نفی است. «يَرَوْا» فعل مضارع است که با حذف «نون» مجزوم شده و «واو» فاعل آن است."
+  },
+  {
+    "arabic": "إِلَى",
+    "persian": "به",
+    "grammar_rule": "حرف جر",
+    "grammar_color": "#2196F3",
+    "grammar_explanation": "حرف جر."
+  },
+  {
+    "arabic": "الطَّيْرِ",
+    "persian": "پرندگان",
+    "grammar_rule": "اسم مجرور",
+    "grammar_color": "#00BCD4",
+    "grammar_explanation": "اسم مجرور به کسره ظاهری."
+  },
+  {
+    "arabic": "فَوْقَـ",
+    "persian": "بالای سرِ",
+    "grammar_rule": "ظرف مکان (مفعول‌فیه)",
+    "grammar_color": "#FF9800",
+    "grammar_explanation": "ظرف مکان منصوب به فتحه ظاهری که نقش مفعول‌فیه را دارد و مضاف است."
+  },
+  {
+    "arabic": "ـهُمْ",
+    "persian": "آن‌ها",
+    "grammar_rule": "مضاف‌الیه",
+    "grammar_color": "#00BCD4",
+    "grammar_explanation": "ضمیر متصل مبنی بر سکون، در محل جر به عنوان مضاف‌الیه."
+  }
+]
     },
     {
       "id": 75,
@@ -3235,42 +4192,57 @@
         "بدان که آب شرب سالم چه نعمت کمیابی است.",
         "حفاظت از آب را جدی‌تر بگیر."
       ],
-      "word_by_word": [
-        {
-          "arabic": "وَ",
-          "persian": "و",
-          "grammar_rule": "حرف عطف",
-          "grammar_color": "#9C27B0",
-          "grammar_explanation": "حرف عطف برای پیوند دادن"
-        },
-        {
-          "arabic": "هُوَ",
-          "persian": "او"
-        },
-        {
-          "arabic": "الَّذِي",
-          "persian": "کسی است که"
-        },
-        {
-          "arabic": "أَنْزَلَ",
-          "persian": "فرو فرستاد"
-        },
-        {
-          "arabic": "مِنَ",
-          "persian": "از",
-          "grammar_rule": "حرف جر",
-          "grammar_color": "#2196F3",
-          "grammar_explanation": "حرف جر به معنای «از»"
-        },
-        {
-          "arabic": "السَّمَاءِ",
-          "persian": "آسمان"
-        },
-        {
-          "arabic": "مَاءً",
-          "persian": "آبی (آب)"
-        }
-      ]
+      "word_by_word":[
+  {
+    "arabic": "وَ",
+    "persian": "و",
+    "grammar_rule": "حرف عطف / استیناف",
+    "grammar_color": "#9C27B0",
+    "grammar_explanation": "حرف عطف یا استیناف."
+  },
+  {
+    "arabic": "هُوَ",
+    "persian": "او",
+    "grammar_rule": "مبتدا",
+    "grammar_color": "#3F51B5",
+    "grammar_explanation": "ضمیر منفصل مبنی بر فتح، در محل رفع به عنوان مبتدا."
+  },
+  {
+    "arabic": "الَّذِي",
+    "persian": "کسی است که",
+    "grammar_rule": "خبر",
+    "grammar_color": "#607D8B",
+    "grammar_explanation": "اسم موصول مبنی، در محل رفع به عنوان خبر برای «هُوَ»."
+  },
+  {
+    "arabic": "أَنْزَلَ",
+    "persian": "فرو فرستاد",
+    "grammar_rule": "فعل ماضی",
+    "grammar_color": "#4CAF50",
+    "grammar_explanation": "فعل ماضی مبنی بر فتح. فاعل آن ضمیر مستتر «هُوَ» است. (جمله صله برای موصول)."
+  },
+  {
+    "arabic": "مِنَ",
+    "persian": "از",
+    "grammar_rule": "حرف جر",
+    "grammar_color": "#2196F3",
+    "grammar_explanation": "حرف جر (نون آن برای جلوگیری از التقای ساکنین، مفتوح شده است)."
+  },
+  {
+    "arabic": "السَّمَاءِ",
+    "persian": "آسمان",
+    "grammar_rule": "اسم مجرور",
+    "grammar_color": "#00BCD4",
+    "grammar_explanation": "اسم مجرور به کسره."
+  },
+  {
+    "arabic": "مَاءً",
+    "persian": "آبی (آب)",
+    "grammar_rule": "مفعول‌به",
+    "grammar_color": "#FF9800",
+    "grammar_explanation": "مفعول‌به منصوب به فتحه ظاهری (تنوین نصب)."
+  }
+]
     },
     {
       "id": 76,
@@ -3286,38 +4258,56 @@
         "مستندی درباره ستاره خورشید ببین."
       ],
       "word_by_word": [
-        {
-          "arabic": "وَ",
-          "persian": "و",
-          "grammar_rule": "حرف عطف",
-          "grammar_color": "#9C27B0",
-          "grammar_explanation": "حرف عطف برای پیوند دادن"
-        },
-        {
-          "arabic": "الشَّمْسُ",
-          "persian": "خورشید"
-        },
-        {
-          "arabic": "تَجْرِي",
-          "persian": "در حرکت است (حرکت می‌کند)"
-        },
-        {
-          "arabic": "لِـ",
-          "persian": "برای"
-        },
-        {
-          "arabic": "مُسْتَقَرٍّ",
-          "persian": "جایگاهی معیّن"
-        },
-        {
-          "arabic": "لَـ",
-          "persian": "برای"
-        },
-        {
-          "arabic": "ـهَا",
-          "persian": "آن"
-        }
-      ]
+  {
+    "arabic": "وَ",
+    "persian": "و",
+    "grammar_rule": "حرف عطف / استیناف",
+    "grammar_color": "#9C27B0",
+    "grammar_explanation": "حرف مبنی بر فتح برای آغاز جمله جدید یا عطف."
+  },
+  {
+    "arabic": "الشَّمْسُ",
+    "persian": "خورشید",
+    "grammar_rule": "مبتدا",
+    "grammar_color": "#3F51B5",
+    "grammar_explanation": "مبتدا و مرفوع به ضمه ظاهری. (جمله فعلیه بعد از آن در نقش خبر است)."
+  },
+  {
+    "arabic": "تَجْرِي",
+    "persian": "در حرکت است",
+    "grammar_rule": "فعل مضارع",
+    "grammar_color": "#4CAF50",
+    "grammar_explanation": "فعل مضارع مرفوع به ضمه مقدر (روی یاء). فاعل آن ضمیر مستتر «هِيَ» (بازگشت به شمس) است."
+  },
+  {
+    "arabic": "لِـ",
+    "persian": "برای",
+    "grammar_rule": "حرف جر",
+    "grammar_color": "#2196F3",
+    "grammar_explanation": "حرف جر مبنی بر کسره."
+  },
+  {
+    "arabic": "مُسْتَقَرٍّ",
+    "persian": "جایگاهی معیّن",
+    "grammar_rule": "اسم مجرور",
+    "grammar_color": "#00BCD4",
+    "grammar_explanation": "اسم مجرور به حرف جر با علامت کسره (تنوین جر)."
+  },
+  {
+    "arabic": "لَـ",
+    "persian": "برای",
+    "grammar_rule": "حرف جر",
+    "grammar_color": "#2196F3",
+    "grammar_explanation": "حرف جر مبنی بر فتح (چون به ضمیر متصل شده است)."
+  },
+  {
+    "arabic": "ـهَا",
+    "persian": "آن",
+    "grammar_rule": "اسم مجرور",
+    "grammar_color": "#00BCD4",
+    "grammar_explanation": "ضمیر متصل مبنی، در محل جر به حرف جر."
+  }
+]
     },
     {
       "id": 77,
@@ -3333,30 +4323,42 @@
         "با دوربین دوچشمی ماه بدر را تماشا کن."
       ],
       "word_by_word": [
-        {
-          "arabic": "وَ",
-          "persian": "و",
-          "grammar_rule": "حرف عطف",
-          "grammar_color": "#9C27B0",
-          "grammar_explanation": "حرف عطف برای پیوند دادن"
-        },
-        {
-          "arabic": "الْقَمَرَ",
-          "persian": "ماه (را)"
-        },
-        {
-          "arabic": "قَدَّرْنَا",
-          "persian": "مقدر کردیم"
-        },
-        {
-          "arabic": "ـهُ",
-          "persian": "آن را (برای آن)"
-        },
-        {
-          "arabic": "مَنَازِلَ",
-          "persian": "منزل‌هایی"
-        }
-      ]
+  {
+    "arabic": "وَ",
+    "persian": "و",
+    "grammar_rule": "حرف عطف",
+    "grammar_color": "#9C27B0",
+    "grammar_explanation": "حرف عطف مبنی بر فتح."
+  },
+  {
+    "arabic": "الْقَمَرَ",
+    "persian": "ماه",
+    "grammar_rule": "مفعول‌به (اشتغال)",
+    "grammar_color": "#FF9800",
+    "grammar_explanation": "منصوب به فتحه ظاهری. به این حالت «اشتغال» می‌گویند؛ یعنی مفعول‌به برای فعلی است که حذف شده ولی فعل بعدی (قَدَّرْنَا) آن را تفسیر می‌کند."
+  },
+  {
+    "arabic": "قَدَّرْنَا",
+    "persian": "مقدر کردیم",
+    "grammar_rule": "فعل ماضی و فاعل",
+    "grammar_color": "#4CAF50",
+    "grammar_explanation": "فعل ماضی از باب تفعیل، مبنی بر سکون. «نَا» ضمیر متصل در نقش فاعل."
+  },
+  {
+    "arabic": "ـهُ",
+    "persian": "آن را",
+    "grammar_rule": "مفعول‌به اول",
+    "grammar_color": "#FF9800",
+    "grammar_explanation": "ضمیر متصل مبنی بر ضم، در محل نصب به عنوان مفعول‌به."
+  },
+  {
+    "arabic": "مَنَازِلَ",
+    "persian": "منزل‌هایی",
+    "grammar_rule": "مفعول‌به دوم / ظرف",
+    "grammar_color": "#FF9800",
+    "grammar_explanation": "منصوب به فتحه. چون این کلمه «ممنوع من الصرف» است (صیغه منتهی الجموع)، تنوین نمی‌گیرد."
+  }
+]
     },
     {
       "id": 78,
@@ -3372,26 +4374,35 @@
         "درباره ستاره قطبی و استفاده تاریخی آن بخوان."
       ],
       "word_by_word": [
-        {
-          "arabic": "وَ",
-          "persian": "سوگند به",
-          "grammar_rule": "حرف عطف",
-          "grammar_color": "#9C27B0",
-          "grammar_explanation": "حرف عطف برای پیوند دادن"
-        },
-        {
-          "arabic": "السَّمَاءِ",
-          "persian": "آسمان"
-        },
-        {
-          "arabic": "ذَاتِ",
-          "persian": "دارای"
-        },
-        {
-          "arabic": "الْبُرُوجِ",
-          "persian": "برج‌ها"
-        }
-      ]
+  {
+    "arabic": "وَ",
+    "persian": "سوگند به",
+    "grammar_rule": "حرف قَسَم و جر",
+    "grammar_color": "#2196F3",
+    "grammar_explanation": "حرف واو در اینجا برای سوگند است و عمل حرف جر را انجام می‌دهد."
+  },
+  {
+    "arabic": "السَّمَاءِ",
+    "persian": "آسمان",
+    "grammar_rule": "اسم مجرور",
+    "grammar_color": "#00BCD4",
+    "grammar_explanation": "مجرور به کسره ظاهری (مُقسَم بِه / چیزی که به آن سوگند یاد شده)."
+  },
+  {
+    "arabic": "ذَاتِ",
+    "persian": "دارای",
+    "grammar_rule": "صفت (نعت)",
+    "grammar_color": "#00BCD4",
+    "grammar_explanation": "صفت برای «السَّمَاءِ»، لذا در جر از آن پیروی کرده و مجرور به کسره است. در ضمن مضاف نیز می‌باشد."
+  },
+  {
+    "arabic": "الْبُرُوجِ",
+    "persian": "برج‌ها",
+    "grammar_rule": "مضاف‌الیه",
+    "grammar_color": "#00BCD4",
+    "grammar_explanation": "مضاف‌الیه و مجرور به کسره ظاهری."
+  }
+]
     },
     {
       "id": 79,
@@ -3407,42 +4418,63 @@
         "دانش‌آموز کنجکاوی باش که فقط حفظ نمی‌کند، می‌فهمد."
       ],
       "word_by_word": [
-        {
-          "arabic": "إِنَّ",
-          "persian": "همانا (به‌راستی)"
-        },
-        {
-          "arabic": "فِي",
-          "persian": "در",
-          "grammar_rule": "حرف جر",
-          "grammar_color": "#2196F3",
-          "grammar_explanation": "حرف جر به معنای «در»"
-        },
-        {
-          "arabic": "ذَلِكَ",
-          "persian": "آن (این)"
-        },
-        {
-          "arabic": "لَـ",
-          "persian": "قطعاً"
-        },
-        {
-          "arabic": "ذِكْرَىٰ",
-          "persian": "یادآوری (پندی)"
-        },
-        {
-          "arabic": "لِـ",
-          "persian": "برای"
-        },
-        {
-          "arabic": "أُولِي",
-          "persian": "صاحبان"
-        },
-        {
-          "arabic": "الْأَلْبَابِ",
-          "persian": "خردها (خردمندان)"
-        }
-      ]
+  {
+    "arabic": "إِنَّ",
+    "persian": "همانا",
+    "grammar_rule": "حرف مشبهة بالفعل",
+    "grammar_color": "#E91E63",
+    "grammar_explanation": "حرف تأکید و ناصب اسم و رافع خبر."
+  },
+  {
+    "arabic": "فِي",
+    "persian": "در",
+    "grammar_rule": "حرف جر",
+    "grammar_color": "#2196F3",
+    "grammar_explanation": "حرف جر."
+  },
+  {
+    "arabic": "ذَلِكَ",
+    "persian": "آن",
+    "grammar_rule": "اسم اشاره (خبر مقدم)",
+    "grammar_color": "#00BCD4",
+    "grammar_explanation": "اسم اشاره مبنی، در محل جر. جار و مجرور مجموعاً در محل رفع، خبر مقدّم برای «إنّ» هستند."
+  },
+  {
+    "arabic": "لَـ",
+    "persian": "قطعاً",
+    "grammar_rule": "لام مزحلقه (تأکید)",
+    "grammar_color": "#E91E63",
+    "grammar_explanation": "لام تأکید مبنی بر فتح که معمولاً بر سر خبر «إنّ» می‌آید، اما چون خبر مقدم شده، روی اسم «إنّ» آمده است."
+  },
+  {
+    "arabic": "ذِكْرَىٰ",
+    "persian": "یادآوری",
+    "grammar_rule": "اسم إنَّ مؤخر",
+    "grammar_color": "#FF9800",
+    "grammar_explanation": "اسم مؤخر برای «إنّ»، منصوب به فتحه مقدر (چون به الف مقصوره ختم شده است)."
+  },
+  {
+    "arabic": "لِـ",
+    "persian": "برای",
+    "grammar_rule": "حرف جر",
+    "grammar_color": "#2196F3",
+    "grammar_explanation": "حرف جر."
+  },
+  {
+    "arabic": "أُولِي",
+    "persian": "صاحبان",
+    "grammar_rule": "اسم مجرور (ملحق به جمع)",
+    "grammar_color": "#00BCD4",
+    "grammar_explanation": "اسم مجرور به حرف جر. علامت جر آن «یاء» است چون ملحق به جمع مذکر سالم است. این کلمه مضاف نیز هست."
+  },
+  {
+    "arabic": "الْأَلْبَابِ",
+    "persian": "خردها (خردمندان)",
+    "grammar_rule": "مضاف‌الیه",
+    "grammar_color": "#00BCD4",
+    "grammar_explanation": "مضاف‌الیه و مجرور به کسره ظاهری."
+  }
+]
     },
     {
       "id": 80,
@@ -3458,42 +4490,63 @@
         "هر روز یه سوال درباره طبیعت بپرس و جوابش را پیدا کن."
       ],
       "word_by_word": [
-        {
-          "arabic": "إِنَّ",
-          "persian": "همانا (به‌راستی)"
-        },
-        {
-          "arabic": "فِي",
-          "persian": "در",
-          "grammar_rule": "حرف جر",
-          "grammar_color": "#2196F3",
-          "grammar_explanation": "حرف جر به معنای «در»"
-        },
-        {
-          "arabic": "ذَلِكَ",
-          "persian": "آن (این)"
-        },
-        {
-          "arabic": "لَـ",
-          "persian": "قطعاً"
-        },
-        {
-          "arabic": "آيَةً",
-          "persian": "نشانه‌ای"
-        },
-        {
-          "arabic": "لِـ",
-          "persian": "برای"
-        },
-        {
-          "arabic": "قَوْمٍ",
-          "persian": "گروهی (مردمی)"
-        },
-        {
-          "arabic": "يَتَفَكَّرُونَ",
-          "persian": "می‌اندیشند (تفکر می‌کنند)"
-        }
-      ]
+  {
+    "arabic": "إِنَّ",
+    "persian": "همانا",
+    "grammar_rule": "حرف مشبهة بالفعل",
+    "grammar_color": "#E91E63",
+    "grammar_explanation": "حرف تأکید (ناصب اسم و رافع خبر)."
+  },
+  {
+    "arabic": "فِي",
+    "persian": "در",
+    "grammar_rule": "حرف جر",
+    "grammar_color": "#2196F3",
+    "grammar_explanation": "حرف جر."
+  },
+  {
+    "arabic": "ذَلِكَ",
+    "persian": "آن",
+    "grammar_rule": "اسم اشاره (خبر مقدم)",
+    "grammar_color": "#00BCD4",
+    "grammar_explanation": "اسم اشاره، در محل جر. مجموعاً به عنوان خبر مقدّم برای «إنّ»."
+  },
+  {
+    "arabic": "لَـ",
+    "persian": "قطعاً",
+    "grammar_rule": "لام مزحلقه",
+    "grammar_color": "#E91E63",
+    "grammar_explanation": "حرف تأکید مبنی بر فتح."
+  },
+  {
+    "arabic": "آيَةً",
+    "persian": "نشانه‌ای",
+    "grammar_rule": "اسم إنَّ مؤخر",
+    "grammar_color": "#FF9800",
+    "grammar_explanation": "اسم مؤخر برای «إنّ» و منصوب به فتحه ظاهری (تنوین نصب)."
+  },
+  {
+    "arabic": "لِـ",
+    "persian": "برای",
+    "grammar_rule": "حرف جر",
+    "grammar_color": "#2196F3",
+    "grammar_explanation": "حرف جر."
+  },
+  {
+    "arabic": "قَوْمٍ",
+    "persian": "گروهی (مردمی)",
+    "grammar_rule": "اسم مجرور",
+    "grammar_color": "#00BCD4",
+    "grammar_explanation": "اسم مجرور به حرف جر."
+  },
+  {
+    "arabic": "يَتَفَكَّرُونَ",
+    "persian": "می‌اندیشند",
+    "grammar_rule": "فعل مضارع",
+    "grammar_color": "#4CAF50",
+    "grammar_explanation": "فعل مضارع مرفوع به ثبوت «نون» (از افعال خمسه). فاعل آن ضمیر بارز «واو» است. این جمله نقش صفت برای «قَوْم» را دارد."
+  }
+]
     },
     {
       "id": 81,
@@ -3508,43 +4561,64 @@
         "یادت باشد خدا همیشه محبت دارد، حتی وقتی نمی‌فهمی چرا.",
         "وقتی احساس ضعف می‌کنی، به این آیه فکر کن."
       ],
-      "word_by_word": [
-        {
-          "arabic": "مَا",
-          "persian": "نه (نـ)"
-        },
-        {
-          "arabic": "وَدَّعَ",
-          "persian": "رها کرد"
-        },
-        {
-          "arabic": "ـكَ",
-          "persian": "تو را"
-        },
-        {
-          "arabic": "رَبُّ",
-          "persian": "پروردگار"
-        },
-        {
-          "arabic": "ـكَ",
-          "persian": "ـت (تو)"
-        },
-        {
-          "arabic": "وَ",
-          "persian": "و",
-          "grammar_rule": "حرف عطف",
-          "grammar_color": "#9C27B0",
-          "grammar_explanation": "حرف عطف برای پیوند دادن"
-        },
-        {
-          "arabic": "مَا",
-          "persian": "نه"
-        },
-        {
-          "arabic": "قَلَىٰ",
-          "persian": "خشم گرفت"
-        }
-      ]
+      "word_by_word":[
+  {
+    "arabic": "مَا",
+    "persian": "نه",
+    "grammar_rule": "حرف نفی",
+    "grammar_color": "#E91E63",
+    "grammar_explanation": "حرف نفی مبنی بر سکون که بر سر فعل ماضی آمده است."
+  },
+  {
+    "arabic": "وَدَّعَ",
+    "persian": "رها کرد",
+    "grammar_rule": "فعل ماضی",
+    "grammar_color": "#4CAF50",
+    "grammar_explanation": "فعل ماضی از باب تفعیل، مبنی بر فتح."
+  },
+  {
+    "arabic": "ـكَ",
+    "persian": "تو را",
+    "grammar_rule": "مفعول‌به مقدم",
+    "grammar_color": "#FF9800",
+    "grammar_explanation": "ضمیر متصل مبنی بر فتح، در محل نصب به عنوان مفعول‌به برای فعل «وَدَّعَ»."
+  },
+  {
+    "arabic": "رَبُّ",
+    "persian": "پروردگار",
+    "grammar_rule": "فاعل",
+    "grammar_color": "#3F51B5",
+    "grammar_explanation": "فاعلِ مرفوع به ضمه ظاهری. (در اینجا فاعل بعد از مفعول‌به آمده است)."
+  },
+  {
+    "arabic": "ـكَ",
+    "persian": "تو",
+    "grammar_rule": "مضاف‌الیه",
+    "grammar_color": "#00BCD4",
+    "grammar_explanation": "ضمیر متصل مبنی بر فتح، در محل جر به اضافه."
+  },
+  {
+    "arabic": "وَ",
+    "persian": "و",
+    "grammar_rule": "حرف عطف",
+    "grammar_color": "#9C27B0",
+    "grammar_explanation": "حرف عطف مبنی بر فتح."
+  },
+  {
+    "arabic": "مَا",
+    "persian": "نه",
+    "grammar_rule": "حرف نفی",
+    "grammar_color": "#E91E63",
+    "grammar_explanation": "حرف نفی مبنی بر سکون."
+  },
+  {
+    "arabic": "قَلَىٰ",
+    "persian": "خشم گرفت",
+    "grammar_rule": "فعل ماضی",
+    "grammar_color": "#4CAF50",
+    "grammar_explanation": "فعل ماضی مبنی بر فتحه مقدر (به دلیل ختم شدن به الف مقصوره). فاعل آن ضمیر مستتر «هُوَ» و مفعول‌به آن ضمیر محذوف است (قلاکَ)."
+  }
+]
     },
     {
       "id": 82,
@@ -3560,26 +4634,35 @@
         "از کمک خدا غافل نباش حتی وقتی همه چیز خوب است."
       ],
       "word_by_word": [
-        {
-          "arabic": "وَ",
-          "persian": "و",
-          "grammar_rule": "حرف عطف",
-          "grammar_color": "#9C27B0",
-          "grammar_explanation": "حرف عطف برای پیوند دادن"
-        },
-        {
-          "arabic": "اللَّهُ",
-          "persian": "خدا"
-        },
-        {
-          "arabic": "خَيْرُ",
-          "persian": "بهترین"
-        },
-        {
-          "arabic": "النَّاصِرِينَ",
-          "persian": "یاری‌دهندگان"
-        }
-      ]
+  {
+    "arabic": "وَ",
+    "persian": "و",
+    "grammar_rule": "حرف استیناف / عطف",
+    "grammar_color": "#9C27B0",
+    "grammar_explanation": "حرف مبنی بر فتح برای شروع جمله جدید یا عطف."
+  },
+  {
+    "arabic": "اللَّهُ",
+    "persian": "خدا",
+    "grammar_rule": "مبتدا",
+    "grammar_color": "#3F51B5",
+    "grammar_explanation": "لفظ جلاله، مبتدا و مرفوع به ضمه ظاهری."
+  },
+  {
+    "arabic": "خَيْرُ",
+    "persian": "بهترین",
+    "grammar_rule": "خبر / مضاف",
+    "grammar_color": "#3F51B5",
+    "grammar_explanation": "خبر برای مبتدا و مرفوع به ضمه ظاهری. این کلمه همزمان مضاف است."
+  },
+  {
+    "arabic": "النَّاصِرِينَ",
+    "persian": "یاری‌دهندگان",
+    "grammar_rule": "مضاف‌الیه",
+    "grammar_color": "#00BCD4",
+    "grammar_explanation": "مضاف‌الیه و مجرور. چون جمع مذکر سالم است، علامت جر آن حرف «یاء» می‌باشد."
+  }
+]
     },
     {
       "id": 83,
@@ -3595,31 +4678,49 @@
         "یادداشت کن که از دشواری‌های قبلی چطور عبور کردی."
       ],
       "word_by_word": [
-        {
-          "arabic": "سَـ",
-          "persian": "به زودی"
-        },
-        {
-          "arabic": "يَجْعَلُ",
-          "persian": "قرار می‌دهد"
-        },
-        {
-          "arabic": "اللَّهُ",
-          "persian": "خدا"
-        },
-        {
-          "arabic": "بَعْدَ",
-          "persian": "پس از (بعد از)"
-        },
-        {
-          "arabic": "عُسْرٍ",
-          "persian": "سختی"
-        },
-        {
-          "arabic": "يُسْرًا",
-          "persian": "آسانی"
-        }
-      ]
+  {
+    "arabic": "سَـ",
+    "persian": "به‌زودی",
+    "grammar_rule": "حرف استقبال",
+    "grammar_color": "#9C27B0",
+    "grammar_explanation": "حرف استقبال مبنی بر فتح که بر سر فعل مضارع می‌آید و زمان آن را به آینده نزدیک می‌برد."
+  },
+  {
+    "arabic": "يَجْعَلُ",
+    "persian": "قرار می‌دهد",
+    "grammar_rule": "فعل مضارع",
+    "grammar_color": "#4CAF50",
+    "grammar_explanation": "فعل مضارع مرفوع به ضمه ظاهری."
+  },
+  {
+    "arabic": "اللَّهُ",
+    "persian": "خدا",
+    "grammar_rule": "فاعل",
+    "grammar_color": "#3F51B5",
+    "grammar_explanation": "لفظ جلاله، فاعل و مرفوع به ضمه ظاهری."
+  },
+  {
+    "arabic": "بَعْدَ",
+    "persian": "پس از",
+    "grammar_rule": "مفعول‌فیه (ظرف زمان)",
+    "grammar_color": "#FF9800",
+    "grammar_explanation": "ظرف زمان، منصوب به فتحه ظاهری و مضاف."
+  },
+  {
+    "arabic": "عُسْرٍ",
+    "persian": "سختی",
+    "grammar_rule": "مضاف‌الیه",
+    "grammar_color": "#00BCD4",
+    "grammar_explanation": "مضاف‌الیه و مجرور به کسره ظاهری (تنوین جر)."
+  },
+  {
+    "arabic": "يُسْرًا",
+    "persian": "آسانی",
+    "grammar_rule": "مفعول‌به",
+    "grammar_color": "#FF9800",
+    "grammar_explanation": "مفعول‌به منصوب به فتحه ظاهری (تنوین نصب)."
+  }
+]
     },
     {
       "id": 84,
@@ -3634,28 +4735,43 @@
         "داستان‌های الهام‌بخش درباره عبور از سختی بخوان.",
         "وقتی درس می‌دهد، بدان که بعد آسان‌تر می‌شود."
       ],
-      "word_by_word": [
-        {
-          "arabic": "فَـ",
-          "persian": "پس"
-        },
-        {
-          "arabic": "إِنَّ",
-          "persian": "بی‌گمان (قطعا)"
-        },
-        {
-          "arabic": "مَعَ",
-          "persian": "با (همراه)"
-        },
-        {
-          "arabic": "الْعُسْرِ",
-          "persian": "سختی"
-        },
-        {
-          "arabic": "يُسْرًا",
-          "persian": "آسانی"
-        }
-      ]
+      "word_by_word":[
+  {
+    "arabic": "فَـ",
+    "persian": "پس",
+    "grammar_rule": "حرف عطف / تعلیل",
+    "grammar_color": "#9C27B0",
+    "grammar_explanation": "حرف عطف یا تعلیل مبنی بر فتح."
+  },
+  {
+    "arabic": "إِنَّ",
+    "persian": "بی‌گمان",
+    "grammar_rule": "حرف مشبهة بالفعل",
+    "grammar_color": "#E91E63",
+    "grammar_explanation": "حرف تأکید که اسم را منصوب و خبر را مرفوع می‌کند."
+  },
+  {
+    "arabic": "مَعَ",
+    "persian": "با",
+    "grammar_rule": "مفعول‌فیه (ظرف / خبر مقدم)",
+    "grammar_color": "#FF9800",
+    "grammar_explanation": "ظرف مکان/زمان منصوب و مضاف. شبه‌جمله (ظرف و مضاف‌الیه) در محل رفع، خبر مقدّم برای «إنَّ» است."
+  },
+  {
+    "arabic": "الْعُسْرِ",
+    "persian": "سختی",
+    "grammar_rule": "مضاف‌الیه",
+    "grammar_color": "#00BCD4",
+    "grammar_explanation": "مضاف‌الیه و مجرور به کسره ظاهری."
+  },
+  {
+    "arabic": "يُسْرًا",
+    "persian": "آسانی",
+    "grammar_rule": "اسم إنَّ مؤخر",
+    "grammar_color": "#FF9800",
+    "grammar_explanation": "اسم مؤخر برای «إنَّ» و منصوب به فتحه ظاهری (تنوین نصب)."
+  }
+]
     },
     {
       "id": 85,
@@ -3670,32 +4786,50 @@
         "غم را با خدا در میان بگذار، نه تنها حملش کن.",
         "یه ورق بنویس: «خدا با من است» و جایی بگذار."
       ],
-      "word_by_word": [
-        {
-          "arabic": "لَا",
-          "persian": "نه"
-        },
-        {
-          "arabic": "تَحْزَنْ",
-          "persian": "غمگین نشو"
-        },
-        {
-          "arabic": "إِنَّ",
-          "persian": "همانا"
-        },
-        {
-          "arabic": "اللَّهَ",
-          "persian": "خدا"
-        },
-        {
-          "arabic": "مَعَ",
-          "persian": "با (همراهِ)"
-        },
-        {
-          "arabic": "ـنَا",
-          "persian": "ما"
-        }
-      ]
+      "word_by_word":[
+  {
+    "arabic": "لَا",
+    "persian": "نه",
+    "grammar_rule": "حرف نهی (جازم)",
+    "grammar_color": "#E91E63",
+    "grammar_explanation": "حرف نهی مبنی بر سکون که فعل مضارع را مجزوم می‌کند."
+  },
+  {
+    "arabic": "تَحْزَنْ",
+    "persian": "غمگین نشو",
+    "grammar_rule": "فعل مضارع مجزوم",
+    "grammar_color": "#4CAF50",
+    "grammar_explanation": "فعل مضارع که با «لا» مجزوم شده و علامت جزم آن سکون ظاهری است. فاعل آن ضمیر مستتر «أَنْتَ» است."
+  },
+  {
+    "arabic": "إِنَّ",
+    "persian": "همانا",
+    "grammar_rule": "حرف مشبهة بالفعل",
+    "grammar_color": "#E91E63",
+    "grammar_explanation": "حرف تأکید و ناصب اسم و رافع خبر."
+  },
+  {
+    "arabic": "اللَّهَ",
+    "persian": "خدا",
+    "grammar_rule": "اسم إنَّ",
+    "grammar_color": "#FF9800",
+    "grammar_explanation": "لفظ جلاله، اسم «إنَّ» و منصوب به فتحه ظاهری."
+  },
+  {
+    "arabic": "مَعَ",
+    "persian": "با",
+    "grammar_rule": "ظرف (خبر إنَّ)",
+    "grammar_color": "#FF9800",
+    "grammar_explanation": "ظرف منصوب به فتحه. شبه‌جمله (مَعَنَا) در محل رفع، خبر برای «إنَّ» است."
+  },
+  {
+    "arabic": "ـنَا",
+    "persian": "ما",
+    "grammar_rule": "مضاف‌الیه",
+    "grammar_color": "#00BCD4",
+    "grammar_explanation": "ضمیر متصل مبنی بر سکون، در محل جر به عنوان مضاف‌الیه."
+  }
+]
     },
     {
       "id": 86,
@@ -3711,31 +4845,49 @@
         "ثبت کار خوبی که بدون چشم‌داشت انجام دادی."
       ],
       "word_by_word": [
-        {
-          "arabic": "إِنَّ",
-          "persian": "همانا"
-        },
-        {
-          "arabic": "اللَّهَ",
-          "persian": "خدا"
-        },
-        {
-          "arabic": "لَا",
-          "persian": "نه"
-        },
-        {
-          "arabic": "يُضِيعُ",
-          "persian": "از بین می‌برد (ضایع می‌کند)"
-        },
-        {
-          "arabic": "أَجْرَ",
-          "persian": "پاداشِ"
-        },
-        {
-          "arabic": "الْمُحْسِنِينَ",
-          "persian": "نیکوکاران"
-        }
-      ]
+  {
+    "arabic": "إِنَّ",
+    "persian": "همانا",
+    "grammar_rule": "حرف مشبهة بالفعل",
+    "grammar_color": "#E91E63",
+    "grammar_explanation": "حرف تأکید که اسم را منصوب و خبر را مرفوع می‌کند."
+  },
+  {
+    "arabic": "اللَّهَ",
+    "persian": "خدا",
+    "grammar_rule": "اسم إنَّ",
+    "grammar_color": "#FF9800",
+    "grammar_explanation": "لفظ جلاله، اسم «إنَّ» و منصوب به فتحه ظاهری."
+  },
+  {
+    "arabic": "لَا",
+    "persian": "نه",
+    "grammar_rule": "حرف نفی",
+    "grammar_color": "#E91E63",
+    "grammar_explanation": "حرف نفی غیرعامل مبنی بر سکون."
+  },
+  {
+    "arabic": "يُضِيعُ",
+    "persian": "از بین می‌برد",
+    "grammar_rule": "فعل مضارع",
+    "grammar_color": "#4CAF50",
+    "grammar_explanation": "فعل مضارع مرفوع به ضمه ظاهری. فاعل آن ضمیر مستتر «هُوَ» است. جمله فعلیه (لا یضیع) در محل رفع، خبر برای «إنَّ» است."
+  },
+  {
+    "arabic": "أَجْرَ",
+    "persian": "پاداشِ",
+    "grammar_rule": "مفعول‌به / مضاف",
+    "grammar_color": "#FF9800",
+    "grammar_explanation": "مفعول‌به منصوب به فتحه ظاهری و همزمان مضاف است."
+  },
+  {
+    "arabic": "الْمُحْسِنِينَ",
+    "persian": "نیکوکاران",
+    "grammar_rule": "مضاف‌الیه",
+    "grammar_color": "#00BCD4",
+    "grammar_explanation": "مضاف‌الیه و مجرور. چون جمع مذکر سالم است، علامت جر آن حرف «یاء» می‌باشد."
+  }
+]
     },
     {
       "id": 87,
@@ -3751,45 +4903,63 @@
         "بدان که هیچ کار خوبی گم نمی‌شود."
       ],
       "word_by_word": [
-        {
-          "arabic": "وَ",
-          "persian": "و",
-          "grammar_rule": "حرف عطف",
-          "grammar_color": "#9C27B0",
-          "grammar_explanation": "حرف عطف برای پیوند دادن"
-        },
-        {
-          "arabic": "مَن",
-          "persian": "هر کس (کسی که)",
-          "grammar_rule": "حرف جر",
-          "grammar_color": "#2196F3",
-          "grammar_explanation": "حرف جر به معنای «از»"
-        },
-        {
-          "arabic": "يَعْمَلْ",
-          "persian": "انجام دهد (عمل کند)"
-        },
-        {
-          "arabic": "مِثْقَالَ",
-          "persian": "هم‌وزنِ (به اندازه)"
-        },
-        {
-          "arabic": "ذَرَّةٍ",
-          "persian": "ذره‌ای"
-        },
-        {
-          "arabic": "خَيْرًا",
-          "persian": "کار نیکی"
-        },
-        {
-          "arabic": "يَرَ",
-          "persian": "می‌بیند"
-        },
-        {
-          "arabic": "ـهُ",
-          "persian": "آن را"
-        }
-      ]
+  {
+    "arabic": "وَ",
+    "persian": "و",
+    "grammar_rule": "حرف عطف / استیناف",
+    "grammar_color": "#9C27B0",
+    "grammar_explanation": "حرف مبنی بر فتح."
+  },
+  {
+    "arabic": "مَن",
+    "persian": "هر کس",
+    "grammar_rule": "اسم شرط جازم",
+    "grammar_color": "#3F51B5",
+    "grammar_explanation": "اسم شرط جازم مبنی بر سکون، در محل رفع مبتدا."
+  },
+  {
+    "arabic": "يَعْمَلْ",
+    "persian": "انجام دهد",
+    "grammar_rule": "فعل شرط مجزوم",
+    "grammar_color": "#4CAF50",
+    "grammar_explanation": "فعل مضارع که مجزوم به ادات شرط است و علامت جزم آن سکون می‌باشد."
+  },
+  {
+    "arabic": "مِثْقَالَ",
+    "persian": "به اندازه",
+    "grammar_rule": "مفعول‌به / مضاف",
+    "grammar_color": "#FF9800",
+    "grammar_explanation": "مفعول‌به منصوب به فتحه ظاهری و در نقش مضاف."
+  },
+  {
+    "arabic": "ذَرَّةٍ",
+    "persian": "ذره‌ای",
+    "grammar_rule": "مضاف‌الیه",
+    "grammar_color": "#00BCD4",
+    "grammar_explanation": "مضاف‌الیه مجرور به کسره ظاهری."
+  },
+  {
+    "arabic": "خَيْرًا",
+    "persian": "کار نیکی",
+    "grammar_rule": "تمیز / بدل",
+    "grammar_color": "#FF9800",
+    "grammar_explanation": "منصوب به فتحه ظاهری در نقش تمیز یا بدل برای رفع ابهام از «مِثقالَ ذرّةٍ»."
+  },
+  {
+    "arabic": "يَرَ",
+    "persian": "می‌بیند",
+    "grammar_rule": "جواب شرط مجزوم",
+    "grammar_color": "#4CAF50",
+    "grammar_explanation": "فعل جواب شرط مجزوم. علامت جزم آن حذف حرف عله (الف مقصوره از انتهای «یری») است."
+  },
+  {
+    "arabic": "ـهُ",
+    "persian": "آن را",
+    "grammar_rule": "مفعول‌به",
+    "grammar_color": "#FF9800",
+    "grammar_explanation": "ضمیر متصل در محل نصب مفعول‌به برای فعل «یرَ»."
+  }
+]
     },
     {
       "id": 88,
@@ -3804,46 +4974,64 @@
         "کارهای بد کوچک را جدی بگیر.",
         "هر روز چک کن کار بدی نکرده باشی که از آن غافل بودی."
       ],
-      "word_by_word": [
-        {
-          "arabic": "وَ",
-          "persian": "و",
-          "grammar_rule": "حرف عطف",
-          "grammar_color": "#9C27B0",
-          "grammar_explanation": "حرف عطف برای پیوند دادن"
-        },
-        {
-          "arabic": "مَن",
-          "persian": "هر کس (کسی که)",
-          "grammar_rule": "حرف جر",
-          "grammar_color": "#2196F3",
-          "grammar_explanation": "حرف جر به معنای «از»"
-        },
-        {
-          "arabic": "يَعْمَلْ",
-          "persian": "انجام دهد"
-        },
-        {
-          "arabic": "مِثْقَالَ",
-          "persian": "هم‌وزنِ (به اندازه)"
-        },
-        {
-          "arabic": "ذَرَّةٍ",
-          "persian": "ذره‌ای"
-        },
-        {
-          "arabic": "شَرًّا",
-          "persian": "کار بدی"
-        },
-        {
-          "arabic": "يَرَ",
-          "persian": "می‌بیند"
-        },
-        {
-          "arabic": "ـهُ",
-          "persian": "آن را"
-        }
-      ]
+      "word_by_word":[
+  {
+    "arabic": "وَ",
+    "persian": "و",
+    "grammar_rule": "حرف عطف / استیناف",
+    "grammar_color": "#9C27B0",
+    "grammar_explanation": "حرف مبنی بر فتح."
+  },
+  {
+    "arabic": "مَن",
+    "persian": "هر کس",
+    "grammar_rule": "اسم شرط جازم",
+    "grammar_color": "#3F51B5",
+    "grammar_explanation": "اسم شرط جازم مبنی بر سکون، در محل رفع مبتدا."
+  },
+  {
+    "arabic": "يَعْمَلْ",
+    "persian": "انجام دهد",
+    "grammar_rule": "فعل شرط مجزوم",
+    "grammar_color": "#4CAF50",
+    "grammar_explanation": "فعل مضارع مجزوم به ادات شرط. علامت جزم آن سکون است."
+  },
+  {
+    "arabic": "مِثْقَالَ",
+    "persian": "به اندازه",
+    "grammar_rule": "مفعول‌به / مضاف",
+    "grammar_color": "#FF9800",
+    "grammar_explanation": "مفعول‌به منصوب به فتحه ظاهری و در نقش مضاف."
+  },
+  {
+    "arabic": "ذَرَّةٍ",
+    "persian": "ذره‌ای",
+    "grammar_rule": "مضاف‌الیه",
+    "grammar_color": "#00BCD4",
+    "grammar_explanation": "مضاف‌الیه مجرور به کسره ظاهری."
+  },
+  {
+    "arabic": "شَرًّا",
+    "persian": "کار بدی",
+    "grammar_rule": "تمیز / بدل",
+    "grammar_color": "#FF9800",
+    "grammar_explanation": "منصوب به فتحه ظاهری در نقش تمیز یا بدل برای رفع ابهام."
+  },
+  {
+    "arabic": "يَرَ",
+    "persian": "می‌بیند",
+    "grammar_rule": "جواب شرط مجزوم",
+    "grammar_color": "#4CAF50",
+    "grammar_explanation": "فعل جواب شرط مجزوم با علامت جزمِ حذف حرف عله."
+  },
+  {
+    "arabic": "ـهُ",
+    "persian": "آن را",
+    "grammar_rule": "مفعول‌به",
+    "grammar_color": "#FF9800",
+    "grammar_explanation": "ضمیر متصل در محل نصب مفعول‌به."
+  }
+]
     },
     {
       "id": 89,
@@ -3859,34 +5047,49 @@
         "یادت باشد خوبی‌ات به خودت برمی‌گردد."
       ],
       "word_by_word": [
-        {
-          "arabic": "إِنَّ",
-          "persian": "همانا"
-        },
-        {
-          "arabic": "رَحْمَتَ",
-          "persian": "رحمتِ"
-        },
-        {
-          "arabic": "اللَّهِ",
-          "persian": "خدا"
-        },
-        {
-          "arabic": "قَرِيبٌ",
-          "persian": "نزدیک است"
-        },
-        {
-          "arabic": "مِنَ",
-          "persian": "به (از)",
-          "grammar_rule": "حرف جر",
-          "grammar_color": "#2196F3",
-          "grammar_explanation": "حرف جر به معنای «از»"
-        },
-        {
-          "arabic": "الْمُحْسِنِينَ",
-          "persian": "نیکوکاران"
-        }
-      ]
+  {
+    "arabic": "إِنَّ",
+    "persian": "همانا",
+    "grammar_rule": "حرف مشبهة بالفعل",
+    "grammar_color": "#E91E63",
+    "grammar_explanation": "حرف تأکید و ناصب اسم و رافع خبر."
+  },
+  {
+    "arabic": "رَحْمَتَ",
+    "persian": "رحمتِ",
+    "grammar_rule": "اسم إنَّ / مضاف",
+    "grammar_color": "#FF9800",
+    "grammar_explanation": "اسم «إنَّ» منصوب به فتحه ظاهری و مضاف."
+  },
+  {
+    "arabic": "اللَّهِ",
+    "persian": "خدا",
+    "grammar_rule": "مضاف‌الیه",
+    "grammar_color": "#00BCD4",
+    "grammar_explanation": "لفظ جلاله مجرور به کسره ظاهری."
+  },
+  {
+    "arabic": "قَرِيبٌ",
+    "persian": "نزدیک است",
+    "grammar_rule": "خبر إنَّ",
+    "grammar_color": "#3F51B5",
+    "grammar_explanation": "خبر «إنَّ» و مرفوع به ضمه ظاهری. (با اینکه رحمت مؤنث است، کلمه «قریب» به دلیل کاربرد وصفی خاص در اینجا مذکر آمده است)."
+  },
+  {
+    "arabic": "مِنَ",
+    "persian": "به / از",
+    "grammar_rule": "حرف جر",
+    "grammar_color": "#2196F3",
+    "grammar_explanation": "حرف جر مبنی بر فتح (برای رفع التقای ساکنین کسره به فتحه تبدیل شده است)."
+  },
+  {
+    "arabic": "الْمُحْسِنِينَ",
+    "persian": "نیکوکاران",
+    "grammar_rule": "مجرور به حرف جر",
+    "grammar_color": "#00BCD4",
+    "grammar_explanation": "مجرور به حرف جر. چون جمع مذکر سالم است، علامت جر آن «یاء» است."
+  }
+]
     },
     {
       "id": 90,
@@ -3902,44 +5105,56 @@
         "از اینکه از خدا آمرزش بخواهی خجالت نکش."
       ],
       "word_by_word": [
-        {
-          "arabic": "وَ",
-          "persian": "و",
-          "grammar_rule": "حرف عطف",
-          "grammar_color": "#9C27B0",
-          "grammar_explanation": "حرف عطف برای پیوند دادن"
-        },
-        {
-          "arabic": "سَارِعُوا",
-          "persian": "شتاب کنید"
-        },
-        {
-          "arabic": "إِلَىٰ",
-          "persian": "به سوی",
-          "grammar_rule": "حرف جر",
-          "grammar_color": "#2196F3",
-          "grammar_explanation": "حرف جر به معنای «به سوی»"
-        },
-        {
-          "arabic": "مَغْفِرَةٍ",
-          "persian": "آمرزشی"
-        },
-        {
-          "arabic": "مِنْ",
-          "persian": "از جانبِ",
-          "grammar_rule": "حرف جر",
-          "grammar_color": "#2196F3",
-          "grammar_explanation": "حرف جر به معنای «از»"
-        },
-        {
-          "arabic": "رَبِّ",
-          "persian": "پروردگارِ"
-        },
-        {
-          "arabic": "ـكُمْ",
-          "persian": "شما (ـتان)"
-        }
-      ]
+  {
+    "arabic": "وَ",
+    "persian": "و",
+    "grammar_rule": "حرف عطف",
+    "grammar_color": "#9C27B0",
+    "grammar_explanation": "حرف عطف مبنی بر فتح."
+  },
+  {
+    "arabic": "سَارِعُوا",
+    "persian": "شتاب کنید",
+    "grammar_rule": "فعل امر",
+    "grammar_color": "#4CAF50",
+    "grammar_explanation": "فعل امر از باب مفاعله، مبنی بر حذف نون. ضمیر «واو» فاعل و در محل رفع است."
+  },
+  {
+    "arabic": "إِلَىٰ",
+    "persian": "به سوی",
+    "grammar_rule": "حرف جر",
+    "grammar_color": "#2196F3",
+    "grammar_explanation": "حرف جر مبنی بر سکون."
+  },
+  {
+    "arabic": "مَغْفِرَةٍ",
+    "persian": "آمرزشی",
+    "grammar_rule": "مجرور به حرف جر",
+    "grammar_color": "#00BCD4",
+    "grammar_explanation": "مجرور به حرف جر با کسره ظاهری (تنوین جر)."
+  },
+  {
+    "arabic": "مِنْ",
+    "persian": "از جانب",
+    "grammar_rule": "حرف جر",
+    "grammar_color": "#2196F3",
+    "grammar_explanation": "حرف جر مبنی بر سکون."
+  },
+  {
+    "arabic": "رَبِّ",
+    "persian": "پروردگارِ",
+    "grammar_rule": "مجرور به حرف جر / مضاف",
+    "grammar_color": "#00BCD4",
+    "grammar_explanation": "مجرور به حرف جر با کسره ظاهری، که همزمان مضاف است."
+  },
+  {
+    "arabic": "ـكُمْ",
+    "persian": "شما / ـتان",
+    "grammar_rule": "مضاف‌الیه",
+    "grammar_color": "#00BCD4",
+    "grammar_explanation": "ضمیر متصل مبنی بر سکون، در محل جر به اضافه."
+  }
+]
     },
     {
       "id": 91,
@@ -3954,47 +5169,50 @@
         "شادی در کارهای ساده را تمرین کن.",
         "با دوستانت درباره نعمت‌های خدا صحبت کن."
       ],
-      "word_by_word": [
-        {
-          "arabic": "فَرِحِينَ",
-          "persian": "شادمان‌اند"
-        },
-        {
-          "arabic": "بِـ",
-          "persian": "به"
-        },
-        {
-          "arabic": "ـمَا",
-          "persian": "آنچه"
-        },
-        {
-          "arabic": "آتَى",
-          "persian": "عطا کرد"
-        },
-        {
-          "arabic": "ـهُمُ",
-          "persian": "به آنان"
-        },
-        {
-          "arabic": "اللَّهُ",
-          "persian": "خداوند"
-        },
-        {
-          "arabic": "مِنْ",
-          "persian": "از",
-          "grammar_rule": "حرف جر",
-          "grammar_color": "#2196F3",
-          "grammar_explanation": "حرف جر به معنای «از»"
-        },
-        {
-          "arabic": "فَضْلِ",
-          "persian": "فضلِ (بخششِ)"
-        },
-        {
-          "arabic": "ـهِ",
-          "persian": "او (خود)"
-        }
-      ]
+      "word_by_word":[
+  {
+    "arabic": "فَرِحِينَ",
+    "persian": "شادمانند",
+    "grammar_rule": "حال",
+    "grammar_color": "#FF9800",
+    "grammar_explanation": "حال و منصوب است. چون جمع مذکر سالم است، علامت نصب آن حرف «یاء» می‌باشد."
+  },
+  {
+    "arabic": "بِمَا",
+    "persian": "به آنچه",
+    "grammar_rule": "جار و مجرور",
+    "grammar_color": "#00BCD4",
+    "grammar_explanation": "مرکب از حرف جر «بـ» و اسم موصول «ما» که در محل جر قرار دارد."
+  },
+  {
+    "arabic": "آتَاهُمُ",
+    "persian": "به آنها داده است",
+    "grammar_rule": "فعل و مفعول‌به",
+    "grammar_color": "#4CAF50",
+    "grammar_explanation": "مرکب از فعل ماضی «آتَى» (مبنی بر فتح مقدر) و ضمیر متصل «هُم» که در محل نصب مفعول‌به است."
+  },
+  {
+    "arabic": "اللَّهُ",
+    "persian": "خدا",
+    "grammar_rule": "فاعل",
+    "grammar_color": "#3F51B5",
+    "grammar_explanation": "لفظ جلاله، فاعل برای فعل «آتَى» و مرفوع به ضمه ظاهری."
+  },
+  {
+    "arabic": "مِنْ",
+    "persian": "از",
+    "grammar_rule": "حرف جر",
+    "grammar_color": "#2196F3",
+    "grammar_explanation": "حرف جر مبنی بر سکون."
+  },
+  {
+    "arabic": "فَضْلِهِ",
+    "persian": "فضلِ خود",
+    "grammar_rule": "مجرور و مضاف / مضاف‌الیه",
+    "grammar_color": "#00BCD4",
+    "grammar_explanation": "«فَضْلِ» مجرور به حرف جر و مضاف است. ضمیر «ـهِ» در محل جر، مضاف‌الیه می‌باشد."
+  }
+]
     },
     {
       "id": 92,
@@ -4010,22 +5228,28 @@
         "وقتی خسته شدی، این آیه را بخوان و ادامه بده."
       ],
       "word_by_word": [
-        {
-          "arabic": "وَ",
-          "persian": "و",
-          "grammar_rule": "حرف عطف",
-          "grammar_color": "#9C27B0",
-          "grammar_explanation": "حرف عطف برای پیوند دادن"
-        },
-        {
-          "arabic": "بَشِّرِ",
-          "persian": "بشارت بده (مژده بده)"
-        },
-        {
-          "arabic": "الصَّابِرِينَ",
-          "persian": "شکیبایان (صبرکنندگان)"
-        }
-      ]
+  {
+    "arabic": "وَ",
+    "persian": "و",
+    "grammar_rule": "حرف عطف / استیناف",
+    "grammar_color": "#9C27B0",
+    "grammar_explanation": "حرف مبنی بر فتح."
+  },
+  {
+    "arabic": "بَشِّرِ",
+    "persian": "بشارت ده",
+    "grammar_rule": "فعل امر",
+    "grammar_color": "#4CAF50",
+    "grammar_explanation": "فعل امر مبنی بر سکون. کسره انتهای آن عارضی و برای رفع التقای ساکنین (رسیدن دو ساکن به هم) است. فاعل آن ضمیر مستتر «أنتَ» می‌باشد."
+  },
+  {
+    "arabic": "الصَّابِرِينَ",
+    "persian": "صبرکنندگان را",
+    "grammar_rule": "مفعول‌به",
+    "grammar_color": "#FF9800",
+    "grammar_explanation": "مفعول‌به منصوب. چون جمع مذکر سالم است، علامت نصب آن «یاء» است."
+  }
+]
     },
     {
       "id": 93,
@@ -4041,38 +5265,42 @@
         "یادت باشد خدا به صابران توجه خاص دارد."
       ],
       "word_by_word": [
-        {
-          "arabic": "أُولَئِكَ",
-          "persian": "آنان"
-        },
-        {
-          "arabic": "عَلَيْـ",
-          "persian": "بر"
-        },
-        {
-          "arabic": "ـهِمْ",
-          "persian": "ایشان"
-        },
-        {
-          "arabic": "صَلَوَاتٌ",
-          "persian": "درودهایی (رحمت‌هایی)"
-        },
-        {
-          "arabic": "مِنْ",
-          "persian": "از سویِ (از جانبِ)",
-          "grammar_rule": "حرف جر",
-          "grammar_color": "#2196F3",
-          "grammar_explanation": "حرف جر به معنای «از»"
-        },
-        {
-          "arabic": "رَبِّ",
-          "persian": "پروردگارِ"
-        },
-        {
-          "arabic": "ـهِمْ",
-          "persian": "ـشان (ایشان)"
-        }
-      ]
+  {
+    "arabic": "أُولَئِكَ",
+    "persian": "آنان",
+    "grammar_rule": "اسم اشاره / مبتدا",
+    "grammar_color": "#3F51B5",
+    "grammar_explanation": "اسم اشاره مبنی بر فتح، در محل رفع و نقش مبتدا را دارد."
+  },
+  {
+    "arabic": "عَلَيْهِمْ",
+    "persian": "بر آنان است",
+    "grammar_rule": "جار و مجرور / خبر مقدم",
+    "grammar_color": "#00BCD4",
+    "grammar_explanation": "متشکل از حرف جر «عَلَى» و ضمیر «هِم». این شبه‌جمله در محل رفع، خبر مقدم برای «صَلَوَاتٌ» است."
+  },
+  {
+    "arabic": "صَلَوَاتٌ",
+    "persian": "درودهایی",
+    "grammar_rule": "مبتدای مؤخر",
+    "grammar_color": "#3F51B5",
+    "grammar_explanation": "مبتدای مؤخر و مرفوع به تنوین ضمه."
+  },
+  {
+    "arabic": "مِنْ",
+    "persian": "از جانب",
+    "grammar_rule": "حرف جر",
+    "grammar_color": "#2196F3",
+    "grammar_explanation": "حرف جر مبنی بر سکون."
+  },
+  {
+    "arabic": "رَبِّهِمْ",
+    "persian": "پروردگارشان",
+    "grammar_rule": "مجرور / مضاف و مضاف‌الیه",
+    "grammar_color": "#00BCD4",
+    "grammar_explanation": "«رَبِّ» مجرور به حرف جر و مضاف است. ضمیر «هِم» مضاف‌الیه و در محل جر است."
+  }
+]
     },
     {
       "id": 94,
@@ -4088,23 +5316,42 @@
         "فهرستی از وعده‌های خدا در قرآن بنویس."
       ],
       "word_by_word": [
-        {
-          "arabic": "إِنَّ",
-          "persian": "همانا (قطعا)"
-        },
-        {
-          "arabic": "اللَّهَ",
-          "persian": "خداوند"
-        },
-        {
-          "arabic": "لَا يُخْلِفُ",
-          "persian": "خلاف نمی‌کند"
-        },
-        {
-          "arabic": "الْمِيعَادَ",
-          "persian": "وعده (وعده‌گاه)"
-        }
-      ]
+  {
+    "arabic": "إِنَّ",
+    "persian": "همانا",
+    "grammar_rule": "حرف مشبهة بالفعل",
+    "grammar_color": "#E91E63",
+    "grammar_explanation": "حرف تأکید و ناصب اسم و رافع خبر."
+  },
+  {
+    "arabic": "اللَّهَ",
+    "persian": "خدا",
+    "grammar_rule": "اسم إنَّ",
+    "grammar_color": "#FF9800",
+    "grammar_explanation": "لفظ جلاله، اسم «إنَّ» و منصوب به فتحه ظاهری."
+  },
+  {
+    "arabic": "لَا",
+    "persian": "نه",
+    "grammar_rule": "حرف نفی",
+    "grammar_color": "#E91E63",
+    "grammar_explanation": "حرف نفی غیرعامل مبنی بر سکون."
+  },
+  {
+    "arabic": "يُخْلِفُ",
+    "persian": "خلف وعده نمی‌کند",
+    "grammar_rule": "فعل مضارع",
+    "grammar_color": "#4CAF50",
+    "grammar_explanation": "فعل مضارع مرفوع به ضمه ظاهری. فاعل آن ضمیر مستتر «هُوَ» است. جمله فعلیه خبر «إنَّ» است."
+  },
+  {
+    "arabic": "الْمِيعَادَ",
+    "persian": "وعده را",
+    "grammar_rule": "مفعول‌به",
+    "grammar_color": "#FF9800",
+    "grammar_explanation": "مفعول‌به و منصوب به فتحه ظاهری."
+  }
+]
     },
     {
       "id": 95,
@@ -4120,19 +5367,28 @@
         "این آیه را حفظ کن و در لحظات شک بخوان."
       ],
       "word_by_word": [
-        {
-          "arabic": "وَعْدَ",
-          "persian": "وعدهٔ"
-        },
-        {
-          "arabic": "اللَّهِ",
-          "persian": "خدا"
-        },
-        {
-          "arabic": "حَقٌّ",
-          "persian": "حق (راست)"
-        }
-      ]
+  {
+    "arabic": "وَعْدَ",
+    "persian": "وعده",
+    "grammar_rule": "مفعول مطلق / مضاف",
+    "grammar_color": "#FF9800",
+    "grammar_explanation": "منصوب به فتحه ظاهری (احتمالاً مفعول مطلق تأکیدی برای فعلی که حذف شده است) و در نقش مضاف است."
+  },
+  {
+    "arabic": "اللَّهِ",
+    "persian": "خدا",
+    "grammar_rule": "مضاف‌الیه",
+    "grammar_color": "#00BCD4",
+    "grammar_explanation": "لفظ جلاله، مضاف‌الیه و مجرور به کسره ظاهری."
+  },
+  {
+    "arabic": "حَقٌّ",
+    "persian": "حق است",
+    "grammar_rule": "خبر",
+    "grammar_color": "#3F51B5",
+    "grammar_explanation": "خبر مرفوع به تنوین ضمه (برای یک مبتدای محذوف مانند «ذلِکَ» یا در اصل «إنّ وعدَ اللهِ حقٌّ» بوده است)."
+  }
+]
     },
     {
       "id": 96,
@@ -4148,33 +5404,42 @@
         "یاد بگیر پیروزی‌هایت را به خدا نسبت دهی."
       ],
       "word_by_word": [
-        {
-          "arabic": "وَ",
-          "persian": "و",
-          "grammar_rule": "حرف عطف",
-          "grammar_color": "#9C27B0",
-          "grammar_explanation": "حرف عطف برای پیوند دادن"
-        },
-        {
-          "arabic": "يَنْصُرُ",
-          "persian": "یاری می‌کند"
-        },
-        {
-          "arabic": "اللَّهُ",
-          "persian": "خداوند"
-        },
-        {
-          "arabic": "مَنْ",
-          "persian": "هر کس را (کسی را که)",
-          "grammar_rule": "حرف جر",
-          "grammar_color": "#2196F3",
-          "grammar_explanation": "حرف جر به معنای «از»"
-        },
-        {
-          "arabic": "يَشَاءُ",
-          "persian": "بخواهد"
-        }
-      ]
+  {
+    "arabic": "وَ",
+    "persian": "و",
+    "grammar_rule": "حرف عطف",
+    "grammar_color": "#9C27B0",
+    "grammar_explanation": "حرف عطف مبنی بر فتح."
+  },
+  {
+    "arabic": "يَنْصُرُ",
+    "persian": "یاری می‌کند",
+    "grammar_rule": "فعل مضارع",
+    "grammar_color": "#4CAF50",
+    "grammar_explanation": "فعل مضارع مرفوع به ضمه ظاهری."
+  },
+  {
+    "arabic": "اللَّهُ",
+    "persian": "خدا",
+    "grammar_rule": "فاعل",
+    "grammar_color": "#3F51B5",
+    "grammar_explanation": "لفظ جلاله، فاعل و مرفوع به ضمه ظاهری."
+  },
+  {
+    "arabic": "مَنْ",
+    "persian": "هر که را",
+    "grammar_rule": "مفعول‌به",
+    "grammar_color": "#FF9800",
+    "grammar_explanation": "اسم موصول مبنی بر سکون، در محل نصب و مفعول‌به است."
+  },
+  {
+    "arabic": "يَشَاءُ",
+    "persian": "بخواهد",
+    "grammar_rule": "فعل مضارع",
+    "grammar_color": "#4CAF50",
+    "grammar_explanation": "فعل مضارع مرفوع به ضمه ظاهری. فاعل آن ضمیر مستتر «هُوَ» است (جمله صله برای مَنْ)."
+  }
+]
     },
     {
       "id": 97,
@@ -4189,27 +5454,36 @@
         "داستان کسانی که به خاطر تقوا پیروز شدند بخوان.",
         "در انتخاب بین راه درست و آسان، راه درست را انتخاب کن."
       ],
-      "word_by_word": [
-        {
-          "arabic": "وَ",
-          "persian": "و",
-          "grammar_rule": "حرف عطف",
-          "grammar_color": "#9C27B0",
-          "grammar_explanation": "حرف عطف برای پیوند دادن"
-        },
-        {
-          "arabic": "الْعَاقِبَةُ",
-          "persian": "سرانجام (عاقبت)"
-        },
-        {
-          "arabic": "لِـ",
-          "persian": "برای"
-        },
-        {
-          "arabic": "ـلْمُتَّقِينَ",
-          "persian": "پرهیزگاران"
-        }
-      ]
+      "word_by_word":[
+  {
+    "arabic": "وَ",
+    "persian": "و",
+    "grammar_rule": "حرف استیناف",
+    "grammar_color": "#9C27B0",
+    "grammar_explanation": "حرف مبنی بر فتح (جمله جدیدی را آغاز می‌کند)."
+  },
+  {
+    "arabic": "الْعَاقِبَةُ",
+    "persian": "سرانجام نیک",
+    "grammar_rule": "مبتدا",
+    "grammar_color": "#3F51B5",
+    "grammar_explanation": "مبتدا و مرفوع به ضمه ظاهری."
+  },
+  {
+    "arabic": "لِـ",
+    "persian": "برای",
+    "grammar_rule": "حرف جر",
+    "grammar_color": "#2196F3",
+    "grammar_explanation": "حرف جر مبنی بر کسره."
+  },
+  {
+    "arabic": "ـلْمُتَّقِينَ",
+    "persian": "پرهیزگاران است",
+    "grammar_rule": "مجرور / خبر",
+    "grammar_color": "#00BCD4",
+    "grammar_explanation": "مجرور به حرف جر لِـ. چون جمع مذکر سالم است، علامت جر آن «یاء» است. شبه‌جمله (جار و مجرور) در محل رفع، خبر مبتدا می‌باشد."
+  }
+]
     },
     {
       "id": 98,
@@ -4224,32 +5498,50 @@
         "این آیه را در روزهای سخت بخوان.",
         "از خودت بپرس آیا خدا کافی نیست؟ جوابت آرامت می‌کند."
       ],
-      "word_by_word": [
-        {
-          "arabic": "أَ",
-          "persian": "آیا"
-        },
-        {
-          "arabic": "لَيْسَ",
-          "persian": "نیست"
-        },
-        {
-          "arabic": "اللَّهُ",
-          "persian": "خداوند"
-        },
-        {
-          "arabic": "بِكَافٍ",
-          "persian": "کافی"
-        },
-        {
-          "arabic": "عَبْدَ",
-          "persian": "بنده"
-        },
-        {
-          "arabic": "ـهُ",
-          "persian": "اش (او)"
-        }
-      ]
+      "word_by_word":[
+  {
+    "arabic": "أَ",
+    "persian": "آیا",
+    "grammar_rule": "حرف استفهام",
+    "grammar_color": "#9C27B0",
+    "grammar_explanation": "همزه استفهام (پرسشی) مبنی بر فتح."
+  },
+  {
+    "arabic": "لَيْسَ",
+    "persian": "نیست",
+    "grammar_rule": "فعل ناقصه",
+    "grammar_color": "#4CAF50",
+    "grammar_explanation": "فعل ماضی ناقص از نواسخ که اسم را مرفوع و خبر را منصوب می‌کند."
+  },
+  {
+    "arabic": "اللَّهُ",
+    "persian": "خدا",
+    "grammar_rule": "اسم لَيْسَ",
+    "grammar_color": "#3F51B5",
+    "grammar_explanation": "لفظ جلاله، اسم «لَيْسَ» و مرفوع به ضمه ظاهری."
+  },
+  {
+    "arabic": "بِكَافٍ",
+    "persian": "کافی",
+    "grammar_rule": "خبر لَيْسَ",
+    "grammar_color": "#00BCD4",
+    "grammar_explanation": "«باء» حرف جر زائد برای تأکید است. «کافٍ» از نظر لفظی مجرور به کسره مقدر (چون اسم منقوص است) و از نظر محلی منصوب (خبر لَيْسَ) است."
+  },
+  {
+    "arabic": "عَبْدَ",
+    "persian": "بنده‌اش را",
+    "grammar_rule": "مفعول‌به",
+    "grammar_color": "#FF9800",
+    "grammar_explanation": "مفعول‌به برای اسم فاعل (كَافٍ) است و منصوب به فتحه ظاهری می‌باشد."
+  },
+  {
+    "arabic": "ـهُ",
+    "persian": "اش",
+    "grammar_rule": "مضاف‌الیه",
+    "grammar_color": "#00BCD4",
+    "grammar_explanation": "ضمیر متصل مبنی بر ضم، در محل جر مضاف‌الیه است."
+  }
+]
     },
     {
       "id": 99,
@@ -4264,38 +5556,50 @@
         "به آینده نگران نباش، خدا کنترل دارد.",
         "داستان یوسف (ع) را بخوان تا ببینی خدا چطور همه چیز را درست کرد."
       ],
-      "word_by_word": [
-        {
-          "arabic": "وَ",
-          "persian": "و",
-          "grammar_rule": "حرف عطف",
-          "grammar_color": "#9C27B0",
-          "grammar_explanation": "حرف عطف برای پیوند دادن"
-        },
-        {
-          "arabic": "اللَّهُ",
-          "persian": "خداوند"
-        },
-        {
-          "arabic": "غَالِبٌ",
-          "persian": "چیره (مسلط)"
-        },
-        {
-          "arabic": "عَلَىٰ",
-          "persian": "بر",
-          "grammar_rule": "حرف جر",
-          "grammar_color": "#2196F3",
-          "grammar_explanation": "حرف جر به معنای «بر»"
-        },
-        {
-          "arabic": "أَمْرِ",
-          "persian": "کار (فرمان)"
-        },
-        {
-          "arabic": "ـهِ",
-          "persian": "خویش (اش/او)"
-        }
-      ]
+      "word_by_word":[
+  {
+    "arabic": "وَ",
+    "persian": "و",
+    "grammar_rule": "حرف استیناف / عطف",
+    "grammar_color": "#9C27B0",
+    "grammar_explanation": "حرف مبنی بر فتح."
+  },
+  {
+    "arabic": "اللَّهُ",
+    "persian": "خدا",
+    "grammar_rule": "مبتدا",
+    "grammar_color": "#3F51B5",
+    "grammar_explanation": "لفظ جلاله، مبتدا و مرفوع به ضمه ظاهری."
+  },
+  {
+    "arabic": "غَالِبٌ",
+    "persian": "چیره است",
+    "grammar_rule": "خبر",
+    "grammar_color": "#3F51B5",
+    "grammar_explanation": "خبرِ مبتدا و مرفوع به تنوین ضمه."
+  },
+  {
+    "arabic": "عَلَىٰ",
+    "persian": "بر",
+    "grammar_rule": "حرف جر",
+    "grammar_color": "#2196F3",
+    "grammar_explanation": "حرف جر مبنی بر سکون مقدر روی الف."
+  },
+  {
+    "arabic": "أَمْرِ",
+    "persian": "کار",
+    "grammar_rule": "مجرور و مضاف",
+    "grammar_color": "#00BCD4",
+    "grammar_explanation": "مجرور به حرف جر با کسره ظاهری و در نقش مضاف است."
+  },
+  {
+    "arabic": "ـهِ",
+    "persian": "خویش",
+    "grammar_rule": "مضاف‌الیه",
+    "grammar_color": "#00BCD4",
+    "grammar_explanation": "ضمیر متصل در محل جر مضاف‌الیه است."
+  }
+]
     },
     {
       "id": 100,
@@ -4310,27 +5614,36 @@
         "این آیه را قبل از خواب بخوان.",
         "بدان که هر رحمتی در دنیا، کوچک‌ترین نشانه‌ای از رحمت خداست."
       ],
-      "word_by_word": [
-        {
-          "arabic": "وَ",
-          "persian": "و",
-          "grammar_rule": "حرف عطف",
-          "grammar_color": "#9C27B0",
-          "grammar_explanation": "حرف عطف برای پیوند دادن"
-        },
-        {
-          "arabic": "هُوَ",
-          "persian": "او"
-        },
-        {
-          "arabic": "خَيْرُ",
-          "persian": "بهترینِ"
-        },
-        {
-          "arabic": "الرَّاحِمِينَ",
-          "persian": "مهربانان (رحم‌کنندگان)"
-        }
-      ]
+      "word_by_word":[
+  {
+    "arabic": "وَ",
+    "persian": "و",
+    "grammar_rule": "حرف عطف",
+    "grammar_color": "#9C27B0",
+    "grammar_explanation": "حرف عطف مبنی بر فتح."
+  },
+  {
+    "arabic": "هُوَ",
+    "persian": "او",
+    "grammar_rule": "مبتدا",
+    "grammar_color": "#3F51B5",
+    "grammar_explanation": "ضمیر منفصل مبنی بر فتح، در محل رفع مبتدا."
+  },
+  {
+    "arabic": "خَیْرُ",
+    "persian": "بهترینِ",
+    "grammar_rule": "خبر / مضاف",
+    "grammar_color": "#3F51B5",
+    "grammar_explanation": "خبر مبتدا، مرفوع به ضمه ظاهری و در نقش مضاف است."
+  },
+  {
+    "arabic": "الرَّاحِمِینَ",
+    "persian": "مهربانان است",
+    "grammar_rule": "مضاف‌الیه",
+    "grammar_color": "#00BCD4",
+    "grammar_explanation": "مضاف‌الیه مجرور. چون جمع مذکر سالم است، علامت جر آن حرف «یاء» می‌باشد."
+  }
+]
     }
   ]
 }

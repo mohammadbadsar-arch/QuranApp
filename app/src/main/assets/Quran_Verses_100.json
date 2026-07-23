@@ -65,48 +65,63 @@
         "شب قبل از خواب، احوال‌پرسی گرمی از پدر یا مادرت داشته باش."
       ],
       "word_by_word": [
-        {
-          "arabic": "وَ",
-          "persian": "و",
-          "grammar_rule": "حرف عطف",
-          "grammar_color": "#9C27B0",
-          "grammar_explanation": "حرف عطف برای پیوند دادن"
-        },
-        {
-          "arabic": "اخْفِضْ",
-          "persian": "پایین بیاور (فرود آر)"
-        },
-        {
-          "arabic": "لِ",
-          "persian": "برای",
-          "grammar_rule": "حرف جر",
-          "grammar_color": "#2196F3",
-          "grammar_explanation": "حرف جر به معنای «برای»"
-        },
-        {
-          "arabic": "هُمَا",
-          "persian": "آن دو (پدر و مادر)"
-        },
-        {
-          "arabic": "جَنَاحَ",
-          "persian": "بالِ"
-        },
-        {
-          "arabic": "الذُّلِّ",
-          "persian": "تواضع و فروتنی"
-        },
-        {
-          "arabic": "مِنَ",
-          "persian": "از (رویِ)",
-          "grammar_rule": "حرف جر",
-          "grammar_color": "#2196F3",
-          "grammar_explanation": "حرف جر به معنای «از»"
-        },
-        {
-          "arabic": "الرَّحْمَةِ",
-          "persian": "مهربانی و رحمت"
-        }
-      ]
+  {
+    "arabic": "وَ",
+    "persian": "و",
+    "grammar_rule": "حرف عطف",
+    "grammar_color": "#9C27B0",
+    "grammar_explanation": "برای پیوند دادن کلمات و جملات استفاده می‌شود."
+  },
+  {
+    "arabic": "اخْفِضْ",
+    "persian": "پایین بیاور (فرود آر)",
+    "grammar_rule": "فعل امر",
+    "grammar_color": "#4CAF50",
+    "grammar_explanation": "فعل امر برای طلب انجام کار (صیغه مفرد مذکر مخاطب)."
+  },
+  {
+    "arabic": "لِ",
+    "persian": "برای",
+    "grammar_rule": "حرف جر",
+    "grammar_color": "#2196F3",
+    "grammar_explanation": "حرف جر که کلمه بعد از خود را مجرور می‌کند."
+  },
+  {
+    "arabic": "هُمَا",
+    "persian": "آن دو (پدر و مادر)",
+    "grammar_rule": "ضمیر",
+    "grammar_color": "#546E7A",
+    "grammar_explanation": "ضمیر متصل مجروری، مرجع آن پدر و مادر است."
+  },
+  {
+    "arabic": "جَنَاحَ",
+    "persian": "بالِ",
+    "grammar_rule": "مفعول‌به",
+    "grammar_color": "#FF9800",
+    "grammar_explanation": "مفعول برای فعل «اخفض» و منصوب است."
+  },
+  {
+    "arabic": "الذُّلِّ",
+    "persian": "تواضع و فروتنی",
+    "grammar_rule": "مضاف‌الیه",
+    "grammar_color": "#795548",
+    "grammar_explanation": "مضاف الیه برای «جناح» و مجرور است."
+  },
+  {
+    "arabic": "مِنَ",
+    "persian": "از (رویِ)",
+    "grammar_rule": "حرف جر",
+    "grammar_color": "#2196F3",
+    "grammar_explanation": "حرف جر که کلمه بعد از خود را مجرور می‌کند."
+  },
+  {
+    "arabic": "الرَّحْمَةِ",
+    "persian": "مهربانی و رحمت",
+    "grammar_rule": "اسم مجرور",
+    "grammar_color": "#1565C0",
+    "grammar_explanation": "اسم مجرور به حرف جر «مِن»."
+  }
+]
     },
     {
       "id": 3,
@@ -122,26 +137,35 @@
         "وقتی داری تلویزیون می‌بینی، اگر آن‌ها وارد اتاق شدند کانال مورد علاقه‌شان را بگذار."
       ],
       "word_by_word": [
-        {
-          "arabic": "وَ",
-          "persian": "و",
-          "grammar_rule": "حرف عطف",
-          "grammar_color": "#9C27B0",
-          "grammar_explanation": "حرف عطف برای پیوند دادن"
-        },
-        {
-          "arabic": "بِ",
-          "persian": "به"
-        },
-        {
-          "arabic": "الْوَالِدَيْنِ",
-          "persian": "پدر و مادر"
-        },
-        {
-          "arabic": "إِحْسَانًا",
-          "persian": "نیکی کردن"
-        }
-      ]
+  {
+    "arabic": "وَ",
+    "persian": "و",
+    "grammar_rule": "حرف عطف",
+    "grammar_color": "#9C27B0",
+    "grammar_explanation": "حرف عطف برای پیوند دادن."
+  },
+  {
+    "arabic": "بِ",
+    "persian": "به",
+    "grammar_rule": "حرف جر",
+    "grammar_color": "#2196F3",
+    "grammar_explanation": "حرف جر که اسم بعد از خود را مجرور می‌کند."
+  },
+  {
+    "arabic": "الْوَالِدَيْنِ",
+    "persian": "پدر و مادر",
+    "grammar_rule": "اسم مجرور",
+    "grammar_color": "#1565C0",
+    "grammar_explanation": "مجرور به حرف جر «بِ». نشانه جر در مثنی، حرف «یا» است."
+  },
+  {
+    "arabic": "إِحْسَانًا",
+    "persian": "نیکی کردن",
+    "grammar_rule": "مفعول مطلق",
+    "grammar_color": "#FF5722",
+    "grammar_explanation": "مفعول مطلق نایب از فعل محذوف (أحسنوا إحساناً) و منصوب است."
+  }
+]
     },
     {
       "id": 4,
@@ -157,50 +181,77 @@
         "عکس قدیمی از والدینت ببین و قدرشناسی‌شان را در دل تجدید کن."
       ],
       "word_by_word": [
-        {
-          "arabic": "وَ",
-          "persian": "و (حرف عطف)",
-          "grammar_rule": "حرف عطف",
-          "grammar_color": "#9C27B0",
-          "grammar_explanation": "حرف عطف برای پیوند دادن"
-        },
-        {
-          "arabic": "قُلْ",
-          "persian": "بگو"
-        },
-        {
-          "arabic": "رَبِّ",
-          "persian": "پروردگارِ من"
-        },
-        {
-          "arabic": "ارْحَمْ",
-          "persian": "رحم کن / رحمت آور"
-        },
-        {
-          "arabic": "هُمَا",
-          "persian": "آن دو را (ضمیر متصل اشاره به والدین)"
-        },
-        {
-          "arabic": "كَ",
-          "persian": "مانندِ / همان‌گونه که (حرف جر)"
-        },
-        {
-          "arabic": "مَا",
-          "persian": "که / آنچه"
-        },
-        {
-          "arabic": "رَبَّيَا",
-          "persian": "آن دو پرورش دادند"
-        },
-        {
-          "arabic": "نِي",
-          "persian": "مرا (ضمیر متصل)"
-        },
-        {
-          "arabic": "صَغِیرًا",
-          "persian": "در کودکی / کوچک"
-        }
-      ]
+  {
+    "arabic": "وَ",
+    "persian": "و",
+    "grammar_rule": "حرف عطف",
+    "grammar_color": "#9C27B0",
+    "grammar_explanation": "حرف عطف برای پیوند دادن."
+  },
+  {
+    "arabic": "قُلْ",
+    "persian": "بگو",
+    "grammar_rule": "فعل امر",
+    "grammar_color": "#4CAF50",
+    "grammar_explanation": "فعل امر (صیغه مفرد مذکر مخاطب) از ریشه قول."
+  },
+  {
+    "arabic": "رَبِّ",
+    "persian": "پروردگارِ من",
+    "grammar_rule": "منادا",
+    "grammar_color": "#00ACC1",
+    "grammar_explanation": "منادا مضاف (حرف ندا «یا» و ضمیر «ی» محذوف است)."
+  },
+  {
+    "arabic": "ارْحَمْ",
+    "persian": "رحم کن",
+    "grammar_rule": "فعل امر",
+    "grammar_color": "#4CAF50",
+    "grammar_explanation": "فعل امر دعاگونه خطاب به خداوند."
+  },
+  {
+    "arabic": "هُمَا",
+    "persian": "آن دو را",
+    "grammar_rule": "ضمیر / مفعول‌به",
+    "grammar_color": "#546E7A",
+    "grammar_explanation": "ضمیر متصل در جایگاه مفعول‌به برای فعل ارحم."
+  },
+  {
+    "arabic": "كَ",
+    "persian": "همان‌گونه که",
+    "grammar_rule": "حرف جر",
+    "grammar_color": "#2196F3",
+    "grammar_explanation": "حرف جر به معنای تشبیه (مانندِ)."
+  },
+  {
+    "arabic": "مَا",
+    "persian": "آنچه",
+    "grammar_rule": "حرف مصدری",
+    "grammar_color": "#607D8B",
+    "grammar_explanation": "مای مصدریه که فعل بعد از خود را به تأویل مصدر می‌برد."
+  },
+  {
+    "arabic": "رَبَّيَا",
+    "persian": "آن دو پرورش دادند",
+    "grammar_rule": "فعل ماضی",
+    "grammar_color": "#2E7D32",
+    "grammar_explanation": "فعل ماضی، صیغه تثنیه مذکر غایب."
+  },
+  {
+    "arabic": "نِي",
+    "persian": "مرا",
+    "grammar_rule": "ضمیر / مفعول‌به",
+    "grammar_color": "#546E7A",
+    "grammar_explanation": "نون وقایه + یای متکلم (ضمیر در جایگاه مفعول)."
+  },
+  {
+    "arabic": "صَغِیرًا",
+    "persian": "در کودکی",
+    "grammar_rule": "حال",
+    "grammar_color": "#8BC34A",
+    "grammar_explanation": "حال برای ضمیر «ی» و منصوب است (در حالتی که کوچک بودم)."
+  }
+]
     },
     {
       "id": 5,
@@ -216,26 +267,35 @@
         "اگر در کلاس جواب سوالی را نمی‌دانی، صادقانه بگو نمی‌دانم."
       ],
       "word_by_word": [
-        {
-          "arabic": "وَ",
-          "persian": "و (حرف عطف)",
-          "grammar_rule": "حرف عطف",
-          "grammar_color": "#9C27B0",
-          "grammar_explanation": "حرف عطف برای پیوند دادن"
-        },
-        {
-          "arabic": "قُولُوا",
-          "persian": "بگویید"
-        },
-        {
-          "arabic": "قَوْلًا",
-          "persian": "سخنی / گفتاری"
-        },
-        {
-          "arabic": "سَدِیدًا",
-          "persian": "درست، استوار و محکم"
-        }
-      ]
+  {
+    "arabic": "وَ",
+    "persian": "و",
+    "grammar_rule": "حرف عطف",
+    "grammar_color": "#9C27B0",
+    "grammar_explanation": "حرف عطف."
+  },
+  {
+    "arabic": "قُولُوا",
+    "persian": "بگویید",
+    "grammar_rule": "فعل امر",
+    "grammar_color": "#4CAF50",
+    "grammar_explanation": "فعل امر صیغه جمع مذکر مخاطب."
+  },
+  {
+    "arabic": "قَوْلًا",
+    "persian": "سخنی",
+    "grammar_rule": "مفعول مطلق",
+    "grammar_color": "#FF5722",
+    "grammar_explanation": "مفعول مطلق از جنس خود فعل (قولوا) برای تأکید و بیان نوع."
+  },
+  {
+    "arabic": "سَدِیدًا",
+    "persian": "استوار و محکم",
+    "grammar_rule": "صفت",
+    "grammar_color": "#E91E63",
+    "grammar_explanation": "صفت برای «قولاً» که در نصب از آن تبعیت کرده است."
+  }
+]
     },
     {
       "id": 6,

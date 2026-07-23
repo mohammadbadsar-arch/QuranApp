@@ -13,43 +13,43 @@
         "موقع بازی اگر کسی خوب بازی کرد، تعریف کن.",
         "حتی به کسی که از او خوشت نمی‌آید، بی‌احترامی نکن."
       ],
-"word_by_word": [
-  {
-    "arabic": "وَ",
-    "persian": "و",
-    "grammar_rule": "حرف عطف",
-    "grammar_color": "#9C27B0",
-    "grammar_explanation": "این واژه برای پیوند دادن کلمات یا جمله‌ها به کار می‌رود."
-  },
-  {
-    "arabic": "قُولُوا",
-    "persian": "بگویید",
-    "grammar_rule": "فعل امر",
-    "grammar_color": "#4CAF50",
-    "grammar_explanation": "این واژه فعل امر و خطاب به چند نفر است."
-  },
-  {
-    "arabic": "لِ",
-    "persian": "به / برای",
-    "grammar_rule": "حرف جر",
-    "grammar_color": "#2196F3",
-    "grammar_explanation": "این واژه حرف جر است و اسم بعد از خود را مجرور می‌کند."
-  },
-  {
-    "arabic": "النَّاسِ",
-    "persian": "مردم",
-    "grammar_rule": "اسم مجرور",
-    "grammar_color": "#E91E63",
-    "grammar_explanation": "این اسم به دلیل قرار گرفتن بعد از حرف جر «لِ» مجرور شده است."
-  },
-  {
-    "arabic": "حُسْنًا",
-    "persian": "(سخنِ) نیکو",
-    "grammar_rule": "قید حالت",
-    "grammar_color": "#FF9800",
-    "grammar_explanation": "این واژه در این عبارت چگونگی سخن گفتن را بیان می‌کند."
-  }
-]
+      "word_by_word": [
+        {
+          "arabic": "وَ",
+          "persian": "و",
+          "grammar_rule": "حرف عطف",
+          "grammar_color": "#9C27B0",
+          "grammar_explanation": "برای پیوند دادن دو کلمه"
+        },
+        {
+          "arabic": "قُولُوا",
+          "persian": "بگویید",
+          "grammar_rule": "فعل امر",
+          "grammar_color": "#4CAF50",
+          "grammar_explanation": "این واژه فعل امر و خطاب به چند نفر است."
+        },
+        {
+          "arabic": "لِ",
+          "persian": "به / برای",
+          "grammar_rule": "حرف جر",
+          "grammar_color": "#2196F3",
+          "grammar_explanation": "حرف جر به معنای «برای» یا «به»"
+        },
+        {
+          "arabic": "النَّاسِ",
+          "persian": "مردم",
+          "grammar_rule": "اسم مجرور",
+          "grammar_color": "#E91E63",
+          "grammar_explanation": "این اسم به دلیل قرار گرفتن بعد از حرف جر «لِ» مجرور شده است."
+        },
+        {
+          "arabic": "حُسْنًا",
+          "persian": "(سخنِ) نیکو",
+          "grammar_rule": "قید حالت",
+          "grammar_color": "#FF9800",
+          "grammar_explanation": "این واژه در این عبارت چگونگی سخن گفتن را بیان می‌کند."
+        }
+      ]
     },
     {
       "id": 2,
@@ -67,7 +67,10 @@
       "word_by_word": [
         {
           "arabic": "وَ",
-          "persian": "و"
+          "persian": "و",
+          "grammar_rule": "حرف عطف",
+          "grammar_color": "#9C27B0",
+          "grammar_explanation": "برای پیوند دادن دو کلمه"
         },
         {
           "arabic": "اخْفِضْ",
@@ -75,7 +78,10 @@
         },
         {
           "arabic": "لِ",
-          "persian": "برای"
+          "persian": "برای",
+          "grammar_rule": "حرف جر",
+          "grammar_color": "#2196F3",
+          "grammar_explanation": "حرف جر به معنای «برای» یا «به»"
         },
         {
           "arabic": "هُمَا",
@@ -115,7 +121,10 @@
       "word_by_word": [
         {
           "arabic": "وَ",
-          "persian": "و"
+          "persian": "و",
+          "grammar_rule": "حرف عطف",
+          "grammar_color": "#9C27B0",
+          "grammar_explanation": "برای پیوند دادن دو کلمه"
         },
         {
           "arabic": "بِ",
@@ -147,7 +156,10 @@
       "word_by_word": [
         {
           "arabic": "وَ",
-          "persian": "و (حرف عطف)"
+          "persian": "و (حرف عطف)",
+          "grammar_rule": "حرف عطف",
+          "grammar_color": "#9C27B0",
+          "grammar_explanation": "برای پیوند دادن دو کلمه"
         },
         {
           "arabic": "قُلْ",
@@ -203,7 +215,10 @@
       "word_by_word": [
         {
           "arabic": "وَ",
-          "persian": "و (حرف عطف)"
+          "persian": "و (حرف عطف)",
+          "grammar_rule": "حرف عطف",
+          "grammar_color": "#9C27B0",
+          "grammar_explanation": "برای پیوند دادن دو کلمه"
         },
         {
           "arabic": "قُولُوا",
@@ -235,7 +250,10 @@
       "word_by_word": [
         {
           "arabic": "وَ",
-          "persian": "و (حرف عطف)"
+          "persian": "و (حرف عطف)",
+          "grammar_rule": "حرف عطف",
+          "grammar_color": "#9C27B0",
+          "grammar_explanation": "برای پیوند دادن دو کلمه"
         },
         {
           "arabic": "أَصْلِحُوا",
@@ -279,7 +297,10 @@
         },
         {
           "arabic": "وَ",
-          "persian": "و"
+          "persian": "و",
+          "grammar_rule": "حرف عطف",
+          "grammar_color": "#9C27B0",
+          "grammar_explanation": "برای پیوند دادن دو کلمه"
         },
         {
           "arabic": "اصْفَحُوا",
@@ -335,7 +356,10 @@
       "word_by_word": [
         {
           "arabic": "وَ",
-          "persian": "و"
+          "persian": "و",
+          "grammar_rule": "حرف عطف",
+          "grammar_color": "#9C27B0",
+          "grammar_explanation": "برای پیوند دادن دو کلمه"
         },
         {
           "arabic": "اللَّهُ",
@@ -403,7 +427,10 @@
       "word_by_word": [
         {
           "arabic": "وَ",
-          "persian": "و"
+          "persian": "و",
+          "grammar_rule": "حرف عطف",
+          "grammar_color": "#9C27B0",
+          "grammar_explanation": "برای پیوند دادن دو کلمه"
         },
         {
           "arabic": "لَا تَبْخَسُوا",
@@ -439,7 +466,10 @@
       "word_by_word": [
         {
           "arabic": "وَ",
-          "persian": "و"
+          "persian": "و",
+          "grammar_rule": "حرف عطف",
+          "grammar_color": "#9C27B0",
+          "grammar_explanation": "برای پیوند دادن دو کلمه"
         },
         {
           "arabic": "أَقِیمُوا",
@@ -467,7 +497,10 @@
         },
         {
           "arabic": "وَ",
-          "persian": "و"
+          "persian": "و",
+          "grammar_rule": "حرف عطف",
+          "grammar_color": "#9C27B0",
+          "grammar_explanation": "برای پیوند دادن دو کلمه"
         },
         {
           "arabic": "لَا تُخْسِرُوا",
@@ -499,7 +532,10 @@
       "word_by_word": [
         {
           "arabic": "وَ",
-          "persian": "و"
+          "persian": "و",
+          "grammar_rule": "حرف عطف",
+          "grammar_color": "#9C27B0",
+          "grammar_explanation": "برای پیوند دادن دو کلمه"
         },
         {
           "arabic": "أَحْسِنُوا",
@@ -543,7 +579,10 @@
       "word_by_word": [
         {
           "arabic": "وَ",
-          "persian": "و"
+          "persian": "و",
+          "grammar_rule": "حرف عطف",
+          "grammar_color": "#9C27B0",
+          "grammar_explanation": "برای پیوند دادن دو کلمه"
         },
         {
           "arabic": "لَا تَمْشِ",
@@ -583,7 +622,10 @@
       "word_by_word": [
         {
           "arabic": "وَ",
-          "persian": "و"
+          "persian": "و",
+          "grammar_rule": "حرف عطف",
+          "grammar_color": "#9C27B0",
+          "grammar_explanation": "برای پیوند دادن دو کلمه"
         },
         {
           "arabic": "اغْضُضْ",
@@ -651,7 +693,10 @@
       "word_by_word": [
         {
           "arabic": "وَ",
-          "persian": "و"
+          "persian": "و",
+          "grammar_rule": "حرف عطف",
+          "grammar_color": "#9C27B0",
+          "grammar_explanation": "برای پیوند دادن دو کلمه"
         },
         {
           "arabic": "لَا تَلْمِزُوا",
@@ -683,7 +728,10 @@
       "word_by_word": [
         {
           "arabic": "وَ",
-          "persian": "و"
+          "persian": "و",
+          "grammar_rule": "حرف عطف",
+          "grammar_color": "#9C27B0",
+          "grammar_explanation": "برای پیوند دادن دو کلمه"
         },
         {
           "arabic": "لَا يَغْتَبْ",
@@ -775,7 +823,10 @@
         },
         {
           "arabic": "لِ",
-          "persian": "برای"
+          "persian": "برای",
+          "grammar_rule": "حرف جر",
+          "grammar_color": "#2196F3",
+          "grammar_explanation": "حرف جر به معنای «برای» یا «به»"
         },
         {
           "arabic": "لَّهِ",
@@ -859,7 +910,10 @@
         },
         {
           "arabic": "وَ",
-          "persian": "و"
+          "persian": "و",
+          "grammar_rule": "حرف عطف",
+          "grammar_color": "#9C27B0",
+          "grammar_explanation": "برای پیوند دادن دو کلمه"
         },
         {
           "arabic": "إِيَّاكَ",
@@ -967,7 +1021,10 @@
       "word_by_word": [
         {
           "arabic": "وَ",
-          "persian": "و"
+          "persian": "و",
+          "grammar_rule": "حرف عطف",
+          "grammar_color": "#9C27B0",
+          "grammar_explanation": "برای پیوند دادن دو کلمه"
         },
         {
           "arabic": "عَلَى",
@@ -1003,7 +1060,10 @@
       "word_by_word": [
         {
           "arabic": "وَ",
-          "persian": "و"
+          "persian": "و",
+          "grammar_rule": "حرف عطف",
+          "grammar_color": "#9C27B0",
+          "grammar_explanation": "برای پیوند دادن دو کلمه"
         },
         {
           "arabic": "مَنْ",
@@ -1163,7 +1223,10 @@
       "word_by_word": [
         {
           "arabic": "وَ",
-          "persian": "و"
+          "persian": "و",
+          "grammar_rule": "حرف عطف",
+          "grammar_color": "#9C27B0",
+          "grammar_explanation": "برای پیوند دادن دو کلمه"
         },
         {
           "arabic": "هُوَ",
@@ -1243,7 +1306,10 @@
       "word_by_word": [
         {
           "arabic": "وَ",
-          "persian": "و"
+          "persian": "و",
+          "grammar_rule": "حرف عطف",
+          "grammar_color": "#9C27B0",
+          "grammar_explanation": "برای پیوند دادن دو کلمه"
         },
         {
           "arabic": "رَحْمَتِ",
@@ -1359,7 +1425,10 @@
       "word_by_word": [
         {
           "arabic": "وَ",
-          "persian": "و"
+          "persian": "و",
+          "grammar_rule": "حرف عطف",
+          "grammar_color": "#9C27B0",
+          "grammar_explanation": "برای پیوند دادن دو کلمه"
         },
         {
           "arabic": "هُوَ",
@@ -1411,7 +1480,10 @@
         },
         {
           "arabic": "وَ",
-          "persian": "و"
+          "persian": "و",
+          "grammar_rule": "حرف عطف",
+          "grammar_color": "#9C27B0",
+          "grammar_explanation": "برای پیوند دادن دو کلمه"
         },
         {
           "arabic": "الْأَرْضِ",
@@ -1507,7 +1579,10 @@
       "word_by_word": [
         {
           "arabic": "وَ",
-          "persian": "و"
+          "persian": "و",
+          "grammar_rule": "حرف عطف",
+          "grammar_color": "#9C27B0",
+          "grammar_explanation": "برای پیوند دادن دو کلمه"
         },
         {
           "arabic": "رَبُّ",
@@ -1571,7 +1646,10 @@
       "word_by_word": [
         {
           "arabic": "وَ",
-          "persian": "و"
+          "persian": "و",
+          "grammar_rule": "حرف عطف",
+          "grammar_color": "#9C27B0",
+          "grammar_explanation": "برای پیوند دادن دو کلمه"
         },
         {
           "arabic": "اصْبِرْ",
@@ -1579,7 +1657,10 @@
         },
         {
           "arabic": "وَ",
-          "persian": "و"
+          "persian": "و",
+          "grammar_rule": "حرف عطف",
+          "grammar_color": "#9C27B0",
+          "grammar_explanation": "برای پیوند دادن دو کلمه"
         },
         {
           "arabic": "مَا",
@@ -1671,7 +1752,10 @@
         },
         {
           "arabic": "وَ",
-          "persian": "و"
+          "persian": "و",
+          "grammar_rule": "حرف عطف",
+          "grammar_color": "#9C27B0",
+          "grammar_explanation": "برای پیوند دادن دو کلمه"
         },
         {
           "arabic": "عَمِلُوا",
@@ -1699,7 +1783,10 @@
       "word_by_word": [
         {
           "arabic": "وَ",
-          "persian": "و"
+          "persian": "و",
+          "grammar_rule": "حرف عطف",
+          "grammar_color": "#9C27B0",
+          "grammar_explanation": "برای پیوند دادن دو کلمه"
         },
         {
           "arabic": "تَوَاصَوْا",
@@ -1731,7 +1818,10 @@
       "word_by_word": [
         {
           "arabic": "وَ",
-          "persian": "و"
+          "persian": "و",
+          "grammar_rule": "حرف عطف",
+          "grammar_color": "#9C27B0",
+          "grammar_explanation": "برای پیوند دادن دو کلمه"
         },
         {
           "arabic": "تَوَاصَوْا",
@@ -1763,7 +1853,10 @@
       "word_by_word": [
         {
           "arabic": "وَ",
-          "persian": "و"
+          "persian": "و",
+          "grammar_rule": "حرف عطف",
+          "grammar_color": "#9C27B0",
+          "grammar_explanation": "برای پیوند دادن دو کلمه"
         },
         {
           "arabic": "اسْتَعِينُوا",
@@ -1779,7 +1872,10 @@
         },
         {
           "arabic": "وَ",
-          "persian": "و"
+          "persian": "و",
+          "grammar_rule": "حرف عطف",
+          "grammar_color": "#9C27B0",
+          "grammar_explanation": "برای پیوند دادن دو کلمه"
         },
         {
           "arabic": "الصَّلَاةِ",
@@ -1839,7 +1935,10 @@
       "word_by_word": [
         {
           "arabic": "وَ",
-          "persian": "و"
+          "persian": "و",
+          "grammar_rule": "حرف عطف",
+          "grammar_color": "#9C27B0",
+          "grammar_explanation": "برای پیوند دادن دو کلمه"
         },
         {
           "arabic": "قَدْ",
@@ -1879,7 +1978,10 @@
       "word_by_word": [
         {
           "arabic": "وَ",
-          "persian": "و"
+          "persian": "و",
+          "grammar_rule": "حرف عطف",
+          "grammar_color": "#9C27B0",
+          "grammar_explanation": "برای پیوند دادن دو کلمه"
         },
         {
           "arabic": "لَا تَقْفُ",
@@ -1931,7 +2033,10 @@
       "word_by_word": [
         {
           "arabic": "وَ",
-          "persian": "و"
+          "persian": "و",
+          "grammar_rule": "حرف عطف",
+          "grammar_color": "#9C27B0",
+          "grammar_explanation": "برای پیوند دادن دو کلمه"
         },
         {
           "arabic": "كُلُوا",
@@ -1939,7 +2044,10 @@
         },
         {
           "arabic": "وَ",
-          "persian": "و"
+          "persian": "و",
+          "grammar_rule": "حرف عطف",
+          "grammar_color": "#9C27B0",
+          "grammar_explanation": "برای پیوند دادن دو کلمه"
         },
         {
           "arabic": "اشْرَبُوا",
@@ -1947,7 +2055,10 @@
         },
         {
           "arabic": "وَ",
-          "persian": "و (ولی)"
+          "persian": "و (ولی)",
+          "grammar_rule": "حرف عطف",
+          "grammar_color": "#9C27B0",
+          "grammar_explanation": "برای پیوند دادن دو کلمه"
         },
         {
           "arabic": "لَا تُسْرِفُوا",
@@ -1971,7 +2082,10 @@
       "word_by_word": [
         {
           "arabic": "وَ",
-          "persian": "و"
+          "persian": "و",
+          "grammar_rule": "حرف عطف",
+          "grammar_color": "#9C27B0",
+          "grammar_explanation": "برای پیوند دادن دو کلمه"
         },
         {
           "arabic": "لَا تُبَذِّرْ",
@@ -2179,7 +2293,10 @@
       "word_by_word": [
         {
           "arabic": "وَ",
-          "persian": "و"
+          "persian": "و",
+          "grammar_rule": "حرف عطف",
+          "grammar_color": "#9C27B0",
+          "grammar_explanation": "برای پیوند دادن دو کلمه"
         },
         {
           "arabic": "الَّذِينَ",
@@ -2218,7 +2335,10 @@
       "word_by_word": [
         {
           "arabic": "وَ",
-          "persian": "و"
+          "persian": "و",
+          "grammar_rule": "حرف عطف",
+          "grammar_color": "#9C27B0",
+          "grammar_explanation": "برای پیوند دادن دو کلمه"
         },
         {
           "arabic": "الَّذِينَ",
@@ -2258,7 +2378,10 @@
       "word_by_word": [
         {
           "arabic": "وَ",
-          "persian": "و"
+          "persian": "و",
+          "grammar_rule": "حرف عطف",
+          "grammar_color": "#9C27B0",
+          "grammar_explanation": "برای پیوند دادن دو کلمه"
         },
         {
           "arabic": "الَّذِينَ",
@@ -2302,7 +2425,10 @@
       "word_by_word": [
         {
           "arabic": "وَ",
-          "persian": "و"
+          "persian": "و",
+          "grammar_rule": "حرف عطف",
+          "grammar_color": "#9C27B0",
+          "grammar_explanation": "برای پیوند دادن دو کلمه"
         },
         {
           "arabic": "اللَّهُ",
@@ -2386,7 +2512,10 @@
         },
         {
           "arabic": "وَ",
-          "persian": "و"
+          "persian": "و",
+          "grammar_rule": "حرف عطف",
+          "grammar_color": "#9C27B0",
+          "grammar_explanation": "برای پیوند دادن دو کلمه"
         },
         {
           "arabic": "الْأَرْضِ",
@@ -2418,7 +2547,10 @@
       "word_by_word": [
         {
           "arabic": "وَ",
-          "persian": "و"
+          "persian": "و",
+          "grammar_rule": "حرف عطف",
+          "grammar_color": "#9C27B0",
+          "grammar_explanation": "برای پیوند دادن دو کلمه"
         },
         {
           "arabic": "فِي",
@@ -2562,7 +2694,10 @@
       "word_by_word": [
         {
           "arabic": "وَ",
-          "persian": "و"
+          "persian": "و",
+          "grammar_rule": "حرف عطف",
+          "grammar_color": "#9C27B0",
+          "grammar_explanation": "برای پیوند دادن دو کلمه"
         },
         {
           "arabic": "إِلَى",
@@ -2598,7 +2733,10 @@
       "word_by_word": [
         {
           "arabic": "وَ",
-          "persian": "و"
+          "persian": "و",
+          "grammar_rule": "حرف عطف",
+          "grammar_color": "#9C27B0",
+          "grammar_explanation": "برای پیوند دادن دو کلمه"
         },
         {
           "arabic": "مَا",
@@ -2646,7 +2784,10 @@
       "word_by_word": [
         {
           "arabic": "وَ",
-          "persian": "و"
+          "persian": "و",
+          "grammar_rule": "حرف عطف",
+          "grammar_color": "#9C27B0",
+          "grammar_explanation": "برای پیوند دادن دو کلمه"
         },
         {
           "arabic": "جَعَلْنَا",
@@ -2690,7 +2831,10 @@
       "word_by_word": [
         {
           "arabic": "وَ",
-          "persian": "و"
+          "persian": "و",
+          "grammar_rule": "حرف عطف",
+          "grammar_color": "#9C27B0",
+          "grammar_explanation": "برای پیوند دادن دو کلمه"
         },
         {
           "arabic": "جَعَلْنَا",
@@ -2702,7 +2846,10 @@
         },
         {
           "arabic": "وَ",
-          "persian": "و"
+          "persian": "و",
+          "grammar_rule": "حرف عطف",
+          "grammar_color": "#9C27B0",
+          "grammar_explanation": "برای پیوند دادن دو کلمه"
         },
         {
           "arabic": "النَّهَارَ",
@@ -2742,7 +2889,10 @@
         },
         {
           "arabic": "وَ",
-          "persian": "و"
+          "persian": "و",
+          "grammar_rule": "حرف عطف",
+          "grammar_color": "#9C27B0",
+          "grammar_explanation": "برای پیوند دادن دو کلمه"
         },
         {
           "arabic": "النَّهَارَ",
@@ -2886,7 +3036,10 @@
         },
         {
           "arabic": "وَ",
-          "persian": "و"
+          "persian": "و",
+          "grammar_rule": "حرف عطف",
+          "grammar_color": "#9C27B0",
+          "grammar_explanation": "برای پیوند دادن دو کلمه"
         },
         {
           "arabic": "لَمْ يَرَوْا",
@@ -2926,7 +3079,10 @@
       "word_by_word": [
         {
           "arabic": "وَ",
-          "persian": "و"
+          "persian": "و",
+          "grammar_rule": "حرف عطف",
+          "grammar_color": "#9C27B0",
+          "grammar_explanation": "برای پیوند دادن دو کلمه"
         },
         {
           "arabic": "هُوَ",
@@ -2970,7 +3126,10 @@
       "word_by_word": [
         {
           "arabic": "وَ",
-          "persian": "و"
+          "persian": "و",
+          "grammar_rule": "حرف عطف",
+          "grammar_color": "#9C27B0",
+          "grammar_explanation": "برای پیوند دادن دو کلمه"
         },
         {
           "arabic": "الشَّمْسُ",
@@ -3014,7 +3173,10 @@
       "word_by_word": [
         {
           "arabic": "وَ",
-          "persian": "و"
+          "persian": "و",
+          "grammar_rule": "حرف عطف",
+          "grammar_color": "#9C27B0",
+          "grammar_explanation": "برای پیوند دادن دو کلمه"
         },
         {
           "arabic": "الْقَمَرَ",
@@ -3050,7 +3212,10 @@
       "word_by_word": [
         {
           "arabic": "وَ",
-          "persian": "سوگند به"
+          "persian": "سوگند به",
+          "grammar_rule": "حرف عطف",
+          "grammar_color": "#9C27B0",
+          "grammar_explanation": "برای پیوند دادن دو کلمه"
         },
         {
           "arabic": "السَّمَاءِ",
@@ -3198,7 +3363,10 @@
         },
         {
           "arabic": "وَ",
-          "persian": "و"
+          "persian": "و",
+          "grammar_rule": "حرف عطف",
+          "grammar_color": "#9C27B0",
+          "grammar_explanation": "برای پیوند دادن دو کلمه"
         },
         {
           "arabic": "مَا",
@@ -3226,7 +3394,10 @@
       "word_by_word": [
         {
           "arabic": "وَ",
-          "persian": "و"
+          "persian": "و",
+          "grammar_rule": "حرف عطف",
+          "grammar_color": "#9C27B0",
+          "grammar_explanation": "برای پیوند دادن دو کلمه"
         },
         {
           "arabic": "اللَّهُ",
@@ -3414,7 +3585,10 @@
       "word_by_word": [
         {
           "arabic": "وَ",
-          "persian": "و"
+          "persian": "و",
+          "grammar_rule": "حرف عطف",
+          "grammar_color": "#9C27B0",
+          "grammar_explanation": "برای پیوند دادن دو کلمه"
         },
         {
           "arabic": "مَن",
@@ -3462,7 +3636,10 @@
       "word_by_word": [
         {
           "arabic": "وَ",
-          "persian": "و"
+          "persian": "و",
+          "grammar_rule": "حرف عطف",
+          "grammar_color": "#9C27B0",
+          "grammar_explanation": "برای پیوند دادن دو کلمه"
         },
         {
           "arabic": "مَن",
@@ -3550,7 +3727,10 @@
       "word_by_word": [
         {
           "arabic": "وَ",
-          "persian": "و"
+          "persian": "و",
+          "grammar_rule": "حرف عطف",
+          "grammar_color": "#9C27B0",
+          "grammar_explanation": "برای پیوند دادن دو کلمه"
         },
         {
           "arabic": "سَارِعُوا",
@@ -3646,7 +3826,10 @@
       "word_by_word": [
         {
           "arabic": "وَ",
-          "persian": "و"
+          "persian": "و",
+          "grammar_rule": "حرف عطف",
+          "grammar_color": "#9C27B0",
+          "grammar_explanation": "برای پیوند دادن دو کلمه"
         },
         {
           "arabic": "بَشِّرِ",
@@ -3778,7 +3961,10 @@
       "word_by_word": [
         {
           "arabic": "وَ",
-          "persian": "و"
+          "persian": "و",
+          "grammar_rule": "حرف عطف",
+          "grammar_color": "#9C27B0",
+          "grammar_explanation": "برای پیوند دادن دو کلمه"
         },
         {
           "arabic": "يَنْصُرُ",
@@ -3814,7 +4000,10 @@
       "word_by_word": [
         {
           "arabic": "وَ",
-          "persian": "و"
+          "persian": "و",
+          "grammar_rule": "حرف عطف",
+          "grammar_color": "#9C27B0",
+          "grammar_explanation": "برای پیوند دادن دو کلمه"
         },
         {
           "arabic": "الْعَاقِبَةُ",
@@ -3886,7 +4075,10 @@
       "word_by_word": [
         {
           "arabic": "وَ",
-          "persian": "و"
+          "persian": "و",
+          "grammar_rule": "حرف عطف",
+          "grammar_color": "#9C27B0",
+          "grammar_explanation": "برای پیوند دادن دو کلمه"
         },
         {
           "arabic": "اللَّهُ",
@@ -3926,7 +4118,10 @@
       "word_by_word": [
         {
           "arabic": "وَ",
-          "persian": "و"
+          "persian": "و",
+          "grammar_rule": "حرف عطف",
+          "grammar_color": "#9C27B0",
+          "grammar_explanation": "برای پیوند دادن دو کلمه"
         },
         {
           "arabic": "هُوَ",

@@ -19,7 +19,7 @@
           "persian": "و",
           "grammar_rule": "حرف عطف",
           "grammar_color": "#9C27B0",
-          "grammar_explanation": "برای پیوند دادن دو کلمه"
+          "grammar_explanation": "حرف عطف برای پیوند دادن"
         },
         {
           "arabic": "قُولُوا",
@@ -33,7 +33,7 @@
           "persian": "به / برای",
           "grammar_rule": "حرف جر",
           "grammar_color": "#2196F3",
-          "grammar_explanation": "حرف جر به معنای «برای» یا «به»"
+          "grammar_explanation": "حرف جر به معنای «برای»"
         },
         {
           "arabic": "النَّاسِ",
@@ -70,7 +70,7 @@
           "persian": "و",
           "grammar_rule": "حرف عطف",
           "grammar_color": "#9C27B0",
-          "grammar_explanation": "برای پیوند دادن دو کلمه"
+          "grammar_explanation": "حرف عطف برای پیوند دادن"
         },
         {
           "arabic": "اخْفِضْ",
@@ -81,7 +81,7 @@
           "persian": "برای",
           "grammar_rule": "حرف جر",
           "grammar_color": "#2196F3",
-          "grammar_explanation": "حرف جر به معنای «برای» یا «به»"
+          "grammar_explanation": "حرف جر به معنای «برای»"
         },
         {
           "arabic": "هُمَا",
@@ -97,7 +97,10 @@
         },
         {
           "arabic": "مِنَ",
-          "persian": "از (رویِ)"
+          "persian": "از (رویِ)",
+          "grammar_rule": "حرف جر",
+          "grammar_color": "#2196F3",
+          "grammar_explanation": "حرف جر به معنای «از»"
         },
         {
           "arabic": "الرَّحْمَةِ",
@@ -124,7 +127,7 @@
           "persian": "و",
           "grammar_rule": "حرف عطف",
           "grammar_color": "#9C27B0",
-          "grammar_explanation": "برای پیوند دادن دو کلمه"
+          "grammar_explanation": "حرف عطف برای پیوند دادن"
         },
         {
           "arabic": "بِ",
@@ -159,7 +162,7 @@
           "persian": "و (حرف عطف)",
           "grammar_rule": "حرف عطف",
           "grammar_color": "#9C27B0",
-          "grammar_explanation": "برای پیوند دادن دو کلمه"
+          "grammar_explanation": "حرف عطف برای پیوند دادن"
         },
         {
           "arabic": "قُلْ",
@@ -218,7 +221,7 @@
           "persian": "و (حرف عطف)",
           "grammar_rule": "حرف عطف",
           "grammar_color": "#9C27B0",
-          "grammar_explanation": "برای پیوند دادن دو کلمه"
+          "grammar_explanation": "حرف عطف برای پیوند دادن"
         },
         {
           "arabic": "قُولُوا",
@@ -253,7 +256,7 @@
           "persian": "و (حرف عطف)",
           "grammar_rule": "حرف عطف",
           "grammar_color": "#9C27B0",
-          "grammar_explanation": "برای پیوند دادن دو کلمه"
+          "grammar_explanation": "حرف عطف برای پیوند دادن"
         },
         {
           "arabic": "أَصْلِحُوا",
@@ -300,7 +303,7 @@
           "persian": "و",
           "grammar_rule": "حرف عطف",
           "grammar_color": "#9C27B0",
-          "grammar_explanation": "برای پیوند دادن دو کلمه"
+          "grammar_explanation": "حرف عطف برای پیوند دادن"
         },
         {
           "arabic": "اصْفَحُوا",
@@ -359,7 +362,7 @@
           "persian": "و",
           "grammar_rule": "حرف عطف",
           "grammar_color": "#9C27B0",
-          "grammar_explanation": "برای پیوند دادن دو کلمه"
+          "grammar_explanation": "حرف عطف برای پیوند دادن"
         },
         {
           "arabic": "اللَّهُ",
@@ -430,7 +433,7 @@
           "persian": "و",
           "grammar_rule": "حرف عطف",
           "grammar_color": "#9C27B0",
-          "grammar_explanation": "برای پیوند دادن دو کلمه"
+          "grammar_explanation": "حرف عطف برای پیوند دادن"
         },
         {
           "arabic": "لَا تَبْخَسُوا",
@@ -469,7 +472,7 @@
           "persian": "و",
           "grammar_rule": "حرف عطف",
           "grammar_color": "#9C27B0",
-          "grammar_explanation": "برای پیوند دادن دو کلمه"
+          "grammar_explanation": "حرف عطف برای پیوند دادن"
         },
         {
           "arabic": "أَقِیمُوا",
@@ -500,7 +503,7 @@
           "persian": "و",
           "grammar_rule": "حرف عطف",
           "grammar_color": "#9C27B0",
-          "grammar_explanation": "برای پیوند دادن دو کلمه"
+          "grammar_explanation": "حرف عطف برای پیوند دادن"
         },
         {
           "arabic": "لَا تُخْسِرُوا",
@@ -535,7 +538,7 @@
           "persian": "و",
           "grammar_rule": "حرف عطف",
           "grammar_color": "#9C27B0",
-          "grammar_explanation": "برای پیوند دادن دو کلمه"
+          "grammar_explanation": "حرف عطف برای پیوند دادن"
         },
         {
           "arabic": "أَحْسِنُوا",
@@ -582,7 +585,7 @@
           "persian": "و",
           "grammar_rule": "حرف عطف",
           "grammar_color": "#9C27B0",
-          "grammar_explanation": "برای پیوند دادن دو کلمه"
+          "grammar_explanation": "حرف عطف برای پیوند دادن"
         },
         {
           "arabic": "لَا تَمْشِ",
@@ -590,7 +593,10 @@
         },
         {
           "arabic": "فِي",
-          "persian": "در"
+          "persian": "در",
+          "grammar_rule": "حرف جر",
+          "grammar_color": "#2196F3",
+          "grammar_explanation": "حرف جر به معنای «در»"
         },
         {
           "arabic": "الْ",
@@ -625,7 +631,7 @@
           "persian": "و",
           "grammar_rule": "حرف عطف",
           "grammar_color": "#9C27B0",
-          "grammar_explanation": "برای پیوند دادن دو کلمه"
+          "grammar_explanation": "حرف عطف برای پیوند دادن"
         },
         {
           "arabic": "اغْضُضْ",
@@ -633,7 +639,10 @@
         },
         {
           "arabic": "مِنْ",
-          "persian": "از"
+          "persian": "از",
+          "grammar_rule": "حرف جر",
+          "grammar_color": "#2196F3",
+          "grammar_explanation": "حرف جر به معنای «از»"
         },
         {
           "arabic": "صَوْتِ",
@@ -669,7 +678,10 @@
         },
         {
           "arabic": "مِنْ",
-          "persian": "از"
+          "persian": "از",
+          "grammar_rule": "حرف جر",
+          "grammar_color": "#2196F3",
+          "grammar_explanation": "حرف جر به معنای «از»"
         },
         {
           "arabic": "قَوْمٍ",
@@ -696,7 +708,7 @@
           "persian": "و",
           "grammar_rule": "حرف عطف",
           "grammar_color": "#9C27B0",
-          "grammar_explanation": "برای پیوند دادن دو کلمه"
+          "grammar_explanation": "حرف عطف برای پیوند دادن"
         },
         {
           "arabic": "لَا تَلْمِزُوا",
@@ -731,7 +743,7 @@
           "persian": "و",
           "grammar_rule": "حرف عطف",
           "grammar_color": "#9C27B0",
-          "grammar_explanation": "برای پیوند دادن دو کلمه"
+          "grammar_explanation": "حرف عطف برای پیوند دادن"
         },
         {
           "arabic": "لَا يَغْتَبْ",
@@ -826,7 +838,7 @@
           "persian": "برای",
           "grammar_rule": "حرف جر",
           "grammar_color": "#2196F3",
-          "grammar_explanation": "حرف جر به معنای «برای» یا «به»"
+          "grammar_explanation": "حرف جر به معنای «برای»"
         },
         {
           "arabic": "لَّهِ",
@@ -913,7 +925,7 @@
           "persian": "و",
           "grammar_rule": "حرف عطف",
           "grammar_color": "#9C27B0",
-          "grammar_explanation": "برای پیوند دادن دو کلمه"
+          "grammar_explanation": "حرف عطف برای پیوند دادن"
         },
         {
           "arabic": "إِيَّاكَ",
@@ -941,7 +953,10 @@
       "word_by_word": [
         {
           "arabic": "فَ",
-          "persian": "پس"
+          "persian": "پس",
+          "grammar_rule": "حرف عطف",
+          "grammar_color": "#9C27B0",
+          "grammar_explanation": "حرف عطف برای ترتیب یا نتیجه"
         },
         {
           "arabic": "اذْكُرُو",
@@ -1024,11 +1039,14 @@
           "persian": "و",
           "grammar_rule": "حرف عطف",
           "grammar_color": "#9C27B0",
-          "grammar_explanation": "برای پیوند دادن دو کلمه"
+          "grammar_explanation": "حرف عطف برای پیوند دادن"
         },
         {
           "arabic": "عَلَى",
-          "persian": "بر"
+          "persian": "بر",
+          "grammar_rule": "حرف جر",
+          "grammar_color": "#2196F3",
+          "grammar_explanation": "حرف جر به معنای «بر»"
         },
         {
           "arabic": "اللَّهِ",
@@ -1036,7 +1054,10 @@
         },
         {
           "arabic": "فَ",
-          "persian": "پس"
+          "persian": "پس",
+          "grammar_rule": "حرف عطف",
+          "grammar_color": "#9C27B0",
+          "grammar_explanation": "حرف عطف برای ترتیب یا نتیجه"
         },
         {
           "arabic": "تَوَكَّلُوا",
@@ -1063,11 +1084,14 @@
           "persian": "و",
           "grammar_rule": "حرف عطف",
           "grammar_color": "#9C27B0",
-          "grammar_explanation": "برای پیوند دادن دو کلمه"
+          "grammar_explanation": "حرف عطف برای پیوند دادن"
         },
         {
           "arabic": "مَنْ",
-          "persian": "هر کس"
+          "persian": "هر کس",
+          "grammar_rule": "حرف جر",
+          "grammar_color": "#2196F3",
+          "grammar_explanation": "حرف جر به معنای «از»"
         },
         {
           "arabic": "يَتَوَكَّلْ",
@@ -1075,7 +1099,10 @@
         },
         {
           "arabic": "عَلَى",
-          "persian": "بر"
+          "persian": "بر",
+          "grammar_rule": "حرف جر",
+          "grammar_color": "#2196F3",
+          "grammar_explanation": "حرف جر به معنای «بر»"
         },
         {
           "arabic": "اللَّهِ",
@@ -1083,7 +1110,10 @@
         },
         {
           "arabic": "فَ",
-          "persian": "پس"
+          "persian": "پس",
+          "grammar_rule": "حرف عطف",
+          "grammar_color": "#9C27B0",
+          "grammar_explanation": "حرف عطف برای ترتیب یا نتیجه"
         },
         {
           "arabic": "هُوَ",
@@ -1187,7 +1217,10 @@
       "word_by_word": [
         {
           "arabic": "فَ",
-          "persian": "پس"
+          "persian": "پس",
+          "grammar_rule": "حرف عطف",
+          "grammar_color": "#9C27B0",
+          "grammar_explanation": "حرف عطف برای ترتیب یا نتیجه"
         },
         {
           "arabic": "اسْتَقِمْ",
@@ -1226,7 +1259,7 @@
           "persian": "و",
           "grammar_rule": "حرف عطف",
           "grammar_color": "#9C27B0",
-          "grammar_explanation": "برای پیوند دادن دو کلمه"
+          "grammar_explanation": "حرف عطف برای پیوند دادن"
         },
         {
           "arabic": "هُوَ",
@@ -1278,7 +1311,10 @@
         },
         {
           "arabic": "مِنْ",
-          "persian": "از"
+          "persian": "از",
+          "grammar_rule": "حرف جر",
+          "grammar_color": "#2196F3",
+          "grammar_explanation": "حرف جر به معنای «از»"
         },
         {
           "arabic": "رَحْمَةِ",
@@ -1309,7 +1345,7 @@
           "persian": "و",
           "grammar_rule": "حرف عطف",
           "grammar_color": "#9C27B0",
-          "grammar_explanation": "برای پیوند دادن دو کلمه"
+          "grammar_explanation": "حرف عطف برای پیوند دادن"
         },
         {
           "arabic": "رَحْمَتِ",
@@ -1385,7 +1421,10 @@
       "word_by_word": [
         {
           "arabic": "فَ",
-          "persian": "پس"
+          "persian": "پس",
+          "grammar_rule": "حرف عطف",
+          "grammar_color": "#9C27B0",
+          "grammar_explanation": "حرف عطف برای ترتیب یا نتیجه"
         },
         {
           "arabic": "ادْعُو",
@@ -1401,7 +1440,10 @@
         },
         {
           "arabic": "لَ",
-          "persian": "برای"
+          "persian": "برای",
+          "grammar_rule": "حرف جر",
+          "grammar_color": "#2196F3",
+          "grammar_explanation": "حرف جر به معنای «برای»"
         },
         {
           "arabic": "كُمْ",
@@ -1428,7 +1470,7 @@
           "persian": "و",
           "grammar_rule": "حرف عطف",
           "grammar_color": "#9C27B0",
-          "grammar_explanation": "برای پیوند دادن دو کلمه"
+          "grammar_explanation": "حرف عطف برای پیوند دادن"
         },
         {
           "arabic": "هُوَ",
@@ -1436,7 +1478,10 @@
         },
         {
           "arabic": "عَلَىٰ",
-          "persian": "بر"
+          "persian": "بر",
+          "grammar_rule": "حرف جر",
+          "grammar_color": "#2196F3",
+          "grammar_explanation": "حرف جر به معنای «بر»"
         },
         {
           "arabic": "كُلِّ",
@@ -1483,7 +1528,7 @@
           "persian": "و",
           "grammar_rule": "حرف عطف",
           "grammar_color": "#9C27B0",
-          "grammar_explanation": "برای پیوند دادن دو کلمه"
+          "grammar_explanation": "حرف عطف برای پیوند دادن"
         },
         {
           "arabic": "الْأَرْضِ",
@@ -1582,7 +1627,7 @@
           "persian": "و",
           "grammar_rule": "حرف عطف",
           "grammar_color": "#9C27B0",
-          "grammar_explanation": "برای پیوند دادن دو کلمه"
+          "grammar_explanation": "حرف عطف برای پیوند دادن"
         },
         {
           "arabic": "رَبُّ",
@@ -1649,7 +1694,7 @@
           "persian": "و",
           "grammar_rule": "حرف عطف",
           "grammar_color": "#9C27B0",
-          "grammar_explanation": "برای پیوند دادن دو کلمه"
+          "grammar_explanation": "حرف عطف برای پیوند دادن"
         },
         {
           "arabic": "اصْبِرْ",
@@ -1660,7 +1705,7 @@
           "persian": "و",
           "grammar_rule": "حرف عطف",
           "grammar_color": "#9C27B0",
-          "grammar_explanation": "برای پیوند دادن دو کلمه"
+          "grammar_explanation": "حرف عطف برای پیوند دادن"
         },
         {
           "arabic": "مَا",
@@ -1712,11 +1757,17 @@
         },
         {
           "arabic": "لَ",
-          "persian": "قطعاً"
+          "persian": "قطعاً",
+          "grammar_rule": "حرف جر",
+          "grammar_color": "#2196F3",
+          "grammar_explanation": "حرف جر به معنای «برای»"
         },
         {
           "arabic": "فِي",
-          "persian": "در"
+          "persian": "در",
+          "grammar_rule": "حرف جر",
+          "grammar_color": "#2196F3",
+          "grammar_explanation": "حرف جر به معنای «در»"
         },
         {
           "arabic": "خُسْرٍ",
@@ -1755,7 +1806,7 @@
           "persian": "و",
           "grammar_rule": "حرف عطف",
           "grammar_color": "#9C27B0",
-          "grammar_explanation": "برای پیوند دادن دو کلمه"
+          "grammar_explanation": "حرف عطف برای پیوند دادن"
         },
         {
           "arabic": "عَمِلُوا",
@@ -1786,7 +1837,7 @@
           "persian": "و",
           "grammar_rule": "حرف عطف",
           "grammar_color": "#9C27B0",
-          "grammar_explanation": "برای پیوند دادن دو کلمه"
+          "grammar_explanation": "حرف عطف برای پیوند دادن"
         },
         {
           "arabic": "تَوَاصَوْا",
@@ -1821,7 +1872,7 @@
           "persian": "و",
           "grammar_rule": "حرف عطف",
           "grammar_color": "#9C27B0",
-          "grammar_explanation": "برای پیوند دادن دو کلمه"
+          "grammar_explanation": "حرف عطف برای پیوند دادن"
         },
         {
           "arabic": "تَوَاصَوْا",
@@ -1856,7 +1907,7 @@
           "persian": "و",
           "grammar_rule": "حرف عطف",
           "grammar_color": "#9C27B0",
-          "grammar_explanation": "برای پیوند دادن دو کلمه"
+          "grammar_explanation": "حرف عطف برای پیوند دادن"
         },
         {
           "arabic": "اسْتَعِينُوا",
@@ -1875,7 +1926,7 @@
           "persian": "و",
           "grammar_rule": "حرف عطف",
           "grammar_color": "#9C27B0",
-          "grammar_explanation": "برای پیوند دادن دو کلمه"
+          "grammar_explanation": "حرف عطف برای پیوند دادن"
         },
         {
           "arabic": "الصَّلَاةِ",
@@ -1907,7 +1958,10 @@
         },
         {
           "arabic": "مَنْ",
-          "persian": "کسی که"
+          "persian": "کسی که",
+          "grammar_rule": "حرف جر",
+          "grammar_color": "#2196F3",
+          "grammar_explanation": "حرف جر به معنای «از»"
         },
         {
           "arabic": "زَكَّا",
@@ -1938,7 +1992,7 @@
           "persian": "و",
           "grammar_rule": "حرف عطف",
           "grammar_color": "#9C27B0",
-          "grammar_explanation": "برای پیوند دادن دو کلمه"
+          "grammar_explanation": "حرف عطف برای پیوند دادن"
         },
         {
           "arabic": "قَدْ",
@@ -1950,7 +2004,10 @@
         },
         {
           "arabic": "مَنْ",
-          "persian": "کسی که"
+          "persian": "کسی که",
+          "grammar_rule": "حرف جر",
+          "grammar_color": "#2196F3",
+          "grammar_explanation": "حرف جر به معنای «از»"
         },
         {
           "arabic": "دَسَّا",
@@ -1981,7 +2038,7 @@
           "persian": "و",
           "grammar_rule": "حرف عطف",
           "grammar_color": "#9C27B0",
-          "grammar_explanation": "برای پیوند دادن دو کلمه"
+          "grammar_explanation": "حرف عطف برای پیوند دادن"
         },
         {
           "arabic": "لَا تَقْفُ",
@@ -1997,7 +2054,10 @@
         },
         {
           "arabic": "لَ",
-          "persian": "برای"
+          "persian": "برای",
+          "grammar_rule": "حرف جر",
+          "grammar_color": "#2196F3",
+          "grammar_explanation": "حرف جر به معنای «برای»"
         },
         {
           "arabic": "كَ",
@@ -2036,7 +2096,7 @@
           "persian": "و",
           "grammar_rule": "حرف عطف",
           "grammar_color": "#9C27B0",
-          "grammar_explanation": "برای پیوند دادن دو کلمه"
+          "grammar_explanation": "حرف عطف برای پیوند دادن"
         },
         {
           "arabic": "كُلُوا",
@@ -2047,7 +2107,7 @@
           "persian": "و",
           "grammar_rule": "حرف عطف",
           "grammar_color": "#9C27B0",
-          "grammar_explanation": "برای پیوند دادن دو کلمه"
+          "grammar_explanation": "حرف عطف برای پیوند دادن"
         },
         {
           "arabic": "اشْرَبُوا",
@@ -2058,7 +2118,7 @@
           "persian": "و (ولی)",
           "grammar_rule": "حرف عطف",
           "grammar_color": "#9C27B0",
-          "grammar_explanation": "برای پیوند دادن دو کلمه"
+          "grammar_explanation": "حرف عطف برای پیوند دادن"
         },
         {
           "arabic": "لَا تُسْرِفُوا",
@@ -2085,7 +2145,7 @@
           "persian": "و",
           "grammar_rule": "حرف عطف",
           "grammar_color": "#9C27B0",
-          "grammar_explanation": "برای پیوند دادن دو کلمه"
+          "grammar_explanation": "حرف عطف برای پیوند دادن"
         },
         {
           "arabic": "لَا تُبَذِّرْ",
@@ -2145,7 +2205,10 @@
       "word_by_word": [
         {
           "arabic": "فَ",
-          "persian": "پس"
+          "persian": "پس",
+          "grammar_rule": "حرف عطف",
+          "grammar_color": "#9C27B0",
+          "grammar_explanation": "حرف عطف برای ترتیب یا نتیجه"
         },
         {
           "arabic": "إِذَا",
@@ -2157,7 +2220,10 @@
         },
         {
           "arabic": "فَ",
-          "persian": "پس"
+          "persian": "پس",
+          "grammar_rule": "حرف عطف",
+          "grammar_color": "#9C27B0",
+          "grammar_explanation": "حرف عطف برای ترتیب یا نتیجه"
         },
         {
           "arabic": "انصَبْ",
@@ -2261,7 +2327,10 @@
         },
         {
           "arabic": "فِي",
-          "persian": "در"
+          "persian": "در",
+          "grammar_rule": "حرف جر",
+          "grammar_color": "#2196F3",
+          "grammar_explanation": "حرف جر به معنای «در»"
         },
         {
           "arabic": "صَلَاتِ",
@@ -2296,7 +2365,7 @@
           "persian": "و",
           "grammar_rule": "حرف عطف",
           "grammar_color": "#9C27B0",
-          "grammar_explanation": "برای پیوند دادن دو کلمه"
+          "grammar_explanation": "حرف عطف برای پیوند دادن"
         },
         {
           "arabic": "الَّذِينَ",
@@ -2338,7 +2407,7 @@
           "persian": "و",
           "grammar_rule": "حرف عطف",
           "grammar_color": "#9C27B0",
-          "grammar_explanation": "برای پیوند دادن دو کلمه"
+          "grammar_explanation": "حرف عطف برای پیوند دادن"
         },
         {
           "arabic": "الَّذِينَ",
@@ -2381,7 +2450,7 @@
           "persian": "و",
           "grammar_rule": "حرف عطف",
           "grammar_color": "#9C27B0",
-          "grammar_explanation": "برای پیوند دادن دو کلمه"
+          "grammar_explanation": "حرف عطف برای پیوند دادن"
         },
         {
           "arabic": "الَّذِينَ",
@@ -2428,7 +2497,7 @@
           "persian": "و",
           "grammar_rule": "حرف عطف",
           "grammar_color": "#9C27B0",
-          "grammar_explanation": "برای پیوند دادن دو کلمه"
+          "grammar_explanation": "حرف عطف برای پیوند دادن"
         },
         {
           "arabic": "اللَّهُ",
@@ -2500,7 +2569,10 @@
         },
         {
           "arabic": "فِي",
-          "persian": "در"
+          "persian": "در",
+          "grammar_rule": "حرف جر",
+          "grammar_color": "#2196F3",
+          "grammar_explanation": "حرف جر به معنای «در»"
         },
         {
           "arabic": "خَلْقِ",
@@ -2515,7 +2587,7 @@
           "persian": "و",
           "grammar_rule": "حرف عطف",
           "grammar_color": "#9C27B0",
-          "grammar_explanation": "برای پیوند دادن دو کلمه"
+          "grammar_explanation": "حرف عطف برای پیوند دادن"
         },
         {
           "arabic": "الْأَرْضِ",
@@ -2550,11 +2622,14 @@
           "persian": "و",
           "grammar_rule": "حرف عطف",
           "grammar_color": "#9C27B0",
-          "grammar_explanation": "برای پیوند دادن دو کلمه"
+          "grammar_explanation": "حرف عطف برای پیوند دادن"
         },
         {
           "arabic": "فِي",
-          "persian": "در"
+          "persian": "در",
+          "grammar_rule": "حرف جر",
+          "grammar_color": "#2196F3",
+          "grammar_explanation": "حرف جر به معنای «در»"
         },
         {
           "arabic": "أَنْفُسِ",
@@ -2614,7 +2689,10 @@
         },
         {
           "arabic": "إِلَى",
-          "persian": "به (سوی)"
+          "persian": "به (سوی)",
+          "grammar_rule": "حرف جر",
+          "grammar_color": "#2196F3",
+          "grammar_explanation": "حرف جر به معنای «به سوی»"
         },
         {
           "arabic": "الْإِبِلِ",
@@ -2662,7 +2740,10 @@
         },
         {
           "arabic": "إِلَى",
-          "persian": "به (سوی)"
+          "persian": "به (سوی)",
+          "grammar_rule": "حرف جر",
+          "grammar_color": "#2196F3",
+          "grammar_explanation": "حرف جر به معنای «به سوی»"
         },
         {
           "arabic": "السَّمَاءِ",
@@ -2697,11 +2778,14 @@
           "persian": "و",
           "grammar_rule": "حرف عطف",
           "grammar_color": "#9C27B0",
-          "grammar_explanation": "برای پیوند دادن دو کلمه"
+          "grammar_explanation": "حرف عطف برای پیوند دادن"
         },
         {
           "arabic": "إِلَى",
-          "persian": "به (سوی)"
+          "persian": "به (سوی)",
+          "grammar_rule": "حرف جر",
+          "grammar_color": "#2196F3",
+          "grammar_explanation": "حرف جر به معنای «به سوی»"
         },
         {
           "arabic": "الْأَرْضِ",
@@ -2736,7 +2820,7 @@
           "persian": "و",
           "grammar_rule": "حرف عطف",
           "grammar_color": "#9C27B0",
-          "grammar_explanation": "برای پیوند دادن دو کلمه"
+          "grammar_explanation": "حرف عطف برای پیوند دادن"
         },
         {
           "arabic": "مَا",
@@ -2787,7 +2871,7 @@
           "persian": "و",
           "grammar_rule": "حرف عطف",
           "grammar_color": "#9C27B0",
-          "grammar_explanation": "برای پیوند دادن دو کلمه"
+          "grammar_explanation": "حرف عطف برای پیوند دادن"
         },
         {
           "arabic": "جَعَلْنَا",
@@ -2795,7 +2879,10 @@
         },
         {
           "arabic": "مِنَ",
-          "persian": "از"
+          "persian": "از",
+          "grammar_rule": "حرف جر",
+          "grammar_color": "#2196F3",
+          "grammar_explanation": "حرف جر به معنای «از»"
         },
         {
           "arabic": "الْمَاءِ",
@@ -2834,7 +2921,7 @@
           "persian": "و",
           "grammar_rule": "حرف عطف",
           "grammar_color": "#9C27B0",
-          "grammar_explanation": "برای پیوند دادن دو کلمه"
+          "grammar_explanation": "حرف عطف برای پیوند دادن"
         },
         {
           "arabic": "جَعَلْنَا",
@@ -2849,7 +2936,7 @@
           "persian": "و",
           "grammar_rule": "حرف عطف",
           "grammar_color": "#9C27B0",
-          "grammar_explanation": "برای پیوند دادن دو کلمه"
+          "grammar_explanation": "حرف عطف برای پیوند دادن"
         },
         {
           "arabic": "النَّهَارَ",
@@ -2892,7 +2979,7 @@
           "persian": "و",
           "grammar_rule": "حرف عطف",
           "grammar_color": "#9C27B0",
-          "grammar_explanation": "برای پیوند دادن دو کلمه"
+          "grammar_explanation": "حرف عطف برای پیوند دادن"
         },
         {
           "arabic": "النَّهَارَ",
@@ -2924,7 +3011,10 @@
         },
         {
           "arabic": "إِلَىٰ",
-          "persian": "به"
+          "persian": "به",
+          "grammar_rule": "حرف جر",
+          "grammar_color": "#2196F3",
+          "grammar_explanation": "حرف جر به معنای «به سوی»"
         },
         {
           "arabic": "آثَارِ",
@@ -2976,7 +3066,10 @@
         },
         {
           "arabic": "فِي",
-          "persian": "در"
+          "persian": "در",
+          "grammar_rule": "حرف جر",
+          "grammar_color": "#2196F3",
+          "grammar_explanation": "حرف جر به معنای «در»"
         },
         {
           "arabic": "الْآفَاقِ",
@@ -3008,7 +3101,10 @@
         },
         {
           "arabic": "فِي",
-          "persian": "در"
+          "persian": "در",
+          "grammar_rule": "حرف جر",
+          "grammar_color": "#2196F3",
+          "grammar_explanation": "حرف جر به معنای «در»"
         },
         {
           "arabic": "الْأَرْضِ",
@@ -3039,7 +3135,7 @@
           "persian": "و",
           "grammar_rule": "حرف عطف",
           "grammar_color": "#9C27B0",
-          "grammar_explanation": "برای پیوند دادن دو کلمه"
+          "grammar_explanation": "حرف عطف برای پیوند دادن"
         },
         {
           "arabic": "لَمْ يَرَوْا",
@@ -3047,7 +3143,10 @@
         },
         {
           "arabic": "إِلَى",
-          "persian": "به"
+          "persian": "به",
+          "grammar_rule": "حرف جر",
+          "grammar_color": "#2196F3",
+          "grammar_explanation": "حرف جر به معنای «به سوی»"
         },
         {
           "arabic": "الطَّيْرِ",
@@ -3082,7 +3181,7 @@
           "persian": "و",
           "grammar_rule": "حرف عطف",
           "grammar_color": "#9C27B0",
-          "grammar_explanation": "برای پیوند دادن دو کلمه"
+          "grammar_explanation": "حرف عطف برای پیوند دادن"
         },
         {
           "arabic": "هُوَ",
@@ -3098,7 +3197,10 @@
         },
         {
           "arabic": "مِنَ",
-          "persian": "از"
+          "persian": "از",
+          "grammar_rule": "حرف جر",
+          "grammar_color": "#2196F3",
+          "grammar_explanation": "حرف جر به معنای «از»"
         },
         {
           "arabic": "السَّمَاءِ",
@@ -3129,7 +3231,7 @@
           "persian": "و",
           "grammar_rule": "حرف عطف",
           "grammar_color": "#9C27B0",
-          "grammar_explanation": "برای پیوند دادن دو کلمه"
+          "grammar_explanation": "حرف عطف برای پیوند دادن"
         },
         {
           "arabic": "الشَّمْسُ",
@@ -3176,7 +3278,7 @@
           "persian": "و",
           "grammar_rule": "حرف عطف",
           "grammar_color": "#9C27B0",
-          "grammar_explanation": "برای پیوند دادن دو کلمه"
+          "grammar_explanation": "حرف عطف برای پیوند دادن"
         },
         {
           "arabic": "الْقَمَرَ",
@@ -3215,7 +3317,7 @@
           "persian": "سوگند به",
           "grammar_rule": "حرف عطف",
           "grammar_color": "#9C27B0",
-          "grammar_explanation": "برای پیوند دادن دو کلمه"
+          "grammar_explanation": "حرف عطف برای پیوند دادن"
         },
         {
           "arabic": "السَّمَاءِ",
@@ -3251,7 +3353,10 @@
         },
         {
           "arabic": "فِي",
-          "persian": "در"
+          "persian": "در",
+          "grammar_rule": "حرف جر",
+          "grammar_color": "#2196F3",
+          "grammar_explanation": "حرف جر به معنای «در»"
         },
         {
           "arabic": "ذَلِكَ",
@@ -3299,7 +3404,10 @@
         },
         {
           "arabic": "فِي",
-          "persian": "در"
+          "persian": "در",
+          "grammar_rule": "حرف جر",
+          "grammar_color": "#2196F3",
+          "grammar_explanation": "حرف جر به معنای «در»"
         },
         {
           "arabic": "ذَلِكَ",
@@ -3366,7 +3474,7 @@
           "persian": "و",
           "grammar_rule": "حرف عطف",
           "grammar_color": "#9C27B0",
-          "grammar_explanation": "برای پیوند دادن دو کلمه"
+          "grammar_explanation": "حرف عطف برای پیوند دادن"
         },
         {
           "arabic": "مَا",
@@ -3397,7 +3505,7 @@
           "persian": "و",
           "grammar_rule": "حرف عطف",
           "grammar_color": "#9C27B0",
-          "grammar_explanation": "برای پیوند دادن دو کلمه"
+          "grammar_explanation": "حرف عطف برای پیوند دادن"
         },
         {
           "arabic": "اللَّهُ",
@@ -3588,11 +3696,14 @@
           "persian": "و",
           "grammar_rule": "حرف عطف",
           "grammar_color": "#9C27B0",
-          "grammar_explanation": "برای پیوند دادن دو کلمه"
+          "grammar_explanation": "حرف عطف برای پیوند دادن"
         },
         {
           "arabic": "مَن",
-          "persian": "هر کس (کسی که)"
+          "persian": "هر کس (کسی که)",
+          "grammar_rule": "حرف جر",
+          "grammar_color": "#2196F3",
+          "grammar_explanation": "حرف جر به معنای «از»"
         },
         {
           "arabic": "يَعْمَلْ",
@@ -3639,11 +3750,14 @@
           "persian": "و",
           "grammar_rule": "حرف عطف",
           "grammar_color": "#9C27B0",
-          "grammar_explanation": "برای پیوند دادن دو کلمه"
+          "grammar_explanation": "حرف عطف برای پیوند دادن"
         },
         {
           "arabic": "مَن",
-          "persian": "هر کس (کسی که)"
+          "persian": "هر کس (کسی که)",
+          "grammar_rule": "حرف جر",
+          "grammar_color": "#2196F3",
+          "grammar_explanation": "حرف جر به معنای «از»"
         },
         {
           "arabic": "يَعْمَلْ",
@@ -3703,7 +3817,10 @@
         },
         {
           "arabic": "مِنَ",
-          "persian": "به (از)"
+          "persian": "به (از)",
+          "grammar_rule": "حرف جر",
+          "grammar_color": "#2196F3",
+          "grammar_explanation": "حرف جر به معنای «از»"
         },
         {
           "arabic": "الْمُحْسِنِينَ",
@@ -3730,7 +3847,7 @@
           "persian": "و",
           "grammar_rule": "حرف عطف",
           "grammar_color": "#9C27B0",
-          "grammar_explanation": "برای پیوند دادن دو کلمه"
+          "grammar_explanation": "حرف عطف برای پیوند دادن"
         },
         {
           "arabic": "سَارِعُوا",
@@ -3738,7 +3855,10 @@
         },
         {
           "arabic": "إِلَىٰ",
-          "persian": "به سوی"
+          "persian": "به سوی",
+          "grammar_rule": "حرف جر",
+          "grammar_color": "#2196F3",
+          "grammar_explanation": "حرف جر به معنای «به سوی»"
         },
         {
           "arabic": "مَغْفِرَةٍ",
@@ -3746,7 +3866,10 @@
         },
         {
           "arabic": "مِنْ",
-          "persian": "از جانبِ"
+          "persian": "از جانبِ",
+          "grammar_rule": "حرف جر",
+          "grammar_color": "#2196F3",
+          "grammar_explanation": "حرف جر به معنای «از»"
         },
         {
           "arabic": "رَبِّ",
@@ -3798,7 +3921,10 @@
         },
         {
           "arabic": "مِنْ",
-          "persian": "از"
+          "persian": "از",
+          "grammar_rule": "حرف جر",
+          "grammar_color": "#2196F3",
+          "grammar_explanation": "حرف جر به معنای «از»"
         },
         {
           "arabic": "فَضْلِ",
@@ -3829,7 +3955,7 @@
           "persian": "و",
           "grammar_rule": "حرف عطف",
           "grammar_color": "#9C27B0",
-          "grammar_explanation": "برای پیوند دادن دو کلمه"
+          "grammar_explanation": "حرف عطف برای پیوند دادن"
         },
         {
           "arabic": "بَشِّرِ",
@@ -3873,7 +3999,10 @@
         },
         {
           "arabic": "مِنْ",
-          "persian": "از سویِ (از جانبِ)"
+          "persian": "از سویِ (از جانبِ)",
+          "grammar_rule": "حرف جر",
+          "grammar_color": "#2196F3",
+          "grammar_explanation": "حرف جر به معنای «از»"
         },
         {
           "arabic": "رَبِّ",
@@ -3964,7 +4093,7 @@
           "persian": "و",
           "grammar_rule": "حرف عطف",
           "grammar_color": "#9C27B0",
-          "grammar_explanation": "برای پیوند دادن دو کلمه"
+          "grammar_explanation": "حرف عطف برای پیوند دادن"
         },
         {
           "arabic": "يَنْصُرُ",
@@ -3976,7 +4105,10 @@
         },
         {
           "arabic": "مَنْ",
-          "persian": "هر کس را (کسی را که)"
+          "persian": "هر کس را (کسی را که)",
+          "grammar_rule": "حرف جر",
+          "grammar_color": "#2196F3",
+          "grammar_explanation": "حرف جر به معنای «از»"
         },
         {
           "arabic": "يَشَاءُ",
@@ -4003,7 +4135,7 @@
           "persian": "و",
           "grammar_rule": "حرف عطف",
           "grammar_color": "#9C27B0",
-          "grammar_explanation": "برای پیوند دادن دو کلمه"
+          "grammar_explanation": "حرف عطف برای پیوند دادن"
         },
         {
           "arabic": "الْعَاقِبَةُ",
@@ -4078,7 +4210,7 @@
           "persian": "و",
           "grammar_rule": "حرف عطف",
           "grammar_color": "#9C27B0",
-          "grammar_explanation": "برای پیوند دادن دو کلمه"
+          "grammar_explanation": "حرف عطف برای پیوند دادن"
         },
         {
           "arabic": "اللَّهُ",
@@ -4090,7 +4222,10 @@
         },
         {
           "arabic": "عَلَىٰ",
-          "persian": "بر"
+          "persian": "بر",
+          "grammar_rule": "حرف جر",
+          "grammar_color": "#2196F3",
+          "grammar_explanation": "حرف جر به معنای «بر»"
         },
         {
           "arabic": "أَمْرِ",
@@ -4121,7 +4256,7 @@
           "persian": "و",
           "grammar_rule": "حرف عطف",
           "grammar_color": "#9C27B0",
-          "grammar_explanation": "برای پیوند دادن دو کلمه"
+          "grammar_explanation": "حرف عطف برای پیوند دادن"
         },
         {
           "arabic": "هُوَ",

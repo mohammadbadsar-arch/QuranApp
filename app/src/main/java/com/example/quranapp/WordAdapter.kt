@@ -8,8 +8,9 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class WordAdapter(private var words: List<WordTranslation>) :
-    RecyclerView.Adapter<WordAdapter.WordViewHolder>() {
+class WordAdapter(
+    private var words: List<WordTranslation> = emptyList()
+) : RecyclerView.Adapter<WordAdapter.WordViewHolder>() {
 
     class WordViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val tvArabicWord: TextView = view.findViewById(R.id.tvArabicWord)
@@ -28,42 +29,33 @@ class WordAdapter(private var words: List<WordTranslation>) :
         holder.tvArabicWord.text = word.arabic
         holder.tvPersianWord.text = word.persian
 
-        // رنگ‌دهی بر اساس قاعده
-        if (!word.grammarColor.isNullOrBlank()) {
+        // اعمال رنگ گرامری
+        word.grammarColor?.takeIf { it.isNotBlank() }?.let { color ->
             try {
-                holder.tvArabicWord.setTextColor(Color.parseColor(word.grammarColor))
-            } catch (e: Exception) {
+                holder.tvArabicWord.setTextColor(Color.parseColor(color))
+            } catch (e: IllegalArgumentException) {
                 holder.tvArabicWord.setTextColor(Color.BLACK)
             }
-        } else {
-            holder.tvArabicWord.setTextColor(Color.BLACK)
-        }
+        } ?: holder.tvArabicWord.setTextColor(Color.BLACK)
 
-        // کلیک برای نمایش توضیح
+        // باز کردن توضیحات با کلیک
         holder.itemView.setOnClickListener {
-            val title = word.grammarRule ?: "توضیح واژه"
-            val message = buildString {
-                append("واژه: ${word.arabic}\n\n")
-                append("ترجمه: ${word.persian}\n\n")
-                if (!word.grammarRule.isNullOrBlank()) {
-                    append("قاعده: ${word.grammarRule}\n\n")
-                }
-                if (!word.grammarExplanation.isNullOrBlank()) {
-                    append("توضیح: ${word.grammarExplanation}")
-                } else {
-                    append("توضیحی برای این واژه ثبت نشده است.")
-                }
-            }
+            val explanation = listOfNotNull(
+                word.grammarRule?.takeIf { it.isNotBlank() }?.let { "قاعده: $it" },
+                word.grammarExplanation?.takeIf { it.isNotBlank() }?.let { "توضیح: $it" }
+            ).joinToString("\n\n")
 
-            AlertDialog.Builder(holder.itemView.context)
-                .setTitle(title)
-                .setMessage(message)
-                .setPositiveButton("بستن", null)
-                .show()
+            if (explanation.isNotBlank()) {
+                AlertDialog.Builder(holder.itemView.context)
+                    .setTitle(word.arabic)
+                    .setMessage(explanation)
+                    .setPositiveButton("باشه", null)
+                    .show()
+            }
         }
     }
 
-    override fun getItemCount() = words.size
+    override fun getItemCount(): Int = words.size
 
     fun updateData(newWords: List<WordTranslation>) {
         words = newWords

@@ -4,14 +4,13 @@ import com.google.gson.annotations.SerializedName
 
 data class Verse(
     val id: Int? = null,
-    @SerializedName("category")
     val category: String? = null,
     @SerializedName("arabic_text")
-    val arabic_text: String,
+    val arabic_text: String = "",
     @SerializedName("persian_translation")
-    val persian_translation: String,
+    val persian_translation: String = "",
     @SerializedName("surah_reference")
-    val surah_reference: String,
+    val surah_reference: String = "",
     @SerializedName("practical_examples")
     val practical_examples: List<String> = emptyList(),
     @SerializedName("word_by_word")
@@ -19,8 +18,8 @@ data class Verse(
 )
 
 data class WordTranslation(
-    val arabic: String,
-    val persian: String,
+    val arabic: String = "",
+    val persian: String = "",
     @SerializedName("grammar_rule")
     val grammarRule: String? = null,
     @SerializedName("grammar_color")

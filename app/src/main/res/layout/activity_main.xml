@@ -198,6 +198,14 @@
             android:orientation="horizontal"
             android:gravity="center"
             android:layout_marginBottom="16dp">
+            
+<Button
+    android:id="@+id/btnPrevious"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="→ آیه قبلی"
+    android:layout_marginTop="8dp"
+    android:visibility="gone"/> <!-- در ابتدا مخفی است -->
 
             <Button
                 android:id="@+id/nextButton"

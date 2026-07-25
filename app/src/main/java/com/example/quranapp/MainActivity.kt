@@ -40,6 +40,8 @@ class MainActivity : AppCompatActivity() {
     private lateinit var checkBox2: CheckBox
     private lateinit var checkBox3: CheckBox
     private lateinit var checkBox4: CheckBox
+    private lateinit var checkBox5: CheckBox // جدید
+    private lateinit var checkBox6: CheckBox // جدید
 
     private var isResetting = false
     private lateinit var progressManager: ProgressManager
@@ -65,6 +67,9 @@ class MainActivity : AppCompatActivity() {
         checkBox2 = findViewById(R.id.checkBox2)
         checkBox3 = findViewById(R.id.checkBox3)
         checkBox4 = findViewById(R.id.checkBox4)
+        checkBox5 = findViewById(R.id.checkBox5)
+        checkBox6 = findViewById(R.id.checkBox6)
+
 
         // راه‌اندازی RecyclerView برای نمایش کلمات در 3 ستون
         wordsRecyclerView = findViewById(R.id.wordsRecyclerView)
@@ -107,6 +112,9 @@ class MainActivity : AppCompatActivity() {
         checkBox2.setOnCheckedChangeListener(checkListener)
         checkBox3.setOnCheckedChangeListener(checkListener)
         checkBox4.setOnCheckedChangeListener(checkListener)
+        checkBox5.setOnCheckedChangeListener(checkBoxListener)
+        checkBox6.setOnCheckedChangeListener(checkBoxListener)
+
 
         nextButton.setOnClickListener {
             val sharedPref = getSharedPreferences("AppPrefs", Context.MODE_PRIVATE)
@@ -140,9 +148,11 @@ class MainActivity : AppCompatActivity() {
         if (isResetting) return
 
         val allChecked = checkBox1.isChecked &&
-                checkBox2.isChecked &&
-                checkBox3.isChecked &&
-                checkBox4.isChecked
+                 checkBox2.isChecked &&
+                 checkBox3.isChecked &&
+                 checkBox4.isChecked &&
+                 checkBox5.isChecked && // جدید
+                 checkBox6.isChecked    // جدید
 
         if (allChecked) {
             nextButton.isEnabled = true
@@ -300,6 +310,7 @@ class MainActivity : AppCompatActivity() {
         checkBox2.isEnabled = false
         checkBox3.isEnabled = false
         checkBox4.isEnabled = false
+        
 
         isResetting = false
 
@@ -322,11 +333,15 @@ class MainActivity : AppCompatActivity() {
         checkBox2.isEnabled = true
         checkBox3.isEnabled = true
         checkBox4.isEnabled = true
+        checkBox5.isEnabled = true
+        checkBox6.isEnabled = true
 
         checkBox1.isChecked = false
         checkBox2.isChecked = false
         checkBox3.isChecked = false
         checkBox4.isChecked = false
+        checkBox5.isChecked = false
+        checkBox6.isChecked = false
 
         nextButton.isEnabled = false
         nextButton.text = "آیه بعدی"
@@ -353,6 +368,9 @@ class MainActivity : AppCompatActivity() {
             checkBox2.isEnabled = false
             checkBox3.isEnabled = false
             checkBox4.isEnabled = false
+            checkBox5.isChecked = false
+            checkBox6.isChecked = false
+
             return
         }
 

@@ -1,5 +1,8 @@
 package com.example.quranapp
 
+import androidx.recyclerview.widget.RecyclerView
+import android.view.ViewGroup
+import android.view.View
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle

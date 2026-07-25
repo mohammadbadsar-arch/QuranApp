@@ -178,7 +178,7 @@
     android:id="@+id/checkBox5"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:text="۵. تسلط به نقش‌های گرامری کلمات"
+    android:text="تسلط به نقش‌های گرامری کلمات"
     android:textSize="16sp"
     android:padding="8dp"/>
 
@@ -186,7 +186,7 @@
     android:id="@+id/checkBox6"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:text="۶. انجام یک کار عملی"
+    android:text="انجام یک کار عملی"
     android:textSize="16sp"
     android:padding="8dp"/>
         </LinearLayout>

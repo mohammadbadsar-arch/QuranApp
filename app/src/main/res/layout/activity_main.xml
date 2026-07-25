@@ -88,7 +88,6 @@
                 android:textStyle="bold" />
         </androidx.cardview.widget.CardView>
 
-        <!-- ========================================== -->
         <!-- بخش جدید برای نمایش کلمه به کلمه (مخفی در ابتدا) -->
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/wordsRecyclerView"
@@ -98,7 +97,6 @@
             android:nestedScrollingEnabled="false"
             android:layoutDirection="rtl"
             android:visibility="gone" />
-        <!-- ========================================== -->
 
         <!-- دکمه نمایش ترجمه -->
         <Button
@@ -174,55 +172,51 @@
             <CheckBox android:id="@+id/checkBox2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="حفظ متن عربی" />
             <CheckBox android:id="@+id/checkBox3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="یادگیری ترجمه" />
             <CheckBox android:id="@+id/checkBox4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="درک مصداق کاربردی" />
-            <CheckBox
-    android:id="@+id/checkBox5"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="تسلط به نقش‌های گرامری کلمات"
-    android:textSize="16sp"
-    android:padding="8dp"/>
-
-<CheckBox
-    android:id="@+id/checkBox6"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="انجام یک کار عملی"
-    android:textSize="16sp"
-    android:padding="8dp"/>
+            <CheckBox android:id="@+id/checkBox5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="تسلط به نقش‌های گرامری کلمات" android:textSize="16sp" android:padding="8dp"/>
+            <CheckBox android:id="@+id/checkBox6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="انجام یک کار عملی" android:textSize="16sp" android:padding="8dp"/>
         </LinearLayout>
 
-        <!-- Actions -->
+        <!-- Actions (بخش اصلاح شده برای نمایش صحیح دکمه‌ها) -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
+            android:orientation="vertical"
             android:gravity="center"
             android:layout_marginBottom="16dp">
             
-<Button
-    android:id="@+id/btnPrevious"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:text="→ آیه قبلی"
-    android:layout_marginTop="8dp"
-    android:visibility="gone"/> <!-- در ابتدا مخفی است -->
-
-            <Button
-                android:id="@+id/nextButton"
-                android:layout_width="0dp"
+            <!-- ردیف دکمه‌های آیه قبلی و بعدی -->
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="آیه بعدی"
-                android:layout_marginEnd="8dp"/>
+                android:orientation="horizontal"
+                android:weightSum="2">
 
+                <Button
+                    android:id="@+id/btnPrevious"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="→ آیه قبلی"
+                    android:layout_marginEnd="4dp"
+                    android:visibility="gone"/>
+
+                <Button
+                    android:id="@+id/nextButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="آیه بعدی ←"
+                    android:layout_marginStart="4dp"/>
+            </LinearLayout>
+
+            <!-- دکمه داشبورد در ردیف پایین -->
             <Button
                 android:id="@+id/btnBackToDashboard"
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:text="بازگشت به داشبورد"
                 android:backgroundTint="#757575"
-                android:layout_marginStart="8dp"/>
+                android:layout_marginTop="8dp"/>
         </LinearLayout>
 
     </LinearLayout>

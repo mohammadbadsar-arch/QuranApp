@@ -71,6 +71,45 @@ class DashboardActivity : AppCompatActivity() {
         findViewById<ProgressBar>(R.id.progressBar).progress = currentIndex
         findViewById<TextView>(R.id.tvProgressText).text = "شما $currentIndex آیه از $totalVerses آیه را یاد گرفته‌اید"
     }
+// ۱. این متد را در DashboardActivity.kt برای تنظیم لیست اضافه کنید:
+private fun setupPassedVersesList(maxApprovedIndex: Int) {
+    val rvPassedVerses = findViewById<RecyclerView>(R.id.rvPassedVerses)
+    rvPassedVerses.layoutManager = androidx.recyclerview.widget.LinearLayoutManager(this)
+
+    // بارگذاری لیست همه آیات از فایل برای نمایش نام و شماره سوره
+    val allVerses = VerseRepository.load(this)
+    val passedList = mutableListOf<Pair<Int, String>>()
+
+    for (i in 0 until maxApprovedIndex) {
+        if (i < allVerses.size) {
+            passedList.add(Pair(i, "آیه ${i + 1} - ${allVerses[i].surah_reference}"))
+        }
+    }
+
+    // تنظیم آداپتور ساده برای لیست
+    rvPassedVerses.adapter = object : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+        override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
+            val view = layoutInflater.inflate(android.R.layout.simple_list_item_1, parent, false)
+            return object : RecyclerView.ViewHolder(view) {}
+        }
+
+        override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
+            val tv = holder.itemView.findViewById<TextView>(android.R.id.text1)
+            val item = passedList[position]
+            tv.text = "✓ ${item.second}"
+            tv.textSize = 15f
+            
+            // با کلیک روی هر آیه، به MainActivity می‌رویم و شماره آیه را ارسال می‌کنیم
+            holder.itemView.setOnClickListener {
+                val intent = Intent(this@DashboardActivity, MainActivity::class.java)
+                intent.putExtra("VERSE_INDEX", item.first) // ارسال شاخص آیه انتخاب‌شده
+                startActivity(intent)
+            }
+        }
+
+        override fun getItemCount(): Int = passedList.size
+    }
+}
 
     // تابع بررسی وضعیت تایید از سرور
     private fun checkTeacherApproval() {

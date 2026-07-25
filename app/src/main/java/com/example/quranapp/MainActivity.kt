@@ -36,6 +36,7 @@ class MainActivity : AppCompatActivity() {
     
     private lateinit var nextButton: Button
     private lateinit var btnBackToDashboard: Button
+    private lateinit var btnPrevious: Button // اضافه شده برای دکمه قبلی
     
     private lateinit var checkBox1: CheckBox
     private lateinit var checkBox2: CheckBox
@@ -63,6 +64,7 @@ class MainActivity : AppCompatActivity() {
         
         nextButton = findViewById(R.id.nextButton)
         btnBackToDashboard = findViewById(R.id.btnBackToDashboard)
+        btnPrevious = findViewById(R.id.btnPrevious) // مقداردهی دکمه قبلی
         
         checkBox1 = findViewById(R.id.checkBox1)
         checkBox2 = findViewById(R.id.checkBox2)
@@ -71,7 +73,6 @@ class MainActivity : AppCompatActivity() {
         checkBox5 = findViewById(R.id.checkBox5)
         checkBox6 = findViewById(R.id.checkBox6)
 
-
         // راه‌اندازی RecyclerView برای نمایش کلمات در 3 ستون
         wordsRecyclerView = findViewById(R.id.wordsRecyclerView)
         wordsRecyclerView.layoutManager = GridLayoutManager(this, 3)
@@ -79,20 +80,15 @@ class MainActivity : AppCompatActivity() {
         wordsRecyclerView.adapter = wordAdapter
 
         progressManager = ProgressManager(this)
-verses = VerseRepository.load(this)
-
-// دریافت شاخص ارسال‌شده از داشبورد (در صورت وجود)
-val extraIndex = intent.getIntExtra("VERSE_INDEX", -1)
-if (extraIndex != -1) {
-    currentDisplayIndex = extraIndex
-} else {
-    currentDisplayIndex = progressManager.getIndex()
-}
-
-loadVerse()
-
-        progressManager = ProgressManager(this)
         verses = VerseRepository.load(this)
+
+        // دریافت شاخص ارسال‌شده از داشبورد (در صورت وجود)
+        val extraIndex = intent.getIntExtra("VERSE_INDEX", -1)
+        if (extraIndex != -1) {
+            currentDisplayIndex = extraIndex
+        } else {
+            currentDisplayIndex = progressManager.getIndex()
+        }
 
         // بازگشت اصولی به داشبورد
         btnBackToDashboard.setOnClickListener {
@@ -129,22 +125,32 @@ loadVerse()
         checkBox5.setOnCheckedChangeListener(checkListener)
         checkBox6.setOnCheckedChangeListener(checkListener)
 
-
         nextButton.setOnClickListener {
-            val sharedPref = getSharedPreferences("AppPrefs", Context.MODE_PRIVATE)
-            val studentId = sharedPref.getString("user_id", "")
-            val isGuest = (studentId == "guest")
+            val maxUnlockedIndex = progressManager.getIndex()
+            val isReviewMode = currentDisplayIndex < maxUnlockedIndex
 
-            if (isGuest) {
-                val currentIndex = progressManager.getIndex()
-                progressManager.saveIndex(currentIndex + 1)
-                Toast.makeText(this@MainActivity, "آفرین! آیه بعدی...", Toast.LENGTH_SHORT).show()
+            if (isReviewMode) {
+                // اگر در حالت مرور هستیم، فقط به آیه بعدی در لیست مرور می‌رویم
+                currentDisplayIndex++
                 loadVerse()
             } else {
-                if (nextButton.text.contains("بررسی وضعیت")) {
-                    syncProgressWithServer()
+                // اگر در حالت یادگیری آیه جدید هستیم
+                val sharedPref = getSharedPreferences("AppPrefs", Context.MODE_PRIVATE)
+                val studentId = sharedPref.getString("user_id", "")
+                val isGuest = (studentId == "guest")
+
+                if (isGuest) {
+                    val currentIndex = progressManager.getIndex()
+                    progressManager.saveIndex(currentIndex + 1)
+                    currentDisplayIndex = currentIndex + 1
+                    Toast.makeText(this@MainActivity, "آفرین! آیه بعدی...", Toast.LENGTH_SHORT).show()
+                    loadVerse()
                 } else {
-                    sendProgressToServer()
+                    if (nextButton.text.contains("بررسی وضعیت")) {
+                        syncProgressWithServer()
+                    } else {
+                        sendProgressToServer()
+                    }
                 }
             }
         }
@@ -165,19 +171,24 @@ loadVerse()
                  checkBox2.isChecked &&
                  checkBox3.isChecked &&
                  checkBox4.isChecked &&
-                 checkBox5.isChecked && // جدید
-                 checkBox6.isChecked    // جدید
+                 checkBox5.isChecked && 
+                 checkBox6.isChecked    
 
         if (allChecked) {
             nextButton.isEnabled = true
 
             val sharedPref = getSharedPreferences("AppPrefs", Context.MODE_PRIVATE)
             val isGuest = sharedPref.getString("user_id", "") == "guest"
-
-            nextButton.text = if (isGuest) {
-                "رفتن به آیه بعدی (آفلاین)"
+            val maxUnlockedIndex = progressManager.getIndex()
+            
+            if (currentDisplayIndex < maxUnlockedIndex) {
+                 nextButton.text = "آیه بعدی (مرور) ←"
             } else {
-                "ارسال برای تایید معلم"
+                nextButton.text = if (isGuest) {
+                    "رفتن به آیه بعدی (آفلاین)"
+                } else {
+                    "ارسال برای تایید معلم"
+                }
             }
 
             playSuccessSound()
@@ -243,61 +254,6 @@ loadVerse()
                 }
             })
     }
-private fun loadVerse() {
-    val maxUnlockedIndex = progressManager.getIndex()
-    
-    // اگر بار اول است، روی آخرین آیه باز شده قرار بگیرد
-    if (currentDisplayIndex == -1) {
-        currentDisplayIndex = maxUnlockedIndex
-    }
-
-    val currentIndex = currentDisplayIndex
-    val isReviewMode = currentIndex < maxUnlockedIndex // آیا در حال مرور آیات قبلی هستیم؟
-
-    // مدیریت دکمه آیه قبلی
-    val btnPrevious = findViewById<Button>(R.id.btnPrevious)
-    if (currentIndex > 0) {
-        btnPrevious.visibility = View.VISIBLE
-        btnPrevious.setOnClickListener {
-            currentDisplayIndex--
-            loadVerse()
-        }
-    } else {
-        btnPrevious.visibility = View.GONE
-    }
-
-    // اگر در حالت مرور آیه پاس‌شده هستیم، چک‌باکس‌ها را به‌طور خودکار تیک‌زده و دکمه بعدی را فعال کن
-    if (isReviewMode) {
-        checkBox1.isChecked = true; checkBox1.isEnabled = false
-        checkBox2.isChecked = true; checkBox2.isEnabled = false
-        checkBox3.isChecked = true; checkBox3.isEnabled = false
-        checkBox4.isChecked = true; checkBox4.isEnabled = false
-        // اگر چک‌باکس‌های ۵ و ۶ را هم دارید اینجا اضافه کنید
-
-        nextButton.isEnabled = true
-        nextButton.text = "آیه بعدی (مرور) ←"
-        nextButton.setOnClickListener {
-            currentDisplayIndex++
-            loadVerse()
-        }
-    } else {
-        // حالت عادی یادگیری آیه جدید
-        checkBox1.isChecked = false; checkBox1.isEnabled = true
-        checkBox2.isChecked = false; checkBox2.isEnabled = true
-        checkBox3.isChecked = false; checkBox3.isEnabled = true
-        checkBox4.isChecked = false; checkBox4.isEnabled = true
-        
-        nextButton.isEnabled = false
-        nextButton.text = "آیه بعدی"
-        // رویداد کلیک استاندارد nextButton (ارسال به سرور یا ذخیره آفلاین) که از قبل داشتید اینجا باقی می‌ماند
-    }
-
-    // باقی کدهای نمایش متن عربی، ترجمه و مثال‌ها بدون تغییر باقی می‌مانند...
-    val currentVerse = verses[currentIndex]
-    verseNumber.text = "آیه ${currentIndex + 1} - ${currentVerse.surah_reference}"
-    arabicText.text = currentVerse.arabic_text
-    // ...
-}
 
     private fun syncProgressWithServer() {
         val sharedPref = getSharedPreferences("AppPrefs", Context.MODE_PRIVATE)
@@ -337,6 +293,7 @@ private fun loadVerse() {
 
                         if (maxApprovedIndex >= currentIndex) {
                             progressManager.saveIndex(maxApprovedIndex + 1)
+                            currentDisplayIndex = maxApprovedIndex + 1
                             Toast.makeText(
                                 this@MainActivity,
                                 "معلم پیشرفت شما را تایید کرد!",
@@ -374,50 +331,46 @@ private fun loadVerse() {
         checkBox2.isChecked = true
         checkBox3.isChecked = true
         checkBox4.isChecked = true
+        checkBox5.isChecked = true
+        checkBox6.isChecked = true
 
         checkBox1.isEnabled = false
         checkBox2.isEnabled = false
         checkBox3.isEnabled = false
         checkBox4.isEnabled = false
+        checkBox5.isEnabled = false
+        checkBox6.isEnabled = false
         
-
         isResetting = false
 
         nextButton.isEnabled = true
         nextButton.text = "بررسی وضعیت تایید (رفرش)"
     }
 
+    // یک تابع loadVerse یکپارچه
     private fun loadVerse() {
         if (verses.isEmpty()) return
 
         isResetting = true
+        val maxUnlockedIndex = progressManager.getIndex()
+        
+        if (currentDisplayIndex == -1) {
+            currentDisplayIndex = maxUnlockedIndex
+        }
 
-        // مخفی کردن ترجمه، مثال و کلمات برای آیه جدید
-        cardTranslation.visibility = View.GONE
-        cardExample.visibility = View.GONE
-        wordsRecyclerView.visibility = View.GONE
-        btnShowTranslation.visibility = View.VISIBLE
+        val currentIndex = currentDisplayIndex
+        val isReviewMode = currentIndex < maxUnlockedIndex
 
-        checkBox1.isEnabled = true
-        checkBox2.isEnabled = true
-        checkBox3.isEnabled = true
-        checkBox4.isEnabled = true
-        checkBox5.isEnabled = true
-        checkBox6.isEnabled = true
-
-        checkBox1.isChecked = false
-        checkBox2.isChecked = false
-        checkBox3.isChecked = false
-        checkBox4.isChecked = false
-        checkBox5.isChecked = false
-        checkBox6.isChecked = false
-
-        nextButton.isEnabled = false
-        nextButton.text = "آیه بعدی"
-
-        isResetting = false
-
-        val currentIndex = progressManager.getIndex()
+        // مدیریت دکمه آیه قبلی
+        if (currentIndex > 0) {
+            btnPrevious.visibility = View.VISIBLE
+            btnPrevious.setOnClickListener {
+                currentDisplayIndex--
+                loadVerse()
+            }
+        } else {
+            btnPrevious.visibility = View.GONE
+        }
 
         if (currentIndex >= verses.size) {
             verseNumber.text = "پایان مسیر"
@@ -425,27 +378,55 @@ private fun loadVerse() {
             translation.text = ""
             exampleText.text = ""
             
-            // نمایش دائم برای پایان مسیر
             cardTranslation.visibility = View.VISIBLE
             cardExample.visibility = View.VISIBLE
             btnShowTranslation.visibility = View.GONE
-            wordsRecyclerView.visibility = View.GONE // پنهان کردن لیست کلمات در صفحه پایان
+            wordsRecyclerView.visibility = View.GONE 
+            btnPrevious.visibility = View.VISIBLE 
             
             nextButton.isEnabled = false
-
             checkBox1.isEnabled = false
             checkBox2.isEnabled = false
             checkBox3.isEnabled = false
             checkBox4.isEnabled = false
-            checkBox5.isChecked = false
-            checkBox6.isChecked = false
-
+            checkBox5.isEnabled = false
+            checkBox6.isEnabled = false
+            
+            isResetting = false
             return
         }
 
-        val currentVerse = verses[currentIndex]
+        // مخفی کردن بخش‌های ترجمه برای آیه جدید
+        cardTranslation.visibility = View.GONE
+        cardExample.visibility = View.GONE
+        wordsRecyclerView.visibility = View.GONE
+        btnShowTranslation.visibility = View.VISIBLE
 
-        // اصلاح نمایش شماره آیه (اضافه کردن ۱ به ایندکس)
+        if (isReviewMode) {
+            checkBox1.isChecked = true; checkBox1.isEnabled = false
+            checkBox2.isChecked = true; checkBox2.isEnabled = false
+            checkBox3.isChecked = true; checkBox3.isEnabled = false
+            checkBox4.isChecked = true; checkBox4.isEnabled = false
+            checkBox5.isChecked = true; checkBox5.isEnabled = false
+            checkBox6.isChecked = true; checkBox6.isEnabled = false
+
+            nextButton.isEnabled = true
+            nextButton.text = "آیه بعدی (مرور) ←"
+        } else {
+            checkBox1.isChecked = false; checkBox1.isEnabled = true
+            checkBox2.isChecked = false; checkBox2.isEnabled = true
+            checkBox3.isChecked = false; checkBox3.isEnabled = true
+            checkBox4.isChecked = false; checkBox4.isEnabled = true
+            checkBox5.isChecked = false; checkBox5.isEnabled = true
+            checkBox6.isChecked = false; checkBox6.isEnabled = true
+            
+            nextButton.isEnabled = false
+            nextButton.text = "آیه بعدی"
+        }
+
+        isResetting = false
+
+        val currentVerse = verses[currentIndex]
         verseNumber.text = "آیه ${currentIndex + 1} - ${currentVerse.surah_reference}"
         arabicText.text = currentVerse.arabic_text
         translation.text = currentVerse.persian_translation
@@ -456,10 +437,6 @@ private fun loadVerse() {
             exampleText.text = "مثالی وجود ندارد."
         }
         
-        // ===============================================
-        // آماده‌سازی داده‌های ترجمه کلمه به کلمه در Adapter
-        // (نمایش آنها با کلیک روی دکمه انجام می‌شود)
-        // ===============================================
         if (!currentVerse.word_translations.isNullOrEmpty()) {
             wordAdapter.updateData(currentVerse.word_translations)
         } else {

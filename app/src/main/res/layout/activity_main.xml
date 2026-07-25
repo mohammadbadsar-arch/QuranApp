@@ -88,8 +88,7 @@
                 android:textStyle="bold" />
         </androidx.cardview.widget.CardView>
 
-        <!-- ========================================== -->
-        <!-- بخش جدید برای نمایش کلمه به کلمه (مخفی در ابتدا) -->
+        <!-- جدول کلمات مخفی -->
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/wordsRecyclerView"
             android:layout_width="match_parent"
@@ -98,7 +97,6 @@
             android:nestedScrollingEnabled="false"
             android:layoutDirection="rtl"
             android:visibility="gone" />
-        <!-- ========================================== -->
 
         <!-- دکمه نمایش ترجمه -->
         <Button
@@ -111,7 +109,7 @@
             android:textColor="#FFFFFF"
             android:layout_marginBottom="16dp" />
 
-        <!-- Translation Card (مخفی در ابتدا) -->
+        <!-- Translation Card -->
         <androidx.cardview.widget.CardView
             android:id="@+id/cardTranslation"
             android:layout_width="match_parent"
@@ -132,7 +130,7 @@
                 android:lineSpacingExtra="4dp"/>
         </androidx.cardview.widget.CardView>
 
-        <!-- Practical Example Card (مخفی در ابتدا) -->
+        <!-- Practical Example Card -->
         <androidx.cardview.widget.CardView
             android:id="@+id/cardExample"
             android:layout_width="match_parent"
@@ -156,6 +154,7 @@
 
         <!-- Options Section -->
         <TextView
+            android:id="@+id/tvQuestionTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="آیا این آیه را یاد گرفته‌اید؟"
@@ -163,17 +162,62 @@
             android:textStyle="bold"
             android:layout_marginBottom="8dp"/>
 
-        <!-- Checkboxes -->
+        <!-- 6 Checkboxes -->
         <LinearLayout
+            android:id="@+id/llCheckboxes"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_marginBottom="24dp">
 
-            <CheckBox android:id="@+id/checkBox1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="روخوانی صحیح" />
-            <CheckBox android:id="@+id/checkBox2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="حفظ متن عربی" />
-            <CheckBox android:id="@+id/checkBox3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="یادگیری ترجمه" />
-            <CheckBox android:id="@+id/checkBox4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="درک مصداق کاربردی" />
+            <CheckBox 
+                android:id="@+id/checkBox1" 
+                android:layout_width="wrap_content" 
+                android:layout_height="wrap_content" 
+                android:text="۱. تلفظ و خواندن صحیح" 
+                android:textColor="#333333"/>
+
+            <CheckBox 
+                android:id="@+id/checkBox2" 
+                android:layout_width="wrap_content" 
+                android:layout_height="wrap_content" 
+                android:layout_marginTop="8dp"
+                android:text="۲. درک ترجمه و مفهوم" 
+                android:textColor="#333333"/>
+
+            <CheckBox 
+                android:id="@+id/checkBox3" 
+                android:layout_width="wrap_content" 
+                android:layout_height="wrap_content" 
+                android:layout_marginTop="8dp"
+                android:text="۳. مطالعه مصداق و کاربرد" 
+                android:textColor="#333333"/>
+
+            <CheckBox 
+                android:id="@+id/checkBox4" 
+                android:layout_width="wrap_content" 
+                android:layout_height="wrap_content" 
+                android:layout_marginTop="8dp"
+                android:text="۴. تعهد به انجام عمل در زندگی" 
+                android:textColor="#333333"/>
+
+            <CheckBox 
+                android:id="@+id/checkBox5" 
+                android:layout_width="wrap_content" 
+                android:layout_height="wrap_content" 
+                android:layout_marginTop="8dp"
+                android:text="۵. انجام کار عملی این آیه" 
+                android:textColor="#333333"
+                android:textStyle="bold"/>
+
+            <CheckBox 
+                android:id="@+id/checkBox6" 
+                android:layout_width="wrap_content" 
+                android:layout_height="wrap_content" 
+                android:layout_marginTop="8dp"
+                android:text="۶. تسلط بر قواعد عربی حاکم بر این آیه" 
+                android:textColor="#333333"
+                android:textStyle="bold"/>
         </LinearLayout>
 
         <!-- Actions -->

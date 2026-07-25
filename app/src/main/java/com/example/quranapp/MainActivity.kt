@@ -112,8 +112,8 @@ class MainActivity : AppCompatActivity() {
         checkBox2.setOnCheckedChangeListener(checkListener)
         checkBox3.setOnCheckedChangeListener(checkListener)
         checkBox4.setOnCheckedChangeListener(checkListener)
-        checkBox5.setOnCheckedChangeListener(checkBoxListener)
-        checkBox6.setOnCheckedChangeListener(checkBoxListener)
+        checkBox5.setOnCheckedChangeListener(checkListener)
+        checkBox6.setOnCheckedChangeListener(checkListener)
 
 
         nextButton.setOnClickListener {

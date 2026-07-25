@@ -3,11 +3,16 @@ package com.example.quranapp
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ProgressBar
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -15,7 +20,10 @@ import retrofit2.Response
 class DashboardActivity : AppCompatActivity() {
 
     private lateinit var progressManager: ProgressManager
-    private val totalVerses = 100 // تعداد کل آیات
+    private val totalVerses = 100 
+    
+    private lateinit var rvPassedVerses: RecyclerView
+    private lateinit var passedVerseAdapter: PassedVerseAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,89 +35,104 @@ class DashboardActivity : AppCompatActivity() {
         progressBar.max = totalVerses
 
         val btnStart = findViewById<Button>(R.id.btnStart)
-        val btnLogout = findViewById<Button>(R.id.btnLogout) // اضافه شدن دکمه خروج
+        val btnLogout = findViewById<Button>(R.id.btnLogout)
 
-        // کلیک روی دکمه برای رفتن به صفحه آیات
         btnStart.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
 
-        // عملیات خروج از حساب
         btnLogout.setOnClickListener {
-            // پاک کردن اطلاعات کاربر از حافظه اصلی (AppPrefs که در صفحه لاگین ذخیره می‌شود)
             val sharedPref = getSharedPreferences("AppPrefs", Context.MODE_PRIVATE)
             sharedPref.edit().remove("user_id").apply()
-
-            // پاک کردن حافظه UserPrefs (برای اطمینان کامل)
             val userPrefs = getSharedPreferences("UserPrefs", Context.MODE_PRIVATE)
             userPrefs.edit().remove("student_id").apply()
 
-            // بازگشت به صفحه لاگین و بستن کامل صفحات قبلی
             val intent = Intent(this, LoginActivity::class.java)
             intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
             startActivity(intent)
             finish()
         }
 
-        // نمایش وضعیت اولیه کاربر هنگام باز شدن صفحه
+        // راه‌اندازی لیست مرور
+        rvPassedVerses = findViewById(R.id.rvPassedVerses)
+        rvPassedVerses.layoutManager = GridLayoutManager(this, 5) // 5 ستون برای مرور آیات
+        passedVerseAdapter = PassedVerseAdapter(0)
+        rvPassedVerses.adapter = passedVerseAdapter
+
         updateUI()
     }
 
-    // این متد هر بار که کاربر به این صفحه برمی‌گردد اجرا می‌شود
     override fun onResume() {
         super.onResume()
-        // ابتدا بر اساس دیتای ذخیره شده در گوشی آپدیت می‌کنیم
         updateUI()
-        // سپس از سرور چک می‌کنیم که آیا معلم تایید جدیدی داشته یا خیر
         checkTeacherApproval()
     }
 
-    // یک تابع کمکی برای آپدیت کردن نوار و متن پیشرفت (برای جلوگیری از تکرار کد)
     private fun updateUI() {
         val currentIndex = progressManager.getIndex()
         findViewById<ProgressBar>(R.id.progressBar).progress = currentIndex
         findViewById<TextView>(R.id.tvProgressText).text = "شما $currentIndex آیه از $totalVerses آیه را یاد گرفته‌اید"
+        
+        // آپدیت کردن آداپتور با تعداد آیاتی که تا الان یاد گرفته
+        passedVerseAdapter.updateCount(currentIndex)
     }
 
-    // تابع بررسی وضعیت تایید از سرور
     private fun checkTeacherApproval() {
-        // گرفتن آیدی دانش آموز
         val sharedPreferences = getSharedPreferences("UserPrefs", MODE_PRIVATE)
         val studentId = sharedPreferences.getString("student_id", "") ?: ""
-
         if (studentId.isEmpty()) return
 
-        // اصلاح: استفاده از RetrofitClient.instance به جای apiService
         RetrofitClient.instance.getProgress(studentId).enqueue(object : Callback<GetProgressResponse> {
             override fun onResponse(call: Call<GetProgressResponse>, response: Response<GetProgressResponse>) {
                 if (response.isSuccessful) {
-                    // ایمن‌سازی در برابر Null
                     val progressList = response.body()?.progress ?: return
-                    
-                    // پیدا کردن بالاترین شماره آیه‌ای که تایید شده (approved) و تبدیل مقدار به عدد
                     val maxApprovedIndex = progressList.filter { it.status == "approved" }
                         .maxOfOrNull { it.verse_index.toString().toIntOrNull() ?: -1 } ?: -1
 
                     if (maxApprovedIndex >= 0) {
-                        // اگر تایید شده بود، قفل آیه بعدی باز می‌شود
                         val nextUnlockedVerse = maxApprovedIndex + 1
                         val currentLocalIndex = progressManager.getIndex()
-                        
-                        // اگر آیه بعدی بزرگتر از پیشرفت فعلی گوشی است، یعنی معلم تایید جدیدی داده
                         if (nextUnlockedVerse > currentLocalIndex) {
                             progressManager.saveIndex(nextUnlockedVerse)
                             Toast.makeText(this@DashboardActivity, "معلم پیشرفت شما را تایید کرد!", Toast.LENGTH_SHORT).show()
-                            // چون پیشرفت جدید داریم، دوباره صفحه را آپدیت می‌کنیم
                             updateUI() 
                         }
                     }
                 }
             }
-
-            override fun onFailure(call: Call<GetProgressResponse>, t: Throwable) {
-                // در صورت نیاز به لاگ زدن خطا
-            }
+            override fun onFailure(call: Call<GetProgressResponse>, t: Throwable) {}
         })
+    }
+
+    // آداپتور داخلی برای نمایش آیات آموخته شده در داشبورد
+    inner class PassedVerseAdapter(private var passedCount: Int) : RecyclerView.Adapter<PassedVerseAdapter.ViewHolder>() {
+
+        fun updateCount(newCount: Int) {
+            this.passedCount = newCount
+            notifyDataSetChanged()
+        }
+
+        inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+            val root = view
+            val tvVerseNumber: TextView = view.findViewById(R.id.tvVerseNumber)
+        }
+
+        override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+            val view = LayoutInflater.from(parent.context).inflate(R.layout.item_passed_verse, parent, false)
+            return ViewHolder(view)
+        }
+
+        override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+            holder.tvVerseNumber.text = "${position + 1}"
+            
+            holder.root.setOnClickListener {
+                val intent = Intent(this@DashboardActivity, MainActivity::class.java)
+                intent.putExtra("REVIEW_VERSE_INDEX", position) // ارسال ایندکس آیه برای مرور
+                startActivity(intent)
+            }
+        }
+
+        override fun getItemCount(): Int = passedCount
     }
 }

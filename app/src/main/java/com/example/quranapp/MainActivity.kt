@@ -40,6 +40,8 @@ class MainActivity : AppCompatActivity() {
     private lateinit var checkBox2: CheckBox
     private lateinit var checkBox3: CheckBox
     private lateinit var checkBox4: CheckBox
+    private lateinit var checkBox5: CheckBox // اضافه شد
+    private lateinit var checkBox6: CheckBox // اضافه شد
 
     private var isResetting = false
     private lateinit var progressManager: ProgressManager
@@ -65,6 +67,8 @@ class MainActivity : AppCompatActivity() {
         checkBox2 = findViewById(R.id.checkBox2)
         checkBox3 = findViewById(R.id.checkBox3)
         checkBox4 = findViewById(R.id.checkBox4)
+        checkBox5 = findViewById(R.id.checkBox5) // اضافه شد
+        checkBox6 = findViewById(R.id.checkBox6) // اضافه شد
 
         // راه‌اندازی RecyclerView برای نمایش کلمات در 3 ستون
         wordsRecyclerView = findViewById(R.id.wordsRecyclerView)
@@ -107,6 +111,8 @@ class MainActivity : AppCompatActivity() {
         checkBox2.setOnCheckedChangeListener(checkListener)
         checkBox3.setOnCheckedChangeListener(checkListener)
         checkBox4.setOnCheckedChangeListener(checkListener)
+        checkBox5.setOnCheckedChangeListener(checkListener) // اضافه شد
+        checkBox6.setOnCheckedChangeListener(checkListener) // اضافه شد
 
         nextButton.setOnClickListener {
             val sharedPref = getSharedPreferences("AppPrefs", Context.MODE_PRIVATE)
@@ -139,10 +145,13 @@ class MainActivity : AppCompatActivity() {
     private fun checkAllCompleted() {
         if (isResetting) return
 
+        // حالا باید هر ۶ چک‌باکس بررسی شوند
         val allChecked = checkBox1.isChecked &&
                 checkBox2.isChecked &&
                 checkBox3.isChecked &&
-                checkBox4.isChecked
+                checkBox4.isChecked &&
+                checkBox5.isChecked && // اضافه شد
+                checkBox6.isChecked    // اضافه شد
 
         if (allChecked) {
             nextButton.isEnabled = true
@@ -295,11 +304,15 @@ class MainActivity : AppCompatActivity() {
         checkBox2.isChecked = true
         checkBox3.isChecked = true
         checkBox4.isChecked = true
+        checkBox5.isChecked = true // اضافه شد
+        checkBox6.isChecked = true // اضافه شد
 
         checkBox1.isEnabled = false
         checkBox2.isEnabled = false
         checkBox3.isEnabled = false
         checkBox4.isEnabled = false
+        checkBox5.isEnabled = false // اضافه شد
+        checkBox6.isEnabled = false // اضافه شد
 
         isResetting = false
 
@@ -322,11 +335,15 @@ class MainActivity : AppCompatActivity() {
         checkBox2.isEnabled = true
         checkBox3.isEnabled = true
         checkBox4.isEnabled = true
+        checkBox5.isEnabled = true // اضافه شد
+        checkBox6.isEnabled = true // اضافه شد
 
         checkBox1.isChecked = false
         checkBox2.isChecked = false
         checkBox3.isChecked = false
         checkBox4.isChecked = false
+        checkBox5.isChecked = false // اضافه شد
+        checkBox6.isChecked = false // اضافه شد
 
         nextButton.isEnabled = false
         nextButton.text = "آیه بعدی"
@@ -353,50 +370,9 @@ class MainActivity : AppCompatActivity() {
             checkBox2.isEnabled = false
             checkBox3.isEnabled = false
             checkBox4.isEnabled = false
+            checkBox5.isEnabled = false // اضافه شد
+            checkBox6.isEnabled = false // اضافه شد
             return
         }
 
-        val currentVerse = verses[currentIndex]
-
-        // اصلاح نمایش شماره آیه (اضافه کردن ۱ به ایندکس)
-        verseNumber.text = "آیه ${currentIndex + 1} - ${currentVerse.surah_reference}"
-        arabicText.text = currentVerse.arabic_text
-        translation.text = currentVerse.persian_translation
-
-        if (!currentVerse.practical_examples.isNullOrEmpty()) {
-            exampleText.text = currentVerse.practical_examples.joinToString("\n- ", prefix = "- ")
-        } else {
-            exampleText.text = "مثالی وجود ندارد."
-        }
-        
-        // ===============================================
-        // آماده‌سازی داده‌های ترجمه کلمه به کلمه در Adapter
-        // (نمایش آنها با کلیک روی دکمه انجام می‌شود)
-        // ===============================================
-        if (!currentVerse.word_translations.isNullOrEmpty()) {
-            wordAdapter.updateData(currentVerse.word_translations)
-        } else {
-            wordAdapter.updateData(emptyList())
-        }
-    }
-
-    private fun playClickSound() {
-        try {
-            val mediaPlayer = MediaPlayer.create(this, R.raw.click)
-            mediaPlayer.start()
-            mediaPlayer.setOnCompletionListener { it.release() }
-        } catch (e: Exception) {
-            e.printStackTrace()
-        }
-    }
-
-    private fun playSuccessSound() {
-        try {
-            val mediaPlayer = MediaPlayer.create(this, R.raw.success)
-            mediaPlayer.start()
-            mediaPlayer.setOnCompletionListener { it.release() }
-        } catch (e: Exception) {
-            e.printStackTrace()
-        }
-    }
-}
+        val 

@@ -21,6 +21,8 @@ import retrofit2.Response
 class MainActivity : AppCompatActivity() {
     
     private var currentDisplayIndex = -1 // شاخص آیه‌ای که اکنون نمایش داده می‌شود
+    private var lastDisplayedIndex: Int = -1 // اضافه شده: برای تشخیص تغییر آیه و موضوع
+    
     private lateinit var verseNumber: TextView
     private lateinit var categoryText: TextView // اضافه شده
     private lateinit var arabicText: TextView
@@ -430,12 +432,27 @@ class MainActivity : AppCompatActivity() {
         isResetting = false
 
         val currentVerse = verses[currentIndex]
+        
+        // --- کدهای جدید برای نمایش دیالوگ تغییر موضوع ---
+        val newCategory = currentVerse.category?.trim()
+
+        if (lastDisplayedIndex != -1 && currentIndex > lastDisplayedIndex) {
+            val oldCategory = verses[lastDisplayedIndex].category?.trim()
+            if (!oldCategory.isNullOrEmpty() &&
+                !newCategory.isNullOrEmpty() &&
+                oldCategory != newCategory
+            ) {
+                showCategoryChangeDialog(oldCategory, newCategory)
+            }
+        }
+        lastDisplayedIndex = currentIndex
+        // ------------------------------------------------
+
         verseNumber.text = "آیه ${currentIndex + 1} - ${currentVerse.surah_reference}"
 
         // اعمال منطق نمایش دسته‌بندی موضوعی آیه
-        val category = currentVerse.category?.trim()
-        if (!category.isNullOrEmpty()) {
-            categoryText.text = "موضوع: $category"
+        if (!newCategory.isNullOrEmpty()) {
+            categoryText.text = "موضوع: $newCategory"
             categoryText.visibility = View.VISIBLE
         } else {
             categoryText.visibility = View.GONE
@@ -475,5 +492,17 @@ class MainActivity : AppCompatActivity() {
         } catch (e: Exception) {
             e.printStackTrace()
         }
+    }
+    
+    // --- تابع جدید برای نمایش دیالوگ ---
+    private fun showCategoryChangeDialog(oldCategory: String, newCategory: String) {
+        android.app.AlertDialog.Builder(this)
+            .setTitle("🎉 تبریک! پایان یک بخش")
+            .setMessage("شما آیات مربوط به موضوع «$oldCategory» را با موفقیت به پایان رساندید.\n\nآماده‌اید وارد بخش جدید شوید؟\nموضوع جدید: «$newCategory»")
+            .setPositiveButton("بزن بریم!") { dialog, _ ->
+                dialog.dismiss()
+            }
+            .setCancelable(false)
+            .show()
     }
 }

@@ -22,6 +22,7 @@ class MainActivity : AppCompatActivity() {
     
     private var currentDisplayIndex = -1 // شاخص آیه‌ای که اکنون نمایش داده می‌شود
     private lateinit var verseNumber: TextView
+    private lateinit var categoryText: TextView // اضافه شده
     private lateinit var arabicText: TextView
     private lateinit var translation: TextView
     private lateinit var exampleText: TextView
@@ -54,6 +55,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         verseNumber = findViewById(R.id.verseNumber)
+        categoryText = findViewById(R.id.categoryText) // اضافه شده
         arabicText = findViewById(R.id.arabicText)
         translation = findViewById(R.id.translation)
         exampleText = findViewById(R.id.exampleText)
@@ -374,6 +376,7 @@ class MainActivity : AppCompatActivity() {
 
         if (currentIndex >= verses.size) {
             verseNumber.text = "پایان مسیر"
+            categoryText.visibility = View.GONE // پنهان کردن موضوع در پایان مسیر
             arabicText.text = "تبریک! شما همه آیات را یاد گرفتید."
             translation.text = ""
             exampleText.text = ""
@@ -428,6 +431,16 @@ class MainActivity : AppCompatActivity() {
 
         val currentVerse = verses[currentIndex]
         verseNumber.text = "آیه ${currentIndex + 1} - ${currentVerse.surah_reference}"
+
+        // اعمال منطق نمایش دسته‌بندی موضوعی آیه
+        val category = currentVerse.category?.trim()
+        if (!category.isNullOrEmpty()) {
+            categoryText.text = "موضوع: $category"
+            categoryText.visibility = View.VISIBLE
+        } else {
+            categoryText.visibility = View.GONE
+        }
+        
         arabicText.text = currentVerse.arabic_text
         translation.text = currentVerse.persian_translation
 

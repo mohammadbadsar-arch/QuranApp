@@ -14,7 +14,9 @@ data class Verse(
     @SerializedName("practical_examples")
     val practical_examples: List<String> = emptyList(),
     @SerializedName("word_by_word")
-    val word_translations: List<WordTranslation> = emptyList()
+    val word_translations: List<WordTranslation> = emptyList(),
+    @SerializedName("video_url")
+    val video_url: String? = null
 )
 
 data class WordTranslation(

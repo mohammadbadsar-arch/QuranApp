@@ -100,7 +100,19 @@
             android:layout_marginBottom="12dp"
             app:cornerRadius="8dp" />
 
-              <!-- لیست کلمات (جدول نقش‌های نحوی) -->
+        <!-- دکمه مشاهده ویدئو (دکمه جدید اضافه شده) -->
+        <Button
+            android:id="@+id/btnWatchVideo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🎥 تماشای ویدئوی آموزشی"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#D84315"
+            android:layout_marginBottom="12dp"
+            android:visibility="gone"
+            app:cornerRadius="8dp" />
+
+        <!-- لیست کلمات (جدول نقش‌های نحوی) -->
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/wordsRecyclerView"
             android:layout_width="match_parent"

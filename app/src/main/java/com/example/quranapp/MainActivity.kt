@@ -3,6 +3,7 @@ package com.example.quranapp
 import android.content.Context
 import android.content.Intent
 import android.media.MediaPlayer
+import android.net.Uri
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
@@ -21,10 +22,10 @@ import retrofit2.Response
 class MainActivity : AppCompatActivity() {
     
     private var currentDisplayIndex = -1 // شاخص آیه‌ای که اکنون نمایش داده می‌شود
-    private var lastDisplayedIndex: Int = -1 // اضافه شده: برای تشخیص تغییر آیه و موضوع
+    private var lastDisplayedIndex: Int = -1 // برای تشخیص تغییر آیه و موضوع
     
     private lateinit var verseNumber: TextView
-    private lateinit var categoryText: TextView // اضافه شده
+    private lateinit var categoryText: TextView 
     private lateinit var arabicText: TextView
     private lateinit var translation: TextView
     private lateinit var exampleText: TextView
@@ -32,6 +33,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var cardTranslation: CardView
     private lateinit var cardExample: CardView
     private lateinit var btnShowTranslation: Button
+    private lateinit var btnWatchVideo: Button // اضافه شده برای دکمه ویدئو
     
     // متغیرهای جدول کلمات
     private lateinit var wordsRecyclerView: RecyclerView
@@ -39,14 +41,14 @@ class MainActivity : AppCompatActivity() {
     
     private lateinit var nextButton: Button
     private lateinit var btnBackToDashboard: Button
-    private lateinit var btnPrevious: Button // اضافه شده برای دکمه قبلی
+    private lateinit var btnPrevious: Button 
     
     private lateinit var checkBox1: CheckBox
     private lateinit var checkBox2: CheckBox
     private lateinit var checkBox3: CheckBox
     private lateinit var checkBox4: CheckBox
-    private lateinit var checkBox5: CheckBox // جدید
-    private lateinit var checkBox6: CheckBox // جدید
+    private lateinit var checkBox5: CheckBox
+    private lateinit var checkBox6: CheckBox
 
     private var isResetting = false
     private lateinit var progressManager: ProgressManager
@@ -57,7 +59,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         verseNumber = findViewById(R.id.verseNumber)
-        categoryText = findViewById(R.id.categoryText) // اضافه شده
+        categoryText = findViewById(R.id.categoryText) 
         arabicText = findViewById(R.id.arabicText)
         translation = findViewById(R.id.translation)
         exampleText = findViewById(R.id.exampleText)
@@ -65,10 +67,11 @@ class MainActivity : AppCompatActivity() {
         cardTranslation = findViewById(R.id.cardTranslation)
         cardExample = findViewById(R.id.cardExample)
         btnShowTranslation = findViewById(R.id.btnShowTranslation)
+        btnWatchVideo = findViewById(R.id.btnWatchVideo) // مقداردهی دکمه ویدئو
         
         nextButton = findViewById(R.id.nextButton)
         btnBackToDashboard = findViewById(R.id.btnBackToDashboard)
-        btnPrevious = findViewById(R.id.btnPrevious) // مقداردهی دکمه قبلی
+        btnPrevious = findViewById(R.id.btnPrevious) 
         
         checkBox1 = findViewById(R.id.checkBox1)
         checkBox2 = findViewById(R.id.checkBox2)
@@ -113,6 +116,21 @@ class MainActivity : AppCompatActivity() {
             
             btnShowTranslation.visibility = View.GONE
             playClickSound()
+        }
+
+        // عملکرد دکمه تماشای ویدئو (جدید)
+        btnWatchVideo.setOnClickListener {
+            if (currentDisplayIndex >= 0 && currentDisplayIndex < verses.size) {
+                val videoUrl = verses[currentDisplayIndex].video_url
+                if (!videoUrl.isNullOrEmpty()) {
+                    try {
+                        val intent = Intent(Intent.ACTION_VIEW, Uri.parse(videoUrl))
+                        startActivity(intent)
+                    } catch (e: Exception) {
+                        Toast.makeText(this, "برنامه‌ای برای باز کردن لینک یافت نشد!", Toast.LENGTH_SHORT).show()
+                    }
+                }
+            }
         }
 
         val checkListener = CompoundButton.OnCheckedChangeListener { _, isChecked ->
@@ -351,7 +369,6 @@ class MainActivity : AppCompatActivity() {
         nextButton.text = "بررسی وضعیت تایید (رفرش)"
     }
 
-    // یک تابع loadVerse یکپارچه
     private fun loadVerse() {
         if (verses.isEmpty()) return
 
@@ -378,7 +395,7 @@ class MainActivity : AppCompatActivity() {
 
         if (currentIndex >= verses.size) {
             verseNumber.text = "پایان مسیر"
-            categoryText.visibility = View.GONE // پنهان کردن موضوع در پایان مسیر
+            categoryText.visibility = View.GONE 
             arabicText.text = "تبریک! شما همه آیات را یاد گرفتید."
             translation.text = ""
             exampleText.text = ""
@@ -386,6 +403,7 @@ class MainActivity : AppCompatActivity() {
             cardTranslation.visibility = View.VISIBLE
             cardExample.visibility = View.VISIBLE
             btnShowTranslation.visibility = View.GONE
+            btnWatchVideo.visibility = View.GONE // پنهان کردن دکمه ویدئو در پایان مسیر
             wordsRecyclerView.visibility = View.GONE 
             btnPrevious.visibility = View.VISIBLE 
             
@@ -433,7 +451,13 @@ class MainActivity : AppCompatActivity() {
 
         val currentVerse = verses[currentIndex]
         
-        // --- کدهای جدید برای نمایش دیالوگ تغییر موضوع ---
+        // بررسی وضعیت ویدئو و نمایش دکمه در صورت وجود لینک (اضافه شده)
+        if (!currentVerse.video_url.isNullOrEmpty()) {
+            btnWatchVideo.visibility = View.VISIBLE
+        } else {
+            btnWatchVideo.visibility = View.GONE
+        }
+        
         val newCategory = currentVerse.category?.trim()
 
         if (lastDisplayedIndex != -1 && currentIndex > lastDisplayedIndex) {
@@ -446,8 +470,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
         lastDisplayedIndex = currentIndex
-        // ------------------------------------------------
-
+        
         verseNumber.text = "آیه ${currentIndex + 1} - ${currentVerse.surah_reference}"
 
         // اعمال منطق نمایش دسته‌بندی موضوعی آیه
@@ -494,7 +517,6 @@ class MainActivity : AppCompatActivity() {
         }
     }
     
-    // --- تابع جدید برای نمایش دیالوگ ---
     private fun showCategoryChangeDialog(oldCategory: String, newCategory: String) {
         android.app.AlertDialog.Builder(this)
             .setTitle("🎉 تبریک! پایان یک بخش")
